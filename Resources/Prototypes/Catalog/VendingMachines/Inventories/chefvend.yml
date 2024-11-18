@@ -15,7 +15,7 @@
     FoodCondimentBottleKetchup: 2
     FoodCondimentBottleBBQ: 2
     FoodCondimentBottleVinegar: 5  # Frontier 2<5
-    FoodCondimentBottleSoysauce: 5 # Frontier    
+    FoodCondimentBottleSoysauce: 5 # Frontier
 #    ReagentContainerOliveoil: 2 # Frontier - Replaced with OilJarOlive
     ReagentContainerMayo: 2
     OilJarOlive: 1 # Frontier
@@ -31,6 +31,10 @@
     DrinkSoyMilkCarton: 1
     FoodButter: 3
     FoodCheese: 2 # Frontier: 1<2
+    BoxChocolateBar: 1 # Floof
+    BoxRaisins: 1 # Floof
+    FoodButter: 4
+    FoodCheese: 1
     FoodMeat: 6
   contrabandInventory:
     EggBoxBroken: 1
