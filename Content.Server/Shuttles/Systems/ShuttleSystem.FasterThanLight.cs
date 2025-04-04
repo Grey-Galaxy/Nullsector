@@ -63,7 +63,7 @@ public sealed partial class ShuttleSystem
     /// <summary>
     /// Space between grids within hyperspace.
     /// </summary>
-    private const float Buffer = 100f;
+    private const float Buffer = 500f;
 
     // Frontier: coordinate rollover
     /// <summary>
