@@ -1,3 +1,3 @@
 @echo off
-dotnet run --project Content.Server
+'/home/ruzter91/Downloads/DEV/DotNet/dotnet' dotnet run --project Content.Server
 pause
