@@ -59,7 +59,7 @@ public sealed partial class GameTicker
 
             // Use localization to get the proper job name instead of the key
             var roleName = Loc.GetString(player.Role);
-            var showUsername = false; // 'false' by default, it is an opt-in feature.t
+            var showUsername = true; // 'true' by default, it is an opt-out feature.
 
             if (_playerManager.TryGetSessionById(player.PlayerGuid, out var ds))
             {

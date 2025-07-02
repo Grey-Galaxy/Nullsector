@@ -49,9 +49,17 @@
   color: "#3DA695"
   
 - type: company
-  id: Cerceakaa
+  id: Cerceakan
   form: Protagonist
   name: Cerceakan Reaches
   image: /Textures/_Null/Companies/cerceakan.png
   description: cerceakan-description
   color: "#00E2F7"
+
+- type: company
+  id: Ursidine
+  form: Protagonist
+  name: Ursidine Collective Expansions
+  image: /Textures/_Null/Companies/ursidine.png
+  description: ursidine-description
+  color: "#B75410"
