@@ -19,13 +19,27 @@ public sealed class FireOnLandSystem : EntitySystem
         SubscribeLocalEvent<FireOnLandComponent, LandEvent>(FireOnLand);
     }
 
-    private void FireOnLand(Entity<FireOnLandComponent> ent, ref LandEvent args)
+/*
+ NOTE: If you are crashing when throwing a Bolted Gun, it is not because of this implementation, but
+ an Enumeration query in the Throwing System. It should -NOT- cause any issues in practice on a server.
+ -Z
+ */
+    /// <summary>
+    /// Causes a gun entity with the FireOnLandComponent to fire when the LandEvent event is triggered.
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="args"></param>
+    private void FireOnLand(Entity<FireOnLandComponent> entity, ref LandEvent args)
     {
-        if (!_random.Prob(ent.Comp.Probability) || !TryComp(ent, out GunComponent? gc))
+        if (!TryComp(entity, out GunComponent? gunComponent))
             return;
 
-        var dir = gc.DefaultDirection;
+        if (!_random.Prob(entity.Comp.Probability))
+            return;
+
+        var dir = gunComponent.DefaultDirection;
         dir = new Vector2(-dir.Y, dir.X); // 90 degrees counter-clockwise, guns shoot down by default
-        _gunSystem.AttemptShoot(ent, ent, gc, new EntityCoordinates(ent, dir));
+        var targetCoordinates = new EntityCoordinates(entity, dir);
+        _gunSystem.AttemptShoot(entity, entity, gunComponent, targetCoordinates);
     }
 }
