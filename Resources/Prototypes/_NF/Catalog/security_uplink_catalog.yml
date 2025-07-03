@@ -110,7 +110,7 @@
   productEntity: ClothingOuterHardsuitNfsdExperimental
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 75 # Death sqaud armor is very hard to get now!
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -535,7 +535,7 @@
   productEntity: CombatMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
   cost:
-    FrontierUplinkCoin: 1
+    FrontierUplinkCoin: 2 # Omni is an all around total healer, why does it cost the same as all the others?
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -859,7 +859,7 @@
   productEntity: WeaponPulsePistol
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 12
+    FrontierUplinkCoin: 20 # Extremely strong weapon, now costs all of the starting coins!
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -880,7 +880,7 @@
   productEntity: WeaponPulseCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 65 # This does not need to be explained any further....
   categories:
     - UplinkSecurityWeapons
   conditions:
