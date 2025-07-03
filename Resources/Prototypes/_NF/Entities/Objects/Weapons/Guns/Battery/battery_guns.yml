@@ -196,7 +196,7 @@
       state: yellow
   - type: MagazineVisuals
     magState: mag
-    steps: 3
+    steps: 5
     zeroVisible: true
   - type: Appearance
   - type: GenericVisualizer
