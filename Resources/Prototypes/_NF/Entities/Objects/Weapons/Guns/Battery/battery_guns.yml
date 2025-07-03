@@ -172,8 +172,8 @@
       path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
     projectileSpeed: 15
   - type: Battery
-    maxCharge: 720
-    startingCharge: 720
+    maxCharge: 1200
+    startingCharge: 1200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
@@ -196,7 +196,7 @@
       state: yellow
   - type: MagazineVisuals
     magState: mag
-    steps: 5
+    steps: 3
     zeroVisible: true
   - type: Appearance
   - type: GenericVisualizer
