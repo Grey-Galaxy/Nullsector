@@ -28,7 +28,7 @@
     proto: null
     capacity: 15
   - type: Item
-    size: Tiny
+    size: Small
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_cap_mag.rsi
     layers:
