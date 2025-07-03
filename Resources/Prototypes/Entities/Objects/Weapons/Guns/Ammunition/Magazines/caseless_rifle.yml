@@ -42,7 +42,7 @@
     proto: CartridgeCaselessRifle
     capacity: 10
   - type: Item
-    size: Tiny
+    size: Small
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
     layers:
