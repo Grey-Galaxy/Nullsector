@@ -32,3 +32,9 @@
             - CartridgeMagnum
 #  - type: PirateBountyItem # Frontier
 #    id: WeaponPistolMk58 # Frontier
+
+- type: entity
+  parent: [ WeaponPistolMauserC96 ]
+  id: LastStandMauserC96
+  name: last-stand pistol
+  description: An old military grade hunk of junk used in desperation. Uses .45 auto ammo. A previous name was scratched out, with “Barlowe” now etched over it.
