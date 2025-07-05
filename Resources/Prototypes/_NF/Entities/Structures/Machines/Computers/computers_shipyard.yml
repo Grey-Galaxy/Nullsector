@@ -242,8 +242,8 @@
 - type: entity
   id: ComputerShipyardSr
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
-  name: colonial staff shipyard console
-  description: Used to buy vessels exclusive to Colonial Outpost personnel.
+  name: lark shipyard console
+  description: Used to buy vessels exclusive to Primary Outpost personnel.
   components:
   - type: ActivatableUI
     key: enum.ShipyardConsoleUiKey.Sr
