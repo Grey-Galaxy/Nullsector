@@ -17,16 +17,16 @@
     stampState: paper_stamp-centcom
     stampedBy:
     - stampedColor: '#004200FF'
-      stampedName: Central Admiralty of Frontier
+      stampedName: New Frontiers Sheriff's Department of Frontier Sector
       stampType: RubberStamp
     - stampedColor: '#333333FF'
       stampedName: Stamps-the-Papers
       stampType: Signature
     content: |2
-      [head=1][color=#1a6295]NGC[/color][/head]
+      [head=1][color=#1a6295]Rogue Central Relay[/color][/head]
 
       [bold]ATTN:[/bold]
-      Colonial Administration Staff
+      Intra/Extra-Galactic Organizations & Members 
 
       [bold]FROM:[/bold]
       [italic]Stamps-the-Papers[/italic]

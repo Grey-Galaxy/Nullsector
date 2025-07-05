@@ -82,7 +82,7 @@
 - type: entity
   parent: NFHolopadPoiBase
   id: NFHolopadFrontierOutpostSTC
-  suffix: Colonial Outpost STC, POI
+  suffix: Outpost STC, POI
   components:
   - type: Label
     currentLabel: nf-holopad-general-frontier-outpost-stc
@@ -90,7 +90,7 @@
 - type: entity
   parent: NFHolopadPoiBase
   id: NFHolopadFrontierOutpostLobby
-  suffix: Colonial Outpost Lobby, POI
+  suffix: Lark Lobby, POI
   components:
   - type: Label
     currentLabel: nf-holopad-general-frontier-outpost-lobby
@@ -98,7 +98,7 @@
 - type: entity
   parent: NFHolopadPoiBase
   id: NFHolopadFrontierOutpostSR
-  suffix: Colonial Outpost Station Rep, POI
+  suffix: Lark Coordinator, POI
   components:
   - type: Label
     currentLabel: nf-holopad-general-frontier-outpost-station-rep

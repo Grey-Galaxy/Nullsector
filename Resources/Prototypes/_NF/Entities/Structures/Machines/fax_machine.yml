@@ -25,25 +25,25 @@
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Colonial Outpost STC"
+    name: "Outpost STC"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFOutpostSR
-  suffix: Outpost, SR
+  suffix: Outpost, Authority
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Colonial Outpost SR"
+    name: "Outpost Authority"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFOutpostGuard
-  suffix: Outpost, Guard
+  suffix: Outpost, Militia
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Colonial Outpost Guard"
+    name: "Outpost Militia"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
@@ -52,7 +52,7 @@
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Colonial Outpost Reception"
+    name: "Outpost Reception"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineCaptain]
@@ -61,17 +61,17 @@
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Colonial Outpost Administration"
+    name: "Outpost Administration"
 
 # POI
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
   id: FaxMachineNFBeacon
-  suffix: POI, Omnichurch Beacon
+  suffix: POI, Temple of Circi
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "Omnichurch Beacon"
+    name: "Temple of Circi"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineSyndie, FaxMachineShipAntag]
@@ -91,7 +91,7 @@
   #categories: [ HideSpawnMenu ] # Mono - comment out
   components:
   - type: FaxMachine
-    name: "The Lodge"
+    name: "Expeditionary Lodge"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
