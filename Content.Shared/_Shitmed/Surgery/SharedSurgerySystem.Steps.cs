@@ -4,33 +4,30 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Shared.Humanoid;
-using Content.Shared.Humanoid.Markings;
-using Content.Shared.Bed.Sleep;
-using Content.Shared.Body.Part;
-using Content.Shared.Body.Organ;
-using Content.Shared.Body.Events;
+using System.Linq;
 using Content.Shared._Shitmed.Body.Events;
-using Content.Shared.Buckle.Components;
-using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Damage;
-using Content.Shared.Damage.Prototypes;
-using Content.Shared.DoAfter;
-using Content.Shared.IdentityManagement;
+using Content.Shared._Shitmed.Body.Organ;
+using Content.Shared._Shitmed.Body.Part;
 using Content.Shared._Shitmed.Medical.Surgery.Conditions;
 using Content.Shared._Shitmed.Medical.Surgery.Effects.Step;
 using Content.Shared._Shitmed.Medical.Surgery.Steps;
 using Content.Shared._Shitmed.Medical.Surgery.Steps.Parts;
 using Content.Shared._Shitmed.Medical.Surgery.Tools;
-//using Content.Shared.Mood;
+using Content.Shared.Body.Organ;
+using Content.Shared.Body.Part;
+using Content.Shared.Buckle.Components;
+using Content.Shared.Containers.ItemSlots;
+using Content.Shared.Damage;
+using Content.Shared.Damage.Prototypes;
+using Content.Shared.DoAfter;
+using Content.Shared.Humanoid;
+using Content.Shared.Humanoid.Markings;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Item;
-using Content.Shared._Shitmed.Body.Organ;
-using Content.Shared._Shitmed.Body.Part;
 using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Toolshed.TypeParsers;
-using System.Linq;
+//using Content.Shared.Mood;
 
 namespace Content.Shared._Shitmed.Medical.Surgery;
 
@@ -38,6 +35,7 @@ public abstract partial class SharedSurgerySystem
 {
     private static readonly string[] BruteDamageTypes = { "Slash", "Blunt", "Piercing" };
     private static readonly string[] BurnDamageTypes = { "Heat", "Shock", "Cold", "Caustic" };
+
     private void InitializeSteps()
     {
         SubscribeLocalEvent<SurgeryStepComponent, SurgeryStepEvent>(OnToolStep);
@@ -60,10 +58,11 @@ public abstract partial class SharedSurgerySystem
         SubSurgery<SurgeryAffixOrganStepComponent>(OnAffixOrganStep, OnAffixOrganCheck);
         SubSurgery<SurgeryAddMarkingStepComponent>(OnAddMarkingStep, OnAddMarkingCheck);
         SubSurgery<SurgeryRemoveMarkingStepComponent>(OnRemoveMarkingStep, OnRemoveMarkingCheck);
-        Subs.BuiEvents<SurgeryTargetComponent>(SurgeryUIKey.Key, subs =>
-        {
-            subs.Event<SurgeryStepChosenBuiMsg>(OnSurgeryTargetStepChosen);
-        });
+        Subs.BuiEvents<SurgeryTargetComponent>(SurgeryUIKey.Key,
+            subs =>
+            {
+                subs.Event<SurgeryStepChosenBuiMsg>(OnSurgeryTargetStepChosen);
+            });
     }
 
     private void SubSurgery<TComp>(EntityEventRefHandler<TComp, SurgeryStepEvent> onStep,
@@ -265,8 +264,8 @@ public abstract partial class SharedSurgerySystem
         }
 
         damageable = damageableComp;
-        return group.Any(damageType => damageableComp.Damage.DamageDict.TryGetValue(damageType, out var value) && value > 0);
-
+        return group.Any(damageType =>
+            damageableComp.Damage.DamageDict.TryGetValue(damageType, out var value) && value > 0);
     }
 
     private void OnTendWoundsStep(Entity<SurgeryTendWoundsEffectComponent> ent, ref SurgeryStepEvent args)
@@ -333,7 +332,7 @@ public abstract partial class SharedSurgerySystem
             && ent.Comp.Action == "Insert"
             && TryComp(activeHandEntity, out ItemComponent? itemComp)
             && (itemComp.Size.Id == "Tiny"
-            || itemComp.Size.Id == "Small"))
+                || itemComp.Size.Id == "Small"))
             _itemSlotsSystem.TryInsert(ent, partComp.ItemInsertionSlot, activeHandEntity, args.User);
         else if (ent.Comp.Action == "Remove")
             _itemSlotsSystem.TryEjectToHands(ent, partComp.ItemInsertionSlot, args.User);
@@ -380,7 +379,8 @@ public abstract partial class SharedSurgerySystem
         if (!TryComp(args.Surgery, out SurgeryPartRemovedConditionComponent? removedComp))
             return;
 
-        var targetPart = _body.GetBodyChildrenOfType(args.Body, removedComp.Part, symmetry: removedComp.Symmetry).FirstOrDefault();
+        var targetPart = _body.GetBodyChildrenOfType(args.Body, removedComp.Part, symmetry: removedComp.Symmetry)
+            .FirstOrDefault();
 
         if (targetPart != default)
         {
@@ -400,7 +400,8 @@ public abstract partial class SharedSurgerySystem
         if (!TryComp(args.Surgery, out SurgeryPartRemovedConditionComponent? removedComp))
             return;
 
-        var targetPart = _body.GetBodyChildrenOfType(args.Body, removedComp.Part, symmetry: removedComp.Symmetry).FirstOrDefault();
+        var targetPart = _body.GetBodyChildrenOfType(args.Body, removedComp.Part, symmetry: removedComp.Symmetry)
+            .FirstOrDefault();
 
         if (targetPart != default
             && HasComp<BodyPartReattachedComponent>(targetPart.Id))
@@ -458,6 +459,7 @@ public abstract partial class SharedSurgerySystem
                     var ev = new SurgeryStepDamageChangeEvent(args.User, args.Body, args.Part, ent);
                     RaiseLocalEvent(ent, ref ev);
                 }
+
                 break;
             }
         }
@@ -496,7 +498,6 @@ public abstract partial class SharedSurgerySystem
             if (organs != null && organs.Count > 0)
                 RemComp<OrganReattachedComponent>(organs[0].Id);
         }
-
     }
 
     private void OnAffixOrganCheck(Entity<SurgeryAffixOrganStepComponent> ent, ref SurgeryStepCompleteCheckEvent args)
@@ -574,7 +575,11 @@ public abstract partial class SharedSurgerySystem
                     || !markingList.Any(marking => marking.MarkingId.Contains(ent.Comp.MatchString)))
                 {
                     EnsureComp<BodyPartAppearanceComponent>(args.Part);
-                    _body.ModifyMarkings(args.Body, args.Part, bodyAppearance, ent.Comp.MarkingCategory, markingComp.Marking);
+                    _body.ModifyMarkings(args.Body,
+                        args.Part,
+                        bodyAppearance,
+                        ent.Comp.MarkingCategory,
+                        markingComp.Marking);
 
                     if (ent.Comp.Accent != null
                         && ent.Comp.Accent.Values.FirstOrDefault() is { } accent)
@@ -588,7 +593,6 @@ public abstract partial class SharedSurgerySystem
                 }
             }
         }
-
     }
 
     private void OnAddMarkingCheck(Entity<SurgeryAddMarkingStepComponent> ent, ref SurgeryStepCompleteCheckEvent args)
@@ -603,12 +607,11 @@ public abstract partial class SharedSurgerySystem
 
     private void OnRemoveMarkingStep(Entity<SurgeryRemoveMarkingStepComponent> ent, ref SurgeryStepEvent args)
     {
-
     }
 
-    private void OnRemoveMarkingCheck(Entity<SurgeryRemoveMarkingStepComponent> ent, ref SurgeryStepCompleteCheckEvent args)
+    private void OnRemoveMarkingCheck(Entity<SurgeryRemoveMarkingStepComponent> ent,
+        ref SurgeryStepCompleteCheckEvent args)
     {
-
     }
 
     private void OnSurgeryTargetStepChosen(Entity<SurgeryTargetComponent> ent, ref SurgeryStepChosenBuiMsg args)
@@ -616,7 +619,14 @@ public abstract partial class SharedSurgerySystem
         var user = args.Actor;
         if (GetEntity(args.Entity) is not { Valid: true } body ||
             GetEntity(args.Part) is not { Valid: true } targetPart ||
-            !IsSurgeryValid(body, targetPart, args.Surgery, args.Step, user, out var surgery, out var part, out var step))
+            !IsSurgeryValid(body,
+                targetPart,
+                args.Surgery,
+                args.Step,
+                user,
+                out var surgery,
+                out var part,
+                out var step))
         {
             return;
         }
@@ -662,11 +672,10 @@ public abstract partial class SharedSurgerySystem
         // TODO: Move 2 seconds to a field of SurgeryStepComponent
         var duration = GetSurgeryDuration(step, user, body, speed);
 
-        if (TryComp(user, out SurgerySpeedModifierComponent? surgerySpeedMod)
-            && surgerySpeedMod is not null)
-            duration = duration / surgerySpeedMod.SpeedModifier;
+        if (TryComp(user, out SurgerySpeedModifierComponent? surgerySpeedMod))
+            duration /= surgerySpeedMod.SpeedModifier;
         if (user == body)
-            duration = duration * 4;
+            duration *= 2;
 
         var doAfter = new DoAfterArgs(EntityManager, user, TimeSpan.FromSeconds(duration), ev, body, part)
         {
@@ -678,21 +687,27 @@ public abstract partial class SharedSurgerySystem
             BreakOnHandChange = true,
         };
 
-        if (_doAfter.TryStartDoAfter(doAfter))
+        if (!_doAfter.TryStartDoAfter(doAfter))
+            return; // Shirt-Circuit if DoAfter Fails
+
+        var userName = Identity.Entity(user, EntityManager);
+        var targetName = Identity.Entity(ent.Owner, EntityManager);
+
+        var locName = $"surgery-popup-procedure-{args.Surgery}-step-{args.Step}";
+        var locResult = Loc.GetString(locName,
+            ("user", userName),
+            ("target", targetName),
+            ("part", part));
+
+        if (locResult == locName)
         {
-            var userName = Identity.Entity(user, EntityManager);
-            var targetName = Identity.Entity(ent.Owner, EntityManager);
-
-            var locName = $"surgery-popup-procedure-{args.Surgery}-step-{args.Step}";
-            var locResult = Loc.GetString(locName,
-                ("user", userName), ("target", targetName), ("part", part));
-
-            if (locResult == locName)
-                locResult = Loc.GetString($"surgery-popup-step-{args.Step}",
-                    ("user", userName), ("target", targetName), ("part", part));
-
-            _popup.PopupEntity(locResult, user);
+            locResult = Loc.GetString($"surgery-popup-step-{args.Step}",
+                ("user", userName),
+                ("target", targetName),
+                ("part", part));
         }
+
+        _popup.PopupEntity(locResult, user);
     }
 
     private float GetSurgeryDuration(EntityUid surgeryStep, EntityUid user, EntityUid target, float toolSpeed)
@@ -707,7 +722,11 @@ public abstract partial class SharedSurgerySystem
 
         return stepComp.Duration / speed;
     }
-    private (Entity<SurgeryComponent> Surgery, int Step)? GetNextStep(EntityUid body, EntityUid part, Entity<SurgeryComponent?> surgery, List<EntityUid> requirements)
+
+    private (Entity<SurgeryComponent> Surgery, int Step)? GetNextStep(EntityUid body,
+        EntityUid part,
+        Entity<SurgeryComponent?> surgery,
+        List<EntityUid> requirements)
     {
         if (!Resolve(surgery, ref surgery.Comp))
             return null;
@@ -764,8 +783,13 @@ public abstract partial class SharedSurgerySystem
         return true;
     }
 
-    public bool CanPerformStep(EntityUid user, EntityUid body, EntityUid part,
-        EntityUid step, bool doPopup, out string? popup, out StepInvalidReason reason,
+    public bool CanPerformStep(EntityUid user,
+        EntityUid body,
+        EntityUid part,
+        EntityUid step,
+        bool doPopup,
+        out string? popup,
+        out StepInvalidReason reason,
         out Dictionary<EntityUid, float>? validTools)
     {
         var type = BodyPartType.Other;
@@ -824,7 +848,8 @@ public abstract partial class SharedSurgerySystem
     {
         foreach (var tool in tools)
         {
-            if (EntityManager.TryGetComponent(tool, component.GetType(), out var found) && found is ISurgeryToolComponent toolComp)
+            if (EntityManager.TryGetComponent(tool, component.GetType(), out var found) &&
+                found is ISurgeryToolComponent toolComp)
             {
                 withComp = tool;
                 speed = toolComp.Speed;
