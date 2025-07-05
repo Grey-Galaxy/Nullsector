@@ -52,8 +52,18 @@
           !type:PhysShapeAabb
           bounds: "-1,-1,1,1"
         density: 1500 # fat mf
-  - type: StaticPrice
-    price: 100
+  - type: DeviceNetwork # frontier
+    deviceNetId: Wireless # frontier
+    receiveFrequencyId: BasicDevice # frontier
+  - type: WirelessNetworkConnection # frontier
+    range: 200 # frontier
+  - type: DeviceLinkSink # frontier
+    ports: # frontier
+    - On # frontier
+    - Off # frontier
+    - Toggle # frontier
+  - type: Anchorable
+    delay: 240
   - type: RadarBlip # Mono
     radarColor: "#99FF99"
     scale: 2
@@ -65,6 +75,24 @@
   parent: BaseThruster
   suffix: 3x3
   components:
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: Thruster
     baseThrust: 5000
     thrust: 5000
@@ -87,7 +115,7 @@
       shader: unshaded
       visible: false
       offset: 0, 1
-    offset: -.25,-.25
+    offset: 1,-1
     scale: 3, 3
   - type: Fixtures
     fixtures:
@@ -106,8 +134,9 @@
     - On # frontier
     - Off # frontier
     - Toggle # frontier
-  - type: Thruster
-    baseThrust: 2500
-    Thrust: 2500
   - type: Anchorable
     delay: 240
+  - type: RadarBlip # Mono
+    radarColor: "#99FF99"
+    scale: 3
+    shape: diamond
