@@ -78,6 +78,8 @@
     radarColor: "#99FF99"
     scale: 2
     shape: diamond
+  - type: ApcPowerReceiver
+    powerLoad: 5000
 
 - type: entity
   id: ThrusterCapital
@@ -123,7 +125,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.3,-0.3,1.3,2.3" # Null Sector :: Alignment(-w bottom, x right, y top, z left)
+          bounds: "-1.5,-0.5,1.4,2.3" # Null Sector :: Alignment(-w right, x top, y left, z bottom)
         density: 1500
         mask:
         - MachineMask
@@ -150,3 +152,5 @@
     radarColor: "#99FF99"
     scale: 3
     shape: diamond
+  - type: ApcPowerReceiver
+    powerLoad: 10000
