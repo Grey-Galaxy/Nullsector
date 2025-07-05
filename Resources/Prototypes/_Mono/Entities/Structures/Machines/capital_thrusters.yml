@@ -1,3 +1,12 @@
+# !!!FOREWARNING!!!
+#
+#  - type: Thruster
+#    baseThrust: 80 # required because RefreshParts isn't called on Init and this will break post-map-init maps
+#    Thrust: 80     # Thrust lowered from base (100), as lowering ""thrust"" increases real thrust speed.
+#
+# The mathematics for thrusters is out-right incorrect, and faulty. Lowering base thrust from 100 will raise
+# the physics-speed of a thruster. Raising the thrust will effectively "slow down" a craft.
+
 - type: entity
   id: ThrusterLarge
   name: thruster
@@ -42,23 +51,27 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1,-1,1,1"
-        density: 1500 # fat mf
-  - type: DeviceNetwork # frontier
-    deviceNetId: Wireless # frontier
-    receiveFrequencyId: BasicDevice # frontier
-  - type: WirelessNetworkConnection # frontier
-    range: 200 # frontier
-  - type: DeviceLinkSink # frontier
-    ports: # frontier
-    - On # frontier
-    - Off # frontier
-    - Toggle # frontier
-  - type: PirateBountyItem # Frontier
-    id: Thruster # Frontier
+          bounds: "-1.3,-1.5,0.3,0.3" # Null Sector :: Alignment(-w right, x top, y left, z bottom)
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle  
+  - type: PirateBountyItem
+    id: Thruster
   - type: Thruster
-    baseThrust: 2500
-    Thrust: 2500
+    baseThrust: 80 # required because RefreshParts isn't called on Init and this will break post-map-init maps
+    Thrust: 80 # Thrust lowered from base (100), as lowering ""thrust"" increases real thrust speed.
   - type: Anchorable
     delay: 240
   - type: RadarBlip # Mono
@@ -101,6 +114,7 @@
     - state: thrust_burn_unshaded
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
+      offset: 0,1
       visible: false
     offset: 0, 1
     scale: 3, 3
@@ -109,23 +123,27 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.5,-1.5,1.5,1.5"
-        density: 1500 # fat mf
-  - type: DeviceNetwork # frontier
-    deviceNetId: Wireless # frontier
-    receiveFrequencyId: BasicDevice # frontier
-  - type: WirelessNetworkConnection # frontier
-    range: 200 # frontier
-  - type: DeviceLinkSink # frontier
-    ports: # frontier
-    - On # frontier
-    - Off # frontier
-    - Toggle # frontier
-  - type: PirateBountyItem # Frontier
-    id: Thruster # Frontier
+          bounds: "-1.3,-0.3,1.3,2.3" # Null Sector :: Alignment(-w bottom, x right, y top, z left)
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - On
+    - Off
+    - Toggle
+  - type: PirateBountyItem
+    id: Thruster
   - type: Thruster
-    baseThrust: 7500
-    Thrust: 7500
+    baseThrust: 60
+    Thrust: 60
   - type: Anchorable
     delay: 480
   - type: RadarBlip # Mono
