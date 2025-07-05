@@ -110,7 +110,7 @@
   productEntity: ClothingOuterHardsuitNfsdExperimental
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 75
   categories:
     - UplinkSecurityHardsuits
   conditions:
@@ -273,7 +273,7 @@
   productEntity: WeaponLaserCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi, state: icon }
   cost:
-    FrontierUplinkCoin: 1 # GARBAGE!!!
+    FrontierUplinkCoin: 1
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -289,7 +289,7 @@
   productEntity: WeaponDisablerSMG
   icon: { sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 5 # STUNMETA!!!
+    FrontierUplinkCoin: 5
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -535,7 +535,7 @@
   productEntity: CombatMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
   cost:
-    FrontierUplinkCoin: 1
+    FrontierUplinkCoin: 2
   categories:
     - UplinkSecurityUtility
   conditions:
@@ -859,7 +859,7 @@
   productEntity: WeaponPulsePistol
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 12
+    FrontierUplinkCoin: 20
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -880,7 +880,7 @@
   productEntity: WeaponPulseCarbine
   icon: { sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi, state: base }
   cost:
-    FrontierUplinkCoin: 20
+    FrontierUplinkCoin: 65
   categories:
     - UplinkSecurityWeapons
   conditions:

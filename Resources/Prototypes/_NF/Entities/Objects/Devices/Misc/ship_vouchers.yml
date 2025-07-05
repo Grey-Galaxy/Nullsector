@@ -66,7 +66,7 @@
   parent: BaseShipVoucher
   id: ShipVoucherFrontierJanitor
   name: janitor ship voucher
-  description: Allows for one free janitorial ship purchase from the Frontier Staff Shipyard. Destroyed on sale.
+  description: Allows for one free janitorial ship purchase from the Lark Staff Shipyard. Destroyed on sale.
   components:
   - type: Sprite
     layers:
@@ -84,7 +84,7 @@
   parent: ShipVoucherFrontierJanitor
   id: ShipVoucherFrontierValet
   name: valet ship voucher
-  description: Allows for one free valet ship purchase from the Frontier Staff Shipyard. Destroyed on sale.
+  description: Allows for one free valet ship purchase from the Lark Staff Shipyard. Destroyed on sale.
   components:
   - type: Sprite
     layers:
@@ -98,7 +98,7 @@
   parent: ShipVoucherFrontierJanitor
   id: ShipVoucherFrontierMailCarrier
   name: mail carrier ship voucher
-  description: Allows for one free mail ship purchase from the Frontier Staff Shipyard. Destroyed on sale.
+  description: Allows for one free mail ship purchase from the Lark Staff Shipyard. Destroyed on sale.
   components:
   - type: Sprite
     layers:
@@ -111,8 +111,8 @@
 - type: entity
   parent: ShipVoucherFrontierJanitor
   id: ShipVoucherFrontierGuard
-  name: station guard ship voucher
-  description: Allows for one free guard ship purchase from the Frontier Staff Shipyard. Destroyed on sale.
+  name: local militia ship voucher
+  description: Allows for one free guard ship purchase from the Lark Staff Shipyard. Destroyed on sale.
   components:
   - type: Sprite
     layers:
