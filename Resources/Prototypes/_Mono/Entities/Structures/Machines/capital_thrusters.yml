@@ -75,7 +75,6 @@
   parent: BaseThruster
   suffix: 3x3
   components:
-  components:
   - type: Destructible
     thresholds:
     - trigger:
