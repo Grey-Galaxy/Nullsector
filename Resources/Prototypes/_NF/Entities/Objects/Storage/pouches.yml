@@ -186,12 +186,12 @@
   - type: Sprite
     layers:
     - state: base
-      color: "#194214"
+      color: "#19428C"
     - state: closed
       map: ["closeLayer"]
-      color: "#194214"
+      color: "#19428C"
     - state: open
-      color: "#194214"
+      color: "#19428C"
       map: ["openLayer"]
       visible: false
     - state: inside
@@ -217,18 +217,18 @@
     inhandVisuals:
       left:
       - state: inhand-left
-        color: "#194214"
+        color: "#19428C"
       right:
       - state: inhand-right
-        color: "#194214"
+        color: "#19428C"
   - type: Clothing
     clothingVisuals:
       belt:
       - state: equipped-BELT
-        color: "#194214"
+        color: "#19428C"
       pocket:
       - state: equipped-BELT
-        color: "#194214"
+        color: "#19428C"
 
 #region captains
 - type: entity
@@ -264,7 +264,7 @@
       visible: false
     - state: decal-line-04
       map: [ "decal1" ]
-      color: "#194214"
+      color: "#19428C"
     - state: decal-bird
       map: [ "decal2" ]
       color: "#f2b833"
