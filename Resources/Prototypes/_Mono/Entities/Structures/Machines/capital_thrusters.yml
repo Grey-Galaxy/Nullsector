@@ -106,8 +106,6 @@
     - On # frontier
     - Off # frontier
     - Toggle # frontier
-  - type: PirateBountyItem # Frontier
-    id: Thruster # Frontier
   - type: Thruster
     baseThrust: 2500
     Thrust: 2500
