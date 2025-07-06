@@ -114,3 +114,18 @@
       receiveNukeCodes: true
     - type: StealTarget
       stealGroup: FaxMachineCaptain
+
+# Null Sector
+- type: entity
+  parent: FaxMachineBase
+  id: FaxMachineLarkRegionalRelay
+  suffix: Lark Relay
+  components:
+  - type: Sprite
+    layers:
+      - state: icon
+        map: [ "base" ]
+        color: "#bfe3ff"
+  - type: FaxMachine
+    name: "Lark Regional Relay"
+    notifyAdmins: true
