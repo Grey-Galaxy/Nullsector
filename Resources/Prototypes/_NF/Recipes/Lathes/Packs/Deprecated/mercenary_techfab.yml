@@ -92,6 +92,7 @@
 ## Ammo boxes
   - BoxLethalshot
   - MagazineBoxLightRifle
+  - MagazineBoxMagnum
   - MagazineBoxPistol
   - MagazineBoxRifle
   - CrossbowBolt
@@ -111,6 +112,9 @@
   - MagazineLightRifleLowCapacityRubber
   - MagazineLightRifle
   - MagazineLightRifleEmpty
+  - MagazineMagnumEmpty
+  - MagazineMagnum
+  - MagazineMagnumRubber
   - MagazineRifle
   - MagazineRifleEmpty
   - MagazinePistol
@@ -118,6 +122,8 @@
   - SpeedLoaderRifleHeavy
   - SpeedLoaderRifleHeavyEmpty
   - SpeedLoaderRifleHeavyRubber
+  - SpeedLoaderMagnum
+  - SpeedLoaderMagnumEmpty
   - SpeedLoaderMagnumRubber
   - MagazineRifleRubber
   - MagazineShotgunSlug

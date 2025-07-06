@@ -59,6 +59,28 @@
   materials:
     Steel: 245 # 20 [Steel per empty mag] + 15 [bullets] * 15 [Steel per bullet]
 
+- type: latheRecipe # mauser mag empty
+  id: MagazineMagnumEmpty
+  parent: BaseAmmoRecipe
+  result: MagazineMagnumEmpty
+  materials:
+    Steel: 25
+
+- type: latheRecipe # mauser mag rubber
+  id: MagazineMagnumRubber
+  parent: BaseAmmoRecipe
+  result: MagazineMagnumRubber
+  materials:
+    Steel: 65
+    Plastic: 135
+
+- type: latheRecipe # mauser mag full
+  id: MagazineMagnum
+  parent: BaseAmmoRecipe
+  result: MagazineMagnum
+  materials:
+    Steel: 200
+
 - type: latheRecipe
   id: SpeedLoaderRifleHeavyEmpty
   parent: BaseEmptyAmmoRecipe
