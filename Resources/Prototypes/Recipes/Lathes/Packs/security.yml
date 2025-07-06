@@ -41,6 +41,9 @@
   - MagazineLightRifle
   - MagazineLightRifleRubber # Frontier
   - MagazineLightRifleEmpty
+  - MagazineMagnum
+  - MagazineMagnumRubber
+  - MagazineMagnumEmpty
   - MagazinePistol
   - MagazinePistolRubber # Frontier
   - MagazinePistolEmpty

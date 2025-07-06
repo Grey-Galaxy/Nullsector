@@ -22,6 +22,9 @@
   - MagazineBoxRiflePractice
   - MagazineLightRifle
   - MagazineLightRifleEmpty
+  - MagazineMagnumEmpty
+  - MagazineMagnum
+  - MagazineMagnumRubber
   - MagazinePistol
   - MagazinePistolEmpty
   - MagazinePistolSubMachineGun
