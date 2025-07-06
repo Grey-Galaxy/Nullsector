@@ -23,9 +23,3 @@ Small fixes/refactors are exempt. Media may be used in SS14 progress reports wit
 ## Breaking changes
 <!-- List any breaking changes, including namespaces, public class/method/field changes, prototype renames; and provide instructions for fixing them.
 This will be posted in #codebase-changes. -->
-:cl:
-- add: Added fun!
-- remove: Removed fun!
-- tweak: Changed fun!
-- fix: Fixed fun!
--->
