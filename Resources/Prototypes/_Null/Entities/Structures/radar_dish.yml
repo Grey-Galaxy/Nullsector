@@ -1,0 +1,49 @@
+- type: entity
+  id: NSRadarDish
+  parent: BaseStructure
+  name: radar tower
+  description: It has a dish with a blinking light. What secrets does it hear in the night?
+  components:
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2" # Null Sector :: Alignment(-w right, x top, y left, z bottom)
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    offset: 0, 1
+    sprite: _Null/Structures/radar_dish.rsi
+    drawdepth: Mobs
+    noRot: false
+    snapCardinals: true
+    layers:
+    - state: base
+    - state: glow
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      shader: unshaded
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: PointLight
+    enabled: false
+    color: "#FFFFFF"
+    radius: 2.0
+    energy: 1.0
+  - type: LitOnPowered
+  - type: ExtensionCableReceiver
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }

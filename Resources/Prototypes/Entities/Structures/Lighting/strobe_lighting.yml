@@ -130,6 +130,19 @@
     popupText: powered-light-component-burn-hand
 
 - type: entity
+  id: AlwaysPoweredStrobeLightRed
+  suffix: "Always powered, Red"
+  parent: AlwaysPoweredStrobeLight
+  components:
+  - type: PointLight
+    mask: /Textures/Effects/LightMasks/double_cone.png
+    color: "#FF0000"
+    energy: 5
+    radius: 10
+    softness: 1
+    offset: "0, 0.35"
+
+- type: entity
   id: PoweredStrobeLightPolice
   suffix: "Empty, police"
   parent: PoweredStrobeLightEmpty

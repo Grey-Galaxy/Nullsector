@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: LukeZurg22
+# Discord: lukezurg22
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+- type: pointOfInterest
+  id: LarkRelay
+  parent: BasePOI
+  name: Lark Relay
+  minimumDistance: 20000
+  maximumDistance: 35000
+  spawnGroup: Required
+  gridPath: /Maps/_Null/POI/lark_relay.yml
+  hideWarp: true
+  addComponents:
+  - type: IFF
+    color: "#9D7EB7"
+    flags: [HideLabel, Hide]
+    readOnly: false
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: LarkRelay
+  mapName: 'Lark Relay'
+  mapPath: /Maps/_Null/POI/lark_relay.yml
+  minPlayers: 0
+  stations:
+    LarkRelay:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Lark Relay'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt

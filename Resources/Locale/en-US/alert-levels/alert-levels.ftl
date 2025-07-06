@@ -15,8 +15,8 @@ alert-level-green-instructions = Do your job.
 alert-level-blue = Blue
 # alert-level-blue-announcement = There is a confirmed threat to NGC rogue space. Security should perform random checks. Crewmembers are advised to be vigilant and report suspicious activity.
 # alert-level-blue-instructions = Crewmembers are advised to be vigilant and report suspicious activity.
-alert-level-blue-announcement = There is a confirmed threat to NGC rogue space. Crews are advised to be vigilant and report suspicious activity to NCMC officers.
-alert-level-blue-instructions = Crews are advised to be vigilant and report suspicious activity to NCMC officers.
+alert-level-blue-announcement = There is a confirmed threat to NGC rogue space. Crews are advised to be vigilant and report suspicious activity to their local Militia.
+alert-level-blue-instructions = Crews are advised to be vigilant and report suspicious activity to their local Militia.
 
 alert-level-red = Red
 # alert-level-red-announcement = There is an immediate threat to the station. Security should prepare to use lethal force if necessary. Crewmembers should find a safe place to shelter in, and are advised to follow any present authorities.

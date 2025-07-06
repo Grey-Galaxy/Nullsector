@@ -36,7 +36,7 @@ shuttle-ftl-recharge = FTL drives still spooling down!
 shuttle-ftl-too-many = Too many shuttles already on expedition!
 
 changelog-tab-title-Upstream = Upstream Changelog
-multiauth-already-connected = Already connected to Monolith Official servers.
+multiauth-already-connected = Already connected to the Null Sector.
 
 public-transit-shuttle-name = Public Transport Shuttle
 public-transit-departure = Now departing for {$destination}. Estimated travel time: {$flytime} seconds.

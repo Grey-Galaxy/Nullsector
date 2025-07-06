@@ -15,8 +15,6 @@
       anchored: true
     - type: Physics
       bodyType: Static
-    - type: Rotatable
-      rotateWhileAnchored: true
     - type: Thruster
       damage:
         types:
@@ -90,6 +88,8 @@
       shader: unshaded
       visible: false
       offset: 0, 1
+  - type: Rotatable
+    rotateWhileAnchored: true
   - type: DeviceNetwork # frontier
     deviceNetId: Wireless # frontier
     receiveFrequencyId: BasicDevice # frontier

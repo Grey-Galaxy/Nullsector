@@ -138,9 +138,11 @@
     - type: Anchorable
       delay: 10
     - type: Sprite
-      offset: -0.5, -0.5
+      scale: 1, 1
+      offset: 0.5,0.5
       sprite: _Null/Structures/ShuttleComponents/shield_beta.rsi
       snapCardinals: true
+      noRot: false
       layers:
       - state: control
       - state: control_on
