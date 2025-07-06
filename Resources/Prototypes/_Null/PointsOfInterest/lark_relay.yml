@@ -11,15 +11,17 @@
   name: Lark Relay
   minimumDistance: 20000
   maximumDistance: 35000
-  spawnGamePreset: [ NFPirate ]
   spawnGroup: Required
   gridPath: /Maps/_Null/POI/lark_relay.yml
   hideWarp: true
   addComponents:
   - type: IFF
     color: "#9D7EB7"
-#    flags: [HideLabel] # Null Sector
-#    readOnly: false # Null Sector
+    flags: [HideLabel, Hide]
+    readOnly: false
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
 
 - type: gameMap
   id: LarkRelay
@@ -28,7 +30,7 @@
   minPlayers: 0
   stations:
     LarkRelay:
-      stationProto: RecordsFrontierOutpost
+      stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Lark Relay'
