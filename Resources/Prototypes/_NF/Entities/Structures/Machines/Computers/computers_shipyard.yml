@@ -239,6 +239,7 @@
     - map: ["computerLayerKeys"]
       state: telesci_key
 
+# Null Sector (public-access service console)
 - type: entity
   id: ComputerShipyardService
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]

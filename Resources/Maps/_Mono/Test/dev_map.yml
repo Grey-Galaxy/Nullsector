@@ -7227,7 +7227,7 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-- proto: SpawnPointStationRepresentative
+- proto: SpawnPointSectorCoordinator
   entities:
   - uid: 1064
     components:

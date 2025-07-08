@@ -3,8 +3,7 @@ job-title-ert-mail-carrier = ERT Mail Carrier
 job-name-ertmailcarrier = ERT Mail Carrier
 JobERTMailCarrier = ERT Mail Carrier
 
-# Frontier -> Null Sector - removed / ignored
-job-name-bailiff = NCMC Captain 
+job-name-bailiff = Bailiff 
 job-name-brigmedic = Brigmedic
 job-name-cadet-nf = Private
 job-name-contractor = Contractor
@@ -24,9 +23,8 @@ job-name-security-guard = Militiaman
 job-name-nf-detective = Private Eye
 JobSecurityGuard = Militiaman
 
-# Null Sector : Merged Roles
 job-name-stc = Station Traffic Controller
-job-name-sr = Sector Coordinator
+job-name-sr = Station Representative
 JobSTC = Station Traffic Controller
 
 # Antag
