@@ -5,7 +5,7 @@
   description: The mailing segment of the combined service ship.
   price: 10000
   category: Micro
-  group: Sr
+  group: Service
   access: Mail
   shuttlePath: /Maps/_Null/Shuttles/Service/letterbox.yml
   guidebookPage: Null

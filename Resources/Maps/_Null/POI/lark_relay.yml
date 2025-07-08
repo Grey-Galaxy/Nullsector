@@ -1121,7 +1121,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerShipyardSr
+- proto: ComputerShipyardService
   entities:
   - uid: 66
     components:

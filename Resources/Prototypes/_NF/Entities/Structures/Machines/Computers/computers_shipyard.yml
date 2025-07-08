@@ -41,7 +41,7 @@
       board: !type:Container
       ShipyardConsole-targetId: !type:ContainerSlot
   - type: Computer
-    board: Null
+    board: Null # a null-type of board. Not the literal "Null" sector.
 
 # Concrete consoles
 - type: entity
@@ -240,16 +240,16 @@
       state: telesci_key
 
 - type: entity
-  id: ComputerShipyardSr
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  id: ComputerShipyardService
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
   name: public liaison utility shipyard console
   description: Used to buy vessels not exclusive to any organization. This console is known as the "P.L.U.S." in some circles.
   components:
   - type: ActivatableUI
-    key: enum.ShipyardConsoleUiKey.Sr
+    key: enum.ShipyardConsoleUiKey.Service
   - type: UserInterface
     interfaces:
-      enum.ShipyardConsoleUiKey.Sr:
+      enum.ShipyardConsoleUiKey.Service:
         type: ShipyardConsoleBoundUserInterface
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi

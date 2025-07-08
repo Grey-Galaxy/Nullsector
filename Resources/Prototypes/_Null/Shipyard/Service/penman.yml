@@ -13,7 +13,7 @@
   description: A run-of-the-mill news vessel with all the bells and whistles.
   price: 18000
   category: Small
-  group: Shipyard
+  group: Service
   shuttlePath: /Maps/_Null/Shuttles/Service/penman.yml
   guidebookPage: null
   class:

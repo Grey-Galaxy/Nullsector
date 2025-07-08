@@ -1,53 +1,51 @@
-using Content.Server.Access.Systems;
-using Content.Server.Popups;
-using Content.Server.Radio.EntitySystems;
+using System.Linq;
+using System.Text.RegularExpressions;
+using Content.Server._Mono.Shipyard;
 using Content.Server._NF.Bank;
 using Content.Server._NF.Shipyard.Components;
 using Content.Server._NF.ShuttleRecords;
-using Content.Shared._NF.Bank.Components;
-using Content.Shared._NF.Shipyard;
-using Content.Shared._NF.Shipyard.Events;
-using Content.Shared._NF.Shipyard.BUI;
-using Content.Shared._NF.Shipyard.Prototypes;
-using Content.Shared._NF.Shipyard.Components;
-using Content.Shared.Access.Systems;
-using Content.Shared.Access.Components;
-using Content.Shared.Ghost;
-using Robust.Server.GameObjects;
-using Robust.Shared.Containers;
-using Robust.Shared.Prototypes;
-using Content.Shared.Radio;
-using System.Linq;
+using Content.Server._NF.Station.Components;
+using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Mobs.Systems;
-using Content.Server.Maps;
-using Content.Shared.StationRecords;
 using Content.Server.Chat.Systems;
+using Content.Server.Maps;
 using Content.Server.Mind;
+using Content.Server.Popups;
 using Content.Server.Preferences.Managers;
+using Content.Server.Radio.EntitySystems;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
+using Content.Server.StationEvents.Components;
 using Content.Server.StationRecords;
 using Content.Server.StationRecords.Systems;
-using Content.Shared.Database;
-using Content.Shared.Preferences;
-using static Content.Shared._NF.Shipyard.Components.ShuttleDeedComponent;
-using Content.Server.Shuttles.Components;
-using Content.Server._NF.Station.Components;
-using System.Text.RegularExpressions;
-using Content.Server._Mono.Shipyard;
-using Content.Server.Shuttles.Systems;
-using Content.Shared.UserInterface;
-using Robust.Shared.Audio.Systems;
-using Content.Shared.Access;
-using Content.Shared._NF.Bank.BUI;
-using Content.Shared._NF.ShuttleRecords;
-using Content.Server.StationEvents.Components;
 using Content.Shared._Mono.Company;
+using Content.Shared._NF.Bank.BUI;
+using Content.Shared._NF.Bank.Components;
+using Content.Shared._NF.Shipyard;
+using Content.Shared._NF.Shipyard.BUI;
+using Content.Shared._NF.Shipyard.Components;
+using Content.Shared._NF.Shipyard.Events;
+using Content.Shared._NF.Shipyard.Prototypes;
+using Content.Shared._NF.ShuttleRecords;
+using Content.Shared.Access;
+using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
+using Content.Shared.Database;
 using Content.Shared.Forensics.Components;
+using Content.Shared.Ghost;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
+using Content.Shared.Preferences;
+using Content.Shared.Radio;
 using Content.Shared.Shuttles.Components;
-using Robust.Server.Player;
+using Content.Shared.StationRecords;
+using Content.Shared.UserInterface;
+using Robust.Server.GameObjects;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Containers;
 using Robust.Shared.Player;
-using Robust.Shared.Log;
+using Robust.Shared.Prototypes;
+using static Content.Shared._NF.Shipyard.Components.ShuttleDeedComponent;
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -149,7 +147,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         // Keep track of whether or not a voucher was used.
         // TODO: voucher purchase should be done in a separate function.
-        bool voucherUsed = false;
+        var voucherUsed = false;
         if (voucher is not null)
         {
             if (voucher!.RedemptionsLeft <= 0)
@@ -162,7 +160,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 }
                 return;
             }
-            else if (voucher!.ConsoleType != (ShipyardConsoleUiKey)args.UiKey)
+            if (voucher!.ConsoleType != (ShipyardConsoleUiKey)args.UiKey)
             {
                 ConsolePopup(player, Loc.GetString("shipyard-console-invalid-voucher-type"));
                 PlayDenySound(player, shipyardConsoleUid, component);

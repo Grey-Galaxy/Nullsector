@@ -9,7 +9,7 @@
   startingGear: ValetGear
   alwaysUseSpawner: true
   icon: "JobIconValet" # Frontier: JobIconServiceWorker<JobIconValet
-  supervisors: job-supervisors-sr
+  supervisors: job-supervisors-sc
   weight: 60 # Frontier
   displayWeight: 10 # Frontier
   canBeAntag: false
