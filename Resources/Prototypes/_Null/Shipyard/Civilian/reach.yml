@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: 
+# Discord:
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: ReachUNJ
+  parent: BaseVessel
+  name: UNJ Reach III
+  description: A small station was found at the edge of the Rogue and sent here for repair. Now operational, the Reach is all-rounder craft.
+  price: 200253
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_Null/Shuttles/Civilian/reach.yml
+  guidebookPage: Null
+  class:
+  - Botany
+  - Civilian
+  - Salvage
+  - Kitchen
+  engine:
+  - AME
+  - Uranium
+
+- type: gameMap
+  id: ReachUNJ
+  mapName: 'Reach'
+  mapPath: /Maps/_Null/Shuttles/Civilian/reach.yml
+  minPlayers: 0
+  stations:
+    ReachUNJ:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Reach CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 3, 3 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
