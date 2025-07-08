@@ -121650,7 +121650,7 @@ entities:
     - type: Transform
       pos: 36.5,-25.5
       parent: 2
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 5674
     components:

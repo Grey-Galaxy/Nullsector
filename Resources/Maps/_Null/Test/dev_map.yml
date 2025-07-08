@@ -7560,7 +7560,7 @@ entities:
     - type: Transform
       pos: 3.5,7.5
       parent: 2
-- proto: SpawnPointBailiff
+- proto: SpawnPointMilitiaCoordinator
   entities:
   - uid: 1037
     components:

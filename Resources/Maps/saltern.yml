@@ -57826,7 +57826,7 @@ entities:
     - type: Transform
       pos: 8.5,20.5
       parent: 31
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 6845
     components:

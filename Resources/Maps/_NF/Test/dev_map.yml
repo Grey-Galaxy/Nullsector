@@ -7042,7 +7042,7 @@ entities:
     - type: Transform
       pos: 3.5,7.5
       parent: 179
-- proto: SpawnPointBailiff
+- proto: SpawnPointMilitiaCoordinator
   entities:
   - uid: 1482
     components:

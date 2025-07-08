@@ -120,7 +120,7 @@
 - type: entity
   id: SpawnPointStationRepresentative
   parent: SpawnPointHeadOfPersonnel
-  name: sector coordinator
+  name: station representative
   components:
   - type: SpawnPoint
     job_id: StationRepresentative
