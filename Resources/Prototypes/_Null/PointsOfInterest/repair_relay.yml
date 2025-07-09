@@ -36,8 +36,8 @@
           mapNameTemplate: 'Lark Repair Orbital'
         - type: ExtraStationInformation
           iconPath: /Textures/_Null/Miscellaneous/repair_icon-256x256.png
-          stationSubtext: 'Lark Repair Orbital'
-          stationDescription: 'A temporary repair orbital for Lark Station. It will be dismantled at a later time. {CAMPAIGN: Lark Station was found in ruins, and a repair team was called in. Some of the team are familiar; others, new faces. Regardless, the Lark Region was nearly destroyed in its infancy, and it remains to be seen if the repair efforts will be enough to keep it together.}'
+          stationSubtext: 'lark-orbital-name'
+          stationDescription: 'lark-orbital-description'
         - type: StationJobs
           availableJobs:
             Contractor: [ -1, -1 ]
