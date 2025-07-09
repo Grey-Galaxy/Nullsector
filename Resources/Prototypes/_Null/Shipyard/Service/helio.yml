@@ -1,36 +1,36 @@
 # Author Info
-# GitHub: LukeZurg22
-# Discord: lukezurg22
+# GitHub: Bluespace-Storm
+# Discord: its_bear
 
 # Shuttle Notes:
-# Made by Sketch
+#
 
 - type: vessel
-  id: Camper
+  id: Helio
   parent: BaseVessel
-  name: UNJ Camper
-  description: A small, single-person shuttle meant for cozy travels.
-  price: 20000
+  name: UCE Helio
+  description: A solar powered, single-person shuttle meant for leisurely travels.
+  price: 22000
   category: Small
-  group: Shipyard
-  shuttlePath: /Maps/_Null/Shuttles/Civilian/camper.yml
-  guidebookPage: null
+  group: Service
+  shuttlePath: /Maps/_Null/Shuttles/Civilian/helio.yml
+  guidebookPage: ShipyardHelio
   class:
   - Civilian
   engine:
-  - Plasma
+  - Solar
 
 - type: gameMap
-  id: Camper
-  mapName: 'Camper'
-  mapPath: /Maps/_Null/Shuttles/Civilian/camper.yml
+  id: Helio
+  mapName: 'Helio'
+  mapPath: /Maps/_Null/Shuttles/Civilian/helio.yml
   minPlayers: 0
   stations:
-    Camper:
+    Helio:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Camper CIV{1}'
+          mapNameTemplate: 'Helio SRV{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

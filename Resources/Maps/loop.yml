@@ -92367,7 +92367,7 @@ entities:
     - type: Transform
       pos: -31.5,68.5
       parent: 2
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 15222
     components:

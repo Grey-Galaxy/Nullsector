@@ -9891,7 +9891,7 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-- proto: ComputerShipyardSr
+- proto: ComputerShipyardService
   entities:
   - uid: 1012
     components:
@@ -28762,7 +28762,7 @@ entities:
     - type: Transform
       pos: 15.5,-17.5
       parent: 2
-- proto: SpawnPointStationRepresentative
+- proto: SpawnPointSectorCoordinator
   entities:
   - uid: 4948
     components:

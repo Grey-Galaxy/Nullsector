@@ -1,0 +1,58 @@
+- type: job
+  id: MilitiaCoordinator
+  name: job-name-militia-coordinator
+  description: job-description-militia-coordinator
+  playTimeTracker: JobMilitiaCoordinator
+  setPreference: true
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 21600 # 6 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 21600 # 6 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 3600 # 1 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 # 3 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 3600 # 1 hours
+  startingGear: MilitiaCoordinatorGear
+  icon: JobIconBailiff
+  supervisors: job-supervisors-sheriff
+  weight: 150
+  displayWeight: 60
+  canBeAntag: false
+  access:
+  - Armory
+  - Sergeant
+  - Bailiff
+  - Medical
+  - Chemistry
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: MilitiaCoordinatorGear
+  equipment:
+    pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
+    pocket2: HoloprojectorNfsd
+  storage:
+    back:
+    - Flash
+    - MagazinePistol
+    - MagazinePistolRubber
+    - BaseSecurityUplinkRadioOfficer
+    - RubberStampBailiff

@@ -1,0 +1,8 @@
+- type: playTimeTracker
+  id: JobMilitiaCoordinator
+  
+- type: playTimeTracker
+  id: JobSectorCoordinator
+  
+- type: playTimeTracker
+  id: JobLodgeSupervisor

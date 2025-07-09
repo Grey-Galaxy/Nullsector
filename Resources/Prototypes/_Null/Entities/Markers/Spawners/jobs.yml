@@ -1,0 +1,23 @@
+- type: entity
+  id: SpawnPointSectorCoordinator
+  parent: SpawnPointHeadOfPersonnel
+  name: sector coordinator
+  components:
+  - type: SpawnPoint
+    job_id: StationRepresentative
+
+- type: entity
+  id: SpawnPointLodgeSupervisor
+  parent: SpawnPointHeadOfSecurity
+  name: lodge supervisor
+  components:
+  - type: SpawnPoint
+    job_id: LodgeSupervisor
+
+- type: entity
+  id: SpawnPointMilitiaCoordinator
+  parent: SpawnPointWarden
+  name: militia coordinator
+  components:
+  - type: SpawnPoint
+    job_id: MilitiaCoordinator

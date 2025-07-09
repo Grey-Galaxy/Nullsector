@@ -3834,7 +3834,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-13.5
       parent: 2
-- proto: ComputerShipyardSr
+- proto: ComputerShipyardService
   entities:
   - uid: 602
     components:
@@ -7038,7 +7038,7 @@ entities:
     - type: Transform
       pos: 3.5,7.5
       parent: 2
-- proto: SpawnPointBailiff
+- proto: SpawnPointMilitiaCoordinator
   entities:
   - uid: 1037
     components:
@@ -7227,7 +7227,7 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-- proto: SpawnPointStationRepresentative
+- proto: SpawnPointSectorCoordinator
   entities:
   - uid: 1064
     components:

@@ -131923,7 +131923,7 @@ entities:
     - type: Transform
       pos: 7.5,-31.5
       parent: 60
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 2095
     components:

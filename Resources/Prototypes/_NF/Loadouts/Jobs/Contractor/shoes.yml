@@ -12,7 +12,7 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
-  price: 50
+  price: 0
   equipment:
     shoes: ClothingShoesClothwrap
 

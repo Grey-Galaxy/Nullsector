@@ -13729,7 +13729,7 @@ entities:
     - type: Transform
       pos: 8.5,0.5
       parent: 2
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 1986
     components:

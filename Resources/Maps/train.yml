@@ -89060,7 +89060,7 @@ entities:
     - type: Transform
       pos: -0.5,-116.5
       parent: 2
-- proto: SpawnPointHeadOfSecurity
+- proto: SpawnPointLodgeSupervisor
   entities:
   - uid: 13342
     components:

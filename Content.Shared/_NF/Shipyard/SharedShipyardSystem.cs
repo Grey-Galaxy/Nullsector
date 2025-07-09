@@ -1,9 +1,7 @@
+using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Containers.ItemSlots;
-using Content.Shared._NF.Shipyard;
-using JetBrains.Annotations;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
-using Content.Shared._NF.Shipyard.Components;
 
 namespace Content.Shared._NF.Shipyard;
 
@@ -19,6 +17,7 @@ public enum ShipyardConsoleUiKey : byte
     Scrap,
     Sr,
     Medical,
+    Service, // Null Sector
     // Add ships to this key if they are only available from mothership consoles. Shipyards using it are inherently empty and are populated using the ShipyardListingComponent.
     Custom
 }
