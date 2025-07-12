@@ -5,6 +5,5 @@ FloorWaterDecorativeEntity: FloorWaterEntity
 # 20250708→27
 ComputerShipyardSr: ComputerShipyardService
 VendingMachineYarrrDrobe: VendingMachinePirateVend
-StationRepresentative: SectorCoordinator
 SpawnPointStationRepresentative: SpawnPointSectorCoordinator
 RubberStampSr: RubberStampSectorCoordinator

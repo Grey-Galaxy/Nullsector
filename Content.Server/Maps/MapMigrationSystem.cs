@@ -1,7 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
-using Robust.Server.GameObjects;
 using Robust.Shared.ContentPack;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map.Events;
@@ -21,7 +20,7 @@ public sealed class MapMigrationSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly IResourceManager _resMan = default!;
 
-    private static readonly string[] MigrationFiles = { "/migration.yml", "/nf_migration.yml" }; // Frontier: use array of migration files
+    private static readonly string[] MigrationFiles = ["/migration.yml", "/nf_migration.yml", "/null_migration.yml"]; // Frontier: use array of migration files
 
     public override void Initialize()
     {
@@ -32,7 +31,7 @@ public sealed class MapMigrationSystem : EntitySystem
         if (!TryReadFiles(out var mappings)) // Frontier: TryReadFile<TryReadFiles
             return;
 
-        // Verify that all of the entries map to valid entity prototypes.
+        // Verify that all the entries map to valid entity prototypes.
         // Delta-V: use list of migrations
         foreach (var mapping in mappings)
         {
@@ -40,8 +39,10 @@ public sealed class MapMigrationSystem : EntitySystem
             {
                 var newId = ((ValueDataNode)node).Value;
                 if (!string.IsNullOrEmpty(newId) && newId != "null")
+                {
                     DebugTools.Assert(_protoMan.HasIndex<EntityPrototype>(newId),
                         $"{newId} is not an entity prototype.");
+                }
             }
         }
         // End Delta-V
@@ -53,7 +54,7 @@ public sealed class MapMigrationSystem : EntitySystem
     {
         mappings = null;
 
-        if (MigrationFiles.Count() <= 0)
+        if (MigrationFiles.Count() <= 0) // Do not use Rider's suggestions here. It breaks prototypes.
             return false;
 
         foreach (var migrationFile in MigrationFiles)
@@ -61,7 +62,7 @@ public sealed class MapMigrationSystem : EntitySystem
             if (!TryReadFile(migrationFile, out var mapping))
                 continue;
 
-            mappings = mappings ?? new List<MappingDataNode>();
+            mappings ??= [];
             mappings.Add(mapping);
         }
 
