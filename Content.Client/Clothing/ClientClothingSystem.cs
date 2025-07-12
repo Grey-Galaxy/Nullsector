@@ -3,6 +3,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Client.Inventory;
+using Content.Client._Goobstation;
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
@@ -266,9 +267,22 @@ public sealed class ClientClothingSystem : ClothingSystem
             return;
         }
 
+        // Goob edit start
+        var slotLayerExists = false;
+        var index = 0;
+        var mapLayerEv = new GetActualMapLayerEvent(slot);
+        RaiseLocalEvent(equipment, ref mapLayerEv);
+        if (mapLayerEv.MapLayer != slot)
+            slotLayerExists = sprite.LayerMapTryGet(mapLayerEv.MapLayer, out index);
+
         // temporary, until layer draw depths get added. Basically: a layer with the key "slot" is being used as a
         // bookmark to determine where in the list of layers we should insert the clothing layers.
-        bool slotLayerExists = sprite.LayerMapTryGet(slot, out var index);
+        if (!slotLayerExists)
+            slotLayerExists = sprite.LayerMapTryGet(slot, out index);
+
+        var hiddenEv = new CheckClothingSlotHiddenEvent(slot);
+        RaiseLocalEvent(equipee, ref hiddenEv);
+        // Goob edit end
 
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
