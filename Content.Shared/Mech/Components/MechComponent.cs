@@ -135,7 +135,17 @@ public sealed partial class MechComponent : Component
     /// Good for things like nukie mechs that start with guns.
     /// </summary>
     [DataField]
-    public List<EntProtoId> StartingEquipment = new();
+    public List<EntProtoId> StartingEquipment = [];
+
+    [DataField(serverOnly: true)]
+    public bool MobStateAdded = false;
+
+    [DataField(serverOnly: true)]
+    public bool MobThresholdsAdded = false;
+
+    [DataField(serverOnly: true)]
+    public bool NpcFactionAdded = false;
+    // End Frontier: extra fields
 
     #region Action Prototypes
     [DataField]

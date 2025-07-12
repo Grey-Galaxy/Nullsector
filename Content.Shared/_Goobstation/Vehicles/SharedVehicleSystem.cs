@@ -14,6 +14,7 @@ using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
@@ -21,11 +22,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 // Frontier
 // Frontier
-// Frontier
-// Frontier
-// Frontier
-// Frontier
-// Frontier
+
 // Frontier
 
 // Frontier
@@ -62,6 +59,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         SubscribeLocalEvent<VehicleComponent, StrappedEvent>(OnStrapped);
         SubscribeLocalEvent<VehicleComponent, UnstrappedEvent>(OnUnstrapped);
         SubscribeLocalEvent<VehicleComponent, VirtualItemDeletedEvent>(OnDropped);
+        SubscribeLocalEvent<VehicleComponent, MeleeHitEvent>(OnMeleeHit); // Frontier
 
         SubscribeLocalEvent<VehicleComponent, EntInsertedIntoContainerMessage>(OnInsert);
         SubscribeLocalEvent<VehicleComponent, EntRemovedFromContainerMessage>(OnEject);
@@ -71,6 +69,15 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
         SubscribeLocalEvent<VehicleRiderComponent, PullAttemptEvent>(OnRiderPull); // Frontier
     }
+
+    // Frontier: do not hit your own vehicle
+    private void OnMeleeHit(Entity<VehicleComponent> ent, ref MeleeHitEvent args)
+    {
+        if (args.User == ent.Comp.Driver) // Don't hit your own vehicle
+            args.Handled = true;
+    }
+    // End Frontier: do not hit your own vehicle
+
 
     private void OnInit(EntityUid uid, VehicleComponent component, ComponentInit args)
     {

@@ -2,11 +2,12 @@ using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
-using Content.Shared.Mech.EntitySystems; // Frontier
+
+// Frontier
 
 namespace Content.Shared.NPC.Components;
 
-[RegisterComponent, NetworkedComponent, Access(typeof(NpcFactionSystem), typeof(SharedMechSystem))] // Frontier - Added MechSystem
+[RegisterComponent, NetworkedComponent, Access(typeof(NpcFactionSystem))]
 public sealed partial class NpcFactionMemberComponent : Component
 {
     /// <summary>
