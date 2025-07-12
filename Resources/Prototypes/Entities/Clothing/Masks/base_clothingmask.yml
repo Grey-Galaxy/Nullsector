@@ -11,6 +11,12 @@
     slots: [mask]
   - type: StaticPrice
     price: 25
+  - type: AltClothingLayer # Goobstation
+    defaultLayer: mask
+    altLayer: maskalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default
+
 
 - type: entity
   abstract: true
@@ -18,6 +24,11 @@
   id: ClothingMaskPullableBase
   components:
   - type: Mask
+  - type: AltClothingLayer # Goobstation
+    defaultLayer: mask
+    altLayer: maskalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default
 
 - type: entity
   id: ActionToggleMask
@@ -51,3 +62,8 @@
   - type: Tag
     tags:
       - ClothMade
+  - type: AltClothingLayer # Goobstation
+    defaultLayer: mask
+    altLayer: maskalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default

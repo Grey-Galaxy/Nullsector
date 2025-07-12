@@ -34,6 +34,12 @@
     slots:
     - Snout
     hideOnToggle: true
+  - type: AltClothingLayer # Goobstation
+    defaultLayer: mask
+    altLayer: maskalt
+    changeToAltMessage: alt-clothing-component-mask-alt
+    changeToDefaultMessage: alt-clothing-component-mask-default
+
 
 - type: entity
   parent: ClothingMaskBandanaBase
