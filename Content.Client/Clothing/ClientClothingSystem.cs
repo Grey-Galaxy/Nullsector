@@ -266,7 +266,7 @@ public sealed class ClientClothingSystem : ClothingSystem
             RaiseLocalEvent(equipment, new EquipmentVisualsUpdatedEvent(equipee, slot, revealedLayers), true);
             return;
         }
-
+/*
         // Goob edit start
         var slotLayerExists = false;
         var index = 0;
@@ -283,7 +283,8 @@ public sealed class ClientClothingSystem : ClothingSystem
         var hiddenEv = new CheckClothingSlotHiddenEvent(slot);
         RaiseLocalEvent(equipee, ref hiddenEv);
         // Goob edit end
-
+*/
+        bool slotLayerExists = sprite.LayerMapTryGet(slot, out var index);
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
 
