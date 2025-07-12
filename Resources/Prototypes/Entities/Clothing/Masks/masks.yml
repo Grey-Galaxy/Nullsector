@@ -230,8 +230,18 @@
     changeToDefaultMessage: alt-clothing-component-mask-default
 
 - type: entity
-  parent: ClothingMaskClownBase
+  parent: ClothingMaskBase
   id: ClothingMaskClown
+  abstract: true
+  name: clown wig and mask
+  description: A true prankster's facial attire. A clown is incomplete without his wig and mask.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/clown.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/clown.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
   components:
   - type: Tag
     tags:
@@ -398,7 +408,7 @@
     accent: StutteringAccent
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ ClothingMaskPullableBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: ClothingMaskGasSwat
   name: swat gas mask
   description: A elite issue Security gas mask.
