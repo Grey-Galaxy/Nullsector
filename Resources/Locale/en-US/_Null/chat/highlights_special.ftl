@@ -4,12 +4,16 @@
 # More may break it. The code-behind also only supports at most 100 entries [0, 99].
 # It may be improved in the future, but for now, will suffice.
 # HIGHLIGHT LOCALIZATION = TEXT[COLOR HEX VALUE AS #RGBA IN ALL CAPS]
+#
+# Placement also matters. Whilst it could be automatically-sorted in code, it isn't.
+# Instead, the entries with the largest number of characters (e.g. "Security" vs "Sec")
+# must precede the smallest.
 # =======================================================================================================
 #
 highlights-special-0 = Subsidiary[#F60700FF]
 highlights-special-1 = Armadan[#F60700FF]
 highlights-special-2 = Armada[#F60700FF]
-highlights-special-3 = Null-Sector[#C6C497FF]
+highlights-special-3 = Null Sector[#C6C497FF]
 highlights-special-4 = Null[#C6C497FF]
 highlights-special-5 = New Galactic Congress[#0074C9FF]
 highlights-special-6 = NGC[#0074C9FF]
