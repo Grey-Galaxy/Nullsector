@@ -232,16 +232,7 @@
 - type: entity
   parent: ClothingMaskBase
   id: ClothingMaskClown
-  abstract: true
-  name: clown wig and mask
-  description: A true prankster's facial attire. A clown is incomplete without his wig and mask.
   components:
-  - type: Sprite
-    sprite: Clothing/Mask/clown.rsi
-  - type: Clothing
-    sprite: Clothing/Mask/clown.rsi
-  - type: BreathMask
-  - type: IdentityBlocker
   - type: Tag
     tags:
     - ClownMask
