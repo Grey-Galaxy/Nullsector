@@ -1,13 +1,10 @@
 using System.Numerics;
 using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
-using Content.Shared.Maps;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
-using Robust.Shared.Map.Enumerators;
-using Robust.Shared.Physics;
 
 namespace Content.Client.Light;
 
@@ -70,18 +67,17 @@ public sealed class RoofOverlay : Overlay
         if (_grids.Count == 0)
             return;
 
-        var lightScale = viewport.LightRenderTarget.Size / (Vector2) viewport.Size;
+        var lightScale = viewport.LightRenderTarget.Size / (Vector2)viewport.Size;
         var scale = viewport.RenderScale / (Vector2.One / lightScale);
 
         worldHandle.RenderInRenderTarget(target,
             () =>
             {
+                var invMatrix = target.GetWorldToLocalMatrix(eye, scale);
                 foreach (var grid in _grids)
                 {
                     if (!_entManager.TryGetComponent(grid.Owner, out RoofComponent? roof))
                         continue;
-
-                    var invMatrix = target.GetWorldToLocalMatrix(eye, scale);
 
                     var gridMatrix = _xformSystem.GetWorldMatrix(grid.Owner);
                     var matty = Matrix3x2.Multiply(gridMatrix, invMatrix);
@@ -103,7 +99,8 @@ public sealed class RoofOverlay : Overlay
                         worldHandle.DrawRect(local, roof.Color);
                     }
                 }
-            }, null);
+            },
+            null);
 
         worldHandle.SetTransform(Matrix3x2.Identity);
     }
