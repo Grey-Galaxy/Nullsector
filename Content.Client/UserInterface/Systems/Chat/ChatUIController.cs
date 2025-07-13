@@ -43,7 +43,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.Systems.Chat;
 
-public sealed class ChatUIController : UIController
+public sealed partial class ChatUIController : UIController
 {
     [Dependency] private readonly IClientAdminManager _admin = default!;
     [Dependency] private readonly IChatManager _manager = default!;
@@ -57,6 +57,7 @@ public sealed class ChatUIController : UIController
     [Dependency] private readonly IStateManager _state = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IReplayRecordingManager _replayRecording = default!;
+    [Dependency] private readonly ILocalizationManager _localizationManager = default!;
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -68,6 +69,7 @@ public sealed class ChatUIController : UIController
 
     [ValidatePrototypeId<ColorPalettePrototype>]
     private const string ChatNamePalette = "ChatNames";
+
     private string[] _chatNameColors = default!;
     private bool _chatNameColorsEnabled;
 
@@ -75,29 +77,29 @@ public sealed class ChatUIController : UIController
 
     public static readonly Dictionary<char, ChatSelectChannel> PrefixToChannel = new()
     {
-        {SharedChatSystem.LocalPrefix, ChatSelectChannel.Local},
-        {SharedChatSystem.WhisperPrefix, ChatSelectChannel.Whisper},
-        {SharedChatSystem.ConsolePrefix, ChatSelectChannel.Console},
-        {SharedChatSystem.LOOCPrefix, ChatSelectChannel.LOOC},
-        {SharedChatSystem.OOCPrefix, ChatSelectChannel.OOC},
-        {SharedChatSystem.EmotesPrefix, ChatSelectChannel.Emotes},
-        {SharedChatSystem.EmotesAltPrefix, ChatSelectChannel.Emotes},
-        {SharedChatSystem.AdminPrefix, ChatSelectChannel.Admin},
-        {SharedChatSystem.RadioCommonPrefix, ChatSelectChannel.Radio},
-        {SharedChatSystem.DeadPrefix, ChatSelectChannel.Dead}
+        { SharedChatSystem.LocalPrefix, ChatSelectChannel.Local },
+        { SharedChatSystem.WhisperPrefix, ChatSelectChannel.Whisper },
+        { SharedChatSystem.ConsolePrefix, ChatSelectChannel.Console },
+        { SharedChatSystem.LOOCPrefix, ChatSelectChannel.LOOC },
+        { SharedChatSystem.OOCPrefix, ChatSelectChannel.OOC },
+        { SharedChatSystem.EmotesPrefix, ChatSelectChannel.Emotes },
+        { SharedChatSystem.EmotesAltPrefix, ChatSelectChannel.Emotes },
+        { SharedChatSystem.AdminPrefix, ChatSelectChannel.Admin },
+        { SharedChatSystem.RadioCommonPrefix, ChatSelectChannel.Radio },
+        { SharedChatSystem.DeadPrefix, ChatSelectChannel.Dead }
     };
 
     public static readonly Dictionary<ChatSelectChannel, char> ChannelPrefixes = new()
     {
-        {ChatSelectChannel.Local, SharedChatSystem.LocalPrefix},
-        {ChatSelectChannel.Whisper, SharedChatSystem.WhisperPrefix},
-        {ChatSelectChannel.Console, SharedChatSystem.ConsolePrefix},
-        {ChatSelectChannel.LOOC, SharedChatSystem.LOOCPrefix},
-        {ChatSelectChannel.OOC, SharedChatSystem.OOCPrefix},
-        {ChatSelectChannel.Emotes, SharedChatSystem.EmotesPrefix},
-        {ChatSelectChannel.Admin, SharedChatSystem.AdminPrefix},
-        {ChatSelectChannel.Radio, SharedChatSystem.RadioCommonPrefix},
-        {ChatSelectChannel.Dead, SharedChatSystem.DeadPrefix}
+        { ChatSelectChannel.Local, SharedChatSystem.LocalPrefix },
+        { ChatSelectChannel.Whisper, SharedChatSystem.WhisperPrefix },
+        { ChatSelectChannel.Console, SharedChatSystem.ConsolePrefix },
+        { ChatSelectChannel.LOOC, SharedChatSystem.LOOCPrefix },
+        { ChatSelectChannel.OOC, SharedChatSystem.OOCPrefix },
+        { ChatSelectChannel.Emotes, SharedChatSystem.EmotesPrefix },
+        { ChatSelectChannel.Admin, SharedChatSystem.AdminPrefix },
+        { ChatSelectChannel.Radio, SharedChatSystem.RadioCommonPrefix },
+        { ChatSelectChannel.Dead, SharedChatSystem.DeadPrefix }
     };
 
     /// <summary>
@@ -240,6 +242,7 @@ public sealed class ChatUIController : UIController
 
         _config.OnValueChanged(CCVars.ChatWindowOpacity, OnChatWindowOpacityChanged);
 
+        InitializeHighlights();
     }
 
     public void OnScreenLoad()
@@ -264,7 +267,8 @@ public sealed class ChatUIController : UIController
 
     private void SetChatWindowOpacity(float opacity)
     {
-        var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ?? UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
+        var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ??
+                      UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
 
         var panel = chatBox?.ChatWindowPanel;
         if (panel is null)
@@ -426,6 +430,8 @@ public sealed class ChatUIController : UIController
     private void OnAttachedChanged(EntityUid uid)
     {
         UpdateChannelPermissions();
+
+        UpdateAutoFillHighlights();
     }
 
     private void AddSpeechBubble(ChatMessage msg, SpeechBubble.SpeechType speechType)
@@ -534,7 +540,7 @@ public sealed class ChatUIController : UIController
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
-            if (_ghost is not {IsGhost: true})
+            if (_ghost is not { IsGhost: true })
             {
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
@@ -544,7 +550,7 @@ public sealed class ChatUIController : UIController
         }
 
         // Only ghosts and admins can send / see deadchat.
-        if (_admin.HasFlag(AdminFlags.Admin) || _ghost is {IsGhost: true})
+        if (_admin.HasFlag(AdminFlags.Admin) || _ghost is { IsGhost: true })
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;
@@ -653,8 +659,10 @@ public sealed class ChatUIController : UIController
 
             if (occluded && !_examine.InRangeUnOccluded(
                     playerPos,
-                    otherPos, 0f,
-                    (ent, player), predicate))
+                    otherPos,
+                    0f,
+                    (ent, player),
+                    predicate))
             {
                 SetBubbles(bubs, false);
                 continue;
@@ -674,7 +682,7 @@ public sealed class ChatUIController : UIController
 
     public ChatSelectChannel MapLocalIfGhost(ChatSelectChannel channel)
     {
-        if (channel == ChatSelectChannel.Local && _ghost is {IsGhost: true})
+        if (channel == ChatSelectChannel.Local && _ghost is { IsGhost: true })
             return ChatSelectChannel.Dead;
 
         return channel;
@@ -684,8 +692,8 @@ public sealed class ChatUIController : UIController
     {
         radioChannel = null;
         return _player.LocalEntity is EntityUid { Valid: true } uid
-           && _chatSys != null
-           && _chatSys.TryProccessRadioMessage(uid, text, out _, out radioChannel, quiet: true);
+               && _chatSys != null
+               && _chatSys.TryProccessRadioMessage(uid, text, out _, out radioChannel, quiet: true);
     }
 
     public void UpdateSelectedChannel(ChatBox box)
@@ -698,7 +706,8 @@ public sealed class ChatUIController : UIController
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(prefixChannel, radioChannel);
     }
 
-    public (ChatSelectChannel chatChannel, string text, RadioChannelPrototype? radioChannel) SplitInputContents(string text)
+    public (ChatSelectChannel chatChannel, string text, RadioChannelPrototype? radioChannel)
+        SplitInputContents(string text)
     {
         text = text.Trim();
         if (text.Length == 0)
@@ -708,23 +717,22 @@ public sealed class ChatUIController : UIController
         // because ????????
 
         ChatSelectChannel chatChannel;
-        if (TryGetRadioChannel(text, out var radioChannel))
-            chatChannel = ChatSelectChannel.Radio;
-        else
-            chatChannel = PrefixToChannel.GetValueOrDefault(text[0]);
+        chatChannel = TryGetRadioChannel(text, out var radioChannel)
+            ? ChatSelectChannel.Radio
+            : PrefixToChannel.GetValueOrDefault(text[0]);
 
         if ((CanSendChannels & chatChannel) == 0)
             return (ChatSelectChannel.None, text, null);
 
-        if (chatChannel == ChatSelectChannel.Radio)
-            return (chatChannel, text, radioChannel);
-
-        if (chatChannel == ChatSelectChannel.Local)
+        switch (chatChannel)
         {
-            if (_ghost?.IsGhost != true)
+            case ChatSelectChannel.Radio:
+                return (chatChannel, text, radioChannel);
+            case ChatSelectChannel.Local when _ghost?.IsGhost != true:
                 return (chatChannel, text, null);
-            else
+            case ChatSelectChannel.Local:
                 chatChannel = ChatSelectChannel.Dead;
+                break;
         }
 
         return (chatChannel, text[1..].TrimStart(), null);
@@ -766,7 +774,8 @@ public sealed class ChatUIController : UIController
 
     private void OnDamageForceSay(DamageForceSayEvent ev, EntitySessionEventArgs _)
     {
-        var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ?? UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
+        var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ??
+                      UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
         if (chatBox == null)
             return;
 
@@ -779,7 +788,7 @@ public sealed class ChatUIController : UIController
         if ((chatBox.SelectedChannel & allowedChannels) == ChatSelectChannel.None)
             return;
 
-        // none can be returned from this if theres no prefix,
+        // none can be returned from this if there's no prefix,
         // so we allow it in that case (assuming the previous check will have exited already if its an invalid channel)
         var prefixChannel = SplitInputContents(msg).chatChannel;
         if (prefixChannel != ChatSelectChannel.None && (prefixChannel & allowedChannels) == ChatSelectChannel.None)
@@ -794,7 +803,8 @@ public sealed class ChatUIController : UIController
 
         var modifiedText = ev.Suffix != null
             ? Loc.GetString(forceSay.ForceSayMessageWrap,
-                ("message", msg), ("suffix", ev.Suffix))
+                ("message", msg),
+                ("suffix", ev.Suffix))
             : Loc.GetString(forceSay.ForceSayMessageWrapNoSuffix,
                 ("message", msg));
 
@@ -817,24 +827,47 @@ public sealed class ChatUIController : UIController
     public void ProcessChatMessage(ChatMessage msg, bool speechBubble = true)
     {
         // color the name unless it's something like "the old man"
-        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper) && _chatNameColorsEnabled)
+        if (msg.Channel is ChatChannel.Local or ChatChannel.Whisper && _chatNameColorsEnabled)
         {
             var grammar = _ent.GetComponentOrNull<GrammarComponent>(_ent.GetEntity(msg.SenderEntity));
             if (grammar != null && grammar.ProperNoun == true)
-                msg.WrappedMessage = SharedChatSystem.InjectTagInsideTag(msg, "Name", "color", GetNameColor(SharedChatSystem.GetStringInsideTag(msg, "Name")));
+            {
+                msg.WrappedMessage = SharedChatSystem.InjectTagInsideTag(msg,
+                    "Name",
+                    "color",
+                    GetNameColor(SharedChatSystem.GetStringInsideTag(msg, "Name")));
+            }
+        }
+
+        // Color any words chosen by the client.
+        foreach (var highlight in _highlights)
+        {
+            msg.WrappedMessage = SharedChatSystem.InjectTagAroundString(msg, highlight, "color", _highlightsColor);
         }
 
         // Color any codewords for minds that have roles that use them
         if (_player.LocalUser != null && _mindSystem != null && _roleCodewordSystem != null)
         {
-            if (_mindSystem.TryGetMind(_player.LocalUser.Value, out var mindId) && _ent.TryGetComponent(mindId, out RoleCodewordComponent? codewordComp))
+            if (_mindSystem.TryGetMind(_player.LocalUser.Value, out var mindId) &&
+                _ent.TryGetComponent(mindId, out RoleCodewordComponent? codewordComp))
             {
                 foreach (var (_, codewordData) in codewordComp.RoleCodewords)
                 {
-                    foreach (string codeword in codewordData.Codewords)
-                        msg.WrappedMessage = SharedChatSystem.InjectTagAroundString(msg, codeword, "color", codewordData.Color.ToHex());
+                    foreach (var codeword in codewordData.Codewords)
+                    {
+                        msg.WrappedMessage =
+                            SharedChatSystem.InjectTagAroundString(msg, codeword, "color", codewordData.Color.ToHex());
+                    }
                 }
             }
+        }
+
+        // Color any specially-reserved words defined in highlights-special.
+        // If the player is mentioning a defined special highlighting word, then grab its dictionary HEX entry.
+        // This assumes the HEX value is correctly entered, and is valid.
+        foreach (var (highlight, hex) in _specialHighlights)
+        {
+            msg.WrappedMessage = SharedChatSystem.InjectTagAroundString(msg, highlight, "color", hex);
         }
 
         // Log all incoming chat to repopulate when filter is un-toggled
@@ -870,7 +903,7 @@ public sealed class ChatUIController : UIController
                 break;
 
             case ChatChannel.Dead:
-                if (_ghost is not {IsGhost: true})
+                if (_ghost is not { IsGhost: true })
                     break;
 
                 AddSpeechBubble(msg, SpeechBubble.SpeechType.Say);
@@ -891,7 +924,7 @@ public sealed class ChatUIController : UIController
     {
         // This will delete messages from an entity even if different players were the author.
         // Usages of the erase admin verb should be rare enough that this does not matter.
-        // Otherwise the client would need to know that one entity has multiple author players,
+        // Otherwise, the client would need to know that one entity has multiple author players,
         // or the server would need to track when and which entities a player sent messages as.
         History.RemoveAll(h => h.Msg.SenderKey == msg.Key || msg.Entities.Contains(h.Msg.SenderEntity));
         Repopulate();
