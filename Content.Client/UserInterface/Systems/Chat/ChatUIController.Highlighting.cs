@@ -176,7 +176,7 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
         /* Generic Incrementer up to 100. Short-circuits but *will* break if the actual list is larger than 100.
          * Note: It may not be expandable, but it suffices for the Null Sector, for now. The solution is to increment
          * this hypothetical "max limit" even further, or simply define the amount elsewhere like how SS14
-         * does so as of 20250713.
+         * does so as of 20250713. This usually takes the form of a CVar, but it makes little difference here.
          */
         for (var i = 0; i < 100; i++)
         {
