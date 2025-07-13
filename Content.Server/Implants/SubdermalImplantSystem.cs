@@ -1,32 +1,56 @@
+// SPDX-FileCopyrightText: 2022 keronshb
+// SPDX-FileCopyrightText: 2023 Arendian
+// SPDX-FileCopyrightText: 2023 Jezithyr
+// SPDX-FileCopyrightText: 2023 Mr0maks
+// SPDX-FileCopyrightText: 2023 Tomás Alves
+// SPDX-FileCopyrightText: 2023 deltanedas
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 Ilya246
+// SPDX-FileCopyrightText: 2024 Kot
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Preston Smith
+// SPDX-FileCopyrightText: 2024 SlamBamActionman
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 12rabbits
+// SPDX-FileCopyrightText: 2025 J
+// SPDX-FileCopyrightText: 2025 Milon
+// SPDX-FileCopyrightText: 2025 Zachary Higgs
+// SPDX-FileCopyrightText: 2025 themias
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+using System.Numerics;
 using Content.Server.Cuffs;
 using Content.Server.Forensics;
 using Content.Server.Humanoid;
+using Content.Server.IdentityManagement;
 using Content.Server.Implants.Components;
 using Content.Server.Store.Components;
 using Content.Server.Store.Systems;
 using Content.Shared.Cuffs.Components;
+using Content.Shared.DetailExaminable;
 using Content.Shared.Forensics;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Implants;
 using Content.Shared.Implants.Components;
 using Content.Shared.Interaction;
+using Content.Shared.Movement.Pulling.Components;
+using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Preferences;
+using Content.Shared.Store.Components;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Collections;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Random;
-using System.Numerics;
-using Content.Shared.Movement.Pulling.Components;
-using Content.Shared.Movement.Pulling.Systems;
-using Content.Server.IdentityManagement;
-using Content.Shared.DetailExaminable;
-using Content.Shared.Store.Components;
-using Robust.Shared.Collections;
-using Robust.Shared.Map.Components;
 
 namespace Content.Server.Implants;
 
@@ -130,7 +154,7 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
 
     private EntityCoordinates? SelectRandomTileInRange(TransformComponent userXform, float radius)
     {
-        var userCoords = userXform.Coordinates.ToMap(EntityManager, _xform);
+        var userCoords = _xform.ToMapCoordinates(userXform.Coordinates);
         _targetGrids.Clear();
         _lookupSystem.GetEntitiesInRange(userCoords, radius, _targetGrids);
         Entity<MapGridComponent>? targetGrid = null;

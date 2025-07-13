@@ -1,7 +1,5 @@
-﻿using System.Numerics;
-using Content.Shared.Random.Helpers;
+using System.Numerics;
 using Robust.Shared.Random;
-using Robust.Shared.Utility;
 
 namespace Content.Shared.Random;
 
@@ -20,7 +18,7 @@ public sealed class RandomHelperSystem : EntitySystem
         var offset = new Vector2(randomX, randomY);
 
         var xform = Transform(entity);
-        _transform.SetLocalPosition(xform, xform.LocalPosition + offset);
+        _transform.SetLocalPosition(entity, xform.LocalPosition + offset, xform);
     }
 
     public void RandomOffset(EntityUid entity, float min, float max)
