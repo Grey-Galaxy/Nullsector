@@ -560,7 +560,7 @@
   - VehicleHoverbikeMailcarrier
   - BaseC2ContrabandUnredeemable
   id: NFVehicleHoverbikeNfsd
-  name: hoverbike
+  name: military-grade hoverbike
   description: An turbine with bike handles. Very safe.
   components:
   - type: Vehicle
