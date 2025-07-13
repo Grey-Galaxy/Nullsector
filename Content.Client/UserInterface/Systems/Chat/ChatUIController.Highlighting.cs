@@ -188,7 +188,6 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
             var hex = match.Success ? match.Groups[1].Value : "FFFFFF"; // White by default.
             highlights.Add(cleanedLocale, hex);
         }
-        var sorted = highlights.OrderBy(kv => kv.Key.Length).ToDictionary(kv => kv.Key, kv => kv.Value);
-        return sorted;
+        return highlights;
     }
 }
