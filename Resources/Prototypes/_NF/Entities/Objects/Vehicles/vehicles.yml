@@ -560,8 +560,8 @@
   - VehicleHoverbikeMailcarrier
   - BaseC2ContrabandUnredeemable
   id: NFVehicleHoverbikeNfsd
-  name: NFSD hoverbike
-  description: An NFSD issued turbine with bike handles. Very safe.
+  name: hoverbike
+  description: An turbine with bike handles. Very safe.
   components:
   - type: Vehicle
     sirenSound:
