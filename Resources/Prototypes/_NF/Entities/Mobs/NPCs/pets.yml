@@ -395,6 +395,7 @@
     - DoorBumpOpener
     - VimPilot
     - AnomalyHost
+    - CanPilot
   - type: Loadout
     prototypes: [ MobKoboldGear ]
   - type: Grammar
