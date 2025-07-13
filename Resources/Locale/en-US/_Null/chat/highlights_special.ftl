@@ -9,7 +9,7 @@
 highlights-special-0 = Subsidiary[#F60700FF]
 highlights-special-1 = Armadan[#F60700FF]
 highlights-special-2 = Armada[#F60700FF]
-highlights-special-3 = Null Sector[#C6C497FF]
+highlights-special-3 = Null-Sector[#C6C497FF]
 highlights-special-4 = Null[#C6C497FF]
 highlights-special-5 = New Galactic Congress[#0074C9FF]
 highlights-special-6 = NGC[#0074C9FF]
