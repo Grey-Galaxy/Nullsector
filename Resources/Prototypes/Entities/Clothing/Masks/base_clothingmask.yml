@@ -12,6 +12,8 @@
   - type: StaticPrice
     price: 25
 
+
+
 - type: entity
   abstract: true
   parent: ClothingMaskBase
@@ -51,3 +53,4 @@
   - type: Tag
     tags:
       - ClothMade
+

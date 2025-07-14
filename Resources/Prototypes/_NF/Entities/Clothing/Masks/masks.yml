@@ -1,13 +1,20 @@
 - type: entity
   id: ClothingMaskArcadia
   name: arcadia battle mask
-  parent: [ ClothingMaskGasExplorer, BaseC3ContrabandNoValue, ContrabandClothing ]
+  parent: [ ClothingMaskPullableBase, BaseC3ContrabandNoValue, ContrabandClothing ]
   description: A close-fitting high tech mask designed by Arcadia Industries for spacefaring operators.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Mask/arcadia.rsi
   - type: Clothing
     sprite: _NF/Clothing/Mask/arcadia.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95 # Frontier 0.90<0.95
+        Slash: 0.95 # Frontier 0.90<0.95
+        Piercing: 0.95
+        Heat: 0.95
   - type: HideLayerClothing
     slots:
     - Hair
@@ -66,7 +73,7 @@
     sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi
 
 - type: entity
-  parent: [ BaseC3CultContrabandUnredeemable, ContrabandClothing, ClothingMaskGasExplorer ]
+  parent: [ BaseC3CultContrabandUnredeemable, ContrabandClothing, ClothingMaskPullableBase ]
   id: ClothingMaskCultJanitor
   name: cult janitor mask
   description: A close-fitting, imposing breath mask designed for accursed custodians who value style.
@@ -78,6 +85,13 @@
   - type: HideLayerClothing
     slots:
     - Hair
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95 # Frontier 0.90<0.95
+        Slash: 0.95 # Frontier 0.90<0.95
+        Piercing: 0.95
+        Heat: 0.95
 
 - type: entity
   id: ClothingMaskPunkHalf
