@@ -47,9 +47,10 @@ public partial class ChatBox : UIWidget
         ChatInput.Input.OnFocusExit += OnFocusExit;
         ChatInput.ChannelSelector.OnChannelSelect += OnChannelSelect;
         ChatInput.FilterButton.Popup.OnChannelFilter += OnChannelFilter;
-
+        ChatInput.FilterButton.Popup.OnNewHighlights += OnNewHighlights;
         _controller = UserInterfaceManager.GetUIController<ChatUIController>();
         _controller.MessageAdded += OnMessageAdded;
+        _controller.HighlightsUpdated += OnHighlightsUpdated;
         _controller.RegisterChat(this);
 
         // WD EDIT START
@@ -103,6 +104,11 @@ public partial class ChatBox : UIWidget
         } // WD EDIT END
     }
 
+    private void OnHighlightsUpdated(string highlights)
+    {
+        ChatInput.FilterButton.Popup.UpdateHighlights(highlights);
+    }
+
     private void OnChannelSelect(ChatSelectChannel channel)
     {
         _controller.UpdateSelectedChannel(this);
@@ -133,7 +139,12 @@ public partial class ChatBox : UIWidget
         }
     }
 
-    public void AddLine(string message, Color color, int repeat = 0) // WD EDIT
+    private void OnNewHighlights(string highlighs)
+    {
+        _controller.UpdateHighlights(highlighs);
+    }
+
+    public void AddLine(string message, Color color, int repeat = 0) // EE - Chat stacking - repeat
     {
         var formatted = new FormattedMessage(4); // WD EDIT // specifying size beforehand smells like a useless microoptimisation, but i'll give them the benefit of doubt
         formatted.PushColor(color);
@@ -245,4 +256,24 @@ public partial class ChatBox : UIWidget
         ChatInput.ChannelSelector.OnChannelSelect -= OnChannelSelect;
         _cfg.UnsubValueChanged(CCVars.CoalesceIdenticalMessages, UpdateCoalescence); // WD EDIT
     }
+
+    // EE - Chat stacking
+    private sealed class ChatStackData
+    {
+        public NetEntity Entity; // Frontier: speaker
+        public string Message; // Frontier: base message
+        public ChatChannel Channel; // Frontier: channel
+        public string WrappedMessage;
+        public Color ColorOverride;
+        public int RepeatCount = 0;
+        public ChatStackData(string wrappedMessage, Color colorOverride, string message, NetEntity entity, ChatChannel channel)
+        {
+            WrappedMessage = wrappedMessage;
+            ColorOverride = colorOverride;
+            Message = message; // Frontier
+            Entity = entity; // Frontier
+            Channel = channel; // Frontier
+        }
+    }
+    // End EE - Chat stacking
 }

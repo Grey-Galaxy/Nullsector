@@ -32,8 +32,8 @@
         density: 100
         mask:
           - MobMask
-        layer:
-          - MobLayer
+        #layer:         # Frontier :: prevents vehicle from being hit by bullets and lasers
+        #  - MobLayer
         hard: true
   - type: Pullable
   - type: Damageable

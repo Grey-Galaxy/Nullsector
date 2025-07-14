@@ -5,44 +5,47 @@
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
-- type: pointOfInterest
-  id: EventRepairRelay
-  parent: BasePOI
-  name: Lark Repair Orbital
-  minimumDistance: 2000
-  maximumDistance: 3500
-  spawnGroup: Required
-  gridPath: /Maps/_Null/Event/repair_relay.yml
-  hideWarp: false
-  addComponents:
-  - type: IFF
-    color: "#87ABBA"
-    #flags: [HideLabel, Hide]
-    readOnly: false
-  - type: SolarPoweredGrid
-    trackOnInit: true
-    doNotCull: true
 
-- type: gameMap
-  id: EventRepairRelay
-  mapName: 'Lark Repair Orbital'
-  mapPath: /Maps/_Null/Event/repair_relay.yml
-  minPlayers: 0
-  stations:
-    EventRepairRelay:
-      stationProto: StandardFrontierStation
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Lark Repair Orbital'
-        - type: ExtraStationInformation
-          iconPath: /Textures/_Null/Miscellaneous/repair_icon-256x256.png
-          stationSubtext: 'lark-orbital-name'
-          stationDescription: 'lark-orbital-description'
-        - type: StationJobs
-          availableJobs:
-            Contractor: [ -1, -1 ]
-            Pilot: [ -1, -1 ]
-            StationRepresentative: [ 1, 1 ]
-          tags:
-          - HeadOfPersonnel
-          - HeadOfSecurity
+## DISABLED
+
+# - type: pointOfInterest
+  # id: EventRepairRelay
+  # parent: BasePOI
+  # name: Lark Repair Orbital
+  # minimumDistance: 2000
+  # maximumDistance: 3500
+  # spawnGroup: Required
+  # gridPath: /Maps/_Null/Event/repair_relay.yml
+  # hideWarp: false
+  # addComponents:
+  # - type: IFF
+    # color: "#87ABBA"
+    # #flags: [HideLabel, Hide]
+    # readOnly: false
+  # - type: SolarPoweredGrid
+    # trackOnInit: true
+    # doNotCull: true
+
+# - type: gameMap
+  # id: EventRepairRelay
+  # mapName: 'Lark Repair Orbital'
+  # mapPath: /Maps/_Null/Event/repair_relay.yml
+  # minPlayers: 0
+  # stations:
+    # EventRepairRelay:
+      # stationProto: StandardFrontierStation
+      # components:
+        # - type: StationNameSetup
+          # mapNameTemplate: 'Lark Repair Orbital'
+        # - type: ExtraStationInformation
+          # iconPath: /Textures/_Null/Miscellaneous/repair_icon-256x256.png
+          # stationSubtext: 'lark-orbital-name'
+          # stationDescription: 'lark-orbital-description'
+        # - type: StationJobs
+          # availableJobs:
+            # Contractor: [ -1, -1 ]
+            # Pilot: [ -1, -1 ]
+            # StationRepresentative: [ 1, 1 ]
+          # tags:
+          # - HeadOfPersonnel
+          # - HeadOfSecurity
