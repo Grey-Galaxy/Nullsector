@@ -1000,6 +1000,9 @@
   id: PercussionInstrument
 
 - type: Tag
+  id: PetCarrier
+
+- type: Tag
   id: PetWearable
 
 - type: Tag

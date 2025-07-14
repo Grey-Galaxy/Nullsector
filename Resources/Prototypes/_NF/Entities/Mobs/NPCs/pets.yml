@@ -5,6 +5,11 @@
   - type: GhostRole
   - type: IntrinsicRadioReceiver
   - type: CargoSellBlacklist
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
 
 - type: entity
   name: Clippy
@@ -393,8 +398,8 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
-    - VimPilot
     - AnomalyHost
+    - CanPilot
   - type: Loadout
     prototypes: [ MobKoboldGear ]
   - type: Grammar

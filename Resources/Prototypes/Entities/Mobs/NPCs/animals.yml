@@ -64,7 +64,9 @@
         Piercing: 5
   - type: Tag
     tags:
+    - PetCarrier
     - VimPilot
+    - DoorBumpOpener
   - type: NightVision # Goobstation - Nigthvision
     color: "#808080"
     activateSound: null
@@ -212,6 +214,7 @@
     - DoorBumpOpener
     - Chicken
     - VimPilot
+    - PetCarrier
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -399,6 +402,7 @@
     tags:
     - Trash
     - VimPilot
+    - PetCarrier
   - type: Destructible
     thresholds:
     - trigger:
@@ -571,6 +575,7 @@
     - Trash
     - CannotSuicide
     - VimPilot
+    - PetCarrier
   - type: CanEscapeInventory
   - type: NpcFactionMember
     factions:
@@ -663,6 +668,7 @@
     - DoorBumpOpener
     - Duck
     - VimPilot
+    - PetCarrier
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -844,6 +850,7 @@
     tags:
     - DoorBumpOpener
     - Cow
+    - PetCarrier
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -982,6 +989,8 @@
   - type: Tag
     tags:
     - VimPilot
+    - PetCarrier
+    - DoorBumpOpener
   - type: HTN
     rootTask:
       task: RuminantCompound
@@ -1021,6 +1030,7 @@
     tags:
     # let moths eat wool directly
     - ClothMade
+    - PetCarrier
     - DoorBumpOpener
     - Goat
   - type: Reproductive
@@ -1127,6 +1137,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - PetCarrier
+    - DoorBumpOpener
+    - VimPilot
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1176,6 +1191,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - PetCarrier
+    - DoorBumpOpener
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1236,6 +1255,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - PetCarrier
+    - DoorBumpOpener
   - type: Physics
   - type: Inventory
     speciesId: kangaroo
@@ -1254,10 +1277,6 @@
         Base: kangaroo-crit
       Dead:
         Base: kangaroo-dead
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - FootstepSound
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-kangaroo-name
@@ -1418,9 +1437,9 @@
   - type: IdExaminable
   - type: Tag
     tags:
-    - VimPilot
     - DoorBumpOpener
     - AnomalyHost
+    - PetCarrier
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -1821,6 +1840,7 @@
     - ChefPilot
     - Mouse
     - Meat
+    - PetCarrier
   - type: Respirator
     damage:
       types:
@@ -2035,6 +2055,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2059,9 +2083,7 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
-  - type: Tag
-    tags:
-    - VimPilot
+
 
 
 - type: entity
@@ -2093,6 +2115,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2148,6 +2174,10 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2169,9 +2199,7 @@
       path: /Audio/Animals/frog_ribbit.ogg
   - type: Bloodstream
     bloodMaxVolume: 50
-  - type: Tag
-    tags:
-    - VimPilot
+
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
 - type: entity
@@ -2203,6 +2231,11 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
+    - DoorBumpOpener
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2269,6 +2302,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - PetCarrier
+    - DoorBumpOpener
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2288,9 +2325,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/penguin_squawk.ogg
-  - type: Tag
-    tags:
-    - VimPilot
   - type: NpcFactionMember
     factions:
     - Passive
@@ -2403,6 +2437,10 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2446,6 +2484,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - PetCarrier
+    - DoorBumpOpener
+    - FootstepSound
   - type: Butcherable
     spawned:
     - id: FoodMeatSpider
@@ -2501,10 +2544,6 @@
       Unsexed: UnisexArachnid
   - type: TypingIndicator
     proto: spider
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - FootstepSound
   - type: Prying # Open door from xeno.yml.
     pryPowered: true
     force: true
@@ -2678,6 +2717,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: possum
     templateId: pet
@@ -2702,9 +2746,7 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: Tag
-    tags:
-    - VimPilot
+
 
 - type: entity
   name: possum
@@ -2752,6 +2794,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: possum #close enough
     templateId: pet
@@ -2777,9 +2824,7 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: Tag
-    tags:
-    - VimPilot
+
 
 - type: entity
   name: fox
@@ -2813,6 +2858,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: fox
     templateId: pet
@@ -2856,9 +2906,6 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
-  - type: Tag
-    tags:
-    - VimPilot
 
 - type: entity
   name: corgi
@@ -2888,6 +2935,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: dog
     templateId: pet
@@ -2918,9 +2970,6 @@
     flavorKind: station-event-random-sentience-flavor-corgi
   - type: MobPrice
     price: 200
-  - type: Tag
-    tags:
-    - VimPilot
 
 - type: entity
   name: corrupted corgi
@@ -3035,6 +3084,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: cat
     templateId: pet
@@ -3076,9 +3130,6 @@
       gender: epicene
   - type: MobPrice
     price: 200
-  - type: Tag
-    tags:
-    - VimPilot
   - type: HTN # DeltaV - make all cats eat mice
     rootTask:
       task: SimpleHostileCompound
@@ -3175,9 +3226,6 @@
   - type: Temperature
     heatDamageThreshold: 423
     coldDamageThreshold: 0
-  - type: Tag
-    tags:
-    - DoorBumpOpener
   - type: MovementAlwaysTouching
   - type: PressureImmunity
   - type: ProtectedFromStepTriggers
@@ -3275,6 +3323,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: sloth
     templateId: pet
@@ -3300,9 +3353,6 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: Tag
-    tags:
-    - VimPilot
 
 - type: entity
   name: ferret
@@ -3329,6 +3379,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: fox #close enough
     templateId: pet
@@ -3355,9 +3410,6 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: Tag
-    tags:
-    - VimPilot
 
 - type: entity
   name: hamster
@@ -3406,6 +3458,14 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - ChefPilot
+    - Trash
+    - Hamster
+    - Meat
+    - PetCarrier
   - type: MobState
   - type: Deathgasp
   - type: MobStateActions
@@ -3457,13 +3517,6 @@
       amount: 1
   - type: ReplacementAccent
     accent: mouse
-  - type: Tag
-    tags:
-    - VimPilot
-    - ChefPilot
-    - Trash
-    - Hamster
-    - Meat
   - type: Respirator
     damage:
       types:
@@ -3526,14 +3579,14 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Inventory
-    speciesId: pig
-    templateId: pet
   - type: Tag
     tags:
     - DoorBumpOpener
     - Pig
-    - VimPilot
+    - PetCarrier
+  - type: Inventory
+    speciesId: pig
+    templateId: pet
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -3599,6 +3652,11 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - PetCarrier
   - type: Inventory
     speciesId: cat
     templateId: pet
@@ -3643,10 +3701,6 @@
       Male: UnisexDiona
       Female: UnisexDiona
       Unsexed: UnisexDiona
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - VimPilot
   - type: Emoting
   - type: BodyEmotes
     soundsId: Nymph
@@ -3695,6 +3749,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - PetCarrier
   - type: DamageStateVisuals
     states:
       Alive:
