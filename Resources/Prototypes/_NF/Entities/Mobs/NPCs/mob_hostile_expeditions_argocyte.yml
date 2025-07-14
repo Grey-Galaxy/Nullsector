@@ -352,7 +352,6 @@
   - type: Tag
     tags:
     - VimPilot
-    - DoorBumpOpener
     - PetCarrier
   - type: MeleeWeapon
     damage:
