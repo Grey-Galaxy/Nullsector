@@ -349,6 +349,10 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Tag
+    tags:
+    - VimPilot
+    - PetCarrier
   - type: MeleeWeapon
     damage:
       types:
