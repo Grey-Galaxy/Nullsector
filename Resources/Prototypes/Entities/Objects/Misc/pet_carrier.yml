@@ -39,11 +39,7 @@
     itemCanStoreMobs: true
     whitelist: # Frontier - whitelist
       tags:
-      - VimPilot
-      - Cow
-      - Goat
-      - Mouse
-      - Pig
+      - PetCarrier
     forceWhitelist: true # Frontier - force whitelist
   - type: Weldable
   - type: ResistLocker
