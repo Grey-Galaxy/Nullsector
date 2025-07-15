@@ -1,0 +1,57 @@
+- type: entity
+  parent: Bible
+  name: Arialial Dominion
+  description: "TODO ADD DESCRIPTION"
+  id: arialial_dominion
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/Arialial Dominion.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/Arialial Dominion.rsi
+
+
+- type: entity
+  parent: Bible
+  name: Armadan Restorationists
+  description: "TODO ADD DESCRIPTION"
+  id: armadan_restorationists
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/Armadan Restorationists.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/Armadan Restorationists.rsi
+
+- type: entity
+  parent: Bible
+  name: Chaos Cult (HC)
+  description: "TODO ADD DESCRIPTION"
+  id: chaos_cult(HC)
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/Chaos Cult (HC).rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/Chaos Cult (HC).rsi
+
+- type: entity
+  parent: Bible
+  name: Chaos Cult (HR)
+  description: "TODO ADD DESCRIPTION"
+  id: chaos_cult(HR).rsi
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/Chaos Cult (HR).rsi.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/Chaos Cult (HR).rsi
+
+
+
+- type: entity
+  parent: Bible
+  name: Followers of Circi
+  description: "TODO ADD DESCRIPTION"
+  id: followers_of_circi
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/Followers of Circi.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/Followers of Circi.rsi
