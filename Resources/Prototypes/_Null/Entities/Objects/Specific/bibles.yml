@@ -39,7 +39,7 @@
   id: Chaos_Cult_HR
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi.rsi
+    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi
 
