@@ -249,7 +249,7 @@
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3PirateContraband] # Frontier: BaseMinorContraband<BaseC3PirateContraband
   id: WeaponShotgunBlunderbuss
   suffix: Pirate
-  description: Deadly at close range, an illegal shotgun often found at the side of a pirate.
+  description: Deadly at close range, the blunderbuss is a shotgun often found at the side of a pirate.
   components:
   - type: Item
     size: Normal
@@ -262,8 +262,8 @@
     fireRate: 2
   - type: BallisticAmmoProvider
     capacity: 1
-  - type: StaticPrice
-    price: 0
+  - type: StaticPrice # Null: This price must remain as it is. PR's changing this price will be denied. Piracy is a choice not made cheap.
+    price: 500
 
 - type: entity
   name: improvised shotgun

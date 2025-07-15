@@ -47,3 +47,5 @@
   - type: Tag
     tags:
     - AppraisalTool
+  - type: StaticPrice
+    price: 90
