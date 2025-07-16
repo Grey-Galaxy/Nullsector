@@ -233,11 +233,48 @@
   inhand:
     - HypoMini
 
+#Null bibles
 - type: loadout
-  id: ContractorBible
+  id: ContractorBibleArialialDominion
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
   price: 500
   inhand:
-    - Bible
+    - BibleArialialDominion
+
+- type: loadout
+  id: ContractorBibleArmadanRestorationists
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleArmadanRestorationists
+
+- type: loadout
+  id: ContractorBibleChaosCultHC
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleChaosCultHC
+
+- type: loadout
+  id: ContractorBibleChaosCultHR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleChaosCultHR
+
+- type: loadout
+  id: ContractorBibleFollowersOfCirci
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleFollowersOfCirci

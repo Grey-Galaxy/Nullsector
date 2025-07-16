@@ -2,7 +2,7 @@
   parent: Bible
   name: Arialial Dominion
   description: "TODO ADD DESCRIPTION"
-  id: Arialial_Dominion
+  id: BibleArialialDominion
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Arialial Dominion.rsi
@@ -14,7 +14,7 @@
   parent: Bible
   name: Armadan Restorationists
   description: "TODO ADD DESCRIPTION"
-  id: Armadan_Restorationists
+  id: BibleArmadanRestorationists
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Armadan Restorationists.rsi
@@ -25,7 +25,7 @@
   parent: Bible
   name: Chaos Cult (HC)
   description: "TODO ADD DESCRIPTION"
-  id: Chaos_Cult_HC
+  id: BibleChaosCultHC
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HC).rsi
@@ -36,7 +36,7 @@
   parent: Bible
   name: Chaos Cult (HR)
   description: "TODO ADD DESCRIPTION"
-  id: Chaos_Cult_HR
+  id: BibleChaosCultHR
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi
@@ -49,7 +49,7 @@
   parent: Bible
   name: Followers of Circi
   description: "TODO ADD DESCRIPTION"
-  id: Followers_of_Circi
+  id: BibleFollowersOfCirci
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Followers of Circi.rsi

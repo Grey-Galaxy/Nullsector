@@ -827,6 +827,12 @@
   - ContractorShipyardRCD
   - ContractorHandheldCrewMonitor
   - ContractorHypoMini
+  #Null bibles
+  - ContractorBibleArialialDominion
+  - ContractorBibleArmadanRestorationists
+  - ContractorBibleChaosCult_HC
+  - ContractorBibleChaosCultHR
+  - ContractorBibleFollowersOfCirci
 
 - type: loadoutGroup
   id: ContractorFace

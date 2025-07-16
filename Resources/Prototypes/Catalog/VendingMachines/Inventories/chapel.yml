@@ -34,11 +34,11 @@
     ClothingOuterEVASuitChaplain: 3 # Frontier
 
  #Null Sector start
-    Arialial_Dominion: 3
-    Armadan_Restorationists: 3
-    Chaos_Cult_HC: 3
-    Chaos_Cult_HR: 3
-    Followers_of_Circi: 3
+    BibleArialialDominion: 3
+    BibleArmadanRestorationists: 3
+    BibleChaosCultHC: 3
+    BibleChaosCultHR: 3
+    BibleFollowersOfCirci: 3
  #Null Sector end
 
   contrabandInventory:
