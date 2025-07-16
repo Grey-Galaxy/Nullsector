@@ -58,7 +58,7 @@
   parent: Bible
   suffix: new circibonic
   description: "Created by the Circibon, blessed machines of Circi, Circibonic (not Circi-A-bonic) followers venerate the advancement of technology above all things. Ironically, Circibonic rids itself of theocratic belief despite it's proven roots in Circi, instead opting to remark Circi as just yet another technological advancement."
-  id: BibleFollowersOfCirci
+  id: BibleNewCircibonic
   components:
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
