@@ -1,0 +1,132 @@
+- type: constructionGraph
+  id: Campfire
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: campfire
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 4
+
+    # Standard Campfire
+    - node: campfire
+      actions:
+      - !type:AppearanceChange
+      entity: Campfire
+      edges:
+        # Upgrade to Campfire w. Spit
+        - to: spit_campfire
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 2
+
+        # Light The Fire
+        - to: lit_campfire
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Coal
+              amount: 1
+              doAfter: 1
+
+        # Deconstruction Step-Down
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3 # Returned Materials from Breaking
+          steps:
+            - tool: Screwing # Breaking
+              doAfter: 3
+
+    # Cooking Campfire
+    - node: spit_campfire
+      actions:
+      - !type:AppearanceChange
+      entity: SpitCampfire
+      edges:
+        # Light The Fire
+        - to: lit_cooking_campfire
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Coal
+              amount: 1
+              doAfter: 1
+
+        # Deconstruction Step-Down to Campfire
+        - to: campfire
+          completed:
+            - !type:AppearanceChange
+              prototype: Campfire
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2 # Returned Materials from Breaking
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+
+    # Lit Campfire
+    - node: lit_campfire
+      actions:
+      - !type:AppearanceChange
+      entity: LitCampfire
+      edges:
+        # Deconstruction Step-Down to Dead Campfire
+        - to: dead_campfire
+          completed:
+            - !type:AppearanceChange
+              prototype: Campfire
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2 # Returned Materials from Breaking
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+    # Lit Cooking Campfire
+    - node: lit_cooking_campfire
+      actions:
+      - !type:AppearanceChange
+      entity: CookingCampfire
+      edges:
+        # Deconstruction Step-Down to Dead Campfire
+        - to: dead_campfire
+          completed:
+            - !type:AppearanceChange
+              prototype: Campfire
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2 # Returned Materials from Breaking
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+    # Dead Campfire
+    - node: dead_campfire
+      actions:
+      - !type:AppearanceChange
+      entity: DeadCampfire
+      edges:
+        # Deconstruction Step-Down to Gone
+        - to: start
+          completed:
+            # Returned Materials from Breaking
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 1
+            # Returned Materials from Breaking
+            - !type:SpawnPrototype
+              prototype: Coal1
+              amount: 1
+          steps:
+            - tool: Screwing # Breaking
+              doAfter: 2

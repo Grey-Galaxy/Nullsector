@@ -8,12 +8,11 @@ using Content.Shared.Atmos;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Inventory;
+using Content.Shared.Projectiles;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Temperature;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Physics.Events;
-using Content.Shared.Projectiles;
 
 namespace Content.Server.Temperature.Systems;
 
@@ -115,6 +114,12 @@ public sealed class TemperatureSystem : EntitySystem
         ShouldUpdateDamage.Clear();
     }
 
+    /// <summary>
+    /// Changes temperature of provided entity with ignorance of heat resistance and heat capacity.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="temp"></param>
+    /// <param name="temperature"></param>
     public void ForceChangeTemperature(EntityUid uid, float temp, TemperatureComponent? temperature = null)
     {
         if (!Resolve(uid, ref temperature))
@@ -127,6 +132,13 @@ public sealed class TemperatureSystem : EntitySystem
             true);
     }
 
+    /// <summary>
+    /// Accounts for possible heat resistance and heat capacity.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="heatAmount"></param>
+    /// <param name="ignoreHeatResistance"></param>
+    /// <param name="temperature"></param>
     public void ChangeHeat(EntityUid uid, float heatAmount, bool ignoreHeatResistance = false,
         TemperatureComponent? temperature = null)
     {
