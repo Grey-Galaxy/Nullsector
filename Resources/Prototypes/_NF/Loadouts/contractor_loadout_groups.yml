@@ -533,8 +533,6 @@
 #  - ContractorClothingHeadHatBeretCmo # Temp removed for DOC. Will return if replaced.
   - ContractorClothingHeadHatBeretQM
   - ContractorClothingHeadHatQMsoft
-  - ContractorClothingHeadHatCardinal
-  - ContractorClothingHeadHatHoodNunHood
   - ContractorClothingHeadSafari
   - ContractorClothingHeadHatJester
   - ContractorClothingHeadHatJesterAlt
@@ -552,7 +550,6 @@
   - ContractorClothingHeadHatCowboyWhite
   - ContractorClothingHeadHatWideBrimmed
   - ContractorClothingHeadHatWitchhunter
-  - ContractorClothingHeadHatBishopMitre
   - ContractorClothingHeadHatPlaguedoctor
   - ContractorPlunger
   - ContractorClothingHeadHatCone

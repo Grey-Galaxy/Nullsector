@@ -84,14 +84,14 @@
 
 - type: loadout
   id: ContractorClothingBeltSuspendersRed
-  name: Surpender Red
+  name: Suspenders Red
   price: 500
   equipment:
     belt: ClothingBeltSuspendersRed
 
 - type: loadout
   id: ContractorClothingBeltSuspendersBlack
-  name: Surpender Black
+  name: Suspenders Black
   price: 500
   equipment:
     belt: ClothingBeltSuspendersBlack
