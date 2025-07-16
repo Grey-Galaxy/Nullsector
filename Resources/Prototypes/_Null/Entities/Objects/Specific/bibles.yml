@@ -1,57 +1,57 @@
 - type: entity
   parent: Bible
   name: Arialial Dominion
-  description: "TODO ADD DESCRIPTION"
+  description: "Vehement worshippers of the goblinic war god of greed, Maglubiyet, whose doctrine decries Felinids as slaves."
   id: BibleArialialDominion
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Arialial Dominion.rsi
+    sprite: _Null/Objects/Specific/Chapel/Arialial_Dominion.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Arialial Dominion.rsi
+    sprite: _Null/Objects/Specific/Chapel/Arialial_Dominion.rsi
 
 
 - type: entity
   parent: Bible
   name: Armadan Restorationists
-  description: "TODO ADD DESCRIPTION"
+  description: "Followers of the strict military doctrine of the Armadan Code. Poor brainwashed souls."
   id: BibleArmadanRestorationists
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Armadan Restorationists.rsi
+    sprite: _Null/Objects/Specific/Chapel/Armadan_Restorationists.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Armadan Restorationists.rsi
+    sprite: _Null/Objects/Specific/Chapel/Armadan_Restorationists.rsi
 
 - type: entity
   parent: Bible
-  name: Chaos Cult (HC)
-  description: "TODO ADD DESCRIPTION"
+  name: Chaos Cult (HC) [the new cult]
+  description: "Dedicated to madness, destruction, and especially the pursuit of wealth."
   id: BibleChaosCultHC
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HC).rsi
+    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HC.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HC).rsi
+    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HC.rsi
 
 - type: entity
   parent: Bible
-  name: Chaos Cult (HR)
-  description: "TODO ADD DESCRIPTION"
+  name: Chaos Cult (HR) [the old cult]
+  description: "Behold the mad god, The Headmaster, whose esoteric goals remain vague at best."
   id: BibleChaosCultHR
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi
+    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HR.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Chaos Cult (HR).rsi
+    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HR.rsi
 
 
 
 - type: entity
   parent: Bible
   name: Followers of Circi
-  description: "TODO ADD DESCRIPTION"
+  description: "Followers of the Ascended Machine, a mythical Tier-3 intelligence that graced robots with consciousness, and vanished without a trace."
   id: BibleFollowersOfCirci
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Followers of Circi.rsi
+    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Followers of Circi.rsi
+    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
