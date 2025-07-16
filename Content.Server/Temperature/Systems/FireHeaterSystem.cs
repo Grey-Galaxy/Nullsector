@@ -6,17 +6,12 @@ using Content.Shared.Placeable;
 namespace Content.Server.Temperature.Systems;
 
 /// <summary>
-/// Handles <see cref="FireHeaterComponent"/> updating and events.
+/// Handles <see cref="FireHeaterComponent"/> updating and events. Free code made by Lukezurg22 for Null Sector.
 /// </summary>
 public sealed class FireHeaterSystem : EntitySystem
 {
     [Dependency] private readonly TemperatureSystem _temperature = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-
-    public override void Initialize()
-    {
-        base.Initialize();
-    }
 
     public override void Update(float frameTime)
     {
@@ -31,14 +26,14 @@ public sealed class FireHeaterSystem : EntitySystem
                     _temperature.ChangeHeat(entity, heatChange, true, temperatureComponent);
                 }
 
-                // If the emplaced item is not a container, add some eat to that sucker.
-                if (TryComp<SolutionContainerManagerComponent>(entity, out var container))
+                // If the placed item is not a container, add some heat to that sucker.
+                if (!TryComp<SolutionContainerManagerComponent>(entity, out var container))
+                    continue; // Short-circuit; there is no SolutionContainerManagerComponent.
+
+                // Since the placed entity is indeed a container, heat that bad boy up.
+                foreach (var (_, solution) in _solutionContainer.EnumerateSolutions((entity, container)))
                 {
-                    // Since the emplaced entity is indeed a container, heat that bad boy up.
-                    foreach (var (_, solution) in _solutionContainer.EnumerateSolutions((entity, container)))
-                    {
-                        _solutionContainer.AddThermalEnergy(solution, heatChange);
-                    }
+                    _solutionContainer.AddThermalEnergy(solution, heatChange);
                 }
             }
         }
