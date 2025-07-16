@@ -16,7 +16,7 @@ public sealed class FireHeaterSystem : EntitySystem
     public override void Update(float frameTime)
     {
         var query = EntityQueryEnumerator<FireHeaterComponent, ItemPlacerComponent>();
-        while (query.MoveNext(out var _, out var heater, out var placer))
+        while (query.MoveNext(out _, out var heater, out var placer))
         {
             var heatChange = heater.HeatPerSecond * frameTime + 0.1f;
             foreach (var entity in placer.PlacedEntities)

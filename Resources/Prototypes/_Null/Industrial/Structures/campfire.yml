@@ -91,7 +91,8 @@
       multiplier: 1.5
       multiplierOnExisting: 0.75
     - !type:Ignite
-
+  - type: SpaceHeater
+  
 
 - type: entity
   id: CookingCampfire
@@ -106,15 +107,13 @@
     - state: cooking_campfire
       visible: true
   - type: ItemPlacer
-    maxEntities: 4 # big grill, many steaks
-#    whitelist:
-#      components:
-#      - Temperature
+    maxEntities: 4
   - type: PlaceableSurface
+    isPlaceable: true
     placeCentered: true
     positionOffset: 0, 0.25
   - type: FireHeater
-    heatPerSecond: 240
+    heatPerSecond: 100 # Less than a hotplate (120). Keep this value reasonably below this limit.
 
 - type: entity
   id: DeadCampfire
