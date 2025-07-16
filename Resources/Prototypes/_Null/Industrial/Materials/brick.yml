@@ -1,0 +1,73 @@
+# RAW BRICK
+- type: entity
+  parent: [ BaseItem ]
+  id: BrickRaw
+  name: brick
+  suffix: raw
+  description: Brick Brick Brick Brick Brick Brick Brick…It’s Fun!
+  components:
+  - type: Sprite
+    sprite: _Null/Objects/Materials/brick.rsi
+    state: raw
+  - type: Item
+    size: Tiny
+  - type: Stack
+    stackType: BrickRaw1
+    count: 1
+  - type: StaticPrice
+    price: 0
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 290
+  - type: Construction
+    graph: FiringRawBrick
+    node: start
+    defaultTarget: firing brick
+
+# FIRED BRICK
+- type: entity
+  parent: [ BrickRaw ]
+  id: BrickFired
+  suffix: fired
+  components:
+  - type: Sprite
+    state: fired
+  - type: Stack
+    stackType: BrickFired1
+    count: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 10
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 8
+  - type: DamageUserOnTrigger
+    damage:
+      types:
+        Blunt: 10
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  - type: Construction
+    graph: FiringRawBrick
+    node: firing brick
+  - type: StaticPrice
+    price: 1

@@ -1,0 +1,38 @@
+- type: entity
+  parent: Ash # Entities/Objects/Specific/Medical/morgue.yml
+  id: Ash1
+  name: ash
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Ash1
+  name: cigarette filter
+  icon: { sprite: "/Textures/Objects/Materials/materials.rsi", state: ash }
+  spawn: Ash1
+  maxCount: 100
+
+- type: entity
+  parent: Ash # Entities/Objects/Specific/Medical/morgue.yml
+  id: Ash100
+  name: ash
+  suffix: 100
+  components:
+  - type: Stack
+    count: 100
+
+- type: stack
+  id: Ash100
+  name: cigarette filter
+  icon: { sprite: "/Textures/Objects/Materials/materials.rsi", state: ash }
+  spawn: Ash100
+  maxCount: 1
+
+- type: stack
+  id: Ash
+  name: ash
+  icon: { sprite: "/Textures/Objects/Materials/materials.rsi", state: ash }
+  spawn: Ash
+  maxCount: 100

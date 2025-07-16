@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By LukeZurg22 for the Null Sector",
+  "size": {
+    "x": 22,
+    "y": 22
+  },
+  "states": [
+    {
+      "name": "raw"
+    },
+    {
+      "name": "fired"
+    }
+  ]
+}
