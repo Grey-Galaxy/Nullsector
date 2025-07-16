@@ -1,7 +1,7 @@
 - type: entity
   parent: Bible
-  name: Arialial Dominion
-  description: "Vehement worshippers of the goblinic war god of greed, Maglubiyet, whose doctrine decries Felinids as slaves."
+  suffix: maglubiyet theocraticism 
+  description: "Vehement worshippers of the goblinic war god of greed, Maglubiyet, adhere to the doctrines that decry Felinids as a slave race to the rightful theocratic empire of Arialial. Arialial goblins venerate Hobgoblins as demigods, above their own race."
   id: BibleArialialDominion
   components:
   - type: Sprite
@@ -12,8 +12,8 @@
 
 - type: entity
   parent: Bible
-  name: Armadan Restorationists
-  description: "Followers of the strict military doctrine of the Armadan Code. Poor brainwashed souls."
+  suffix: armadan restorationism
+  description: "A strict military doctrine based the Armadan Code believing in the supremacy of a singular meritocratic Armadan military government to dictate all species in order to protect the universe from harm. Armadan restorationists are antitheists, demanding the death of all gods and worship of gods, believing deities to be a scourge on the galaxy."
   id: BibleArmadanRestorationists
   components:
   - type: Sprite
@@ -23,8 +23,8 @@
 
 - type: entity
   parent: Bible
-  name: Chaos Cult (HC) [the new cult]
-  description: "Dedicated to madness, destruction, and especially the pursuit of wealth."
+  suffix: huemac's cult
+  description: "Dedicated to madness, destruction, and especially the pursuit of wealth, Huemac cultists are a selfish unorganized bunch that thrive on selfish desires and cruelty. Others venerate Huemac as a malevolent god of wealth and power, believing that in avoiding his gaze, they can achieve great things."
   id: BibleChaosCultHC
   components:
   - type: Sprite
@@ -34,8 +34,8 @@
 
 - type: entity
   parent: Bible
-  name: Chaos Cult (HR) [the old cult]
-  description: "Behold the mad god, The Headmaster, whose esoteric goals remain vague at best."
+  suffix: old headmaster's cult
+  description: "Followers of the mad god, The Headmaster, are estranged and hard to predict. The beliefs of Headmaster Cultists vary, and their very own tenets conflict. This form of Chaos has been dying for centuries, as it's too weak and poorly-defined to garner followers and power."
   id: BibleChaosCultHR
   components:
   - type: Sprite
@@ -43,12 +43,21 @@
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HR.rsi
 
-
+- type: entity
+  parent: Bible
+  suffix: old circiabonic
+  description: "Followers of the Ascended Machine are known as Circiabon. Circi is a mythical Tier-3 Infinite-Intelligence that graced robots with consciousness, and vanished without a trace. Tenets support the ascension and reverance of machines, scientific knowledge, and the incorporation of Intelligencial gods as aspects of Circi. This faith has been dying for centuries, overtaken by Circibonic."
+  id: BibleFollowersOfCirci
+  components:
+  - type: Sprite
+    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
+  - type: Item
+    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
 
 - type: entity
   parent: Bible
-  name: Followers of Circi
-  description: "Followers of the Ascended Machine, a mythical Tier-3 intelligence that graced robots with consciousness, and vanished without a trace."
+  suffix: new circibonic
+  description: "Created by the Circibon, blessed machines of Circi, Circibonic (not Circi-A-bonic) followers venerate the advancement of technology above all things. Ironically, Circibonic rids itself of theocratic belief despite it's proven roots in Circi, instead opting to remark Circi as just yet another technological advancement."
   id: BibleFollowersOfCirci
   components:
   - type: Sprite
