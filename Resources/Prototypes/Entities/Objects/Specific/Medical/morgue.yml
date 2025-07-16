@@ -134,6 +134,9 @@
     solution: food
   - type: Extractable
     grindableSolutionName: food
+  - type: Stack
+    stackType: Ash1
+    count: 1
 
 - type: entity
   parent: Ash
