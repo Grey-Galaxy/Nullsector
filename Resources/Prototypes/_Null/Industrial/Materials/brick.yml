@@ -18,7 +18,7 @@
     price: 0
   - type: AtmosExposed
   - type: Temperature
-    atmosTemperatureTransferEfficiency: 0.01
+    atmosTemperatureTransferEfficiency: 0
     currentTemperature: 290
   - type: Construction
     graph: FiringRawBrick
