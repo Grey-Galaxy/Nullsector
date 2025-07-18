@@ -315,6 +315,7 @@
   - ContractorClothingOuterCoatGentle
   - ContractorClothingOuterJacketChef
   - ContractorClothingOuterHoodieChaplain
+  - ContractorClothingOuterNunRobe
   - ContractorClothingOuterCoatLab
   - ContractorClothingOuterCoatLabGene
   - ContractorClothingOuterCoatLabChem
@@ -376,7 +377,9 @@
   - ContractorClothingOuterCoatAcidRaincoatGreen # Punkish (Static visuals)
   - ContractorClothingOuterCoatAcidRaincoatYellow # Punkish (Static visuals)
   - ContractorClothingOuterCoatAcidRaincoatMagenta # Punkish (Static visuals)
+  - ContractorClothingOuterCoatBishop
   - ContractorClothingOuterCoatWitchHunter
+  - ContractorClothingOuterCoatCardinal
   - ContractorClothingOuterPlagueSuit
   - ContractorWetFloorSign
   - ContractorClothingOuterCoatExpensive
@@ -533,6 +536,8 @@
 #  - ContractorClothingHeadHatBeretCmo # Temp removed for DOC. Will return if replaced.
   - ContractorClothingHeadHatBeretQM
   - ContractorClothingHeadHatQMsoft
+  - ContractorClothingHeadHatCardinal
+  - ContractorClothingHeadHatHoodNunHood
   - ContractorClothingHeadSafari
   - ContractorClothingHeadHatJester
   - ContractorClothingHeadHatJesterAlt
@@ -550,6 +555,7 @@
   - ContractorClothingHeadHatCowboyWhite
   - ContractorClothingHeadHatWideBrimmed
   - ContractorClothingHeadHatWitchhunter
+  - ContractorClothingHeadHatBishopMitre
   - ContractorClothingHeadHatPlaguedoctor
   - ContractorPlunger
   - ContractorClothingHeadHatCone
@@ -628,6 +634,8 @@
   - ContractorClothingOuterPonchoClassic
   - ContractorClothingNeckCloakMiner
   - ContractorClothingNeckCloakMoth
+  - ContractorClothingNeckScarfChaplainStole
+  - ContractorClothingNeckStoleChaplain
   - ContractorClothingNeckCloakTrans
   - ContractorClothingNeckCloakAro
   - ContractorClothingNeckCloakAce

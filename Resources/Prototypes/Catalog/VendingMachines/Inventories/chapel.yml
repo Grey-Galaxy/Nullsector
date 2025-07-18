@@ -9,6 +9,8 @@
     ClothingUniformJumpsuitMonasticRobeLight: 3
     ClothingOuterHoodieChaplain: 3
     ClothingOuterHoodieBlack: 3
+    ClothingHeadHatHoodNunHood: 3
+    ClothingOuterNunRobe: 3
     ClothingHeadHatFez: 3
     ClothingHeadHatPlaguedoctor: 3
     ClothingHeadHatWitch: 3
@@ -18,8 +20,14 @@
     ClothingHeadHatWideBrimmed: 3 # Frontier
     ClothingHeadHatPilgrim: 3 # Frontier
     ClothingUniformJumpsuitChaplainPilgrimVest: 3 # Frontier
+    ClothingHeadHatBishopMitre: 3 # Frontier
+    ClothingOuterCoatBishop: 3 # Frontier
+    ClothingHeadHatCardinal: 3 # Frontier
+    ClothingOuterCoatCardinal: 3 # Frontier
     ClothingHeadHatWitchhunter: 3 # Frontier
     ClothingOuterCoatWitchHunter: 3 # Frontier
+    ClothingNeckScarfChaplainStole: 3 # Frontier
+    ClothingNeckStoleChaplain: 3
     ClothingBeltChaplainSash: 3 # Frontier
 #    ClothingHeadsetService: 4 # Frontier
     RubberStampChaplain: 3
