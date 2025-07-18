@@ -97,6 +97,14 @@
 
 - type: entity
   parent: NFHolopadPoiBase
+  id: NFHolopadLarkOutpostMedical
+  suffix: Lark Station, Medical
+  components:
+  - type: Label
+    currentLabel: null-holopad-general-lark-outpost-medical
+
+- type: entity
+  parent: NFHolopadPoiBase
   id: NFHolopadFrontierOutpostSR
   suffix: Lark Coordinator, POI
   components:
