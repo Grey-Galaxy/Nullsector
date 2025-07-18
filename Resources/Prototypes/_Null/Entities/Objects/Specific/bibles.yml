@@ -1,6 +1,6 @@
 - type: entity
   parent: Bible
-  suffix: maglubiyet theocraticism 
+  suffix: maglubiyet theocraticism
   description: "Vehement worshippers of the goblinic war god of greed, Maglubiyet, adhere to the doctrines that decry Felinids as a slave race to the rightful theocratic empire of Arialial. Arialial goblins venerate Hobgoblins as demigods, above their own race."
   id: BibleArialialDominion
   components:
