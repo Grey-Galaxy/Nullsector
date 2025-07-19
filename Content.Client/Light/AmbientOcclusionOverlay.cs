@@ -22,7 +22,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
 
     private IRenderTexture? _aoTarget;
     private IRenderTexture? _aoBlurBuffer;
