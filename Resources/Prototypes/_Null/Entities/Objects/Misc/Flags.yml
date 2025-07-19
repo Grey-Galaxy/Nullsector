@@ -53,7 +53,7 @@
   description: "A Circiabon flag, followers of the Ascended Machine"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/followers_of_circi__handy_flag.rsi
+    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/followers_of_circi__handy_flag.rsi
+    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
