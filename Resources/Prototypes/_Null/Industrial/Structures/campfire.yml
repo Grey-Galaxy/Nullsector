@@ -46,7 +46,7 @@
     tags:
       - Structure
   - type: Construction
-    graph: Campfire
+    graph: CampfireGraph
     node: campfire
 
 - type: entity
