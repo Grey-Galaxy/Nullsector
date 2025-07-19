@@ -48,3 +48,11 @@
   id: LastStandMauserC96
   name: last-stand pistol
   description: An old military grade hunk of junk used in desperation. Uses .45 auto ammo. A previous name was scratched out, with “Barlowe” now etched over it.
+  compontents:
+  - type: Sprite
+    sprite: _Null/Objects/Weapons/mauser_c96_silver.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
