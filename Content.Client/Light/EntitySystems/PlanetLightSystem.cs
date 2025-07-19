@@ -47,11 +47,8 @@ public sealed class PlanetLightSystem : EntitySystem
 
         SubscribeLocalEvent<GetClearColorEvent>(OnClearColor);
 
-        _cfgManager.OnValueChanged(CCVars.AmbientOcclusion, val =>
-        {
-            AmbientOcclusion = val;
-        }, true);
-
+        _cfgManager.OnValueChanged(CCVars.AmbientOcclusion, val => { AmbientOcclusion = val; }, true);
+        _overlayMan.RemoveOverlay<AmbientOcclusionOverlay>();
         _overlayMan.AddOverlay(new BeforeLightTargetOverlay());
         _overlayMan.AddOverlay(new RoofOverlay(EntityManager));
         _overlayMan.AddOverlay(new TileEmissionOverlay(EntityManager));

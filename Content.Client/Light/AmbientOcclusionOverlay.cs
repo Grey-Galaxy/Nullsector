@@ -22,7 +22,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceEntities;
 
     private IRenderTexture? _aoTarget;
     private IRenderTexture? _aoBlurBuffer;
@@ -33,7 +33,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
     public AmbientOcclusionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        ZIndex = AfterLightTargetOverlay.ContentZIndex + 1;
+        ZIndex = AfterLightTargetOverlay.ContentZIndex + 10;
     }
 
     protected override void Draw(in OverlayDrawArgs args)
@@ -54,7 +54,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
         var worldBounds = args.WorldBounds;
         var worldHandle = args.WorldHandle;
         var color = Color.FromHex(_cfgManager.GetCVar(CCVars.AmbientOcclusionColor));
-        //color = Color.Red; // For testing purposes.
+        //color = Color.Transparent; // For testing purposes.
         var distance = _cfgManager.GetCVar(CCVars.AmbientOcclusionDistance);
         var target = viewport.RenderTarget;
         var lightScale = target.Size / (Vector2)viewport.Size;
