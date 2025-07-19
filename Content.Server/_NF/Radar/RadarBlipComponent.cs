@@ -30,7 +30,7 @@ public sealed partial class RadarBlipComponent : Component
     /// The shape of the blip on the radar.
     /// </summary>
     [DataField]
-    public RadarBlipShape Shape { get; set; } = RadarBlipShape.Ring;
+    public RadarBlipShape Shape { get; set; } = RadarBlipShape.Circle;
 
     /// <summary>
     /// Whether this blip should be shown even when parented to a grid.

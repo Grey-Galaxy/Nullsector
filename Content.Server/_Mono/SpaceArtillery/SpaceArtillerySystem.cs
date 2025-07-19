@@ -5,6 +5,7 @@ using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared._Mono.SpaceArtillery;
+using Content.Shared._Mono.SpaceArtillery.Components;
 using Content.Shared.Camera;
 using Content.Shared.DeviceLinking;
 using Content.Shared.Power;
@@ -12,7 +13,6 @@ using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
-using SpaceArtilleryComponent = Content.Server._Mono.SpaceArtillery.Components.SpaceArtilleryComponent;
 
 namespace Content.Server._Mono.SpaceArtillery;
 
@@ -41,10 +41,9 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         SubscribeLocalEvent<ShipWeaponProjectileComponent, ProjectileHitEvent>(OnProjectileHit);
     }
 
-
     private void OnSignalReceived(EntityUid uid, SpaceArtilleryComponent component, ref SignalReceivedEvent args)
     {
-        if (!TryComp<DeviceLinkSinkComponent>(uid, out var source))
+        if (!TryComp<DeviceLinkSinkComponent>(uid, out _))
             return;
 
         if (args.Port != component.SpaceArtilleryFirePort)
@@ -113,7 +112,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         // We need to set the ShootCoordinates for the gun component
         // This is important to ensure it uses the proper calculations in SharedGunSystem
         gun.ShootCoordinates = targetCoordinates;
-        
+
         // Call AttemptShoot with the correct signature that includes target coordinates
         // This will eventually call GunSystem.Shoot which correctly handles grid velocity
         _gun.AttemptShoot(uid, gunUid, gun, targetCoordinates);
@@ -153,7 +152,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
 
         foreach (var player in players.Recipients)
         {
-            if (player.AttachedEntity is not EntityUid playerEnt)
+            if (player.AttachedEntity is not { } playerEnt) // { } is a null-checking pattern.
                 continue;
 
             var vector = _xform.GetWorldPosition(uid) - _xform.GetWorldPosition(playerEnt);

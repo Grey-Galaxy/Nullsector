@@ -70,5 +70,12 @@ namespace Content.Server.Shuttles.Components
 
         [DataField("angularDamping"), ViewVariables(VVAccess.ReadWrite)]
         public float AngularDamping = 0.05f;
+
+        # region Null Sector
+
+        [ViewVariables(VVAccess.ReadWrite)]
+        public bool GunsDisabled = false;
+
+        # endregion
     }
 }

@@ -1,11 +1,8 @@
 #nullable enable
 using System.Collections.Generic;
-using System.Linq;
 using Content.Shared.Coordinates;
 using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
-using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -35,7 +32,6 @@ public sealed class PrototypeSaveTest
         await using var pair = await PoolManager.GetServerClient();
         var server = pair.Server;
 
-        var mapManager = server.ResolveDependency<IMapManager>();
         var entityMan = server.ResolveDependency<IEntityManager>();
         var prototypeMan = server.ResolveDependency<IPrototypeManager>();
         var seriMan = server.ResolveDependency<ISerializationManager>();
@@ -200,7 +196,8 @@ public sealed class PrototypeSaveTest
             ValueDataNode node,
             IDependencyCollection dependencies,
             SerializationHookContext hookCtx,
-            ISerializationContext? context, ISerializationManager.InstantiationDelegate<EntityUid>? instanceProvider)
+            ISerializationContext? context,
+            ISerializationManager.InstantiationDelegate<EntityUid>? instanceProvider)
         {
             return EntityUid.Parse(node.Value);
         }

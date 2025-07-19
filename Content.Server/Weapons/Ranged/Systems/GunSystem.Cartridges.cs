@@ -1,7 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.Damage.Events;
 using Content.Shared.Examine;
-using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Prototypes;
@@ -33,7 +32,7 @@ public sealed partial class GunSystem
             return null;
 
         if (entityProto.Components
-            .TryGetValue(_factory.GetComponentName(typeof(ProjectileComponent)), out var projectile))
+            .TryGetValue(Factory.GetComponentName<ProjectileComponent>(), out var projectile))
         {
             var p = (ProjectileComponent) projectile.Component;
 

@@ -63,10 +63,11 @@
       machine_board: !type:Container
       machine_parts: !type:Container
   - type: FireControllable
+  - type: FireControlRotate
   - type: RadarBlip
     radarColor: "#9999FF"
     scale: 1
-
+  
 - type: entity
   id: BallisticArtillery
   parent: BallisticArtilleryUnanchorable
@@ -77,3 +78,4 @@
   - type: Pullable
   - type: PirateBountyItem
     id: ShipWeapon
+  - type: FireControlRotate

@@ -1,7 +1,7 @@
 using Content.Server.Power.Components;
+using Content.Server.Power.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Events;
-using Content.Shared.FixedPoint;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
@@ -11,6 +11,7 @@ namespace Content.Server.Weapons.Ranged.Systems;
 
 public sealed partial class GunSystem
 {
+    [Dependency] private readonly BatterySystem _battery = default!; // Mono
     protected override void InitializeBattery()
     {
         base.InitializeBattery();
@@ -46,8 +47,8 @@ public sealed partial class GunSystem
 
     private void UpdateShots(EntityUid uid, BatteryAmmoProviderComponent component, float charge, float maxCharge)
     {
-        var shots = (int) (charge / component.FireCost);
-        var maxShots = (int) (maxCharge / component.FireCost);
+        var shots = (int)(charge / component.FireCost);
+        var maxShots = (int)(maxCharge / component.FireCost);
 
         if (component.Shots != shots || component.Capacity != maxShots)
         {
@@ -81,9 +82,9 @@ public sealed partial class GunSystem
         if (component is ProjectileBatteryAmmoProviderComponent battery)
         {
             if (ProtoManager.Index<EntityPrototype>(battery.Prototype).Components
-                .TryGetValue(_factory.GetComponentName(typeof(ProjectileComponent)), out var projectile))
+                .TryGetValue(Factory.GetComponentName<ProjectileComponent>(), out var projectile))
             {
-                var p = (ProjectileComponent) projectile.Component;
+                var p = (ProjectileComponent)projectile.Component;
 
                 if (!p.Damage.Empty)
                 {

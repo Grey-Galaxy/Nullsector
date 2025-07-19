@@ -1,3 +1,12 @@
+// SPDX-FileCopyrightText: 2024 Dvir
+// SPDX-FileCopyrightText: 2024 ElectroJr
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -20,7 +29,7 @@ public sealed class MapMigrationSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly IResourceManager _resMan = default!;
 
-    private static readonly string[] MigrationFiles = ["/migration.yml", "/nf_migration.yml", "/null_migration.yml"]; // Frontier: use array of migration files
+    private static readonly string[] MigrationFiles = { "/migration.yml", "/nf_migration.yml", "/mono_migration.yml" }; // Monolith: custom migration file
 
     public override void Initialize()
     {
@@ -39,10 +48,7 @@ public sealed class MapMigrationSystem : EntitySystem
             {
                 var newId = ((ValueDataNode)node).Value;
                 if (!string.IsNullOrEmpty(newId) && newId != "null")
-                {
-                    DebugTools.Assert(_protoMan.HasIndex<EntityPrototype>(newId),
-                        $"{newId} is not an entity prototype.");
-                }
+                    DebugTools.Assert(_protoMan.HasIndex<EntityPrototype>(newId), $"{newId} is not an entity prototype.");
             }
         }
         // End Delta-V
@@ -54,7 +60,7 @@ public sealed class MapMigrationSystem : EntitySystem
     {
         mappings = null;
 
-        if (MigrationFiles.Count() <= 0) // Do not use Rider's suggestions here. It breaks prototypes.
+        if (MigrationFiles.Count() <= 0)
             return false;
 
         foreach (var migrationFile in MigrationFiles)
@@ -97,13 +103,13 @@ public sealed class MapMigrationSystem : EntitySystem
         {
             foreach (var (key, value) in mapping)
             {
-                if (key is not ValueDataNode keyNode || value is not ValueDataNode valueNode)
+                if (value is not ValueDataNode valueNode)
                     continue;
 
                 if (string.IsNullOrWhiteSpace(valueNode.Value) || valueNode.Value == "null")
-                    ev.DeletedPrototypes.Add(keyNode.Value);
+                    ev.DeletedPrototypes.Add(key);
                 else
-                    ev.RenamedPrototypes.Add(keyNode.Value, valueNode.Value);
+                    ev.RenamedPrototypes.Add(key, valueNode.Value);
             }
         }
         // End Delta-V

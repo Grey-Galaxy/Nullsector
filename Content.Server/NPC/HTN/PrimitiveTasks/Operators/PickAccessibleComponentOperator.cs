@@ -1,4 +1,3 @@
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.NPC.Pathfinding;
@@ -11,7 +10,6 @@ namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators;
 /// </summary>
 public sealed partial class PickAccessibleComponentOperator : HTNOperator
 {
-    [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
     private PathfindingSystem _pathfinding = default!;
     private EntityLookupSystem _lookup = default!;
@@ -46,7 +44,7 @@ public sealed partial class PickAccessibleComponentOperator : HTNOperator
         CancellationToken cancelToken)
     {
         // Check if the component exists
-        if (!_factory.TryGetRegistration(Component, out var registration))
+        if (!_entManager.ComponentFactory.TryGetRegistration(Component, out var registration))
         {
             return (false, null);
         }
