@@ -5,9 +5,9 @@
   id: BibleArialialDominion
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Arialial_Dominion.rsi
+    sprite: _Null/Objects/Specific/Chapel/arialial_dominion.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Arialial_Dominion.rsi
+    sprite: _Null/Objects/Specific/Chapel/arialial_dominion.rsi
 
 
 - type: entity
@@ -17,9 +17,9 @@
   id: BibleArmadanRestorationists
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Armadan_Restorationists.rsi
+    sprite: _Null/Objects/Specific/Chapel/armadan_restorationists.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Armadan_Restorationists.rsi
+    sprite: _Null/Objects/Specific/Chapel/armadan_restorationists.rsi
 
 - type: entity
   parent: Bible
@@ -28,9 +28,9 @@
   id: BibleChaosCultHC
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HC.rsi
+    sprite: _Null/Objects/Specific/Chapel/chaos_cult_hc.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HC.rsi
+    sprite: _Null/Objects/Specific/Chapel/chaos_cult_hc.rsi
 
 - type: entity
   parent: Bible
@@ -39,9 +39,9 @@
   id: BibleChaosCultHR
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HR.rsi
+    sprite: _Null/Objects/Specific/Chapel/chaos_cult_hr.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Chaos_Cult_HR.rsi
+    sprite: _Null/Objects/Specific/Chapel/chaos_cult_hr.rsi
 
 - type: entity
   parent: Bible
@@ -50,9 +50,9 @@
   id: BibleFollowersOfCirci
   components:
   - type: Sprite
-    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
+    sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
+    sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
 
 - type: entity
   parent: Bible
@@ -63,4 +63,4 @@
   - type: Sprite
     sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
   - type: Item
-    sprite: _Null/Objects/Specific/Chapel/Followers_of_Circi.rsi
+    sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
