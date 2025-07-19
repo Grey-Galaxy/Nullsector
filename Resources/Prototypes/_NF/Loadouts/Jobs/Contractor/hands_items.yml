@@ -278,3 +278,50 @@
   price: 500
   inhand:
     - BibleFollowersOfCirci
+
+#Null faith Flags
+- type: loadout
+  id: ContractorFlagArialialDominion
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagArialialDominion
+
+- type: loadout
+  id: ContractorFlagArmadanRestorationists
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagArmadanRestorationists
+
+- type: loadout
+  id: ContractorFlagChaosCultHC
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagChaosCultHC
+
+- type: loadout
+  id: ContractorFlagChaosCultHR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagChaosCultHR
+
+- type: loadout
+  id: ContractorFlagFollowersOfCirci
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagFollowersOfCirci
+
