@@ -39,8 +39,6 @@
           - Impassable
           - MidImpassable
           - LowImpassable
-#        mask:
-#        - TabletopMachineMask
         hard: false
   - type: Tag
     tags:

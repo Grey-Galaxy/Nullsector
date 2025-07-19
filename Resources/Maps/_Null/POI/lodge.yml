@@ -17687,7 +17687,7 @@ entities:
     - type: Transform
       pos: -6.5,3.5
       parent: 1
-- proto: VendingMachineYarrrDrobe
+- proto: VendingMachinePirateVend
   entities:
   - uid: 2645
     components:
