@@ -1,7 +1,6 @@
 # RAW BRICK
 - type: stack
   id: BrickRaw
-  suffix: raw
   icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: raw }
   spawn: BrickRaw
   maxCount: 100
@@ -38,7 +37,6 @@
 # FIRED BRICK
 - type: stack
   id: BrickFired
-  suffix: fired
   icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: fired }
   spawn: BrickFired
   maxCount: 100
