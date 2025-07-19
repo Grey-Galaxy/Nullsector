@@ -36,7 +36,7 @@
   description: "Flag of the followers of the mad god, The Headmaster"
   components:
   - type: Sprite
-    state: chaos_cult_hc_flag
+    state: chaos_cult_hr_flag
 
 - type: entity
   parent: WallFlagArialialDominion
