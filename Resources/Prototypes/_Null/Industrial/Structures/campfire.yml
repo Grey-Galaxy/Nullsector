@@ -39,14 +39,12 @@
           - Impassable
           - MidImpassable
           - LowImpassable
-#        mask:
-#        - TabletopMachineMask
         hard: false
   - type: Tag
     tags:
       - Structure
   - type: Construction
-    graph: CampfireGraph
+    graph: Campfire
     node: campfire
 
 - type: entity

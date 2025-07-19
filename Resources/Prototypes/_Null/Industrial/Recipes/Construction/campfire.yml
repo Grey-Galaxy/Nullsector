@@ -1,7 +1,7 @@
 - type: construction
   name: campfire
   id: Campfire
-  graph: CampfireGraph
+  graph: Campfire
   startNode: start
   targetNode: campfire
   category: construction-category-furniture

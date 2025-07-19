@@ -1,45 +1,42 @@
 - type: constructionGraph
-  id: CampfireGraph
+  id: Campfire
   start: start
   graph:
     - node: start
       edges:
         - to: campfire
+          completed:
+            - !type:SpawnPrototype
+            - !type:SnapToGrid {}
           steps:
             - material: WoodPlank
               amount: 4
               doAfter: 4
-          completed:
-            - !type:SpawnPrototype
 
     - node: campfire
       entity: Campfire
       edges:
         - to: spit_campfire
-          conditions:
-            - !type:EntityAnchored {}
           steps:
             - material: WoodPlank
               amount: 3
               doAfter: 2
 
         - to: lit_campfire
-          conditions:
-            - !type:EntityAnchored {}
           steps:
             - material: Coal
               amount: 1
               doAfter: 1
 
         - to: start
-          steps:
-            - tool: Screwing
-              doAfter: 3
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 3
             - !type:DestroyEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 3
 
     - node: spit_campfire
       entity: SpitCampfire
@@ -53,48 +50,45 @@
               doAfter: 1
 
         - to: campfire
-          steps:
-            - tool: Screwing
-              doAfter: 1
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
             - !type:DestroyEntity {}
-
+          steps:
+            - tool: Screwing
+              doAfter: 1
+          
     - node: lit_campfire
       entity: LitCampfire
       edges:
         - to: dead_campfire
-          steps:
-            - tool: Screwing
-              doAfter: 1
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
             - !type:DestroyEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
 
     - node: lit_cooking_campfire
       entity: CookingCampfire
       edges:
         - to: dead_campfire
-          steps:
-            - tool: Screwing
-              doAfter: 1
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
             - !type:DestroyEntity {}
-            
+          steps:
+            - tool: Screwing
+              doAfter: 1
+                      
     - node: dead_campfire
       entity: DeadCampfire
       edges:
         - to: start
-          steps:
-            - tool: Screwing
-              doAfter: 2
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
@@ -103,3 +97,6 @@
               prototype: Coal1
               amount: 1
             - !type:DestroyEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
