@@ -35,5 +35,4 @@
   storage:
     back:
     - EncryptionKeyService # Frontier
-    - ShipVoucherFrontierValet
 # End Frontier

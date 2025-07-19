@@ -142,7 +142,7 @@
     - BoxingDrobeInventory
 #    - PietyVendInventory # Dont enable, infinite demon dogs issue
     - NfsdDrobeInventory # Frontier
-    - YarrrDrobeInventory
+    - PirateVendInventory
   - type: Sprite
     layers:
     - state: base

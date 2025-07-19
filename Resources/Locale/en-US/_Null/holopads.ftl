@@ -1,0 +1,1 @@
+null-holopad-general-lark-outpost-medical = Lark Medical

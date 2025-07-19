@@ -2,7 +2,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Audio;
 using Content.Shared.Database;
 using Content.Shared.Interaction;
 using Content.Shared.Maps;
@@ -17,7 +16,6 @@ using Robust.Shared.Network;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Tiles;
@@ -59,14 +57,14 @@ public sealed class FloorTileSystem : EntitySystem
 
         // this looks a bit sussy but it might be because it needs to be able to place off of grids and expand them
         var location = args.ClickLocation.AlignWithClosestGridTile();
-        var locationMap = location.ToMap(EntityManager, _transform);
+        var locationMap = _transform.ToMapCoordinates(location);
         if (locationMap.MapId == MapId.Nullspace)
             return;
 
         var physicQuery = GetEntityQuery<PhysicsComponent>();
         var transformQuery = GetEntityQuery<TransformComponent>();
 
-        var map = location.ToMap(EntityManager, _transform);
+        var map = _transform.ToMapCoordinates(location);
 
         // Disallow placement close to grids.
         // FTLing close is okay but this makes alignment too finnicky.
@@ -92,7 +90,7 @@ public sealed class FloorTileSystem : EntitySystem
             return;
         }
 
-        var userPos = transformQuery.GetComponent(args.User).Coordinates.ToMapPos(EntityManager, _transform);
+        var userPos = _transform.ToMapCoordinates(transformQuery.GetComponent(args.User).Coordinates).Position;
         var dir = userPos - map.Position;
         var canAccessCenter = false;
         if (dir.LengthSquared() > 0.01)

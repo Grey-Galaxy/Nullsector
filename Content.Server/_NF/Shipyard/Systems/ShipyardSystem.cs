@@ -1,27 +1,25 @@
-using Content.Server.Shuttles.Systems;
-using Content.Server.Shuttles.Components;
-using Content.Server.Station.Components;
-using Content.Server.Cargo.Systems;
-using Content.Server.Station.Systems;
-using Content.Shared._NF.Shipyard.Components;
-using Content.Shared._NF.Shipyard;
-using Content.Shared.GameTicking;
-using Robust.Server.GameObjects;
-using Robust.Shared.Map;
-using Content.Shared._NF.CCVar;
-using Robust.Shared.Configuration;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
-using Content.Shared._NF.Shipyard.Events;
-using Content.Shared.Mobs.Components;
-using Robust.Shared.Containers;
 using Content.Server._NF.Station.Components;
+using Content.Server.Cargo.Systems;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
+using Content.Server.Station.Components;
+using Content.Server.Station.Systems;
 using Content.Server.Storage.Components;
+using Content.Shared._NF.CCVar;
+using Content.Shared._NF.Shipyard;
+using Content.Shared._NF.Shipyard.Components;
+using Content.Shared._NF.Shipyard.Events;
+using Content.Shared.GameTicking;
+using Content.Shared.Mobs.Components;
+using Robust.Server.GameObjects;
+using Robust.Shared.Configuration;
+using Robust.Shared.Containers;
 using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.Map;
 using Robust.Shared.Utility;
-using Content.Server._NF.Shipyard.Systems;
-using Robust.Shared.Player;
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -135,7 +133,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return false;
         }
 
-        var price = _pricing.AppraiseGrid(shuttleGrid.Value, null);
+        var price = _pricing.AppraiseGrid(shuttleGrid.Value);
         var targetGrid = _station.GetLargestGrid(stationData);
 
 

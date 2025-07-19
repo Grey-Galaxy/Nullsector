@@ -1,6 +1,6 @@
-using Content.Server.GameTicking;
-using Content.Shared._NF.Shipyard;
+using System.Linq;
 using Content.Shared._NF.Shipyard.Components;
+using Content.Shared.NPC.Components;
 using Robust.Server.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
@@ -84,19 +84,25 @@ public sealed class ShipOwnershipSystem : EntitySystem
         }
 
         // Process deletions outside of enumeration
-        foreach (var shipUid in _pendingDeletionShips)
+        foreach (var shipUid in _pendingDeletionShips.Where(shipUid => EntityManager.EntityExists(shipUid)))
         {
-            if (!EntityManager.EntityExists(shipUid))
+            // Only handle deletion if this entity has a transform and is a grid
+            if (!TryComp<TransformComponent>(shipUid, out var transform) || transform.GridUid != shipUid)
+                continue; // If there isn't a TransformComponent, or the GridUid isn't correct, short-circuit.
+
+            bool someoneAboard = false;
+            while (someoneAboard && transform.ChildEnumerator.MoveNext(out var child))
+            {
+                if (TryComp<NpcFactionMemberComponent>(child, out var factionMember))
+                    someoneAboard = true;
+            }
+            if (someoneAboard) // If someone is aboard, then do not properly queue ship for deletion.
                 continue;
 
-            // Only handle deletion if this entity has a transform and is a grid
-            if (TryComp<TransformComponent>(shipUid, out var transform) && transform.GridUid == shipUid)
-            {
-                Logger.InfoS("shipOwnership", $"Deleting abandoned ship {ToPrettyString(shipUid)}");
+            Logger.InfoS("shipOwnership", $"Deleting abandoned ship {ToPrettyString(shipUid)}");
 
-                // Delete the grid entity
-                QueueDel(shipUid);
-            }
+            // Delete the grid entity
+            QueueDel(shipUid);
         }
 
         _pendingDeletionShips.Clear();

@@ -1,5 +1,5 @@
 - type: vendingMachineInventory
-  id: YarrrDrobeInventory
+  id: PirateVendInventory
   startingInventory:
     ClothingNeckCloakPirateCap: 4
     CageParrot: 2
@@ -16,5 +16,11 @@
     ClothingShoesBootsPirateLuffy: 4
     PirateHandyFlag: 4
     ClothingHeadHatFez: 5
+    ContrabandAppraisalToolPirate: 2
+    WeaponShotgunBlunderbuss: 1
+    ClothingWalletLeatherPirate: 5
+    Cutlass: 2
+    WeaponRevolverPirate: 3
+    PirateHook: 2
   contrabandInventory:
     ClothingOuterCoatPirateCaptain: 1

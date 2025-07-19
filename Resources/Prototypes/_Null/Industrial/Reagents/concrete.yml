@@ -1,0 +1,38 @@
+- type: reagent
+  id: ConcreteSludge
+  name: reagent-name-concrete-sludge
+  desc: reagent-desc-concrete-sludge
+  physicalDesc: reagent-physical-desc-viscous
+  flavor: sludgy
+  color: "#6B424B"
+  boilingPoint: 1473
+  meltingPoint: -50.0
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Blunt: 0.3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 7
+        damage:
+          types:
+            Blunt: 5
+
+- type: entity
+  id: ConcreteChemistryBottle
+  suffix: concrete sludge
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-concrete-sludge
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: ConcreteSludge
+          Quantity: 30

@@ -1,7 +1,7 @@
+using Content.Server.Salvage.Expeditions;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
-using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -56,12 +56,12 @@ public sealed class GridCleanupSystem : EntitySystem
         }
 
         // Check if this entity also has a grid component and ensure it's not marked for cleanup
-        if (TryComp<MapGridComponent>(uid, out var grid))
-        {
-            // Make sure we don't clean up very small expedition grids
-            var tileCount = CountTiles((uid, grid));
-            Logger.DebugS("salvage", $"Expedition grid {uid} has {tileCount} tiles");
-        }
+        if (!TryComp<MapGridComponent>(uid, out var grid))
+            return; // If no grid component, Short-Circuit.
+
+        // Make sure we don't clean up very small expedition grids
+        var tileCount = CountTiles((uid, grid));
+        Logger.DebugS("salvage", $"Expedition grid {uid} has {tileCount} tiles");
     }
 
     private void CheckGrid(Entity<MapGridComponent> ent)

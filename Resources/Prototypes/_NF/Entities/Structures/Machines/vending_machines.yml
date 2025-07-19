@@ -407,17 +407,17 @@
 
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
-  id: VendingMachineYarrrDrobe
-  name: YarrrDrobe
+  id: VendingMachinePirateVend
+  name: PirateVend
   description: A vending machine for skallywags and booty lovers!
   components:
   - type: VendingMachine
-    pack: YarrrDrobeInventory
+    pack: PirateVendInventory
     offState: off
     brokenState: broken
     normalState: normal-unshaded
   - type: Advertise
-    pack: YarrrDrobeAds
+    pack: PirateVendAds
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/yarrrdrobe.rsi
     layers:

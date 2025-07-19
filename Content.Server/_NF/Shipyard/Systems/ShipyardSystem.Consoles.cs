@@ -229,12 +229,11 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         var deedID = EnsureComp<ShuttleDeedComponent>(targetId);
 
-        var shuttleOwner = Name(player).Trim();
-        AssignShuttleDeedProperties(deedID, shuttleUid, name, shuttleOwner, voucherUsed);
+        AssignShuttleDeedProperties(deedID, shuttleUid, name, player, voucherUsed);
         deedID.DeedHolder = targetId;
 
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
-        AssignShuttleDeedProperties(deedShuttle, shuttleUid, name, shuttleOwner, voucherUsed);
+        AssignShuttleDeedProperties(deedShuttle, shuttleUid, name, player, voucherUsed);
 
         // Lock all shuttle consoles on the ship to this deed
         var shuttleConsoleQuery = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
@@ -254,7 +253,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         // Register ship ownership for auto-deletion when owner is offline too long
         // We need to get the player's session from their entity
-        if (TryComp<ActorComponent>(player, out var actorComp) && actorComp.PlayerSession != null)
+        if (TryComp<ActorComponent>(player, out var actorComp))
         {
             _shipOwnership.RegisterShipOwnership(shuttleUid, actorComp.PlayerSession);
         }
@@ -312,7 +311,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             // Get the price of the ship
             if (TryComp<ShuttleDeedComponent>(targetId, out var deed))
-                sellValue = (int)_pricing.AppraiseGrid((EntityUid)(deed?.ShuttleUid!), LacksPreserveOnSaleComp);
+                sellValue = (int)_pricing.AppraiseGrid((EntityUid)deed?.ShuttleUid!, LacksPreserveOnSaleComp);
 
             // Adjust for taxes
             sellValue = CalculateShipResaleValue((shipyardConsoleUid, component), sellValue);
@@ -339,7 +338,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 new ShuttleRecord(
                     name: deedShuttle.ShuttleName ?? "",
                     suffix: deedShuttle.ShuttleNameSuffix ?? "",
-                    ownerName: shuttleOwner,
+                    ownerName: Name(player).Trim(),
                     entityUid: _entityManager.GetNetEntity(shuttleUid),
                     purchasedWithVoucher: voucherUsed,
                     purchasePrice: (uint)vessel.Price
@@ -367,22 +366,18 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (args.Actor is not { Valid: true } player)
             return;
 
-        if (component.TargetIdSlot.ContainerSlot?.ContainedEntity is not { Valid: true } targetId)
-        {
-            ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
-            PlayDenySound(player, uid, component);
-            return;
-        }
-
+        // ID Card or Voucher in Shipyard
+        var targetId = component.TargetIdSlot.ContainerSlot?.ContainedEntity;
         TryComp<IdCardComponent>(targetId, out var idCard);
         TryComp<ShipyardVoucherComponent>(targetId, out var voucher);
-        if (idCard is null && voucher is null)
+        if (targetId is not { Valid: true } || (idCard is null && voucher is null))
         {
             ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
             PlayDenySound(player, uid, component);
             return;
         }
 
+        // Deed
         if (!TryComp<ShuttleDeedComponent>(targetId, out var deed) || deed.ShuttleUid is not { Valid: true } shuttleUid)
         {
             ConsolePopup(player, Loc.GetString("shipyard-console-no-deed"));
@@ -452,7 +447,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-        RemComp<ShuttleDeedComponent>(targetId);
+        RemComp<ShuttleDeedComponent>(targetId.Value);
 
         if (!voucherUsed)
         {
@@ -819,12 +814,15 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     }
 
     #region Deed Assignment
-    void AssignShuttleDeedProperties(ShuttleDeedComponent deed, EntityUid? shuttleUid, string? shuttleName, string? shuttleOwner, bool purchasedWithVoucher)
+    void AssignShuttleDeedProperties(ShuttleDeedComponent deed, EntityUid? shuttleUid, string? shuttleName, EntityUid? shuttleOwner, bool purchasedWithVoucher)
     {
         deed.ShuttleUid = shuttleUid;
         TryParseShuttleName(deed, shuttleName!);
-        deed.ShuttleOwner = shuttleOwner;
+        deed.DeedHolder = shuttleOwner;
         deed.PurchasedWithVoucher = purchasedWithVoucher;
+
+        if (shuttleOwner != null)
+            deed.ShuttleOwner = Name(shuttleOwner.Value).Trim();
     }
 
     private void OnInitDeedSpawner(EntityUid uid, StationDeedSpawnerComponent component, MapInitEvent args)
@@ -842,8 +840,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var output = DeedRegex.Replace($"{shuttleDeed.ShuttleOwner}", ""); // Removes content inside parentheses along with parentheses and a preceding space
         _idSystem.TryChangeFullName(uid, output); // Update the card with owner name
 
-        var deedID = EnsureComp<ShuttleDeedComponent>(uid);
-        AssignShuttleDeedProperties(deedID, shuttleDeed.ShuttleUid, shuttleDeed.ShuttleName, shuttleDeed.ShuttleOwner, shuttleDeed.PurchasedWithVoucher);
+        var deedId = EnsureComp<ShuttleDeedComponent>(uid);
+        AssignShuttleDeedProperties(deedId, shuttleDeed.ShuttleUid, shuttleDeed.ShuttleName, shuttleDeed.DeedHolder, shuttleDeed.PurchasedWithVoucher);
     }
     #endregion
 

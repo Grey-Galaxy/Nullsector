@@ -60,13 +60,11 @@ public sealed class GridDeletionContainerSystem : EntitySystem
                 foreach (var childUid in children)
                 {
                     EnsureContainedEntitiesAreDeleted(childUid, uid, processedEntities);
-
-                    // WIP: DUE NOTE THAT THE BELOW IS FOR TESTING ONLY. PEOPLE ARE GETTING DELETED WITH WRECKS.
-                    if (TryComp<MetaDataComponent>(childUid, out var childMetaData))
+                    // Debug Statement
+                    /*if (TryComp<MetaDataComponent>(childUid, out var childMetaData))
                     {
                         Logger.Debug($"Recursively deleting child entity {childMetaData.EntityName}");
-                    }
-
+                    }*/
                 }
             }
 

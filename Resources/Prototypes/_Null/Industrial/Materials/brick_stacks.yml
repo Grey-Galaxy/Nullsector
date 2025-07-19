@@ -1,0 +1,73 @@
+# RAW BRICK
+- type: stack
+  id: BrickRaw
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: raw }
+  spawn: BrickRaw
+  maxCount: 100
+  
+- type: entity
+  parent: BrickRaw
+  id: BrickRaw1
+  suffix: raw, x1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: BrickRaw1
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: raw }
+  spawn: BrickRaw1
+  maxCount: 100
+
+- type: entity
+  parent: BrickRaw
+  id: BrickRaw100
+  suffix: raw, x100
+  components:
+  - type: Stack
+    count: 100
+  
+- type: stack
+  id: BrickRaw100
+  name: cigarette filter
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: raw }
+  spawn: BrickRaw100
+  maxCount: 1
+
+# FIRED BRICK
+- type: stack
+  id: BrickFired
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: fired }
+  spawn: BrickFired
+  maxCount: 100
+  
+- type: entity
+  parent: BrickFired
+  id: BrickFired1
+  suffix: fired, x1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: BrickFired1
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: fired }
+  spawn: BrickFired1
+  maxCount: 100
+
+- type: entity
+  parent: BrickFired
+  id: BrickFired100
+  suffix: fired, x100
+  components:
+  - type: Stack
+    count: 100
+  - type: StaticPrice
+    price: 100
+
+- type: stack
+  id: BrickFired100
+  name: cigarette filter
+  icon: { sprite: "/Textures/_Null/Objects/Materials/brick.rsi", state: fired }
+  spawn: BrickFired100
+  maxCount: 1

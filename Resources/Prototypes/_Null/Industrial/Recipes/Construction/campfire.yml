@@ -1,0 +1,16 @@
+- type: construction
+  name: campfire
+  id: Campfire
+  graph: Campfire
+  startNode: start
+  targetNode: campfire
+  category: construction-category-furniture
+  description: A campfire for all your needs.
+  icon:
+    sprite: _Null/Structures/campfire.rsi
+    state: campfire
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

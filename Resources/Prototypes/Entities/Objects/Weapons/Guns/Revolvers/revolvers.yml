@@ -171,3 +171,5 @@
     capacity: 5
     chambers: [ True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null ]
+  - type: StaticPrice # Null: This price must remain as it is. PR's changing this price will be denied. Piracy is a choice not made cheap.
+    price: 300

@@ -12,3 +12,5 @@
     state: icon
   - type: Item
     sprite: _NF/Objects/Weapons/Melee/pirate_hook.rsi
+  - type: StaticPrice # Null: This price must remain as it is. PR's changing this price will be denied. Piracy is a choice not made cheap.
+    price: 30
