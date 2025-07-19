@@ -1,6 +1,5 @@
-# Start
 - type: constructionGraph
-  id: CampfireConstruct
+  id: Campfire
   start: start
   graph:
     - node: start
