@@ -6,7 +6,6 @@
       edges:
         - to: campfire
           completed:
-            - !type:SpawnPrototype
             - !type:SnapToGrid {}
           steps:
             - material: WoodPlank
