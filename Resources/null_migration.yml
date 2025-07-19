@@ -4,4 +4,4 @@ FloorWaterDecorativeEntity: FloorWaterEntity
 
 # 20250708→14
 ComputerShipyardSr: ComputerShipyardService
-YarrrDrobe: PirateVend
+VendingMachineYarrrDrobe: VendingMachinePirateVend
