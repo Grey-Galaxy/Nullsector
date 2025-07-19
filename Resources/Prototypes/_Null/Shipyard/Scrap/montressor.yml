@@ -11,7 +11,7 @@
   description: A tandem hull kitchen shuttle made up from two wrecks loosely held together. Make sure not to run out of power!
   price: 25000
   category: Small
-  group: Shipyard
+  group: Scrap
   shuttlePath: /Maps/_Null/Shuttles/Scrap/montressor.yml
   guidebookPage: null
   class:
