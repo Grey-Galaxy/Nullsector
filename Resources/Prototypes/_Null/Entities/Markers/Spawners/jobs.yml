@@ -1,10 +1,14 @@
 - type: entity
   id: SpawnPointSectorCoordinator
-  parent: SpawnPointHeadOfPersonnel
+  parent: SpawnPointJobBase
   name: sector coordinator
   components:
   - type: SpawnPoint
-    job_id: StationRepresentative
+    job_id: SectorCoordinator
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop
 
 - type: entity
   id: SpawnPointLodgeSupervisor

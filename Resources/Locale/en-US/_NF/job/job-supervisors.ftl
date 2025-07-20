@@ -1,9 +1,9 @@
-job-supervisors-sr = the Militia Coordinator
+job-supervisors-sr = the Station Representative
 job-supervisors-sheriff = the Colonel
-job-supervisors-bailiff = the NCMC Captain
+job-supervisors-bailiff = the Bailiff
 job-supervisors-sergeant = the Sergeant
 job-supervisors-cadet = all higher ranking NCMC personnel
-job-supervisors-prisoner = all NCMC personnel
+job-supervisors-prisoner = Lark station security
 job-supervisors-nfsd = Sergeants, the NCMC Captain, and the Colonel
 job-supervisors-pirate = the Rogue Commander and Commandant
 job-supervisors-nobody = nobody

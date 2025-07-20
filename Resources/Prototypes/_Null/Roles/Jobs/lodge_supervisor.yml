@@ -31,7 +31,7 @@
   alwaysUseSpawner: true
   icon: JobIconSheriff
   requireAdminNotify: true
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-sc
   weight: 180
   displayWeight: 70
   canBeAntag: false

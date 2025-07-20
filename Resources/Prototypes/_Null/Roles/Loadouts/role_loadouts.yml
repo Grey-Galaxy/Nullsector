@@ -1,0 +1,56 @@
+# Sector Coordinator
+- type: roleLoadout
+  id: JobSectorCoordinator
+  groups:
+  - StationRepHead
+  - StationRepNeck
+  - StationRepJumpsuit
+  - StationRepGloves
+  - StationRepBackpack
+  - StationRepOuterClothing
+  - ContractorShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - StationRepEars
+  - ContractorBoxSurvival
+  - StationRepPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - StationRepBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  
+# The Lodge
+## Militia Coordinator
+- type: roleLoadout
+  id: JobMilitiaCoordinator
+  groups:
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
+  - SecurityBackpack
+  - SecurityBelt
+  - HeadofSecurityOuterClothing
+  - SecurityShoes
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  - MilitiaCoordinatorPDA
+  
+## Lodge Supervisor
+- type: roleLoadout
+  id: JobLodgeSupervisor
+  groups:
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
+  - SecurityBackpack
+  - SecurityBelt
+  - HeadofSecurityOuterClothing
+  - SecurityShoes
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  - MilitiaCoordinatorPDA
