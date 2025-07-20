@@ -1,0 +1,22 @@
+- type: roleLoadout
+  id: JobSectorCoordinator
+  groups:
+  - StationRepHead
+  - StationRepNeck
+  - StationRepJumpsuit
+  - StationRepGloves
+  - StationRepBackpack
+  - StationRepOuterClothing
+  - ContractorShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - StationRepEars
+  - ContractorBoxSurvival
+  - StationRepPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - StationRepBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
