@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 00:58:11
-  entityCount: 2701
+  time: 07/20/2025 06:19:12
+  entityCount: 2702
 maps: []
 grids:
 - 1
@@ -9526,6 +9526,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.5,21.5
       parent: 1
+- proto: DresserStationRepresentativeFilled
+  entities:
+  - uid: 1790
+    components:
+    - type: Transform
+      pos: -17.5,11.5
+      parent: 1
 - proto: EmergencyLight
   entities:
   - uid: 1111
@@ -14977,7 +14984,7 @@ entities:
   - uid: 2598
     components:
     - type: Transform
-      pos: -17.507635,11.671733
+      pos: -20.514706,7.6220703
       parent: 1
 - proto: NFSignDock
   entities:
@@ -15539,11 +15546,6 @@ entities:
       parent: 1
 - proto: Rack
   entities:
-  - uid: 1790
-    components:
-    - type: Transform
-      pos: -17.5,11.5
-      parent: 1
   - uid: 2639
     components:
     - type: Transform
@@ -16788,6 +16790,13 @@ entities:
     - type: Transform
       pos: -11.5,13.5
       parent: 1
+- proto: SpawnPointLodgeSupervisor
+  entities:
+  - uid: 2594
+    components:
+    - type: Transform
+      pos: -20.5,8.5
+      parent: 1
 - proto: SpawnPointMercenary
   entities:
   - uid: 2186
@@ -16869,6 +16878,13 @@ entities:
     components:
     - type: Transform
       pos: 7.5,10.5
+      parent: 1
+- proto: SpawnPointMilitiaCoordinator
+  entities:
+  - uid: 2698
+    components:
+    - type: Transform
+      pos: -14.5,7.5
       parent: 1
 - proto: SpawnPointPilot
   entities:
@@ -16956,13 +16972,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,9.5
-      parent: 1
-- proto: SpawnPointSheriff
-  entities:
-  - uid: 2594
-    components:
-    - type: Transform
-      pos: -15.5,7.5
       parent: 1
 - proto: StairDark
   entities:
@@ -17661,6 +17670,13 @@ entities:
     - type: Transform
       pos: -10.5,6.5
       parent: 1
+- proto: VendingMachinePirateVend
+  entities:
+  - uid: 2645
+    components:
+    - type: Transform
+      pos: -11.5,11.5
+      parent: 1
 - proto: VendingMachineSalvagePOI
   entities:
   - uid: 2302
@@ -17686,13 +17702,6 @@ entities:
     components:
     - type: Transform
       pos: -6.5,3.5
-      parent: 1
-- proto: VendingMachinePirateVend
-  entities:
-  - uid: 2645
-    components:
-    - type: Transform
-      pos: -11.5,11.5
       parent: 1
 - proto: VendingMachineYouToolPOI
   entities:

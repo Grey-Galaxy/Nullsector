@@ -41,7 +41,8 @@
           lobbySortOrder: 3
         - type: StationJobs
           availableJobs:
-            Sheriff: [ 1, 1 ] # Null Sector
+            MilitiaCoordinator: [ 1, 1 ] # Null Sector
+            LodgeSupervisor: [ 1, 1 ] # Null Sector
             Mercenary: [ -1, -1 ]
         - type: StationDeadDrop
           maxDeadDrops: 1 # Fewer here, players start here.
