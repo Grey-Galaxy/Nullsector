@@ -1,3 +1,4 @@
+# Sector Coordinator
 - type: roleLoadout
   id: JobSectorCoordinator
   groups:
@@ -20,3 +21,34 @@
   - StationRepBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  
+# The Lodge
+## Militia Coordinator
+- type: roleLoadout
+  id: JobMilitiaCoordinator
+  groups:
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
+  - SecurityBackpack
+  - SecurityBelt
+  - HeadofSecurityOuterClothing
+  - SecurityShoes
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  
+## Lodge Supervisor
+- type: roleLoadout
+  id: JobLodgeSupervisor
+  groups:
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
+  - SecurityBackpack
+  - SecurityBelt
+  - HeadofSecurityOuterClothing
+  - SecurityShoes
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
