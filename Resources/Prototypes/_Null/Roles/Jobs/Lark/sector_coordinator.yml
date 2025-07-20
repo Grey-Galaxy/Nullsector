@@ -34,7 +34,14 @@
 - type: startingGear
   id: SectorCoordinatorGear
   equipment:
+    id: SrPDA
+    ears: ClothingHeadsetAltCommand
+    gloves: ClothingHandsGlovesHop
+    belt: BoxFolderClipboard
+    jumpsuit: ClothingUniformJumpsuitSr
     pocket1: WeaponDisabler
+    back: ClothingBackpackSatchel
+    shoes: ClothingShoesColorBrown
   storage:
     back:
     - Flash
