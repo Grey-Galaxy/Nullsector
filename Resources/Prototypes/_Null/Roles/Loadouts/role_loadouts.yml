@@ -37,6 +37,7 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - MilitiaCoordinatorPDA
   
 ## Lodge Supervisor
 - type: roleLoadout
@@ -52,3 +53,4 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - MilitiaCoordinatorPDA

@@ -1,0 +1,8 @@
+- type: loadoutGroup
+  id: MilitiaCoordinatorPDA
+  name: loadout-group-contractor-pda    # Name is not important
+  hidden: true                          # No point in showing this, it gets auto-selected.
+  loadouts:
+  - LodgePDA
+  fallbacks:
+  - LodgePDA

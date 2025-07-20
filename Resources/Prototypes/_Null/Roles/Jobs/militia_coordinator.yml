@@ -10,9 +10,9 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 21600 # 6 hours
-    - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 3600 # 1 hours
+    # - !type:RoleTimeRequirement
+      # role: JobSeniorOfficer
+      # time: 3600 # 1 hours
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
@@ -20,12 +20,12 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10800 # 3 hours
-    - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 3600 # 1 hours
+    # - !type:RoleTimeRequirement
+      # role: JobSeniorOfficer
+      # time: 3600 # 1 hours
   startingGear: MilitiaCoordinatorGear
   icon: JobIconBailiff
-  supervisors: job-supervisors-sheriff
+  supervisors: job-supervisors-sc
   weight: 150
   displayWeight: 60
   canBeAntag: false
