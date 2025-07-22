@@ -12,13 +12,13 @@ namespace Content.Server._NF.Shipyard.Systems;
 /// <summary>
 /// Manages ship ownership and handles cleanup of ships when owners are offline too long
 /// </summary>
-public sealed class ShipOwnershipSystem : EntitySystem
+public sealed class ShipAutoDeleteSystem : EntitySystem
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
 
-    private readonly HashSet<EntityUid> _pendingDeletionShips = new();
+    private readonly HashSet<EntityUid> _pendingDeletionShips = [];
 
     public override void Initialize()
     {
@@ -28,8 +28,8 @@ public sealed class ShipOwnershipSystem : EntitySystem
         _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
 
         // Initialize tracking for ships
-        SubscribeLocalEvent<ShipOwnershipComponent, ComponentStartup>(OnShipOwnershipStartup);
-        SubscribeLocalEvent<ShipOwnershipComponent, ComponentShutdown>(OnShipOwnershipShutdown);
+        SubscribeLocalEvent<ShipAutoDeleteComponent, ComponentStartup>(OnShipOwnershipStartup);
+        SubscribeLocalEvent<ShipAutoDeleteComponent, ComponentShutdown>(OnShipOwnershipShutdown);
     }
 
     public override void Shutdown()
@@ -41,14 +41,14 @@ public sealed class ShipOwnershipSystem : EntitySystem
     /// <summary>
     /// Register a ship as being owned by a player
     /// </summary>
-    public void RegisterShipOwnership(EntityUid gridUid, ICommonSession owningPlayer)
+    public void RegisterAutoDelete(EntityUid gridUid, ICommonSession owningPlayer)
     {
         // Don't register ownership if the entity isn't valid
         if (!EntityManager.EntityExists(gridUid))
             return;
 
         // Add ownership component to the ship
-        var comp = EnsureComp<ShipOwnershipComponent>(gridUid);
+        var comp = EnsureComp<ShipAutoDeleteComponent>(gridUid);
         comp.OwnerUserId = owningPlayer.UserId;
         comp.IsOwnerOnline = true;
         comp.LastStatusChangeTime = _gameTiming.CurTime;
@@ -64,7 +64,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
         base.Update(frameTime);
 
         // Check for ships that need to be deleted due to owner absence
-        var query = EntityQueryEnumerator<ShipOwnershipComponent>();
+        var query = EntityQueryEnumerator<ShipAutoDeleteComponent>();
         while (query.MoveNext(out var uid, out var ownership))
         {
             // Skip ships with online owners
@@ -108,7 +108,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
         _pendingDeletionShips.Clear();
     }
 
-    private void OnShipOwnershipStartup(EntityUid uid, ShipOwnershipComponent component, ComponentStartup args)
+    private void OnShipOwnershipStartup(EntityUid uid, ShipAutoDeleteComponent component, ComponentStartup args)
     {
         // If player is already online, mark them as such
         if (_playerManager.TryGetSessionById(component.OwnerUserId, out var player))
@@ -119,7 +119,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
         }
     }
 
-    private void OnShipOwnershipShutdown(EntityUid uid, ShipOwnershipComponent component, ComponentShutdown args)
+    private void OnShipOwnershipShutdown(EntityUid uid, ShipAutoDeleteComponent component, ComponentShutdown args)
     {
         // Nothing to do here for now
     }
@@ -130,7 +130,7 @@ public sealed class ShipOwnershipSystem : EntitySystem
             return;
 
         var userId = e.Session.UserId;
-        var query = EntityQueryEnumerator<ShipOwnershipComponent>();
+        var query = EntityQueryEnumerator<ShipAutoDeleteComponent>();
 
         // Update all ships owned by this player
         while (query.MoveNext(out var shipUid, out var ownership))
