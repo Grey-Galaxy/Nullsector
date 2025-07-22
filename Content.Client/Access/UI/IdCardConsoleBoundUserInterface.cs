@@ -1,4 +1,3 @@
-using System.Linq;
 using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -43,6 +42,7 @@ namespace Content.Client.Access.UI
 
             _window.CrewManifestButton.OnPressed += _ => SendMessage(new CrewManifestOpenUiMessage());
             _window.PrivilegedIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent(PrivilegedIdCardSlotId));
+            _window.TransferDeedButton.OnPressed += _ => SendMessage(new SharedIdCardSystem.TransferDeedMessage());
             _window.TargetIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent(TargetIdCardSlotId));
 
             _window.OnClose += Close;

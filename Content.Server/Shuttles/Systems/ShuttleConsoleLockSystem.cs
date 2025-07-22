@@ -1,17 +1,17 @@
 using System.Linq;
-using Content.Shared.Shuttles.Systems;
-using Content.Shared.Shuttles.Components;
-using Content.Shared.Access.Components;
-using Content.Shared._NF.Shipyard.Components;
-using Content.Server.Shuttles.Components;
-using Content.Server.Hands.Systems;
-using Content.Shared._NF.Shipyard;
-using Content.Shared.UserInterface;
-using Robust.Shared.Audio.Systems;
-using Content.Shared.Verbs;
-using Robust.Shared.Utility;
 using Content.Server._NF.Shipyard.Components;
+using Content.Server.Hands.Systems;
+using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.Company;
+using Content.Shared._NF.Shipyard;
+using Content.Shared._NF.Shipyard.Components;
+using Content.Shared.Access.Components;
+using Content.Shared.Shuttles.Components;
+using Content.Shared.Shuttles.Systems;
+using Content.Shared.UserInterface;
+using Content.Shared.Verbs;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -197,7 +197,7 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
         while (query.MoveNext(out var entity, out var deed))
         {
             // Check if this is for the same shuttle
-            if ((entity == idCard || deed.DeedHolder == idCard) &&
+            if ((entity == idCard || deed.DeedHolderCard == idCard) &&
                 deed.ShuttleUid != null &&
                 deed.ShuttleUid.Value.ToString() == lockComp.ShuttleId)
             {
@@ -479,10 +479,10 @@ public sealed class ShuttleConsoleLockSystem : SharedShuttleConsoleLockSystem
                 Log.Debug("Found deed on ID card {0}", idCard);
             }
             // Case 2: The deed points to this ID card as its holder
-            else if (deed.DeedHolder == idCard)
+            else if (deed.DeedHolderCard == idCard)
             {
                 deeds.Add((entity, deed));
-                Log.Debug("Found deed with DeedHolder {0} matching ID {1}", deed.DeedHolder, idCard);
+                Log.Debug("Found deed with DeedHolder {0} matching ID {1}", deed.DeedHolderCard, idCard);
             }
         }
 

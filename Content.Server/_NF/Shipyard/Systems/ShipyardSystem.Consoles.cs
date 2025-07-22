@@ -230,7 +230,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var deedID = EnsureComp<ShuttleDeedComponent>(targetId);
 
         AssignShuttleDeedProperties(deedID, shuttleUid, name, player, voucherUsed);
-        deedID.DeedHolder = targetId;
+        deedID.DeedHolderCard = targetId;
 
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
         AssignShuttleDeedProperties(deedShuttle, shuttleUid, name, player, voucherUsed);
@@ -251,11 +251,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             Log.Debug("Locked shuttle console {0} to shuttle {1} for deed holder {2}", consoleUid, shuttleUid, targetId);
         }
 
+        // Code below was added by Ark, for Monolith.
         // Register ship ownership for auto-deletion when owner is offline too long
         // We need to get the player's session from their entity
         if (TryComp<ActorComponent>(player, out var actorComp))
         {
-            _shipOwnership.RegisterShipOwnership(shuttleUid, actorComp.PlayerSession);
+            _shipAutoDelete.RegisterAutoDelete(shuttleUid, actorComp.PlayerSession);
         }
 
         if (!voucherUsed)
@@ -818,7 +819,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     {
         deed.ShuttleUid = shuttleUid;
         TryParseShuttleName(deed, shuttleName!);
-        deed.DeedHolder = shuttleOwner;
+        deed.DeedHolderCard = shuttleOwner;
         deed.PurchasedWithVoucher = purchasedWithVoucher;
 
         if (shuttleOwner != null)
@@ -841,7 +842,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         _idSystem.TryChangeFullName(uid, output); // Update the card with owner name
 
         var deedId = EnsureComp<ShuttleDeedComponent>(uid);
-        AssignShuttleDeedProperties(deedId, shuttleDeed.ShuttleUid, shuttleDeed.ShuttleName, shuttleDeed.DeedHolder, shuttleDeed.PurchasedWithVoucher);
+        AssignShuttleDeedProperties(deedId, shuttleDeed.ShuttleUid, shuttleDeed.ShuttleName, shuttleDeed.DeedHolderCard, shuttleDeed.PurchasedWithVoucher);
     }
     #endregion
 

@@ -1,10 +1,20 @@
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 neuPanda
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Dvir
+// SPDX-FileCopyrightText: 2025 Redrover1760
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // New Frontiers - This file is licensed under AGPLv3
 // Copyright (c) 2024 New Frontiers Contributors
 // See AGPLv3.txt for details.
+
+using Content.Server._Mono.Shuttles.Components;
 using Content.Server._NF.Station.Components;
 using Content.Server.Shuttles.Components;
-using Content.Shared._NF.Shuttles.Events;
 using Content.Shared._NF.Shipyard.Components;
+using Content.Shared._NF.Shuttles.Events;
 using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Shuttles.Systems;
@@ -32,7 +42,8 @@ public sealed partial class ShuttleSystem
             return false;
         }
 
-        if (!EntityManager.HasComponent<ShuttleDeedComponent>(transform.GridUid) ||
+        if (!EntityManager.HasComponent<ShuttleDeedComponent>(transform.GridUid) &
+            !EntityManager.HasComponent<DeedlessShuttleComponent>(transform.GridUid) || // Mono
             EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(transform.GridUid)))
         {
             return false;
@@ -87,13 +98,13 @@ public sealed partial class ShuttleSystem
 
         // Clamp the speed between 0 and 30
         var maxSpeed = Math.Clamp(args.MaxSpeed, 0f, 30f);
-        
+
         // Don't do anything if the value didn't change
         if (Math.Abs(shuttleComponent.BaseMaxLinearVelocity - maxSpeed) < 0.01f)
             return;
-            
+
         shuttleComponent.BaseMaxLinearVelocity = maxSpeed;
-        
+
         // Refresh the shuttle consoles to update the UI
         _console.RefreshShuttleConsoles(transform.GridUid.Value);
     }
@@ -103,8 +114,9 @@ public sealed partial class ShuttleSystem
         if (!EntityManager.TryGetComponent<TransformComponent>(entity, out var xform))
             return InertiaDampeningMode.Dampen;
 
-        // Not a shuttle, shouldn't be togglable
-        if (!EntityManager.HasComponent<ShuttleDeedComponent>(xform.GridUid) ||
+        // Not a shuttle, shouldn't be togglable // Mono - Added DeedlessShuttle
+        if (!EntityManager.HasComponent<ShuttleDeedComponent>(xform.GridUid) &
+            !EntityManager.HasComponent<DeedlessShuttleComponent>(xform.GridUid) ||
             EntityManager.HasComponent<StationDampeningComponent>(_station.GetOwningStation(xform.GridUid)))
             return InertiaDampeningMode.Station;
 
