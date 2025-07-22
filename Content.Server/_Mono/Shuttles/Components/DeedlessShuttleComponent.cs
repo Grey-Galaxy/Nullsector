@@ -5,7 +5,7 @@
 namespace Content.Server._Mono.Shuttles.Components;
 
 /// <summary>
-/// Component that is applied to shuttles without deeds. TODO: add to homemade shittles
+/// Component that is applied to shuttles without deeds. TODO: add to homemade shuttles
 /// </summary>
 [RegisterComponent]
 public sealed partial class DeedlessShuttleComponent : Component
