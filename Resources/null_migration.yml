@@ -2,6 +2,8 @@
 ClothingNeckHeadphones: NullClothingHeadphones
 FloorWaterDecorativeEntity: FloorWaterEntity
 
-# 20250708→14
+# 20250708→22
 ComputerShipyardSr: ComputerShipyardService
 VendingMachineYarrrDrobe: VendingMachinePirateVend
+StationRepresentative: SectorCoordinator
+SpawnPointStationRepresentative: SpawnPointSectorCoordinator
