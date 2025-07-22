@@ -182,7 +182,7 @@
   name: sector coordinator ID card
   components:
   - type: PresetIdCard
-    job: StationRepresentative
+    job: SectorCoordinator
 
 - type: entity
   parent: ValetIDCard

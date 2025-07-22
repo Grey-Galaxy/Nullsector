@@ -21,7 +21,7 @@
       - SeniorOfficer
       - Sheriff
       - SecurityGuard
-      - StationRepresentative
+      - SectorCoordinator
       - StationTrafficController
 
 - type: entity
