@@ -218,6 +218,7 @@
   parent: [ BaseVehicle, BaseFoldable, BaseItem ]
   name: wheelchair
   description: A chair with big wheels. It looks like you can move in these on your own.
+  save: true
   components:
   - type: Sprite
     sprite: Objects/Vehicles/wheelchair.rsi
