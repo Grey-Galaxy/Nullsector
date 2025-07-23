@@ -158,29 +158,6 @@
   - NFSpeciesSpecific
 
 - type: roleLoadout
-  id: JobStationRepresentative
-  groups:
-  - StationRepHead
-  - StationRepNeck
-  - StationRepJumpsuit
-  - StationRepGloves
-  - StationRepBackpack
-  - StationRepOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - StationRepEars
-  - ContractorBoxSurvival
-  - StationRepPDA
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
-  - StationRepBackpackItems
-  - ContractorHandItems
-  - NFSpeciesSpecific
-
-- type: roleLoadout
   id: JobSecurityGuard
   groups:
   - SecurityGuardHead

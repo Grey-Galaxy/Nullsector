@@ -5,7 +5,7 @@
   color: "#334E6D"
   weight: 50 # accounted for in jobs
   roles:
-  - StationRepresentative
+  - SectorCoordinator
   #- DirectorOfCare # Null Sector
   - StationTrafficController
   - Valet # nyano

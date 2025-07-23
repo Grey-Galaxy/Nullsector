@@ -7,7 +7,7 @@ namespace Content.Shared._NF.Shipyard.Components;
 /// Tracks ownership of a ship grid and manages deletion when the owner has been offline too long
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class ShipOwnershipComponent : Component
+public sealed partial class ShipAutoDeleteComponent : Component
 {
     /// <summary>
     /// The owner's player session ID

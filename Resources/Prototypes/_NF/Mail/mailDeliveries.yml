@@ -103,7 +103,7 @@
       MailNFMedkit: 0.5 # 1 weight total
 
   jobs:
-    StationRepresentative:
+    SectorCoordinator:
       MailCommandNFGoldCigars: 0.15 # 0.2 weight total
       MailCommandNFPlatinumCigars: 0.1
       MailCommandNFPremiumAlcohol: 0.25

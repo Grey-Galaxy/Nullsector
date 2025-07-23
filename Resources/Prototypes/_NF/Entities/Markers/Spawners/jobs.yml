@@ -118,14 +118,6 @@
       - state: medic
 
 - type: entity
-  id: SpawnPointStationRepresentative
-  parent: SpawnPointHeadOfPersonnel
-  name: station representative
-  components:
-  - type: SpawnPoint
-    job_id: StationRepresentative
-
-- type: entity
   id: SpawnPointSheriff
   parent: SpawnPointHeadOfSecurity
   name: sheriff

@@ -16,5 +16,5 @@ public sealed partial class FireControlServerComponent : Component
     public HashSet<EntityUid> Consoles = new();
 
     [ViewVariables]
-    public Dictionary<EntityUid, EntityUid> Leases;
+    public Dictionary<EntityUid, EntityUid>? Leases;
 }

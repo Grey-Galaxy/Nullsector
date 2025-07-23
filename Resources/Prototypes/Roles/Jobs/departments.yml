@@ -77,7 +77,7 @@
   # - ERTSecurity # Frontier
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
-  - StationRepresentative # Frontier
+  - SectorCoordinator # Frontier
   - Sheriff  # Frontier
   - StationTrafficController # Frontier
   - DirectorOfCare # Null Sector

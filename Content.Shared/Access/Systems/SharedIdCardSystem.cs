@@ -6,10 +6,10 @@ using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
 using Content.Shared.Roles;
 using Content.Shared.StatusIcon;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Access.Systems;
 
@@ -251,7 +251,7 @@ public abstract class SharedIdCardSystem : EntitySystem
                 ("jobSuffix", jobSuffix));
         _metaSystem.SetEntityName(uid, val);
     }
-    
+
     private static string ExtractFullTitle(IdCardComponent idCardComponent)
     {
         return $"{idCardComponent.FullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(idCardComponent.LocalizedJobTitle ?? string.Empty)})"
@@ -260,33 +260,26 @@ public abstract class SharedIdCardSystem : EntitySystem
 
     // Frontier: rename IDs & shuttles
     [Serializable, NetSerializable]
-    public sealed class WriteToTargetIdMessage : BoundUserInterfaceMessage
+    public sealed class WriteToTargetIdMessage(
+        string fullName,
+        string jobTitle,
+        List<ProtoId<AccessLevelPrototype>> accessList,
+        string jobPrototype)
+        : BoundUserInterfaceMessage
     {
-        public readonly string FullName;
-        public readonly string JobTitle;
-        public readonly List<ProtoId<AccessLevelPrototype>> AccessList;
-        public readonly string JobPrototype;
-
-        public WriteToTargetIdMessage(string fullName, string jobTitle, List<ProtoId<AccessLevelPrototype>> accessList, string jobPrototype)
-        {
-            FullName = fullName;
-            JobTitle = jobTitle;
-            AccessList = accessList;
-            JobPrototype = jobPrototype;
-        }
+        public readonly string FullName = fullName;
+        public readonly string JobTitle = jobTitle;
+        public readonly List<ProtoId<AccessLevelPrototype>> AccessList = accessList;
+        public readonly string JobPrototype = jobPrototype;
     }
 
     [Serializable, NetSerializable]
-    public sealed class WriteToShuttleDeedMessage : BoundUserInterfaceMessage
+    public sealed class WriteToShuttleDeedMessage(string shuttleName, string shuttleSuffix) : BoundUserInterfaceMessage
     {
-        public readonly string ShuttleName;
-        public readonly string ShuttleSuffix;
-
-        public WriteToShuttleDeedMessage(string shuttleName, string shuttleSuffix)
-        {
-            ShuttleName = shuttleName;
-            ShuttleSuffix = shuttleSuffix;
-        }
+        public readonly string ShuttleName = shuttleName;
+        public readonly string ShuttleSuffix = shuttleSuffix;
     }
     // End Frontier: rename IDs & shuttles
+    [Serializable, NetSerializable]
+    public sealed class TransferDeedMessage : BoundUserInterfaceMessage; // Null Sector
 }
