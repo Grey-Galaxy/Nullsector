@@ -13,7 +13,8 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/basic.rsi
-    snapCardinals: true
+    noRot: false
+    snapCardinals: false
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -170,6 +171,7 @@
     priority: 1
   - type: Tag
     tags:
+      - ForceNoFixRotations
       - Airlock
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
   - type: PryUnpowered
