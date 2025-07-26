@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/18/2025 04:13:51
-  entityCount: 5136
+  time: 07/26/2025 06:20:16
+  entityCount: 5135
 maps:
 - 4997
 grids:
@@ -2491,6 +2491,17 @@ entities:
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
   - uid: 5106
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: 4.5079985,1.256103
+      parent: 2
+    - type: RadarBlip
+      enabled: False
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
+  - uid: 5132
     components:
     - type: MetaData
     - type: Transform
@@ -23218,20 +23229,6 @@ entities:
     components:
     - type: Transform
       pos: -9.5,-2.5
-      parent: 2
-- proto: InflatableDoorStack1
-  entities:
-  - uid: 5133
-    components:
-    - type: Transform
-      pos: 0.7057266,16.492664
-      parent: 2
-- proto: InflatableWallStack1
-  entities:
-  - uid: 5132
-    components:
-    - type: Transform
-      pos: 0.09635162,16.53954
       parent: 2
 - proto: JanitorialTrolley
   entities:
