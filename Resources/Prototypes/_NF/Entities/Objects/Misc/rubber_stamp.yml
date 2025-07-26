@@ -1,16 +1,48 @@
+# Beginning Null Sector Changes
+- type: entity
+  name: lodge supervisor's rubber stamp
+  parent: [ RubberStampBase, BaseCommandContraband ]
+  categories: [ DoNotMap ]
+  id: RubberStampLodgeSupervisor
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-ls
+    stampedColor: "#931d6a"
+    stampState: "paper_stamp-nf-bailiff"
+    protected: True
+  - type: Sprite
+    sprite: _NF/Objects/Misc/stamps.rsi
+    state: stamp-bailiff
+
+- type: entity
+  name: militia coordinator's rubber stamp
+  parent: [ RubberStampHop, BaseCommandContraband ]
+  categories: [ DoNotMap ]
+  id: RubberStampMilitiaCoordinator
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-mc
+    stampedColor: "#8e871c"
+    stampState: "paper_stamp-nf-sheriff"
+    protected: True
+  - type: Sprite
+    sprite: _NF/Objects/Misc/stamps.rsi
+    state: stamp-sheriff
+
 - type: entity
   name: sector coordinator's rubber stamp
   parent: [RubberStampHop, BaseCommandContraband]
-  id: RubberStampSr
+  id: RubberStampSectorCoordinator
   components:
   - type: Stamp
-    stampedName: stamp-component-stamped-name-sr
+    stampedName: stamp-component-stamped-name-sc
     stampedColor: "#6ec0ea"
     stampState: "paper_stamp-hop"
     protected: True
   - type: Sprite
     state: stamp-hop
 
+# End of Null Sector Changes
 - type: entity
   name: station traffic controller's rubber stamp
   parent: RubberStampBase
