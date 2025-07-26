@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/18/2025 05:00:44
-  entityCount: 2130
+  time: 07/26/2025 06:22:23
+  entityCount: 2131
 maps: []
 grids:
 - 1
@@ -11900,6 +11900,15 @@ entities:
     - type: Transform
       pos: 1.5,15.5
       parent: 1
+- proto: WarpPointAdmin
+  entities:
+  - uid: 2131
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
+      parent: 1
+    - type: WarpPoint
+      location: Monolith Dungeon
 - proto: WeaponTurretAllHostile
   entities:
   - uid: 250
