@@ -18,7 +18,7 @@
   - Maintenance
   - Service
   - Mail # Frontier
-  - Frontier # Frontier
+  - Lark # Null Sector
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

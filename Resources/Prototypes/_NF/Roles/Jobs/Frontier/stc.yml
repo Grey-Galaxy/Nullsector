@@ -21,7 +21,7 @@
   - Service
   - Maintenance
   - External
-  - Frontier
+  - Lark # Null Sector
   - StationTrafficController
   special:
   - !type:GiveItemOnHolidaySpecial
