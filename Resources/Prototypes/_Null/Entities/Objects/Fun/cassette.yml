@@ -81,7 +81,6 @@
     state: tape_blue
     scale: 0.7, 0.7
 
-
 # Special Blank Tapes
 - type: entity
   parent: BaseTape
@@ -120,6 +119,7 @@
     price: 2500
 
 # Special Music Tapes
+# ARMADAN
 - type: entity
   parent: CassetteTapeArmada # This stuff's rare.
   id: TapeOhMahNina
@@ -142,6 +142,7 @@
     songs:
     - /Audio/_Null/Cassette/payem_payam.ogg
 
+# CONGRESSIONAL
 - type: entity
   parent: CassetteTapeCongress
   id: TapePapersPlease
@@ -153,6 +154,7 @@
     songs:
     - /Audio/_Null/Cassette/papers_please_radio.ogg
 
+# AMBIENT
 - type: entity
   parent: CassetteTapeDefault
   id: TapeAcrossTheVoid
@@ -164,6 +166,18 @@
     songs:
     - /Audio/_Mono/Jukebox/across_the_void.ogg
 
+- type: entity
+  parent: CassetteTapeRed
+  id: TapeVoidAmbiance
+  suffix: void ambiance
+  components:
+  - type: CassetteTape
+    name: "Entity Readings"
+    custom: false
+    songs:
+    - /Audio/_Null/Cassette/vinyl.ogg
+
+# 90.4 FM - Volume 1
 - type: entity
   parent: CassetteTapeRogue
   id: TapeTheBrigVolumeOne
@@ -179,14 +193,21 @@
     - /Audio/_Null/Cassette/take_us_home.ogg
     - /Audio/_Null/Cassette/die_hebben_baarden.ogg
 
+# 90.4 FM - Volume 2
 - type: entity
-  parent: CassetteTapeRed
-  id: TapeVoidAmbiance
-  suffix: void ambiance
+  parent: CassetteTapeRogue
+  id: TapeTheBrigVolumeTwo
+  suffix: the brig - volume two
   components:
   - type: CassetteTape
-    name: "Entity Readings"
+    name: "90.4 The Brig - Volume Two"
     custom: false
     songs:
-    - /Audio/_Null/Cassette/vinyl.ogg
+    - /Audio/_Null/Cassette/another_feather.ogg
+    - /Audio/_Null/Cassette/master_of_my_fate.ogg
+    - /Audio/_Null/Cassette/monkey_island_caribean_pirate.ogg
+    - /Audio/_Null/Cassette/sailing_over_the_dogger.ogg
+    - /Audio/_Null/Cassette/swing_the_cat.ogg
+
+
 
