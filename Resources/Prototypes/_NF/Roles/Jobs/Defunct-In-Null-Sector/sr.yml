@@ -1,0 +1,30 @@
+- type: job
+  id: StationRepresentative
+  name: job-name-stc
+  description: job-description-stc
+  playTimeTracker: JobStc
+  startingGear: StcGear
+  setPreference: false # Null Sector
+  alwaysUseSpawner: true
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 # 20 hrs # mono - change to 5 hr
+    - !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 3600 # 3 hrs as security guard # mono - change to 1 hr
+  canBeAntag: false
+  icon: "JobIconStc"
+  supervisors: job-supervisors-sc
+  weight: 160
+  displayWeight: 50 # Second from the top
+  setPreference: false # Null Sector
+  access:
+  - Service
+  - Maintenance
+  - External
+  - Frontier
+  - StationTrafficController
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
