@@ -1,0 +1,13 @@
+# This file soley exists to avoid YAML-LINTER errors.
+- type: accessLevel
+  id: HeadOfPersonnel
+  name: id-card-access-level-head-of-personnel
+
+- type: accessLevel
+  id: Bailiff
+  name: id-card-access-level-head-of-personnel
+
+
+- type: accessLevel
+  id: Sheriff
+  name: id-card-access-level-sheriff
