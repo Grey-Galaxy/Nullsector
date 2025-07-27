@@ -46,3 +46,13 @@
   components:
   - type: Sprite
     state: followers_of_circi_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagNewCircibonic
+  name: new circibonic flag
+  description: "A Circibon banner, followers of the blessed machines of Circi"
+  components:
+  - type: Sprite
+    state: followers_of_circi_flag
+

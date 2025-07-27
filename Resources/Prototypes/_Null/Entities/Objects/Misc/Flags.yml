@@ -57,3 +57,16 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+
+- type: entity
+  parent: [BaseItem, RecyclableItemClothSmall]
+  id: FlagNewCircibonic
+  name: new circiabonic flag
+  description: "A Circibon flag, followers of the blessed machines of Circi"
+  components:
+  - type: Sprite
+    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+    state: icon
+  - type: Item
+    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+
