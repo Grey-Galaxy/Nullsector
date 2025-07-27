@@ -39,25 +39,7 @@
     destroyOnEmpty: true
     consoleType: Security
     access:
-    - Sergeant # Frontier
-    accessGroups: # Frontier
-    - GeneralNfsdAccess # Frontier
-
-- type: entity
-  parent: ShipVoucherNfsdSergeant
-  id: ShipVoucherNfsdBailiff
-  name: Militia bailiff ship voucher
-  description: Allows for one free small to capital Militia ship purchase. Destroyed on sale.
-  components:
-  - type: Sprite
-    layers:
-    - state: nfsd
-    - state: voucherbailiff
-  - type: ShipyardVoucher
-    access:
-    - Armory
-    - Sergeant # Frontier
-    - Bailiff # Frontier
+    - Lodge
     accessGroups: # Frontier
     - GeneralNfsdAccess # Frontier
 

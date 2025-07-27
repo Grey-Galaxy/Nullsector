@@ -3,7 +3,6 @@
   id: StationRepresentative
   name: job-name-sr
   description: job-description-sr
-  playTimeTracker: JobSr
   startingGear: StcGear
   hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
