@@ -8499,20 +8499,6 @@ entities:
     - type: Transform
       pos: -5.5,2.5
       parent: 2
-- proto: SpawnPointBrigmedic
-  entities:
-  - uid: 1039
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointCadet
-  entities:
-  - uid: 1040
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
 - proto: SpawnPointContractor
   entities:
   - uid: 1041
@@ -8649,13 +8635,6 @@ entities:
 - proto: SpawnPointPrisonGuard
   entities:
   - uid: 1060
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointPublicAffairsLiaison
-  entities:
-  - uid: 1061
     components:
     - type: Transform
       pos: -4.5,2.5
