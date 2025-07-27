@@ -2,6 +2,7 @@
   id: NamesFirstMilitaryLeader
   values:
   - Colonel
+  - Captain
   - Commander
   - Lieutenant
   - Major
@@ -9,6 +10,7 @@
 - type: dataset
   id: NamesFirstMilitary
   values:
+  - Officer
   - Corporal
   - Sergeant
   - Specialist
@@ -22,6 +24,7 @@
   - Aquarius
   - Beid
   - Betelgeuse
+  - Cemmak
   - Canopus
   - Capricorn
   - Celaeno
@@ -30,8 +33,10 @@
   - Chau
   - Cygnus
   - Deneb
+  - Darvinak
   - Dragon
   - Electra
+  - Einak
   - Fomalhaut
   - Ginan
   - Hercules
@@ -56,5 +61,8 @@
   - Taurus
   - Ukdah
   - Vega
+  - Vassak
+  - Volurak
   - Yildun
   - Zosma
+  - Zavak

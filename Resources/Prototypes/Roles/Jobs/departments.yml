@@ -21,7 +21,7 @@
   # - Chaplain # Frontier
   # - Chef # Frontier
   # - Clown # Frontier
-  # - HeadOfPersonnel # Frontier
+  #- HeadOfPersonnel # Frontier
   # - Lawyer # Frontier
   # - Librarian # Frontier
   # - Mime # Frontier
@@ -64,7 +64,7 @@
   # - Captain # Frontier
   # - ChiefEngineer # Frontier
   # - ChiefMedicalOfficer # Frontier
-  # - HeadOfPersonnel # Frontier
+  #- HeadOfPersonnel # Frontier
   # - HeadOfSecurity # Frontier
   # - ResearchDirector # Frontier
   # - Quartermaster # Frontier

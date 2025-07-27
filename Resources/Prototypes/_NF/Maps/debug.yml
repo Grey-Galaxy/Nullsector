@@ -1,10 +1,10 @@
 - type: gameMap
-  id: NFDev
-  mapName: NFDev
-  mapPath: /Maps/_Null/Test/dev_map.yml # Mono
+  id: NullDev
+  mapName: NullDev
+  mapPath: /Maps/_Null/Test/dev_map.yml
   minPlayers: 0
   stations:
-    NFDev:
+    NullDev:
       stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup

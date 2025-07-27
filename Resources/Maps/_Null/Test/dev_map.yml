@@ -27,7 +27,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NFDev
+      name: NullDev
     - type: Transform
     - type: Map
       mapPaused: True
@@ -540,7 +540,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: BecomesStation
-      id: NFDev
+      id: NullDev
     - type: StationTransit
     - type: SpreaderGrid
     - type: GridPathfinding

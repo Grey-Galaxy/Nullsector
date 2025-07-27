@@ -1,9 +1,11 @@
+# This entire prototype is derived from the Frontier Station Representative prototype, but with numerous removals.
 - type: job
   id: StationRepresentative
   name: job-name-sr
   description: job-description-sr
-  playTimeTracker: JobStc
+  playTimeTracker: JobSr
   startingGear: StcGear
+  hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
   alwaysUseSpawner: true
   requirements:
@@ -18,12 +20,4 @@
   weight: 160
   displayWeight: 50 # Second from the top
   access:
-  - Service
   - Maintenance
-  - External
-  - Frontier
-  - StationTrafficController
-  special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FrontierBirthday
-    prototype: FrontierBirthdayGift

@@ -84,10 +84,6 @@ namespace Content.Client.Access.UI
             }
         }
 
-        private void TransferDeed()
-        {
-        }
-
         private void ClearAllAccess()
         {
             foreach (var button in _accessButtons.ButtonsList.Values.Where(button => button.Pressed))

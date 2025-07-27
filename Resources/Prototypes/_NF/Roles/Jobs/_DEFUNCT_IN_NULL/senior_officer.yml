@@ -1,40 +1,32 @@
 - type: job
-  id: Bailiff
-  name: job-name-bailiff
-  description: job-description-bailiff
-  playTimeTracker: JobWarden
+  id: SeniorOfficer
+  name: job-name-senior-officer
+  description: job-description-senior-officer
+  playTimeTracker: JobSeniorOfficer
+  hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
-  requirements: # mono - lowers all of these tbh
+  requirements:
     - !type:OverallPlaytimeRequirement
-      time: 21600 # 6 hours
+      time: 28800 # 8 hours # mono
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 21600 # 6 hours
+      time: 28800 # 8 hours # mono
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 3600 # 1 hours
+      role: JobSecurityOfficer
+      time: 14400 # 12 hours # mono
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 10800 # 3 hours
+      time: 43200 # 12 hours # mono
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 3600 # 1 hours
-  startingGear: BailiffGear
-  icon: JobIconBailiff
-  supervisors: job-supervisors-sheriff
-  weight: 150
-  displayWeight: 60
+      role: JobSecurityOfficer
+      time: 21600 # 6 hours
+  startingGear: SeniorOfficerGear
+  icon: JobIconSergeant
+  supervisors: job-supervisors-bailiff
+  weight: 140
+  displayWeight: 50
   canBeAntag: false
-  access:
-  - Armory
-  - Sergeant
-  - Bailiff
-  - Medical
-  - Chemistry
   accessGroups:
   - GeneralNfsdAccess
   special:
@@ -45,14 +37,12 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: BailiffGear
+  id: SeniorOfficerGear
   equipment:
     pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
-    pocket2: HoloprojectorNfsd
   storage:
     back:
     - Flash
     - MagazinePistol
     - MagazinePistolRubber
     - BaseSecurityUplinkRadioOfficer
-    - RubberStampBailiff

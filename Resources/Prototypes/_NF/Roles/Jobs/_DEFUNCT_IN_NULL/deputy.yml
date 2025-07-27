@@ -1,27 +1,28 @@
 - type: job
-  id: PublicAffairsLiaison
-  name: job-name-pal
-  description: job-description-public-affairs-liaison
-  playTimeTracker: JobPublicAffairsLiaison
+  id: Deputy
+  name: job-name-deputy
+  description: job-description-deputy
+  playTimeTracker: JobSecurityOfficer
+  hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 28800 # 8 hours # mono
+      time: 10800 # 3 hours # mono
     - !type:DepartmentTimeRequirement
       department: Security
       time: 7200 # 2 hours # mono
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hours # mono
-  startingGear: PublicAffairGear
-  icon: "JobIconPublicAffairsLiaison"
-  supervisors: job-supervisors-cadet
+      time: 18000 # 5 hours # mono
+  startingGear: DeputyGear
+  icon: JobIconDeputy
+  supervisors: job-supervisors-sergeant
+  weight: 130
+  displayWeight: 40
   canBeAntag: false
-  weight: 105
-  displayWeight: 16
   accessGroups:
-  - CadetNfsdAccess
+  - GeneralNfsdAccess
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
@@ -30,13 +31,12 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: PublicAffairGear
+  id: DeputyGear
   equipment:
-    pocket1: HyperlinkBookSpaceLaw
-    pocket2: BoxFolderClipboardPal
+    pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
   storage:
     back:
     - Flash
-    - BoxFolderPalBrown
-    - BoxFolderNfsdForms
-    - RubberStampPal
+    - MagazinePistol
+    - MagazinePistolRubber
+    - BaseSecurityUplinkRadioDeputy #Mono: Added Deputy uplink

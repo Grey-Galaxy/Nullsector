@@ -73,7 +73,6 @@ namespace Content.Shared.Roles
 
         /// <summary>
         ///     Frontier - Whether this job should show in the ID Card Console.
-        ///     If set to null, it will default to false.
         /// </summary>
         [DataField]
         public bool HideConsoleVisibility { get; private set; } = false;

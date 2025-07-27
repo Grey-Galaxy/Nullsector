@@ -1,16 +1,18 @@
 - type: job
-  id: MilitiaCoordinator
-  name: job-name-militia-coordinator
-  description: job-description-militia-coordinator
-  playTimeTracker: JobMilitiaCoordinator
-  setPreference: true
-  alwaysUseSpawner: true
-  requirements:
+  id: Bailiff
+  name: job-name-bailiff
+  description: job-description-bailiff
+  playTimeTracker: JobWarden
+  setPreference: false # Null Sector
+  requirements: # mono - lowers all of these tbh
     - !type:OverallPlaytimeRequirement
       time: 21600 # 6 hours
     - !type:DepartmentTimeRequirement
       department: Security
       time: 21600 # 6 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 3600 # 1 hours
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
@@ -18,14 +20,21 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10800 # 3 hours
-  startingGear: MilitiaCoordinatorGear
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 3600 # 1 hours
+  startingGear: BailiffGear
   icon: JobIconBailiff
-  supervisors: job-supervisors-sc
+  supervisors: job-supervisors-sheriff
   weight: 150
   displayWeight: 60
   canBeAntag: false
+  access:
+  - Armory
+  - Medical
+  - Chemistry
   accessGroups:
-  - AllAccess
+  - GeneralNfsdAccess
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
@@ -34,7 +43,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: MilitiaCoordinatorGear
+  id: BailiffGear
   equipment:
     pocket1: WeaponPistolMk58 #WeaponPistolMk58Nonlethal
     pocket2: HoloprojectorNfsd
@@ -43,5 +52,5 @@
     - Flash
     - MagazinePistol
     - MagazinePistolRubber
-    #- BaseSecurityUplinkRadioOfficer # Militia coordinator not given base uplink. May make custom one later.
-    - RubberStampMilitiaCoordinator
+    - BaseSecurityUplinkRadioOfficer
+    - RubberStampBailiff

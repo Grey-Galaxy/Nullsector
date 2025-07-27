@@ -3,6 +3,7 @@
   name: job-name-sheriff
   description: job-description-sheriff
   playTimeTracker: JobHeadOfSecurity
+  hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
   requirements:
     - !type:OverallPlaytimeRequirement

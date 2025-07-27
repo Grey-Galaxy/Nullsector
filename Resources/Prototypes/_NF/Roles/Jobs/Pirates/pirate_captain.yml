@@ -12,7 +12,6 @@
   whitelisted: true 
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
-  hideConsoleVisibility: true
   canBeAntag: true
   icon: "JobIconPirateCaptain"
   supervisors: job-supervisors-nobody
