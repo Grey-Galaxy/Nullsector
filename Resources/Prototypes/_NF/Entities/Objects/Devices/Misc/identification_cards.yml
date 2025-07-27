@@ -130,10 +130,10 @@
 - type: entity
   parent: [CadetIDCard, BaseCommandContraband]
   id: ShriffIDCard
-  name: Militia sheriff ID card
+  name: sheriff ID card
   components:
   - type: PresetIdCard
-    job: Sheriff
+    job: LodgeSupervisor
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:

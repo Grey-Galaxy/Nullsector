@@ -20,8 +20,12 @@
 
 - type: entity
   id: SpawnPointMilitiaCoordinator
-  parent: SpawnPointWarden
+  parent: SpawnPointJobBase
   name: militia coordinator
   components:
   - type: SpawnPoint
     job_id: MilitiaCoordinator
+  - type: Sprite
+    layers:
+      - state: green
+      - state: warden

@@ -7073,13 +7073,6 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-- proto: SpawnPointDeputy
-  entities:
-  - uid: 1042
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
 - proto: SpawnPointDirectorOfCare
   entities:
   - uid: 1043
@@ -7216,13 +7209,6 @@ entities:
 - proto: SpawnPointSecurityGuard
   entities:
   - uid: 1062
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointSheriff
-  entities:
-  - uid: 1063
     components:
     - type: Transform
       pos: -4.5,2.5

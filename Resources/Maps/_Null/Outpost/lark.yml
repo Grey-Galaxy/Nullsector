@@ -23659,13 +23659,6 @@ entities:
     - type: Transform
       pos: -22.5,-23.5
       parent: 2
-- proto: NFSpawnPointSeniorOfficer
-  entities:
-  - uid: 4961
-    components:
-    - type: Transform
-      pos: 15.5,-19.5
-      parent: 2
 - proto: NFTelecomServerFilled
   entities:
   - uid: 1199
@@ -28805,13 +28798,6 @@ entities:
     - type: Transform
       pos: -5.5,12.5
       parent: 2
-- proto: SpawnPointDeputy
-  entities:
-  - uid: 4949
-    components:
-    - type: Transform
-      pos: 15.5,-20.5
-      parent: 2
 - proto: SpawnPointLatejoin
   entities:
   - uid: 5055
@@ -28890,13 +28876,6 @@ entities:
     components:
     - type: Transform
       pos: 15.5,-18.5
-      parent: 2
-- proto: SpawnPointSheriff
-  entities:
-  - uid: 4962
-    components:
-    - type: Transform
-      pos: 15.5,-17.5
       parent: 2
 - proto: SpawnPointValet
   entities:

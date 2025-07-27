@@ -14,7 +14,7 @@
     maxDuration: 1360
     reoccurrenceDelay: 480
     requiredJobs:
-      Sheriff: 1
+      LodgeSupervisor: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -55,7 +55,7 @@
     maxDuration: 1350
     reoccurrenceDelay: 240 # Mono: From 8 to 4 hours
     requiredJobs:
-      Sheriff: 1
+      LodgeSupervisor: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -96,7 +96,7 @@
     maxDuration: 780
     reoccurrenceDelay: 480
     requiredJobs:
-      Sheriff: 1
+      LodgeSupervisor: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup

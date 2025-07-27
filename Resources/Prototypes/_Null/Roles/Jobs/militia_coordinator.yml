@@ -4,6 +4,7 @@
   description: job-description-militia-coordinator
   playTimeTracker: JobMilitiaCoordinator
   setPreference: true
+  alwaysUseSpawner: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 21600 # 6 hours
@@ -20,9 +21,6 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10800 # 3 hours
-    # - !type:RoleTimeRequirement
-      # role: JobSeniorOfficer
-      # time: 3600 # 1 hours
   startingGear: MilitiaCoordinatorGear
   icon: JobIconBailiff
   supervisors: job-supervisors-sc
@@ -30,6 +28,7 @@
   displayWeight: 60
   canBeAntag: false
   access:
+  - Frontier
   - Armory
   - Sergeant
   - Bailiff
@@ -54,5 +53,5 @@
     - Flash
     - MagazinePistol
     - MagazinePistolRubber
-    - BaseSecurityUplinkRadioOfficer
+    #- BaseSecurityUplinkRadioOfficer # Militia coordinator not given base uplink. May make custom one later.
     - RubberStampMilitiaCoordinator

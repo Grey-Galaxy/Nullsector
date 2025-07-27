@@ -3,6 +3,7 @@ job-title-ert-mail-carrier = ERT Mail Carrier
 job-name-ertmailcarrier = ERT Mail Carrier
 JobERTMailCarrier = ERT Mail Carrier
 
+job-name-sheriff = Sheriff
 job-name-bailiff = Bailiff 
 job-name-brigmedic = Brigmedic
 job-name-cadet-nf = Private
@@ -17,11 +18,11 @@ job-name-pilot = Pilot
 JobMercenary = Mercenary
 JobPilot = Pilot
 
-# Security Roles
-job-name-sheriff = Mercenary Coordinator
+# Null Sector Start
 job-name-security-guard = Militiaman
 job-name-nf-detective = Private Eye
 JobSecurityGuard = Militiaman
+# Null Sector End
 
 job-name-stc = Station Traffic Controller
 job-name-sr = Station Representative

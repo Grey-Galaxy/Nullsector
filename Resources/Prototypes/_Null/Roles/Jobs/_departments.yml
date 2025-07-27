@@ -6,17 +6,29 @@
   weight: 50 # accounted for in jobs
   roles:
   - SectorCoordinator
-  #- DirectorOfCare # Null Sector
   - StationTrafficController
   - Valet # nyano
   - NFJanitor
   - MailCarrier # nyano
-  #- SecurityGuard # Null Sector
+  - SecurityGuard # Null Sector
   - Prisoner #nyano
   - Contractor # Frontier
   - Pilot # Frontier
   - Borg # Frontier
+  #- DirectorOfCare # Null Sector
   
+# Null Sector
+- type: department
+  id: Lodge
+  name: department-lodge-name
+  description: department-lodge-description
+  color: "#334E6D"
+  weight: 10 # accounted for in jobs
+  roles:
+  - MilitiaCoordinator
+  - SectorCoordinator
+  - Mercenary
+
 - type: department
   id: Antag
   name: department-Antag
