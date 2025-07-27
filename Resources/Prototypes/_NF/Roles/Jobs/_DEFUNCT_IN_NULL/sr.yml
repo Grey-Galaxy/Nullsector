@@ -3,6 +3,7 @@
   id: StationRepresentative
   name: job-name-sr
   description: job-description-sr
+  playTimeTracker: JobHeadOfPersonnel
   startingGear: StcGear
   hideConsoleVisibility: true # Null Sector
   setPreference: false # Null Sector
@@ -10,13 +11,10 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 18000 # 20 hrs # mono - change to 5 hr
-    - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 3600 # 3 hrs as security guard # mono - change to 1 hr
   canBeAntag: false
   icon: "JobIconStc"
   supervisors: job-supervisors-sc
-  weight: 160
-  displayWeight: 50 # Second from the top
+  weight: 0
+  displayWeight: 0 # Second from the top
   access:
   - Maintenance
