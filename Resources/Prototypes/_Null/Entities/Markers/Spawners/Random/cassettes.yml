@@ -21,7 +21,7 @@
 # BLANKS-ONLY
 - type: entity
   name: cassette tape spawner
-  id: CassetteTapesSpawner
+  id: CassetteTapesSpawnerBlank
   parent: MarkerBase
   suffix: Spawner, Blank
   components:
@@ -57,6 +57,7 @@
     - TapePayemPayam
     - TapePapersPlease
     - TapeAcrossTheVoid
-    - TapeTheBrigVolumeOne
     - TapeVoidAmbiance
+    - TapeTheBrigVolumeOne
+    - TapeTheBrigVolumeTwo
     chance: 1
