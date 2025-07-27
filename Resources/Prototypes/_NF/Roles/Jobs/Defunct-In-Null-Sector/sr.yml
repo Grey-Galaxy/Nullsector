@@ -1,7 +1,7 @@
 - type: job
   id: StationRepresentative
-  name: job-name-stc
-  description: job-description-stc
+  name: job-name-sr
+  description: job-description-sr
   playTimeTracker: JobStc
   startingGear: StcGear
   setPreference: false # Null Sector
