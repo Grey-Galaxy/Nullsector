@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "https://github.com/LukeZurg22/Nullsector",
+  "copyright": Base sprite white_flag: "Derived by sprites from tgstation at https://github.com/tgstation/tgstation/commit/d0d81185f09ca30d3b0856d476544240dba0de53 and adapted by Saveliy360" | The following sprites are added by Ruzter7319 using "base sprite" like a template,
   "size": {
     "x": 32,
     "y": 32
