@@ -19,7 +19,7 @@
       map: [ enum.LockVisualLayers.Lock ]
       shader: unshaded
   - type: AccessReader
-    access: [ ["HeadOfPersonnel"] ]
+    access: [ ["Lark"] ]
   - type: Lock
     locked: true
 
@@ -42,7 +42,7 @@
       map: [ enum.LockVisualLayers.Lock ]
       shader: unshaded
   - type: AccessReader
-    access: [ ["HeadOfPersonnel"] ]
+    access: [ ["Lark"] ]
   - type: Lock
     locked: true
 

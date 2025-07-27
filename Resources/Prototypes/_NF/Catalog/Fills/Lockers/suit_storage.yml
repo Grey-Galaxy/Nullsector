@@ -26,7 +26,7 @@
   suffix: EVA, Militia Coordinator
   components:
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
 
 - type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitCaptain ]

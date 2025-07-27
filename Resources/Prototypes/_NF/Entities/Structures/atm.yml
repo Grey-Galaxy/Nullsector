@@ -213,7 +213,7 @@
       board: !type:Container
       station-bank-ATM-cashSlot: !type:ContainerSlot
   - type: AccessReader
-    access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+    access: [["Lark"], ["HeadOfSecurity"]]
 
 - type: entity
   parent: BaseStationAdminBankATM

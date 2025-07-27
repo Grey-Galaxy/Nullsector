@@ -17,7 +17,6 @@
   - Maintenance
   - External # Frontier
   - Service
-  - Lark # Null Sector
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

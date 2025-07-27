@@ -2,10 +2,10 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsFrontier
-  suffix: Frontier, Locked
+  suffix: Service, Locked
   components:
   - type: AccessReader
-    access: [["Frontier"]]
+    access: [["Service"]]
 
 - type: entity
   parent: DoorElectronics
@@ -13,7 +13,7 @@
   suffix: Theatre, Locked
   components:
   - type: AccessReader
-    access: [["HeadOfSecurity"], ["HeadOfPersonnel"], ["StationTrafficController"]]
+    access: [["HeadOfSecurity"], ["Lark"], ["StationTrafficController"]]
 
 - type: entity
   parent: DoorElectronics
@@ -21,7 +21,7 @@
   suffix: Chapel, Locked
   components:
   - type: AccessReader
-    access: [["HeadOfSecurity"], ["HeadOfPersonnel"]]
+    access: [["HeadOfSecurity"], ["Lark"]]
 
 - type: entity
   parent: DoorElectronics

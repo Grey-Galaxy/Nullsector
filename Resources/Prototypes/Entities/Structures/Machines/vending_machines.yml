@@ -288,7 +288,7 @@
     energy: 1.3
     color: "#ffb0b0"
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
 
 - type: entity
   parent: VendingMachine
