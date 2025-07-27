@@ -463,7 +463,7 @@
   - type: VendingMachine
     pack: NFPTechInventory
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
   - type: MarketModifier
     mod: 5
 

@@ -682,7 +682,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+    access: [["Lark"], ["HeadOfSecurity"]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
     global: true #SR WILL NOT BE IGNORED
@@ -941,7 +941,7 @@
   - type: CargoOrderConsole
     taxAccounts: # Frontier
       Frontier: 0.25 # Frontier
-      Nfsd: 0.15 # Frontier
+      #Nfsd: 0.15 # Frontier -> Null Sector
   - type: BankClient
 #  - type: ActiveRadio # Frontier
 #    channels: # Frontier

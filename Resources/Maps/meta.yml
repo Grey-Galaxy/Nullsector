@@ -68206,7 +68206,7 @@ entities:
     - type: Transform
       pos: 0.42782736,-64.34981
       parent: 5350
-- proto: ClothingNeckHeadphones
+- proto: NullClothingHeadphones
   entities:
   - uid: 8205
     components:

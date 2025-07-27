@@ -17,7 +17,6 @@
   - Maintenance
   - External # Frontier
   - Service
-  - Frontier # Frontier
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

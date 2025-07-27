@@ -163,17 +163,17 @@
     stateDoorOpen: nfsd_gold_open
     stateDoorClosed: nfsd_gold_door
   - type: AccessReader
-    access: [["Sergeant"]]
+    access: [["Lodge"]] # This will need overhaul later anyhow :: Null Sector
 
 # NFSD Gold - Bailiff
 - type: entity
   id: LockerNfsdBailiff
   parent: LockerNfsdSergeant
-  name: Militia locker
+  name: Militia locker # This will need overhaul later anyhow :: Null Sector
   suffix: Bailiff
   components:
   - type: AccessReader
-    access: [["Bailiff"]]
+    access: [["Lodge"]]
 
 # NFSD Sheriff
 - type: entity

@@ -13,7 +13,7 @@
   - type: InteractionOutline
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/basic.rsi
-    noRot: false
+    noRot: true
     snapCardinals: false
     layers:
     - state: closed

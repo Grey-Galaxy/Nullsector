@@ -33,8 +33,8 @@
       - Command
       - Engineering
       - External
-      - Frontier # Frontier
-      - HeadOfPersonnel
+      - Lark # Null Sector
+      - Lodge # Null Sector
       - HeadOfSecurity
       - Hydroponics
       - Janitor
@@ -107,8 +107,8 @@
     - EmergencyShuttleRepealAll
     - Engineering
     - External
-    - Frontier # Frontier
-    - HeadOfPersonnel
+    - Lark # Null Sector
+    - Lodge # Null Sector
     - HeadOfSecurity
     - Hydroponics
     - Janitor

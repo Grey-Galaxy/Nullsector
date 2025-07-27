@@ -16,7 +16,7 @@
     weight: 2
     maxOccurrences: 3
     requiredJobs:
-      Sheriff: 1
+      MilitiaCoordinator: 1
   - type: GameRule
     minPlayers: 25
   - type: LoadMapRule
@@ -33,7 +33,7 @@
     weight: 3
     maxOccurrences: 5
     requiredJobs:
-      Sheriff: 1
+      MilitiaCoordinator: 1
   - type: GameRule
     minPlayers: 15
   - type: LoadMapRule

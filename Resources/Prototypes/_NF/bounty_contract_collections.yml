@@ -4,11 +4,11 @@
   notificationType: Radio
   name: bounty-contract-collection-name-command
   writeAccess:
-  - HeadOfPersonnel
-  - HeadOfSecurity
+  - Lark
+  - Lodge
   deleteAccess:
-  - HeadOfPersonnel
-  - HeadOfSecurity
+  - Lark
+  - Lodge
   categories:
   - Criminal
   - Vacancy
@@ -22,8 +22,8 @@
   notificationType: PDA
   name: bounty-contract-collection-name-public
   deleteAccess:
-  - HeadOfPersonnel
-  - HeadOfSecurity
+  - Lark
+  - Lodge
   categories:
   - Vacancy
   - Construction

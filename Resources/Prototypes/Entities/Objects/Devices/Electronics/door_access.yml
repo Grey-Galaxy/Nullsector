@@ -10,10 +10,10 @@
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsHeadOfPersonnel
-  suffix: HeadOfPersonnel, Locked
+  suffix: Lark Command, Locked
   components:
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
 
 - type: entity
   parent: DoorElectronics

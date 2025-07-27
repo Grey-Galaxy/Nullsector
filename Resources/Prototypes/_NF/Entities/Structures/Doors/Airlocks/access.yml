@@ -2,7 +2,7 @@
 - type: entity
   parent: AirlockCommandLocked
   id: AirlockFrontierLocked
-  suffix: Frontier, Locked
+  suffix: Lark, Locked
   components:
   - type: ContainerFill
     containers:
@@ -11,7 +11,7 @@
 - type: entity
   parent: AirlockServiceLocked
   id: AirlockSeviceFrontierLocked
-  suffix: Frontier, Locked
+  suffix: Lark, Locked
   components:
   - type: ContainerFill
     containers:
@@ -20,7 +20,7 @@
 - type: entity
   parent: AirlockCommandLocked
   id: AirlockFrontierBridgeLocked
-  suffix: Frontier Bridge, Locked
+  suffix: Lark Bridge, Locked
   components:
   - type: ContainerFill
     containers:
@@ -38,7 +38,7 @@
 - type: entity
   parent: AirlockCommandLocked
   id: AirlockFrontierCommandLocked
-  suffix: Frontier Command, Locked
+  suffix: Lark Command, Locked
   components:
   - type: ContainerFill
     containers:
@@ -47,7 +47,7 @@
 - type: entity
   parent: [ AirlockEngineering, AirlockFrontierCommandLocked]
   id: AirlockFrontierCommandEngineeringLocked
-  suffix: Frontier Command, Locked
+  suffix: Lark Command, Locked
   components:
   - type: ContainerFill
     containers:

@@ -9,7 +9,7 @@ public sealed class NFCCVars
      *  Respawn
     */
     /// <summary>
-    /// Whether or not respawning is enabled.
+    /// Whether respawning is enabled.
     /// </summary>
     public static readonly CVarDef<bool> RespawnEnabled =
         CVarDef.Create("nf14.respawn.enabled", true, CVar.SERVER | CVar.REPLICATED);
@@ -27,7 +27,7 @@ public sealed class NFCCVars
         CVarDef.Create("nf14.respawn.time", 1200.0f, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
-    /// Whether or not returning from cryosleep is enabled.
+    /// Whether returning from cryosleep is enabled.
     /// </summary>
     public static readonly CVarDef<bool> CryoReturnEnabled =
         CVarDef.Create("nf14.uncryo.enabled", true, CVar.SERVER | CVar.REPLICATED);
@@ -57,13 +57,13 @@ public sealed class NFCCVars
     /// The amount of time the bus waits at a station.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitWaitTime =
-        CVarDef.Create("nf14.publictransit.wait_time", 180f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.wait_time", 100f, CVar.SERVERONLY);
 
     /// <summary>
     /// The amount of time the flies through FTL space.
     /// </summary>
     public static readonly CVarDef<float> PublicTransitFlyTime =
-        CVarDef.Create("nf14.publictransit.fly_time", 50f, CVar.SERVERONLY);
+        CVarDef.Create("nf14.publictransit.fly_time", 25f, CVar.SERVERONLY);
 
     /*
      *  World Gen

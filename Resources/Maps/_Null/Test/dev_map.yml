@@ -27,7 +27,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NFDev
+      name: NullDev
     - type: Transform
     - type: Map
       mapPaused: True
@@ -540,7 +540,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: BecomesStation
-      id: NFDev
+      id: NullDev
     - type: StationTransit
     - type: SpreaderGrid
     - type: GridPathfinding
@@ -6930,13 +6930,6 @@ entities:
     - type: Transform
       pos: -16.5,-6.5
       parent: 2
-- proto: NFSpawnPointSeniorOfficer
-  entities:
-  - uid: 845
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
 - proto: NFTelecomServerFilled
   entities:
   - uid: 846
@@ -8506,30 +8499,9 @@ entities:
     - type: Transform
       pos: -5.5,2.5
       parent: 2
-- proto: SpawnPointBrigmedic
-  entities:
-  - uid: 1039
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointCadet
-  entities:
-  - uid: 1040
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
 - proto: SpawnPointContractor
   entities:
   - uid: 1041
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointDeputy
-  entities:
-  - uid: 1042
     components:
     - type: Transform
       pos: -4.5,2.5
@@ -8667,13 +8639,6 @@ entities:
     - type: Transform
       pos: -4.5,2.5
       parent: 2
-- proto: SpawnPointPublicAffairsLiaison
-  entities:
-  - uid: 1061
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
 - proto: SpawnPointSectorCoordinator
   entities:
   - uid: 1064
@@ -8684,13 +8649,6 @@ entities:
 - proto: SpawnPointSecurityGuard
   entities:
   - uid: 1062
-    components:
-    - type: Transform
-      pos: -4.5,2.5
-      parent: 2
-- proto: SpawnPointSheriff
-  entities:
-  - uid: 1063
     components:
     - type: Transform
       pos: -4.5,2.5

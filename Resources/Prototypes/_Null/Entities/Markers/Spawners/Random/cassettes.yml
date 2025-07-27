@@ -2,7 +2,7 @@
   name: cassette tape spawner
   id: CassetteTapesSpawner
   parent: MarkerBase
-  suffix: Spawner
+  suffix: Spawner, Random
   components:
   - type: Sprite
     layers:
@@ -11,20 +11,53 @@
       state: tape_default
   - type: RandomSpawner
     prototypes:
-    - CassetteTapeDefault
-    - CassetteTapeRed
+    - CassetteTapesSpawnerBlank
+    chance: 1
+    offset: 0.2
+    rarePrototypes:
+      - CassetteTapesSpawnerRare
+    rareChance: 0.09
+
+# BLANKS-ONLY
+- type: entity
+  name: cassette tape spawner
+  id: CassetteTapesSpawnerBlank
+  parent: MarkerBase
+  suffix: Spawner, Blank
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Null/Objects/Fun/cassette.rsi
+      state: tape_default
+  - type: RandomSpawner
+    prototypes:
     - CassetteTapeGreen
     - CassetteTapeBlue
     - CassetteTapeArmada
     - CassetteTapeCongress
     - CassetteTapeRogue
     chance: 1
-    #offset: 0.2
-    rarePrototypes:
-      - TapeOhMahNina
-      - TapePayemPayam
-      - TapePapersPlease
-      - TapeAcrossTheVoid
-      - TapeTheBrigVolumeOne
-      - TapeVoidAmbiance
-    rareChance: 0.005
+
+# RARES-ONLY
+- type: entity
+  name: cassette tape spawner
+  id: CassetteTapesSpawnerRare
+  parent: MarkerBase
+  suffix: Spawner, Rare-Only
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Null/Objects/Fun/cassette.rsi
+      state: tape_default
+  - type: RandomSpawner
+    prototypes:
+    - TapeOhMahNina
+    - TapePayemPayam
+    - TapePapersPlease
+    - TapeAcrossTheVoid
+    - TapeVoidAmbiance
+    - TapeTheBrigVolumeOne
+    - TapeTheBrigVolumeTwo
+    chance: 1

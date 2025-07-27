@@ -6,6 +6,8 @@
   - type: WallMount
     arc: 360
   - type: Sprite
+    noRot: false
+    snapCardinals: false
     drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/flags.rsi
 

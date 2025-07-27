@@ -36,6 +36,6 @@
   storage:
     back:
     - Flash
-    - RubberStampSr
+    - RubberStampSectorCoordinator
     - DoorRemoteCommand
     - EncryptionKeyStationMaster
