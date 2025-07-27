@@ -1,12 +1,20 @@
 # This file solely exists to avoid YAML-LINTER errors.
 - type: accessLevel
   id: HeadOfPersonnel
-  name: id-card-access-level-head-of-personnel
+  name: id-card-access-defunct
 
 - type: accessLevel
   id: Bailiff
-  name: id-card-access-level-head-of-personnel
+  name: id-card-access-defunct
 
 - type: accessLevel
   id: Sheriff
-  name: id-card-access-level-sheriff
+  name: id-card-access-defunct
+
+- type: accessLevel
+  id: Frontier
+  name: id-card-access-defunct
+  
+- type: accessLevel
+  id: Sergeant
+  name: id-card-access-defunct
