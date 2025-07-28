@@ -60,7 +60,7 @@
           Heat: 0.9
 
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
+  parent: [ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitConsortium
   name: consortium hardsuit helmet
   description: A protective hardsuit helmet Consotrium Officers.
@@ -83,7 +83,7 @@
 
 # USSP
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, BaseSovietContraband]
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase]
   id: ClothingHeadHelmetHardsuitSovietMarine
   name: SSF marine hardsuit helmet
   description: From the soviet dieselpunk world.
