@@ -16,8 +16,6 @@
     - Hair
     - Snout
     hideOnToggle: true
-  - type: Pierceable
-    level: Metal
   - type: Armor
     modifiers:
       coefficients:
