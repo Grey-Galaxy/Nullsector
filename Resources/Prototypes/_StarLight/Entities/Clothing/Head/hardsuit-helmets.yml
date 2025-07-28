@@ -71,8 +71,6 @@
     sprite: _Starlight/Clothing/Head/Hardsuits/ntcc_hardsuit_helmet.rsi
   - type: PointLight
     color: "#addbff"
-  - type: Pierceable
-    level: HardenedMetal
   - type: Armor
     modifiers:
       coefficients:
