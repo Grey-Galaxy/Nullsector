@@ -333,7 +333,7 @@
   table: !type:AllSelector
     children:
     #    - id: WeaponEnergyShotgun # Frontier
-    - id: HyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<HyperlinkBookSpaceLaw
+    #    - id: HyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<HyperlinkBookSpaceLaw
     #    - id: BoxEncryptionKeySecurity # Frontier
     #    - id: CigarGoldCase # Frontier
     #      prob: 0.50 # Frontier

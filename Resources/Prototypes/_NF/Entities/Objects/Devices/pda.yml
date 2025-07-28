@@ -125,12 +125,10 @@
   - type: Pda
     id: ShriffIDCard
     bookSlot: # Frontier
-      startingItem: HyperlinkBookNfsdSop
       priority: -2
       whitelist:
         tags:
-        - BookSpaceLaw
-        - BookNfsdSop
+        - Book
     penSlot:
       startingItem: PenCentcom
       priority: -1
@@ -327,12 +325,10 @@
         tags:
         - Write
     bookSlot: # Frontier
-      startingItem: HyperlinkBookNfsdSop
       priority: -2
       whitelist:
         tags:
-        - BookSpaceLaw
-        - BookNfsdSop
+        - Book
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
