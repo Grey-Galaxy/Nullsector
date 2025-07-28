@@ -2,16 +2,12 @@
   parent:  [ClothingNeckBase]
   id: ClothingNeckCloakHosElite
   name: elite security's cloak
-  description: An elite security cloak crafted from the latest composite glowing fabric. Only for a true paladin.
+  description: An elite security cloak crafted for a true paladin.
   components:
   - type: Sprite
     sprite: _Starlight/Clothing/Neck/Cloaks/hos_elite.rsi
   - type: StealTarget
     stealGroup: HeadCloak
-  - type: PointLight
-    radius: 2
-    energy: 4
-    color: "#DE3A3A"
   - type: StaticPrice
     price: 2000
 
@@ -20,16 +16,12 @@
   parent:  [ClothingNeckBase]
   id: ClothingNeckCloakRdElite
   name: elite research cloak
-  description: Research cloak made from the latest composite glowing fabric, ensuring you stand out. Make sure to tell everyone you invented it.
+  description: Research cloak that ensure you stand out. Make sure to tell everyone you invented it.
   components:
   - type: Sprite
     sprite: _Starlight/Clothing/Neck/Cloaks/rd_elite.rsi
   - type: StealTarget
     stealGroup: HeadCloak
-  - type: PointLight
-    radius: 2
-    energy: 4
-    color: "#D381C9"
   - type: StaticPrice
     price: 2000
 
@@ -38,16 +30,12 @@
   parent: [ ClothingNeckBase]
   id: ClothingNeckCloakBlueElite
   name: Elite Blue Officer's cloak
-  description: An elite Blueshield Officer's cloak crafted from the latest composite glowing fabric. Any true BlueShield is not afraid of shining in the dark!
+  description: An elite Blue cloak!
   components:
   - type: Sprite
     sprite: _Starlight/Clothing/Neck/Cloaks/bso_elite.rsi
   - type: StealTarget
     stealGroup: HeadCloak
-  - type: PointLight
-    radius: 2
-    energy: 4
-    color: "#84BEF4"
   - type: StaticPrice
     price: 2000
 
