@@ -1,7 +1,6 @@
-
 - type: entity
   parent: [ClothingEyesBase]
-  id: ClothingEyesGlasses
+  id: ClothingEyesGlassesBlue
   name: blue glasses
   description: The innovative blue lenses hide your eyes from light flashes.
   components:
@@ -17,7 +16,7 @@
 
 - type: entity
   parent: [ClothingEyesBase]
-  id: ClothingEyesGlasses
+  id: ClothingEyesGlassesGreen
   name: green glasses
   description: The innovative green lenses hide your eyes from light flashes.
   components:

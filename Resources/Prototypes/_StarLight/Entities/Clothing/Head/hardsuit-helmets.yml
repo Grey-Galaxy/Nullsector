@@ -41,7 +41,7 @@
 #Mercenary Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitBase
-  id: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitAdvanceMercenary
   name: mercenary hardsuit helmet
   components:
     - type: Sprite

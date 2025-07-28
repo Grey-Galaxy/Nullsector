@@ -67,7 +67,7 @@
 #Mercenary Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitBase]
-  id: ClothingOuterHardsuitMercenary
+  id: ClothingOuterHardsuitAdvanceMercenary
   name: mercenary hardsuit
   description: It's a hardsuit. It could stop a bullet. It's sealed with top of the line duct tape.
   components:
@@ -94,7 +94,7 @@
     - type: ExplosionResistance
       damageCoefficient: 0.75
     - type: ToggleableClothing
-      clothingPrototype: ClothingHeadHelmetHardsuitMercenary
+      clothingPrototype: ClothingHeadHelmetHardsuitAdvanceMercenary
 
 #CCNT Consortium BSOs
 - type: entity
