@@ -121,17 +121,6 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtSuitNurse
-  name: nurse's uniform
-  description: This nurse uniform combines functionality and style. Durable, comfortable pants paired with a blouse and signature cap create a professional and neat look, making it an ideal choice for healthcare staff.
-  components:
-  - type: Sprite
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/suit_nurse.rsi
-  - type: Clothing
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/suit_nurse.rsi
-
-- type: entity
-  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtPencilTan
   name: beige "pencil" style skirt
   description: The beige "pencil" style skirt exudes softness and elegance. The fitted blazer and straight skirt create a refined silhouette, making it suitable for various occasions, from business meetings to evening dinners.
