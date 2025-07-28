@@ -82,6 +82,20 @@
   equipment:
     belt: ClothingBeltSalvageWebbingFilledNF
 
+- type: loadout
+  id: ContractorClothingBeltSuspendersRed
+  name: Suspenders Red
+  price: 500
+  equipment:
+    belt: ClothingBeltSuspendersRed
+
+- type: loadout
+  id: ContractorClothingBeltSuspendersBlack
+  name: Suspenders Black
+  price: 500
+  equipment:
+    belt: ClothingBeltSuspendersBlack
+
 #T1
 - type: loadout
   id: ContractorBoxFolderClipboard

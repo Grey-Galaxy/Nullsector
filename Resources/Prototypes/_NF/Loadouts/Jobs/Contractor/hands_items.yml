@@ -233,11 +233,95 @@
   inhand:
     - HypoMini
 
+#Null bibles
 - type: loadout
-  id: ContractorBible
+  id: ContractorBibleArialialDominion
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
   price: 500
   inhand:
-    - Bible
+    - BibleArialialDominion
+
+- type: loadout
+  id: ContractorBibleArmadanRestorationists
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleArmadanRestorationists
+
+- type: loadout
+  id: ContractorBibleChaosCultHC
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleChaosCultHC
+
+- type: loadout
+  id: ContractorBibleChaosCultHR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleChaosCultHR
+
+- type: loadout
+  id: ContractorBibleFollowersOfCirci
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleFollowersOfCirci
+
+#Null faith Flags
+- type: loadout
+  id: ContractorFlagArialialDominion
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagArialialDominion
+
+- type: loadout
+  id: ContractorFlagArmadanRestorationists
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagArmadanRestorationists
+
+- type: loadout
+  id: ContractorFlagChaosCultHC
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagChaosCultHC
+
+- type: loadout
+  id: ContractorFlagChaosCultHR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagChaosCultHR
+
+- type: loadout
+  id: ContractorFlagFollowersOfCirci
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  inhand:
+  - FlagFollowersOfCirci
+

@@ -1,0 +1,58 @@
+- type: entity
+  parent: BaseSign
+  id: WallFlagArialialDominion
+  name: maglubiyet theocraticism flag
+  description: "Flag of Vehement worshippers of the goblinic war god of greed, Maglubiyet"
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Null/Structures/Wallmounts/flags.rsi
+    state: arialial_dominion_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagArmadanRestorationists
+  name: armadan restorationism flag
+  description: "Flag of the Armadan restorationists"
+  components:
+  - type: Sprite
+    state: armadan_restorationists_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagChaosCultHC
+  name: huemac's cult flag
+  description: "Flag of the followers of the venerate Huemac"
+  components:
+  - type: Sprite
+    state: chaos_cult_hc_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagChaosCultHR
+  name: old headmaster's cult flag
+  description: "Flag of the followers of the mad god, The Headmaster"
+  components:
+  - type: Sprite
+    state: chaos_cult_hr_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagFollowersOfCirci
+  name: old circiabonic flag
+  description: "A Circiabon flag, followers of the Ascended Machine"
+  components:
+  - type: Sprite
+    state: followers_of_circi_flag
+
+- type: entity
+  parent: WallFlagArialialDominion
+  id: WallFlagNewCircibonic
+  name: new circibonic flag
+  description: "A Circibon banner, followers of the blessed machines of Circi"
+  components:
+  - type: Sprite
+    state: followers_of_circi_flag
+

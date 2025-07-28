@@ -1058,7 +1058,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,-3.5
       parent: 1
-- proto: Bible
+- proto: BibleArmadanRestorationists
   entities:
   - uid: 100
     components:
