@@ -1,0 +1,18 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelRoboticist
+  name: roboticist satchel
+  description: Useful for holding borg parts.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Satchels/roboticist.rsi
+
+- type: entity
+  parent: [ClothingBackpackSatchel]
+  id: ClothingBackpackSatchelBlue
+  name: Blue Satchel
+  description: Useful for holding everything you need
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Back/Satchels/blueshield.rsi
+

@@ -1,0 +1,43 @@
+- type: entity
+  parent: [ ClothingHeadBase]
+  id: ClothingHeadHatCapRep
+  name: officer cap
+  description: The cap of justice!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hats/ntrep.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hats/ntrep.rsi
+
+- type: entity
+  parent: [ClothingHeadBase]
+  id: ClothingHeadHatBeretBlue
+  name: blue beret
+  description: A cool blue baret.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hats/blueshield.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hats/blueshield.rsi
+
+- type: entity
+  parent: [ClothingHeadBase]
+  id: ClothingHeadHatBeretCorpsman
+  name: Corpsman's Beret
+  description: Losing this hat is considered grounds for demotion.. Kidding, though you will be ridiculed by your fellow corpsmans.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hats/beret_corpsman.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hats/beret_corpsman.rsi
+
+- type: entity
+  parent: [ClothingHeadBase]
+  id: ClothingHeadHatHosHatGold
+  name: black hat
+  description: A great hat, that scream i am the law.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hats/hoshat.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hats/hoshat.rsi

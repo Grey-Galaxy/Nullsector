@@ -1,0 +1,34 @@
+
+- type: entity
+  parent: [ClothingEyesBase]
+  id: ClothingEyesGlasses
+  name: blue glasses
+  description: The innovative blue lenses hide your eyes from light flashes.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Eyes/Glasses/blueshield.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Eyes/Glasses/blueshield.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES
+
+- type: entity
+  parent: [ClothingEyesBase]
+  id: ClothingEyesGlasses
+  name: green glasses
+  description: The innovative green lenses hide your eyes from light flashes.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Eyes/Glasses/centcomm.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Eyes/Glasses/centcomm.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES
+
+

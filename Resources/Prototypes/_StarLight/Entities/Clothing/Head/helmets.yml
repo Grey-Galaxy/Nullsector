@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadHelmetERTLeader
+  id: ClothingHeadHelmetConsortium
+  name: consortium helmet
+  description: An in-atmosphere helmet worn by Consortium Officers.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Helmets/ntcc_helmet.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Helmets/ntcc_helmet.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD

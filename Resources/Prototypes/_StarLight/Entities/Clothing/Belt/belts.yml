@@ -1,0 +1,24 @@
+- type: entity
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltBlue
+  name: Blue Webbing
+  description: A tactical rig that can hold many items.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Belt/blueshieldwebbing.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Belt/blueshieldwebbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+
+- type: entity
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltBrigmedicWeb
+  name: Tactical Trauma Rig
+  description: A stylish alternative to the belt.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Belt/brigmedicwebbing.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Belt/brigmedicwebbing.rsi
+  - type: Appearance
