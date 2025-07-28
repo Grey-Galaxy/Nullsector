@@ -40,7 +40,6 @@
         - Write
     # Frontier: space law slot
     bookSlot:
-      startingItem: HyperlinkBookSpaceLaw
       priority: -2
       whitelist:
         tags:
