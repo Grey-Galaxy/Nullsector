@@ -605,7 +605,7 @@
     shoes: ClothingShoesSkates
 
 - type: loadout
-  id: ClothingShoesHighheelShoes
+  id: ContractorClothingShoesHighheelShoes
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
@@ -614,7 +614,7 @@
     proto: ShoesCapableNF
   price: 1200
   equipment:
-    shoes: ContractorClothingShoesHighheelShoes
+    shoes: ClothingShoesHighheelShoes
 
 #T3 for lols
 - type: loadout
