@@ -17,11 +17,8 @@
 - type: loadoutEffectGroup
   id: SecurityStarWorthy
   effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:DepartmentTimeRequirement
-        department: Security
-        time: 360000 #100 hrs
+  - !type:GroupLoadoutEffect
+    proto: MCHourRequirement
 
 # Head
 - type: loadout

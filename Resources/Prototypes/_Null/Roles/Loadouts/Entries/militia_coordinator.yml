@@ -1,0 +1,19 @@
+# 20 Hour MilitiaCoordinator Time Requirement
+- type: loadoutEffectGroup
+  id: MCHourRequirement
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMilitiaCoordinator
+      time: 72000 #20 hrs
+
+- type: loadout
+  id: MCJumpsuitYellowEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryColorYellow
+
+- type: loadout
+  id: LodgePDAEntry
+  equipment:
+    id: SheriffPDA

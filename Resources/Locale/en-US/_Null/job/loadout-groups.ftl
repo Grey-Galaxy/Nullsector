@@ -1,0 +1,1 @@
+loadout-group-mc-jumpsuit = Militia coordinator jumpsuit

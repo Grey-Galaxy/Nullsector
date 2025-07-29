@@ -5,7 +5,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
+      role: JobMilitiaCoordinator # Null Sector
       time: 72000 #20 hrs
 
 # Jumpsuit

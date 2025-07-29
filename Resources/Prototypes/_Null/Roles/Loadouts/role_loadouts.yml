@@ -29,7 +29,7 @@
   groups:
   - HeadofSecurityHead
   - HeadofSecurityNeck
-  - HeadofSecurityJumpsuit
+  - MilitiaCoordinatorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
@@ -45,7 +45,7 @@
   groups:
   - HeadofSecurityHead
   - HeadofSecurityNeck
-  - HeadofSecurityJumpsuit
+  - MilitiaCoordinatorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
