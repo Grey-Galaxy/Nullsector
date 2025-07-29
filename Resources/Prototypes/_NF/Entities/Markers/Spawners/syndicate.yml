@@ -20,6 +20,7 @@
         - LandMineExplosive
         - BannerSyndicate
         - Telecrystal1
+        - WeaponTurretSyndicate
       rarePrototypes:
         - Telecrystal5
       rareChance: 0.01 # Mono
@@ -40,6 +41,7 @@
         - CrateTradeContrabandSecure5
         - CrateTradeContrabandSecure4
         - CrateTradeContrabandSecure3
+        - WeaponTurretSyndicate
       rarePrototypes:
         - CrateSyndicateSurplusBundle
         - CrateSyndicateSurplusBundle
