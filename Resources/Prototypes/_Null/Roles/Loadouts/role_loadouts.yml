@@ -38,6 +38,7 @@
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
+  - ContractorWallet
   
 ## Lodge Supervisor
 - type: roleLoadout
@@ -54,3 +55,4 @@
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
+  - ContractorWallet
