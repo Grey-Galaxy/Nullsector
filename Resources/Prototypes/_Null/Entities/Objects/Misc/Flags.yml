@@ -2,7 +2,7 @@
   parent: [BaseItem, RecyclableItemClothSmall]
   id: FlagArialialDominion
   name: maglubiyet theocraticism handheld flag
-  description: "Flag of Vehement worshippers of the goblinic war god of greed, Maglubiyet"
+  description: "Flag of Vehement worshipers of the goblinic war god of greed, Maglubiyet"
   components:
   - type: Sprite
     sprite: _Null/Objects/Misc/arialial_dominion_handy_flag.rsi
