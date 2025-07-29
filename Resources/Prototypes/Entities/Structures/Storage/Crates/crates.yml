@@ -332,7 +332,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/command.rsi
   - type: AccessReader
-    access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+    access: [["Lark"], ["HeadOfSecurity"]]
 
 - type: entity
   parent: CrateGeneric

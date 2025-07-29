@@ -60920,7 +60920,7 @@ entities:
     - type: Transform
       pos: -40.498245,-36.02266
       parent: 60
-- proto: ClothingNeckHeadphones
+- proto: NullClothingHeadphones
   entities:
   - uid: 7861
     components:

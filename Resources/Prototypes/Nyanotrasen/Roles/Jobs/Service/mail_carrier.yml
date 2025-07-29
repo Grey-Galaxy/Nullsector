@@ -18,7 +18,6 @@
   - Maintenance
   - Service
   - Mail # Frontier
-  - Frontier # Frontier
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

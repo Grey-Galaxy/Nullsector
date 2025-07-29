@@ -1,0 +1,13 @@
+# From Frontier
+- type: accessLevel
+  id: Mercenary
+  name: id-card-access-level-mercenary
+
+# Null Sector
+- type: accessLevel
+  id: Lodge # This is for Lodge Command
+  name: id-card-access-level-lodge
+
+- type: accessLevel
+  id: Lark # This is for Lark Command - the Sector Coordinator
+  name: id-card-access-level-lark

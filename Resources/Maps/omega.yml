@@ -33439,7 +33439,7 @@ entities:
     - type: Transform
       pos: 38.546867,-26.403046
       parent: 4812
-- proto: ClothingNeckHeadphones
+- proto: NullClothingHeadphones
   entities:
   - uid: 9196
     components:

@@ -1,3 +1,4 @@
+# Armadan Propaganda
 - files: ["oh_mah_nina.ogg"]
   license: "CC-BY-NC-SA-3.0"
   copyright: "Oh Mah Nina - Suno"
@@ -18,6 +19,7 @@
   copyright: "Papers Please Remix - Reimaginer"
   source: "https://www.youtube.com/watch?v=EUTmB_zN1SQ"
 
+# 90.4 FM - Volume 1
 - files: ["prepare_yourself_to_fight.ogg"]
   license: "CC-BY-NC-SA-3.0"
   copyright: "Prepare Yourself To Fight - Stormfrun"
@@ -42,3 +44,34 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "Al Die Willen te Kaapren Varen - The Dutch"
   source: "https://youtu.be/v3JSYFkWml4?si=N7eJsbG8RDadcj7j"
+  
+# 90.4 FM - Volume 2
+- files: ["another_feather.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Another Feather - Grog Before Gallows"
+  source: "https://www.youtube.com/watch?v=eMDm9Mh9uzo"
+
+- files: ["master_of_my_fate.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Master of My Fate - Ye Banished Privateers"
+  source: "https://www.youtube.com/watch?v=YWPBqrNGxhU"
+
+- files: ["monkey_island_caribean_pirate.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Monkey Island x Pirates of the Caribbean - Ivan Titkov"
+  source: "https://www.youtube.com/watch?v=q1dyLMcm3ns"
+
+- files: ["sailing_over_the_dogger.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Sailing Over the Dogger Bank - Brian Gullard"
+  source: "https://www.youtube.com/watch?v=KmcZD9ehSm8"
+
+- files: ["swing_the_cat.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Swing the Cat - Meg Davis"
+  source: "https://www.youtube.com/watch?v=Xf6x-HfLfRk"
+
+
+
+
+

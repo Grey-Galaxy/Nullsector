@@ -5,7 +5,7 @@ namespace Content.Shared.CCVar;
 public sealed partial class CCVars
 {
     public static readonly CVarDef<bool> AmbientOcclusion =
-        CVarDef.Create("light.ambient_occlusion", false, CVar.CLIENTONLY | CVar.ARCHIVE); // TEMP: Off by Default whilst Pseudo-Nudity Bug is Present
+        CVarDef.Create("light.ambient_occlusion", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// Distance in world-pixels of ambient occlusion.

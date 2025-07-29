@@ -82,7 +82,7 @@
     stateDoorOpen: hop_open
     stateDoorClosed: hop_door
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
 
 # CE
 - type: entity
@@ -476,7 +476,7 @@
   - type: Appearance
   - type: AccessReader
 #    access: [["Command"]]
-    access: [["HeadOfPersonnel"]] # Frontier
+    access: [["Lark"]] # Frontier
   - type: EntityStorageVisuals
     stateBaseClosed: hop
     stateDoorOpen: hop_open

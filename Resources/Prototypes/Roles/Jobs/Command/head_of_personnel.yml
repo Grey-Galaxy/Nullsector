@@ -24,7 +24,7 @@
   # Frontier: default access
   # access:
   # - Command
-  # - HeadOfPersonnel
+  #- HeadOfPersonnel
   # - Bar
   # - Service
   # - Maintenance

@@ -113,3 +113,57 @@
   components:
   - type: Sprite
     state: banner_subsidiary_vipergroup
+
+- type: entity
+  id: BannerArialialDominion
+  suffix: maglubiyet theocraticism banner
+  description: A banner of Vehement worshippers of the goblinic war god of greed, Maglubiyet.
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_arialial_dominion
+
+- type: entity
+  id: BannerArmadanRestorationists
+  suffix: armadan restorationism banner
+  description: A banner of the Armadan restorationists
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_armadan_restorationists
+
+- type: entity
+  id: BannerChaosCultHC
+  suffix: huemac's cult banner
+  description: A banner of the followers of the venerate Huemac
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_chaos_cult_hc
+
+- type: entity
+  id: BannerChaosCultHR
+  suffix: old headmaster's cult banner
+  description: A banner of the followers of the mad god, The Headmaster
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_chaos_cult_hr
+
+- type: entity
+  id: BannerFollowersOfCirci
+  suffix: old circiabonic banner
+  description: A Circiabon banner, followers of the Ascended Machine
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_followers_of_circi
+
+- type: entity
+  id: BannerNewCircibonic
+  suffix: new circibonic banner
+  description: A Circibon banner, followers of the blessed machines of Circi
+  parent: BannerNull
+  components:
+  - type: Sprite
+    state: banner_followers_of_circi

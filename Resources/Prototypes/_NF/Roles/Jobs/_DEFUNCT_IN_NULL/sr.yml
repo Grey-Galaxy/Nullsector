@@ -1,0 +1,20 @@
+# This entire prototype is derived from the Frontier Station Representative prototype, but with numerous removals.
+- type: job
+  id: StationRepresentative
+  name: job-name-sr
+  description: job-description-sr
+  playTimeTracker: JobHeadOfPersonnel
+  startingGear: StcGear
+  hideConsoleVisibility: true # Null Sector
+  setPreference: false # Null Sector
+  alwaysUseSpawner: true
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 # 20 hrs # mono - change to 5 hr
+  canBeAntag: false
+  icon: "JobIconStc"
+  supervisors: job-supervisors-sc
+  weight: 0
+  displayWeight: 0 # Second from the top
+  access:
+  - Maintenance

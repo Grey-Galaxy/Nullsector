@@ -163,7 +163,7 @@ public sealed partial class GameTicker
         {
             var fieldName = manifestFieldCount == 0
                 ? Loc.GetString("discord-round-end-summary-player-manifest")
-                : Loc.GetString("discord-round-end-summary-player-manifest--continued");
+                : Loc.GetString("discord-round-end-summary-player-manifest-continued");
             var fieldValue = string.Join("\n", currentFieldLines);
             var fieldCharacterCount = fieldName.Length + fieldValue.Length;
 

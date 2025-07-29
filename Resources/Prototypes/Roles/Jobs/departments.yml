@@ -21,7 +21,7 @@
   # - Chaplain # Frontier
   # - Chef # Frontier
   # - Clown # Frontier
-  # - HeadOfPersonnel # Frontier
+  #- HeadOfPersonnel # Frontier
   # - Lawyer # Frontier
   # - Librarian # Frontier
   # - Mime # Frontier
@@ -64,7 +64,7 @@
   # - Captain # Frontier
   # - ChiefEngineer # Frontier
   # - ChiefMedicalOfficer # Frontier
-  # - HeadOfPersonnel # Frontier
+  #- HeadOfPersonnel # Frontier
   # - HeadOfSecurity # Frontier
   # - ResearchDirector # Frontier
   # - Quartermaster # Frontier
@@ -77,8 +77,9 @@
   # - ERTSecurity # Frontier
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
-  - SectorCoordinator # Frontier
-  - Sheriff  # Frontier
+  - SectorCoordinator # Null
+  - MilitiaCoordinator # Null
+  - LodgeSupervisor # Null
   - StationTrafficController # Frontier
   - DirectorOfCare # Null Sector
   primary: false
@@ -115,15 +116,8 @@
 #  - SecurityOfficer # Frontier
 #  - Warden # Frontier
   - PrisonGuard ##nyano
-  - Brigmedic # Frontier
 #  - SecurityGuard # Frontier
   - NFDetective # Frontier
-  - Cadet # Frontier
-  - Deputy # Frontier
-  - Bailiff # Frontier
-  - Sheriff # Frontier
-  - SeniorOfficer # Frontier
-  - PublicAffairsLiaison # Frontier
   - SecurityGuard # Null Sector (right back to where it came from!)
   - Mercenary # Frontier
 

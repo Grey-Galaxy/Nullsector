@@ -40,12 +40,10 @@
         - Write
     # Frontier: space law slot
     bookSlot:
-      startingItem: HyperlinkBookSpaceLaw
       priority: -2
       whitelist:
         tags:
-        - BookSpaceLaw
-        - BookNfsdSop
+        - Book
     # End Frontier: space law slot
     idSlot:
       name: access-id-card-component-default

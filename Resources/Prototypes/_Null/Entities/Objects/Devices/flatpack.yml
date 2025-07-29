@@ -12,3 +12,16 @@
   - type: Sprite
     layers:
     - state: gun-part
+ 
+# From Frontier-Rejected PR #3309
+- type: entity
+  parent: AirlockFlatpack
+  id: GaslockFlatpack
+  name: gaslock flatpack
+  description: A flatpack used for constructing a gaslock, an airlock used exclusively to transfer gas between vessels.
+  components:
+  - type: Flatpack
+    entity: Gaslock
+  - type: Sprite
+    layers:
+    - state: command_airlock_directional

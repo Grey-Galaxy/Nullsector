@@ -68,9 +68,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingNeckCrucifix
       - id: Censer
-      - id: Bible
       - id: Lantern
       - id: ChaplainHolywaterFlaskFilled
       - id: UrnMortuary

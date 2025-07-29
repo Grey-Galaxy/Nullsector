@@ -6,7 +6,7 @@
   price: 685200
   category: Large
   group: Security
-  access: Bailiff
+  access: Lodge # Lodge Command, sorry!
   shuttlePath: /Maps/_Mono/Shuttles/Nfsd/flyssa.yml
   guidebookPage: Null
   class:

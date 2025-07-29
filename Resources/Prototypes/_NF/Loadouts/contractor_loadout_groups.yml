@@ -420,6 +420,8 @@
   - ContractorClothingBeltPunkRandomizedFilled # Punkish (Randomized visuals)
   - ContractorClothingBeltSheathFilledHilt
   - ContractorClothingBeltChampion
+  - ContractorClothingBeltSuspendersRed
+  - ContractorClothingBeltSuspendersBlack
 
 - type: loadoutGroup
   id: ContractorShoes
@@ -554,7 +556,6 @@
   - ContractorClothingHeadHatWideBrimmed
   - ContractorClothingHeadHatWitchhunter
   - ContractorClothingHeadHatBishopMitre
-  - ContractorClothingHeadHatKippah
   - ContractorClothingHeadHatPlaguedoctor
   - ContractorPlunger
   - ContractorClothingHeadHatCone
@@ -626,7 +627,6 @@
   - ContractorClothingNeckTieSci
   - ContractorClothingNeckLawyerbadge
   - ContractorClothingHeadphones
-  - ContractorClothingNeckCrucifix
   - ContractorClothingNeckBellCollar
   - ContractorCDDogtags
   - ContractorClothingNeckStethoscope
@@ -817,8 +817,6 @@
   - ContractorToolboxMechanical
   - ContractorCane
   - ContractorLGBTQHandyFlag
-  - ContractorNTHandyFlag
-  - ContractorBalloonNT
   - ContractorFlashlightUmbrella
   - ContractorDawInstrumentFlatpack
   - ContractorHoverbikeFlatpack
@@ -837,7 +835,18 @@
   - ContractorShipyardRCD
   - ContractorHandheldCrewMonitor
   - ContractorHypoMini
-  - ContractorBible
+  #Null bibles
+  - ContractorBibleArialialDominion
+  - ContractorBibleArmadanRestorationists
+  - ContractorBibleChaosCultHC
+  - ContractorBibleChaosCultHR
+  - ContractorBibleFollowersOfCirci
+  #Null flags
+  - ContractorFlagArialialDominion
+  - ContractorFlagArmadanRestorationists
+  - ContractorFlagChaosCultHC
+  - ContractorFlagChaosCultHR
+  - ContractorFlagFollowersOfCirci
 
 - type: loadoutGroup
   id: ContractorFace

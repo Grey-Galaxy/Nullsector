@@ -1233,7 +1233,7 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
-- proto: Bible
+- proto: BibleFollowersOfCirci
   entities:
   - uid: 1090
     components:

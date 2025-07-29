@@ -52,7 +52,7 @@
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["Lark"]]
 
 ## Engineering
 - type: entity

@@ -63,9 +63,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityCombatHardsuit
@@ -100,8 +99,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityHardsuitSyndieReverseEngineered
@@ -136,7 +135,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityMK58
@@ -444,7 +443,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
+        - LodgeSupervisor
 
 #Mono start
 
@@ -465,8 +464,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Brigmedic
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityPyrazinePen
@@ -485,8 +483,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Brigmedic
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityPuncturasePen
@@ -505,8 +502,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Brigmedic
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityAntiPoisonPen
@@ -525,8 +521,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Brigmedic
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityCombatPen
@@ -723,8 +718,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityAmbuzol
@@ -743,8 +737,7 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Sheriff
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityMedkit
@@ -763,9 +756,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Brigmedic
-        - Bailiff
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityInspector
@@ -798,11 +790,10 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition # Mono: Whitelisted Mateba to only Baliff, Sergeant and Sheriff
+    - !type:BuyerJobCondition # Mono: Whitelisted Mateba to only Baliff, Sergeant and LodgeSupervisor
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityTruncheon
@@ -869,9 +860,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecurityPulseCarbine
@@ -890,9 +880,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Sheriff
-        - Bailiff
-        - SeniorOfficer
+        - LodgeSupervisor
+        - MilitiaCoordinator
 
 - type: listing
   id: UplinkSecurityHammer
@@ -959,9 +948,8 @@
           - SecurityUplink
     - !type:BuyerJobCondition
       whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+        - MilitiaCoordinator
+        - LodgeSupervisor
 
 - type: listing
   id: UplinkSecuritySpeedloader

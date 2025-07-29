@@ -3,12 +3,10 @@
   tags:
   - EmergencyShuttleRepealAll
   - Captain
-  - HeadOfPersonnel
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfSecurity
   - ResearchDirector
-  - Frontier # Frontier
   - Command
   - Cryogenics
   - Security
@@ -26,8 +24,6 @@
   - Research
   - Service
   - StationTrafficController # Frontier
-  - Sergeant # Frontier
-  - Bailiff # Frontier
   - Maintenance
   - External
   - Janitor
@@ -39,3 +35,5 @@
   - Hydroponics
   - Atmospherics
   - Pirate
+  - Lodge # Null Sector
+  - Lark

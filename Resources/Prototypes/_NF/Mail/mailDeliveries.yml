@@ -112,7 +112,7 @@
       MailCommandNFWristwatchGold: 0.5
       MailStationRepNFClurger: 0.5
       MailStationRepNFNukeDisk: 1
-    Sheriff:
+    LodgeSupervisor:
       MailSecurityNonlethalsKit: 2
       MailNFGoldCigars: 0.15 # 0.2 weight total
       MailCommandNFPlatinumCigars: 0.1

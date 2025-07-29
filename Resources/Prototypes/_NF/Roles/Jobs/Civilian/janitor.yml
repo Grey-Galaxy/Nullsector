@@ -18,7 +18,7 @@
   - Janitor
   - Maintenance
   - External
-  - Frontier
+  - Lark # Null Sector
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: GarbageDay
