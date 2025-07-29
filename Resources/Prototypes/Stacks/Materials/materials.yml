@@ -68,6 +68,15 @@
   spawn: MaterialSheetMeat1
   maxCount: 30
 
+# Null Sector - Start
+- type: stack
+  id: PartRodMetal
+  name: metal rod
+  icon: { sprite: /Textures/Objects/Materials/parts.rsi, state: rods }
+  spawn: PartRodMetal1
+  maxCount: 100
+# Null Sector - End
+
 - type: stack
   id: WebSilk
   name: silk

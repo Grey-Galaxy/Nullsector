@@ -1,0 +1,155 @@
+- type: constructionGraph
+  id: StairsLattice
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DeleteEntity {}
+      edges:
+        - to: stairs_lattice
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: MetalRod
+              amount: 8
+              doAfter: 4
+    - node: stairs_lattice
+      entity: StairsLattice
+      edges:
+        - to: stair_dark
+          steps:
+            - material: MetalRod
+              amount: 50
+              doAfter: 3
+        - to: stair_normal
+          steps:
+            - material: Steel
+              amount: 25
+              doAfter: 3
+        - to: stair_white
+          steps:
+            - material: Plastic
+              amount: 25
+              doAfter: 3
+        - to: stair_wood
+          steps:
+            - material: WoodPlank
+              amount: 25
+              doAfter: 3
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 8
+            - !type:DestroyEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 3
+    - node: stair_dark
+      entity: StairDark
+      edges:
+        - to: stair_stage_dark
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+        - to: stairs_lattice
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 25
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_stage_dark
+      entity: StairStageDark
+      edges:
+        - to: stair_dark
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_normal
+      entity: Stairs
+      edges:
+        - to: stair_stage_normal
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+        - to: stairs_lattice
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_stage_normal
+      entity: StairStage
+      edges:
+        - to: stair_normal
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_white
+      entity: StairWhite
+      edges:
+        - to: stair_stage_white
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+        - to: stairs_lattice
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlastic1
+              amount: 15
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_stage_white
+      entity: StairStageWhite
+      edges:
+        - to: stair_white
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_wood
+      entity: StairWood
+      edges:
+        - to: stair_stage_wood
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+        - to: stairs_lattice
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 15
+          steps:
+            - tool: Screwing
+              doAfter: 1
+    - node: stair_stage_wood
+      entity: StairStageWood
+      edges:
+        - to: stair_wood
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
