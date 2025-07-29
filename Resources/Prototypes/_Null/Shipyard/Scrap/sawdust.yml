@@ -1,0 +1,41 @@
+# Author GitHub: LukeZurg22
+# Author Discord: LukeZurg22
+# Maintainer GitHub: ???
+# Maintainer Discord: ???
+# Shuttle Notes:
+# This shuttle is from the mini-campaign that happened on Null Sector. It has some history behind it, and it is a hunk of hot garbage.
+- type: vessel
+  id: Sawdust
+  parent: BaseVessel
+  name: JNK Sawdust
+  description: A stolen chunk of Lark Station that was left derelict in space for some time. A junkyard turned it into a small transport ship. Some maintenance needed. Curse youuuu mooottthhh!
+  price: 30000
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_Null/Shuttles/Scrap/sawdust.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Cargo
+  engine:
+  - Welding
+
+- type: gameMap
+  id: Sawdust
+  mapName: 'JNK Sawdust'
+  mapPath: /Maps/_Null/Shuttles/Scrap/sawdust.yml
+  minPlayers: 0
+  stations:
+    Sawdust:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Sawdust JNK{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 1, 1 ]
+            Mercenary: [ 0, 0 ]
