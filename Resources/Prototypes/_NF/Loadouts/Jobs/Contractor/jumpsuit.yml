@@ -1769,3 +1769,21 @@
   price: 1250
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorMaroon
+
+- type: loadout
+  id: ContractorClothingUniformJumpskirtVictorianBlack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1250
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVictorianBlack
+
+- type: loadout
+  id: ContractorClothingUniformJumpskirtVictorianrRed
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 1250
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVictorianrRed
