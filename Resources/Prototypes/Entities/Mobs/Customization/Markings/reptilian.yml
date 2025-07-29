@@ -402,7 +402,7 @@
   markingCategory: Chest
   speciesRestriction: [Reptilian]
   sprites:
-  - sprite: Mobs/Customization/reptilian_parts.rsi/
+  - sprite: Mobs/Customization/reptilian_parts.rsi
     state: body_dragonwings
-  - sprite: Mobs/Customization/reptilian_parts.rsi/
+  - sprite: Mobs/Customization/reptilian_parts.rsi
     state: body_dragonwings_membrane
