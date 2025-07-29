@@ -63,3 +63,11 @@
   image: /Textures/_Null/Companies/ursidine.png
   description: ursidine-description
   color: "#B75410"
+
+- type: company
+  id: NexWealth
+  form: Protagonist
+  name: NexWealth Consortium
+  image: /Textures/_Null/Companies/nexwealth.png
+  description: nexwealth-description
+  color: "#72DF97"

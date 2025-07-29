@@ -1,14 +1,12 @@
+using System.Linq;
 using Content.Server.Construction.Components;
-using Content.Server.Containers;
 using Content.Shared.Construction;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Construction.Steps;
 using Content.Shared.Containers;
 using Content.Shared.Database;
-using Robust.Server.Containers;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
-using System.Linq;
 
 namespace Content.Server.Construction
 {
@@ -397,8 +395,8 @@ namespace Content.Server.Construction
             var entChangeEv = new ConstructionChangeEntityEvent(newUid, uid);
             RaiseLocalEvent(uid, entChangeEv);
             RaiseLocalEvent(newUid, entChangeEv, broadcast: true);
-
-            foreach (var logic in GetCurrentNode(newUid, newConstruction)!.TransformLogic)
+            var graphTransforms = GetCurrentNode(newUid, newConstruction)!.TransformLogic;
+            foreach (var logic in graphTransforms)
             {
                 logic.Transform(uid, newUid, userUid, new(EntityManager));
             }

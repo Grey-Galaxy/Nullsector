@@ -228,7 +228,8 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
 
         var task = _db.AddAdminLogs(copy);
 
-        _sawmill.Debug($"Saving {copy.Count} admin logs.");
+		// Null Sector: This spams console, and admin logs do indeed save!
+        //_sawmill.Debug($"Saving {copy.Count} admin logs.");
 
         if (_metricsEnabled)
         {

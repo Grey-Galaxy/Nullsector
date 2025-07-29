@@ -5,8 +5,8 @@
   description: Contains goods made in the Frontier sector, ready to be sold at a cargo depot for higher value. MAKE SURE THE CRATE IS INTACT.
   components:
   - type: TradeCrate
-    valueAtDestination: 4250
-    valueElsewhere: 750 # DO NOT PUT OVER 1K OR INFINITE MONEY EXPLOIT
+    valueAtDestination: 2337
+    valueElsewhere: 413 # DO NOT PUT OVER 1K OR INFINITE MONEY EXPLOIT
     expressDeliveryDuration: 2700 # mono - 45 minutes
     expressOnTimeBonus: 1500
     expressLatePenalty: 1000 # 2000/3250
@@ -49,8 +49,8 @@
   description: An urgent crate of goods made in the Frontier sector, ready to be quickly sold at a cargo depot for higher value. MAKE SURE THE CRATE IS INTACT.
   components:
   - type: TradeCrate
-    valueAtDestination: 7500
-    valueElsewhere: 1500 # DO NOT PUT OVER 2K OR INFINITE MONEY EXPLOIT
+    valueAtDestination: 4125
+    valueElsewhere: 825 # DO NOT PUT OVER 2K OR INFINITE MONEY EXPLOIT
     expressDeliveryDuration: 1350 # mono - 22.5 minutes
     expressOnTimeBonus: 1500
     expressLatePenalty: 5500 # 0/2000
@@ -113,8 +113,8 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 7500
-    valueElsewhere: 5000
+    valueAtDestination: 4125
+    valueElsewhere: 2750
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -142,11 +142,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 10000
-    valueElsewhere: 1000
+    valueAtDestination: 5500
+    valueElsewhere: 550
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 10000
-    expressLatePenalty: 9000
+    expressOnTimeBonus: 5500
+    expressLatePenalty: 4950
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -174,11 +174,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 40000
-    valueElsewhere: 4000
+    valueAtDestination: 22000
+    valueElsewhere: 2200
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 40000
-    expressLatePenalty: 30000
+    expressOnTimeBonus: 22000
+    expressLatePenalty: 16500
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -207,11 +207,11 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 50000
-    valueElsewhere: 5000
+    valueAtDestination: 27500
+    valueElsewhere: 2750
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 50000
-    expressLatePenalty: 40000
+    expressOnTimeBonus: 27500
+    expressLatePenalty: 22000
 
 - type: entity
   parent: CrateTradeBaseSecureContraband
@@ -240,9 +240,9 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: TradeCrate
-    valueAtDestination: 60000
-    valueElsewhere: 6000
+    valueAtDestination: 33000
+    valueElsewhere: 3300
     expressDeliveryDuration: 3600 # one hour, go go (timeout mostly for pirates & NFSD)
-    expressOnTimeBonus: 60000
-    expressLatePenalty: 50000
+    expressOnTimeBonus: 33000
+    expressLatePenalty: 27500
 # endregion Contraband Crates

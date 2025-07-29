@@ -1,0 +1,16 @@
+- type: construction
+  name: stair lattice
+  id: StairsLattice
+  graph: StairsLattice
+  startNode: start
+  targetNode: stairs_lattice
+  category: construction-category-furniture
+  description: The framework needed to build some good stairs. Rods, Plastic, Steel, and Wood are all viable materials for the varying types of stairs.
+  icon:
+    sprite: Structures/stairs.rsi
+    state: stairs_lattice
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

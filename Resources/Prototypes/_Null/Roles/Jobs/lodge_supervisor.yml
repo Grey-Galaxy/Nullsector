@@ -7,25 +7,13 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200 # 12 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 43200 # 12 hours
     - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 10800 # 3 hours
-    #- !type:RoleTimeRequirement
-    #  role: JobSeniorOfficer
-    #  time: 10800 # 3 hours 
+      role: JobMilitiaCoordinator
+      time: 7200 # 2 hours
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
-      time: 86400 # 24 hours 
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 28800 # 8 hours 
-    # - !type:RoleTimeRequirement
-      # role: JobWarden
-      # time: 7200 # 2 hours 
+      time: 86400 # 24 hours
   whitelisted: true
   startingGear: LodgeSupervisorGear
   alwaysUseSpawner: true

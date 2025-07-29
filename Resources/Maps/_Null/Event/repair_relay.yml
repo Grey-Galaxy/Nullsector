@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/08/2025 00:44:14
-  entityCount: 428
+  time: 07/29/2025 04:48:56
+  entityCount: 427
 maps: []
 grids:
 - 1
@@ -189,11 +189,20 @@ entities:
       - 325
       - 324
       - 311
-- proto: AirlockEngineering
+- proto: AirlockCommand
   entities:
   - uid: 75
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,-0.5
+      parent: 1
+- proto: AirlockEngineering
+  entities:
+  - uid: 43
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 5.5,-4.5
       parent: 1
 - proto: AirlockExternal
@@ -207,13 +216,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-0.5
-      parent: 1
-- proto: AirlockFrontierBridgeGlassLocked
-  entities:
-  - uid: 364
-    components:
-    - type: Transform
-      pos: 4.5,-0.5
       parent: 1
 - proto: AirlockGlassShuttle
   entities:
@@ -1222,7 +1224,7 @@ entities:
       parent: 1
 - proto: ComputerShipyard
   entities:
-  - uid: 88
+  - uid: 87
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1234,7 +1236,7 @@ entities:
       startingCharge: 0
 - proto: ComputerShipyardService
   entities:
-  - uid: 87
+  - uid: 88
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -2167,13 +2169,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-1.5
-      parent: 1
-- proto: SpawnPointSectorCoordinator
-  entities:
-  - uid: 43
-    components:
-    - type: Transform
-      pos: 3.5,-3.5
       parent: 1
 - proto: StationMap
   entities:

@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/29/2025 03:51:39
-  entityCount: 322
+  time: 07/29/2025 03:34:29
+  entityCount: 324
 maps: []
 grids:
 - 1
@@ -316,8 +316,6 @@ entities:
       parent: 1
     - type: RadarBlip
       enabled: False
-      visibleFromOtherGrids: True
-      shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
@@ -329,8 +327,6 @@ entities:
       parent: 1
     - type: RadarBlip
       enabled: False
-      visibleFromOtherGrids: True
-      shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
@@ -342,8 +338,17 @@ entities:
       parent: 1
     - type: RadarBlip
       enabled: False
-      visibleFromOtherGrids: True
-      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
+  - uid: 323
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: 0.50070524,-2.7104895
+      parent: 1
+    - type: RadarBlip
+      enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
@@ -977,6 +982,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,0.5
       parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 0
     - type: Battery
 - proto: CircularShieldConsole
   entities:
@@ -986,6 +993,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-0.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        118:
+        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
     - type: ApcPowerReceiver
       powerLoad: 5
 - proto: ComputerCriminalRecords
@@ -1019,6 +1030,8 @@ entities:
     - type: Transform
       pos: -2.5,1.5
       parent: 1
+    - type: ShuttleConsoleLock
+      locked: False
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
@@ -1046,6 +1059,20 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
+- proto: ComputerWallmountStationRecords
+  entities:
+  - uid: 324
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,1.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 50.33378
+    - type: ApcPowerReceiverBattery
+      enabled: True
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 125

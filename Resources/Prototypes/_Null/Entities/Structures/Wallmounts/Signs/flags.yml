@@ -1,18 +1,27 @@
+# Abstract Base Type Assigning Sprite, Inheriting from BaseFlag
 - type: entity
-  parent: BaseSign
-  id: WallFlagArialialDominion
-  name: maglubiyet theocraticism flag
-  description: "Flag of Vehement worshippers of the goblinic war god of greed, Maglubiyet"
+  parent: BaseFlag
+  id: BaseFlagNullSector
+  abstract: true
   components:
   - type: WallMount
     arc: 360
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: _Null/Structures/Wallmounts/flags.rsi
+
+# Remaining Actual Flags
+- type: entity
+  parent: BaseFlagNullSector
+  id: WallFlagArialialDominion
+  name: maglubiyet theocraticism flag
+  description: "Flag of Vehement worshippers of the goblinic war god of greed, Maglubiyet"
+  components:
+  - type: Sprite
     state: arialial_dominion_flag
 
 - type: entity
-  parent: WallFlagArialialDominion
+  parent: BaseFlagNullSector
   id: WallFlagArmadanRestorationists
   name: armadan restorationism flag
   description: "Flag of the Armadan restorationists"
@@ -21,7 +30,7 @@
     state: armadan_restorationists_flag
 
 - type: entity
-  parent: WallFlagArialialDominion
+  parent: BaseFlagNullSector
   id: WallFlagChaosCultHC
   name: huemac's cult flag
   description: "Flag of the followers of the venerate Huemac"
@@ -30,7 +39,7 @@
     state: chaos_cult_hc_flag
 
 - type: entity
-  parent: WallFlagArialialDominion
+  parent: BaseFlagNullSector
   id: WallFlagChaosCultHR
   name: old headmaster's cult flag
   description: "Flag of the followers of the mad god, The Headmaster"
@@ -39,7 +48,7 @@
     state: chaos_cult_hr_flag
 
 - type: entity
-  parent: WallFlagArialialDominion
+  parent: BaseFlagNullSector
   id: WallFlagFollowersOfCirci
   name: old circiabonic flag
   description: "A Circiabon flag, followers of the Ascended Machine"
@@ -48,7 +57,7 @@
     state: followers_of_circi_flag
 
 - type: entity
-  parent: WallFlagArialialDominion
+  parent: BaseFlagNullSector
   id: WallFlagNewCircibonic
   name: new circibonic flag
   description: "A Circibon banner, followers of the blessed machines of Circi"

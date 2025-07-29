@@ -29,7 +29,7 @@
   groups:
   - HeadofSecurityHead
   - HeadofSecurityNeck
-  - HeadofSecurityJumpsuit
+  - MilitiaCoordinatorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
@@ -38,6 +38,7 @@
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
+  - ContractorWallet
   
 ## Lodge Supervisor
 - type: roleLoadout
@@ -45,7 +46,7 @@
   groups:
   - HeadofSecurityHead
   - HeadofSecurityNeck
-  - HeadofSecurityJumpsuit
+  - MilitiaCoordinatorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
@@ -54,3 +55,4 @@
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
+  - ContractorWallet
