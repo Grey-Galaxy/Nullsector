@@ -194,7 +194,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakMothDante
   name: clipped moth wings
-  description: Though very morbid, these wings are probably worth a fortune to somebody out there.
+  description: Though very morbid, these wings make the wearer feel compelled to conduct acts of mischief.
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/moth_dante.rsi
