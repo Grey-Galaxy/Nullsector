@@ -263,6 +263,8 @@
     },
     {
       "name": "paper_stamp-nf-bailiff"
-    }
+    }, {
+          "name": "paper_stamp-nexwealth"
+      }
   ]
 }
