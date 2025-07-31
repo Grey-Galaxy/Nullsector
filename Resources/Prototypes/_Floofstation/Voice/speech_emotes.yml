@@ -2,6 +2,12 @@
   id: Gekker
   name: chat-emote-name-gekker
   category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
   chatMessages: [ gekkers ]
   chatTriggers:
   - gekkers
@@ -10,6 +16,12 @@
   id: Yip
   name: chat-emote-name-yip
   category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
   chatMessages: [ yips ]
   chatTriggers:
   - yip

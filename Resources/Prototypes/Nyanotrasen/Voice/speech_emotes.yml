@@ -9,8 +9,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: [hisses.]
   chatTriggers:
     - hiss
@@ -33,8 +33,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: [meows.]
   chatTriggers:
     - meow
@@ -75,8 +75,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: [mews.]
   chatTriggers:
     - mew
@@ -113,8 +113,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: [purrs.]
   chatTriggers:
     - purr

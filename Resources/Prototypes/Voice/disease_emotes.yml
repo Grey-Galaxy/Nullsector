@@ -13,13 +13,13 @@
     components:
     - Vocal
   blacklist:
-    components:
+    tags:
     - SiliconEmotes
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
     - cough
     - coughs
-    - coughed 
+    - coughed
     - cough.
     - coughs.
     - coughed.
@@ -60,7 +60,7 @@
     components:
     - Vocal
   blacklist:
-    components:
+    tags:
     - SiliconEmotes
   chatMessages: ["chat-emote-msg-yawn"]
   chatTriggers:
