@@ -616,6 +616,14 @@
     {
       "name": "frills_neckfull",
       "directions": 4
+    },
+    {
+      "name": "body_dragonwings",
+      "directions": 4
+    },
+    {
+      "name": "body_dragonwings_membrane",
+      "directions": 4
     }
   ]
 }

@@ -112,3 +112,7 @@ marking-LizardChestBackspikes = Lizard Back Spikes (Four)
 marking-LizardSnoutSplotch = Lizard Snout (Splotch)
 marking-LizardSnoutSplotch-snout_splotch_primary = Muzzle
 marking-LizardSnoutSplotch-snout_splotch_secondary = Snoot
+
+marking-LizardChestDragonwings = Draconic Wings	
+marking-LizardChestDragonwings-body_dragonwings = Draconic Wings
+marking-LizardChestDragonwings-body_dragonwings_membrane = Draconic Wings Membrane
