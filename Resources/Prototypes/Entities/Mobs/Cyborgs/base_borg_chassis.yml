@@ -96,12 +96,10 @@
     channels:
     - Binary
     - Common
-    - Science
   - type: ActiveRadio
     channels:
     - Binary
     - Common
-    - Science
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
@@ -235,6 +233,7 @@
     - DoorBumpOpener
     - FootstepSound
     - CanPilot
+    - SiliconEmotes
   - type: Emoting
   - type: GuideHelp
     guides:
