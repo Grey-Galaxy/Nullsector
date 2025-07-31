@@ -189,6 +189,23 @@
   - type: TypingIndicatorClothing
     proto: moth
 
+# Null Sector - Start
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakMothDante
+  name: clipped moth wings
+  description: Though very morbid, these wings are probably worth a fortune to somebody out there.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/moth_dante.rsi
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: TypingIndicatorClothing
+    proto: moth
+# Null Sector - End
+
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakVoid
