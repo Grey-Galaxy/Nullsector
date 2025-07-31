@@ -184,4 +184,7 @@
       - NFPosterLegitMothPlease
       - NFPosterLegitHaveYouSeenThisEgg
         # Frontier: Ending
+        # _Null: Start
+      - PosterLegitNexwealth1 # _Null Poster, see Resources/Prototypes/_Null/Entities/Structures/Wallmounts/Signs/posters.yml
+        # _Null: Ending
     chance: 1

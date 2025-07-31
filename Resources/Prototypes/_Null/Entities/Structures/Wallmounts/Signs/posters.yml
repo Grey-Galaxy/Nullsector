@@ -1,0 +1,9 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitNexwealth1
+  name: "NexWealth Poster"
+  description: "A rather sinister propaganda poster that fills you with determination to pursue wealth. Fortune favors the discreet."
+  components:
+  - type: Sprite
+    sprite: _Null/Structures/Wallmounts/signs.rsi
+    state: nexwealth_sign1
