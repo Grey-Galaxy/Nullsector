@@ -73,9 +73,6 @@
   id: Bloodpack
 
 - type: Tag
-  id: BlueprintAutolathe
-
-- type: Tag
   id: BodyBag
 
 - type: Tag
@@ -1472,5 +1469,9 @@
   id: CartridgeShell
 
 # Null Sector
+- type: Tag # For blueprints to be possibly universal.
+  id: BlueprintLatheBasic
+
 - type: Tag # for gilded pAI recipe
   id: GildedAI
+

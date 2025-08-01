@@ -31,9 +31,9 @@
       - state: inhand-right-base
         color: "#7da0ba"
       - state: inhand-right-text
-  - type: Tag # defaults to autolathe-insertable
+  - type: Tag
     tags:
-    - BlueprintAutolathe
+    - BlueprintLatheBasic
     - Document
     - Paper
   - type: StaticPrice
@@ -161,6 +161,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintEngineeringTechfab
     - Document
     - Paper
@@ -200,6 +201,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintSalvageTechfab
     - Document
     - Paper
@@ -239,6 +241,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintProtolathe
     - Document
     - Paper
@@ -278,6 +281,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintServiceTechfab
     - Document
     - Paper
@@ -316,6 +320,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintMedicalTechfab
     - Document
     - Paper
@@ -353,6 +358,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintArmoryTechfab
     - Document
     - Paper
@@ -392,6 +398,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintMercenaryTechfab
     - Document
     - Paper
@@ -435,6 +442,7 @@
         color: "#cbab00"
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintNfsdTechfab
     - Document
     - Paper
@@ -490,6 +498,7 @@
         color: "#db7372"
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintSalvageTechfab
     - Document
     - Paper
@@ -528,6 +537,7 @@
         color: "#db7372"
   - type: Tag
     tags:
+    - BlueprintLatheBasic
     - NFBaseBlueprintMercenaryTechfab
     - NFBaseBlueprintNfsdTechfab
     - Document

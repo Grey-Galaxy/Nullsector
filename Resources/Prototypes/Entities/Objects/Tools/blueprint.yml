@@ -16,7 +16,7 @@
     price: 1000
   - type: Tag
     tags:
-    - BlueprintAutolathe
+    - BlueprintLatheBasic
 
 - type: entity
   parent: BaseBlueprint
