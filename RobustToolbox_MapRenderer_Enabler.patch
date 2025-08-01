@@ -1,0 +1,69 @@
+Subject: [PATCH] RobustToolbox MapRenderer Enabler
+---
+Index: Robust.Shared/EntitySerialization/Systems/MapLoaderSystem.Load.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Robust.Shared/EntitySerialization/Systems/MapLoaderSystem.Load.cs b/Robust.Shared/EntitySerialization/Systems/MapLoaderSystem.Load.cs
+--- a/Robust.Shared/EntitySerialization/Systems/MapLoaderSystem.Load.cs	(revision 76b46479b6a1ad1d960fba7c8df878469590d1ea)
++++ b/Robust.Shared/EntitySerialization/Systems/MapLoaderSystem.Load.cs	(date 1752915927389)
+@@ -100,13 +100,13 @@
+             throw;
+         }
+ 
+-        if (opts.ExpectedCategory is { } exp && exp != deserializer.Result.Category)
++        /*if (opts.ExpectedCategory is { } exp && exp != deserializer.Result.Category)
+         {
+             // Did someone try to load a map file as a grid or vice versa?
+             Log.Error($"File does not contain the expected data. Expected {exp} but got {deserializer.Result.Category}");
+             Delete(deserializer.Result);
+             return false;
+-        }
++        }*/
+ 
+         // Reparent entities if loading entities onto an existing map.
+         var merged = new HashSet<EntityUid>();
+Index: Robust.Shared/EntitySerialization/EntityDeserializer.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Robust.Shared/EntitySerialization/EntityDeserializer.cs b/Robust.Shared/EntitySerialization/EntityDeserializer.cs
+--- a/Robust.Shared/EntitySerialization/EntityDeserializer.cs	(revision 76b46479b6a1ad1d960fba7c8df878469590d1ea)
++++ b/Robust.Shared/EntitySerialization/EntityDeserializer.cs	(date 1752915910054)
+@@ -861,8 +861,8 @@
+                 continue;
+ 
+             DebugTools.Assert(Result.Orphans.Contains(grid.Owner));
+-            if (Options.LogOrphanedGrids)
+-                _log.Error($"Encountered an orphaned grid. Automatically creating a map for the grid.");
++            /*if (Options.LogOrphanedGrids)
++                _log.Error($"Encountered an orphaned grid. Automatically creating a map for the grid.");*/
+             var map = _map.CreateUninitializedMap();
+             _map.AssignMapId(map);
+ 
+@@ -1151,7 +1151,7 @@
+         ISerializationContext? context,
+         ISerializationManager.InstantiationDelegate<EntityUid>? _)
+     {
+-        if (node.Value == "invalid")
++        /*if (node.Value == "invalid")
+         {
+             if (CurrentComponent == "Transform")
+                 return EntityUid.Invalid;
+@@ -1164,12 +1164,12 @@
+                 : $"Encountered invalid EntityUid reference wile reading entity {curr.YamlId}, component: {CurrentComponent}";
+             _log.Error(msg);
+             return EntityUid.Invalid;
+-        }
++        }*/
+ 
+         if (int.TryParse(node.Value, out var val) && UidMap.TryGetValue(val, out var entity))
+             return entity;
+ 
+-        _log.Error($"Invalid yaml entity id: '{val}'");
++        //_log.Error($"Invalid yaml entity id: '{val}'");
+         return EntityUid.Invalid;
+     }
+ 
