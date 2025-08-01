@@ -1,3 +1,4 @@
+# This File is From Monolith
 - type: technology
   id: ShuttleArmamentComponentsResearch
   name: research-technology-shuttle-armaments-components
@@ -12,6 +13,7 @@
   - MachineShieldAlphaCoreCircuitboard
   - GunneryControlComputerCircuitboard
   - MachineGCSCircuitboard
+  position: 1, 0
 
 - type: technology
   id: ShuttleWarpDriveResearch
@@ -24,3 +26,4 @@
   cost: 12500
   recipeUnlocks:
   - MachineDriveWarpCircuitboard
+  position: 2, 0

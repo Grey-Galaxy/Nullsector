@@ -11,6 +11,7 @@
   cost: 10000
   recipeUnlocks:
   - ClothingEyesNightVisionGoggles
+  position: 1, 0
 
 - type: technology
   id: ThermalVisionTech
@@ -23,3 +24,4 @@
   cost: 10000
   recipeUnlocks:
   - ClothingEyesThermalVisionGoggles
+  position: 2, 0

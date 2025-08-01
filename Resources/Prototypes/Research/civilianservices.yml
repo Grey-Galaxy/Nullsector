@@ -1,267 +1,122 @@
+# This File is from Frontier
 # Tier 1
 
 - type: technology
-  id: Hydroponics
-  name: research-technology-basic-hydroponics
+  id: FoodService
+  name: research-technology-food-service
   icon:
-    sprite: Structures/Machines/seed_extractor.rsi
-    state: seedextractor
-  discipline: CivilianServices
-  tier: 1
-  cost: 7500 # Delta Price. 5000 is pre-adjustment.
-  recipeUnlocks:
-  - BorgModuleGardening
-  - BorgModuleHarvesting
-  - PlantBagOfHolding #DeltaV
-  - SeedExtractorMachineCircuitboard
-  - HydroponicsTrayMachineCircuitboard
-  - ReagentGrinderIndustrialMachineCircuitboard
-  - PlantAnalyzer # Frontier
-  - NFBlueprintPlantAnalyzerEmpty # Frontier
-  - NFBlueprintPlantBagOfHolding # Frontier
-
-- type: technology
-  id: CritterMechs
-  name: research-technology-critter-mechs
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: hamtr
+    sprite: Structures/Machines/juicer.rsi
+    state: juicer1
   discipline: CivilianServices
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - HamtrHarness
-  - HamtrLArm
-  - HamtrRArm
-  - HamtrLLeg
-  - HamtrRLeg
-  - HamtrCentralElectronics
-  - HamtrPeripheralsElectronics
-  - MechEquipmentGrabberSmall
-  - VimHarness
+  - MicrowaveMachineCircuitboard
+  - ReagentGrinderMachineCircuitboard
+  - ElectricGrillMachineCircuitboard
+  - BoozeDispenserMachineCircuitboard
+  - SodaDispenserMachineCircuitboard
+  position: 1, 0
 
 - type: technology
-  id: AudioVisualCommunication
-  name: research-technology-audio-visual-communication
+  id: MiscellaneousItemsOrganization
+  name: research-technology-personal-storage-solutions
   icon:
-    sprite: Structures/Wallmounts/camera.rsi
-    state: cameracase
+    sprite: _NF/Objects/Storage/Pouches/pouch.rsi
+    state: closed
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
-  - SurveillanceCameraRouterCircuitboard
-  #  - SurveillanceCameraWirelessRouterCircuitboard # Frontier - Removal of range limits made it useless to build
-  - SurveillanceWirelessCameraMovableCircuitboard
-  - SurveillanceWirelessCameraAnchoredCircuitboard
-  - SurveillanceCameraMonitorCircuitboard
-  - SurveillanceWirelessCameraMonitorCircuitboard
-  - TelecomServerCircuitboard
-#  - HolopadMachineCircuitboard # Frontier: needs work before use
-
-- type: technology
-  id: AdvancedEntertainment
-  name: research-technology-advanced-entertainment
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: television
-  discipline: CivilianServices
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - ComputerTelevisionCircuitboard
-  - SynthesizerInstrument
-  - DawInstrumentMachineCircuitboard
-  - MassMediaCircuitboard
-  - JukeboxCircuitBoard
-
-- type: technology
-  id: RoboticCleanliness
-  name: research-technology-robotic-cleanliness
-  icon:
-    sprite: Mobs/Silicon/chassis.rsi
-    state: janitor
-  discipline: CivilianServices
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - BorgModuleAdvancedCleaning
-
-- type: technology
-  id: MeatManipulation
-  name: research-technology-meat-manipulation
-  icon:
-    sprite: Structures/Machines/fat_sucker.rsi
-    state: display
-  discipline: CivilianServices
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - FatExtractorMachineCircuitboard
-  - BiogeneratorMachineCircuitboard # Frontier BiofabricatorMachineCircuitboard<BiogeneratorMachineCircuitboard
-  - BiomassReclaimerMachineCircuitboard
+  - NFPouchUtility
+  - NFPouchEngineering
+  - NFPouchFirstAid
+  - NFPouchFirstAidAlt
+  - NFPouchScience
+  - NFPouchSalvage
+  - NFPouchAtmospherics
+  - NFPouchHydroponics
+  - NFPouchChaplain
+  - NFPouchPunk
+  - NFPouchMercenary
+  - NFPouchPrivateSecurity
+  - NFPouchJanitor
+  - NFPouchContractor
+  - NFPouchClown
+  - NFPouchMime
+  - NFPouchCaptain
+  - NFPouchCargo
+  position: 2, 0
 
 # Tier 2
 
 - type: technology
-  id: FauxAstroTiles
-  name: research-technology-faux-astro-tiles
+  id: ChemicalDispensary
+  name: research-technology-chemical-dispensary
   icon:
-    sprite: Objects/Tiles/tile.rsi
-    state: astroice
+    sprite: Structures/dispensers.rsi
+    state: industrial-working
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
-  - FauxTileAstroGrass
-  - FauxTileMowedAstroGrass
-  - FauxTileJungleAstroGrass
-  - FauxTileAstroIce
-  - FauxTileAstroSnow
-  - FauxTileAstroAsteroidSand
+  - ChemMasterMachineCircuitboard
+  - ChemDispenserMachineCircuitboard
+  position: 3, 0
 
 - type: technology
-  id: BiochemicalStasis
-  name: research-technology-biochemical-stasis
+  id: IndustrialMedicine
+  name: research-technology-industrial-medicine
   icon:
-    sprite: Structures/Machines/stasis_bed.rsi
+    sprite: _NF/Structures/Machines/medical_assembler.rsi
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - StasisBedMachineCircuitboard
-  - CryoPodMachineCircuitboard
-  - CryostasisBeaker
-  - SyringeCryostasis
-
-# Shitmed Change Start
-- type: technology
-  id: AdvancedTreatment
-  name: research-technology-advanced-treatment
-  icon:
-    sprite: _Shitmed/Objects/Specific/Medical/Surgery/e-scalpel.rsi
-    state: e-scalpel-on
-  discipline: CivilianServices
-  tier: 2
   cost: 5000
   recipeUnlocks:
-  - BorgModuleAdvancedTreatment
-  - BorgModuleDefibrillator
-  - BorgModuleAdvancedParamedic # Frontier
-  - EnergyScalpel
-  - EnergyCautery
-  - AdvancedRetractor
-  - BorgModuleAdvancedSurgery
+  - MedicalAssemblerMachineCircuitboard
+  - HotplateMachineCircuitboard
+  position: 1, 1
+# Tier 3
 
 - type: technology
-  id: CyberneticEnhancements
-  name: research-technology-cybernetic-enhancements
+  id: AdvancedPersonalPropulsion
+  name: research-technology-advanced-personal-propulsion
   icon:
-    sprite: _Shitmed/Mobs/Species/IPC/organs.rsi
-    state: eyes
+    sprite: Objects/Tanks/Jetpacks/void.rsi
+    state: icon
   discipline: CivilianServices
-  tier: 2
+  tier: 3
   cost: 15000
   recipeUnlocks:
-  - JawsOfLifeLeftArm
-  - JawsOfLifeRightArm
-  - SpeedLeftLeg
-  - SpeedRightLeg
-  - BasicCyberneticEyes
-  - SecurityCyberneticEyes
-  - MedicalCyberneticEyes
-# Shitmed Change End
+  - JetpackVoid
+  position: 2, 1
 
 - type: technology
-  id: AdvancedCleaning
-  name: research-technology-advanced-cleaning
+  id: AdvancedFoodService
+  name: research-technology-advanced-food-service
   icon:
-    sprite: Objects/Specific/Janitorial/advmop.rsi
-    state: advmop
-  discipline: CivilianServices
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-  - AdvMopItem
-  - MegaSprayBottle
-  - NFBlueprintAdvMopItem # Frontier
-  - ReinforcedJug # Frontier
-
-- type: technology
-  id: HONKMech
-  name: research-technology-honk-mech
-  icon:
-    sprite: Objects/Specific/Mech/mecha.rsi
-    state: honker
+    sprite: _NF/Structures/Machines/oven.rsi
+    state: composite_off
   discipline: CivilianServices
   tier: 2
   cost: 7500
   recipeUnlocks:
-  - HonkerHarness
-  - HonkerLArm
-  - HonkerRArm
-  - HonkerLLeg
-  - HonkerRLeg
-  - HonkerCentralElectronics
-  - HonkerPeripheralsElectronics
-  - HonkerTargetingElectronics
-  - MechEquipmentHorn
+  - DeepFryerMachineCircuitboard #Nyano - Summary: adds deep fryer circuit board to service research.
+  - ServiceSelectiveDropper
+  - KitchenAssemblerMachineCircuitboard
+  - ElectricRangeMachineCircuitboard
+  position: 3, 1
 
 - type: technology
-  id: AdvancedSpray
-  name: research-technology-advanced-spray
+  id: MobileSanitation
+  name: research-technology-mobile-sanitation
   icon:
-    sprite: Objects/Weapons/Guns/Basic/spraynozzle.rsi
+    sprite: Objects/Vehicles/janicart.rsi
     state: icon
   discipline: CivilianServices
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
-  - WeaponSprayNozzle
-  - ClothingBackpackWaterTank
-
-    # Tier 3
-
-    # - type: technology # Frontier
-    # id: BluespaceCargoTransport
-    # name: research-technology-bluespace-cargo-transport
-    # icon:
-    # sprite: Structures/cargo_telepad.rsi
-  # state: display
-  # discipline: CivilianServices
-  # tier: 3
-  # cost: 15000
-  # recipeUnlocks:
-  # - CargoTelepadMachineCircuitboard
-
-- type: technology
-  id: QuantumFiberWeaving
-  name: research-technology-quantum-fiber-weaving
-  icon:
-    sprite: Clothing/Shoes/Boots/speedboots.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 3
-  cost: 15000 # Frontier - 10000<15000
-  recipeUnlocks:
-  - ClothingShoesBootsSpeed
-
-- type: technology
-  id: BluespaceChemistry
-  name: research-technology-bluespace-chemistry
-  icon:
-    sprite: Objects/Specific/Chemistry/beaker_bluespace.rsi
-    state: beakerbluespace
-  discipline: CivilianServices
-  tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - BluespaceBeaker
-  - SyringeBluespace
-  - JugBluespace # Frontier
-  - VialBluespace # Frontier
-  - NFBlueprintBluespaceBeaker # Frontier
-  - NFBlueprintSyringeBluespace # Frontier
-  - NFBlueprintJugBluespace # Frontier
-  - NFBlueprintVialBluespace # Frontier
+    - JanicartFlatpack
+  position: 4, 1
