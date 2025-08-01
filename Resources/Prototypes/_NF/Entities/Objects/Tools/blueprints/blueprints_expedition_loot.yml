@@ -3,7 +3,7 @@
 ## Uranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintBoxShotgunUranium
   name: uranium shotgun ammo blueprint
   description: A blueprint with a schematic of an uranium shotgun ammo. It can be inserted into an autolathe or a techfab.
@@ -13,7 +13,7 @@
     - BoxShotgunUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxRifleUranium
   name: uranium .20 ammo blueprint
   description: A blueprint with a schematic of an uranium .20 rifle ammo. It can be inserted into an autolathe or a techfab.
@@ -23,7 +23,7 @@
     - MagazineBoxRifleUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxLightRifleUranium
   name: uranium .30 ammo blueprint
   description: A blueprint with a schematic of an uranium .30 rifle ammo. It can be inserted into an autolathe or a techfab.
@@ -33,7 +33,7 @@
     - MagazineBoxLightRifleUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxMagnumUranium
   name: uranium .45 ammo blueprint
   description: A blueprint with a schematic of an uranium .45 ammo. It can be inserted into an autolathe or a techfab.
@@ -43,7 +43,7 @@
     - MagazineBoxMagnumUranium
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxPistolUranium
   name: uranium .35 ammo blueprint
   description: A blueprint with a schematic of an uranium .35 ammo. It can be inserted into an autolathe or a techfab.
@@ -55,7 +55,7 @@
 ## Incendiary
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintBoxShotgunIncendiary
   name: incendiary shotgun ammo blueprint
   description: A blueprint with a schematic of an incendiary shotgun ammo. It can be inserted into an autolathe or a techfab.
@@ -65,7 +65,7 @@
     - BoxShotgunIncendiary
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxRifleIncendiary
   name: incendiary .20 ammo blueprint
   description: A blueprint with a schematic of an incendiary .20 rifle ammo. It can be inserted into an autolathe or a techfab.
@@ -75,7 +75,7 @@
     - MagazineBoxRifleIncendiary
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxLightRifleIncendiary
   name: incendiary .30 ammo blueprint
   description: A blueprint with a schematic of an incendiary .30 rifle ammo. It can be inserted into an autolathe or a techfab.
@@ -85,7 +85,7 @@
     - MagazineBoxLightRifleIncendiary
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxMagnumIncendiary
   name: incendiary .45 ammo blueprint
   description: A blueprint with a schematic of an incendiary .45 ammo. It can be inserted into an autolathe or a techfab.
@@ -95,7 +95,7 @@
     - MagazineBoxMagnumIncendiary
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintMagazineBoxPistolIncendiary
   name: incendiary .35 ammo blueprint
   description: A blueprint with a schematic of an incendiary .35 ammo. It can be inserted into an autolathe or a techfab.
@@ -107,7 +107,7 @@
 # Guns
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintWeaponLaserCannon
   name: laser cannon blueprint
   description: A blueprint with a schematic of a laser cannon. It can be inserted into an autolathe or a techfab.
@@ -117,7 +117,7 @@
     - WeaponLaserCannon
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintWeaponXrayCannon
   name: x-ray cannon blueprint
   description: A blueprint with a schematic of a x-ray cannon. It can be inserted into an autolathe or a techfab.
@@ -129,7 +129,7 @@
 # Tools
 
 - type: entity
-  parent: BaseBlueprintExpedition
+  parent: NFBaseBlueprintExpedition
   id: NFBlueprintEnergyPickaxe
   name: holopickaxe blueprint
   description: A blueprint with a schematic of a holopickaxe. It can be inserted into an autolathe or a techfab.
