@@ -13,6 +13,21 @@ public sealed partial class BlueprintReceiverComponent : Component
     [DataField]
     public string ContainerId = "blueprint";
 
+    // Whitelisted blueprints are, limiting certain blueprints to certain lathes, but all blueprints are given a basic tag to accomodate.
     [DataField(required: true)]
     public EntityWhitelist Whitelist = new();
+
+    // Blacklisted blueprints are not required, but could prevent specific blueprints from entering lathes.
+    [DataField(required: false)]
+    public EntityWhitelist Blacklist = new();
+    /*
+     *  ===HOW TO USE===
+        - type: BlueprintReceiver
+        whitelist:
+          tags:
+          - BlueprintAutolathe
+        whitelist:
+          tags:
+          - <tag>
+     */
 }
