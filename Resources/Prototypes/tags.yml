@@ -1451,9 +1451,6 @@
 
 - type: Tag
   id: NFBaseBlueprintNfsdTechfab
-  
-- type: Tag
-  id: NFBaseBlueprintSalvageTechfab
 
 - type: Tag
   id: NFBaseBlueprintServiceTechfab
