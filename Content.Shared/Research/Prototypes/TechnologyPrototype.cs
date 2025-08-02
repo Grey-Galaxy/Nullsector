@@ -97,7 +97,7 @@ public sealed partial class TechnologyPrototype : IPrototype
     /// When specified, the technology will show a split color display.
     /// Limited to one additional discipline (total of 2 disciplines).
     /// </summary>
-    [DataField]
+    [DataField("secondarydiscipline")]
     public ProtoId<TechDisciplinePrototype>? SecondaryDiscipline = null;
 
     /// <summary>

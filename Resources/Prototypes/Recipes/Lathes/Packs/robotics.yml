@@ -63,7 +63,7 @@
   - BorgModuleDefibrillator
   - BorgModuleAdvancedTreatment
   - BorgModuleJetpack # Frontier
-  - BorgModuleAdvancedParamedic # Frontier
+  - BorgModuleAdvancedParamedicRecipe # Frontier
   - BorgModuleAdvancedMining # Frontier
 
 - type: latheRecipePack

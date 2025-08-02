@@ -561,7 +561,7 @@
   cost: 5000
   recipeUnlocks:
   - BorgModuleTreatment
-  - BorgModuleSurger
+  - BorgModuleSurgery
   - BorgModuleAdvancedParamedicRecipe
   technologyPrerequisites:
   - NFBluespaceChemistry
