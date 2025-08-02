@@ -14,10 +14,14 @@
   - type: ResearchServer
   - type: TechnologyDatabase
     supportedDisciplines:
-    - Industrial
     - Arsenal
-    - Experimental
     - CivilianServices
+    - Experimental
+    - Industrial
+    - Medical
+    - Science
+    - Salvage
+    - ArsenalMercenary
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver
