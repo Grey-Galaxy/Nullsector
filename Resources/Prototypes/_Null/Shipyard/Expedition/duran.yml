@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardDuran
+  name: guide-entry-shipyard-duran
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Duran.xml"
+
 - type: gameMap
   id: Duran
   mapName: 'Duran'

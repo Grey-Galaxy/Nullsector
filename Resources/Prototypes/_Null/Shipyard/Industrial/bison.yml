@@ -17,6 +17,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardBison
+  name: guide-entry-shipyard-bison
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Bison.xml"
+
 - type: gameMap
   id: Bison
   mapName: 'Bison'

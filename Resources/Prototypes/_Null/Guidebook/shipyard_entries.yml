@@ -4,7 +4,7 @@
   name: guide-entry-shipyard
   text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
   priority: 6
-  children:
+  children: # Reserve this for primary-shipyard guides only, for now. New players may see this first more than experienced ones.
   - ShipyardAkasono
   - ShipyardArgent
   - ShipyardCamper

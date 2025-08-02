@@ -24,6 +24,11 @@
   engine:
   - Plasma
 
+- type: guideEntry
+  id: ShipyardNugget
+  name: guide-entry-shipyard-nugget
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Nugget.xml"
+
 - type: gameMap
   id: Nugget
   mapName: 'JNK Nugget'

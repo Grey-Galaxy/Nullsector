@@ -15,7 +15,6 @@
 - type: entity
   parent: ShuttleMapBase
   id: ShuttleMapAkasono
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: akasono
@@ -23,31 +22,55 @@
 - type: entity
   parent: ShuttleMapBase
   id: ShuttleMapArchon
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: archon
 
 - type: entity
   parent: ShuttleMapBase
+  id: ShuttleMapBison
+  components:
+  - type: Sprite
+    state: bison
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapBucket
+  components:
+  - type: Sprite
+    state: bucket
+
+- type: entity
+  parent: ShuttleMapBase
   id: ShuttleMapCamper
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: camper
 
 - type: entity
   parent: ShuttleMapBase
+  id: ShuttleMapClemency
+  components:
+  - type: Sprite
+    state: clemency
+
+- type: entity
+  parent: ShuttleMapBase
   id: ShuttleMapColdcap
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: coldcap
 
 - type: entity
   parent: ShuttleMapBase
+  id: ShuttleMapDuran
+  components:
+  - type: Sprite
+    state: duran
+
+- type: entity
+  parent: ShuttleMapBase
   id: ShuttleMapMoonlight
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: moonlight
@@ -55,7 +78,13 @@
 - type: entity
   parent: ShuttleMapBase
   id: ShuttleMapNourishment
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: nourishment
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapNugget
+  components:
+  - type: Sprite
+    state: nugget

@@ -14,7 +14,19 @@
       "name": "archon"
     },
     {
+      "name": "bison"
+    },
+    {
+      "name": "bucket"
+    },
+    {
       "name": "camper"
+    },
+    {
+      "name": "clemency"
+    },
+    {
+      "name": "duran"
     },
     {
       "name": "coldcap"
@@ -24,6 +36,9 @@
     },
     {
       "name": "nourishment"
+    },
+    {
+      "name": "nugget"
     }
   ]
 }
