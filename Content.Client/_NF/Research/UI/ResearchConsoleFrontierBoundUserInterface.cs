@@ -21,7 +21,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
     private ISawmill _sawmill = default!;
 
     // Sound to play when unlocking a technology
-    private static readonly SoundPathSpecifier UnlockSound = new("/Audio/_NF/Research/unlock.ogg");
+    private static readonly SoundPathSpecifier UnlockSound = new("/Audio/_Null/Research/achievement-unlocked.ogg");
 
     public ResearchConsoleFrontierBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
