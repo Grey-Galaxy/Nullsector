@@ -1,0 +1,15 @@
+# unlock.ogg is unused in Null Sector as of 20250802
+- files: ["unlock.ogg"]
+  license: "CC-BY-4.0"
+  copyright: 'Freesound: Craftwork7496 - edited by dvir001 (github)'
+  source: "https://freesound.org/people/Craftwork7496/sounds/813617/"
+
+- files: ["achievement-unlocked.ogg"]
+  license: "CC-BY-4.0"
+  copyright: 'Sound Effect from Factorio'
+  source: "https://lua-api.factorio.com/latest/prototypes/UtilitySounds.html"
+
+- files: ["bleep.ogg"]
+  license: "CC-BY-4.0"
+  copyright: 'Free Sound Effect by ElevenLabs - edited by LukeZurg22'
+  source: "https://lua-api.factorio.com/latest/prototypes/UtilitySounds.html"
