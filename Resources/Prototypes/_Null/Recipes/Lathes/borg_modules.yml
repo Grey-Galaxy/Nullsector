@@ -137,6 +137,17 @@
     Diamond: 100 # MiningDrillDiamond Diamond price
 
 - type: latheRecipe
+  id: BorgModuleAdvancedParamedic
+  result: BorgModuleAdvancedParamedic
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50
+
+
+- type: latheRecipe
   id: BorgModuleJetpack
   result: BorgModuleJetpack
   parent: BaseBorgModuleRecipe
