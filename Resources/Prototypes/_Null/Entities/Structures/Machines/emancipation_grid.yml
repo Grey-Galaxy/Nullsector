@@ -42,7 +42,7 @@
             True: { visible: true }
             False: { visible: false }
     # - type: Machine
-      # board: MachineDriveWarpCircuitboard
+      # board: EmancipationGridCircuitboard
     # - type: Construction
       # graph: Machine
       # node: machine
