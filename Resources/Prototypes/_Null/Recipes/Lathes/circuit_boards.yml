@@ -151,3 +151,34 @@
   parent: BaseCircuitboardRecipe
   id: ImpCoffeeMachineCircuitboard
   result: ImpCoffeeMachineCircuitboard
+
+# From Monolith
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: ShieldControlComputerCircuitboard
+  result: ShieldControlComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: GunneryControlComputerCircuitboard
+  result: GunneryControlComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldAlphaCoreCircuitboard
+  result: MachineShieldAlphaCoreCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineDriveWarpCircuitboard
+  result: MachineDriveWarpCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineGCSCircuitboard
+  result: MachineGCSCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: EmancipationGridCircuitboardRecipe
+  result: EmancipationGridCircuitboard
