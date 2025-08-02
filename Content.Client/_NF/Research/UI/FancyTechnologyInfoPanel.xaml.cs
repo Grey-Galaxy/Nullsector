@@ -91,10 +91,10 @@ public sealed partial class FancyTechnologyInfoPanel : Control
         // Replace the event handling method to use a simpler approach
         ResearchButton.OnPressed += args =>
         {
-            _sawmill.Debug($"Research button pressed for {proto.ID}");
+            //_sawmill.Debug($"Research button pressed for {proto.ID}");
             if (BuyAction != null)
             {
-                _sawmill.Debug($"Triggering BuyAction for {proto.ID}");
+                //_sawmill.Debug($"Triggering BuyAction for {proto.ID}");
                 BuyAction.Invoke(proto);
             }
             else
@@ -103,7 +103,7 @@ public sealed partial class FancyTechnologyInfoPanel : Control
             }
         };
 
-        _sawmill.Debug($"Created tech panel: {proto.ID}, availability: {availability}, button disabled: {ResearchButton.Disabled}");
+        //_sawmill.Debug($"Created tech panel: {proto.ID}, availability: {availability}, button disabled: {ResearchButton.Disabled}");
     }
 
     private void InitializePrerequisites(TechnologyPrototype proto, ResearchSystem research, SpriteSystem sprite)

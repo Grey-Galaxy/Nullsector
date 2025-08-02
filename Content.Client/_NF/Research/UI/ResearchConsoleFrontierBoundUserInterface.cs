@@ -29,7 +29,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
         _audioSystem = EntMan.System<SharedAudioSystem>();
 
         _sawmill = _logManager.GetSawmill("research.console");
-        _sawmill.Debug($"ResearchConsoleFrontierBoundUserInterface created for {owner} with key {uiKey}");
+        //_sawmill.Debug($"ResearchConsoleFrontierBoundUserInterface created for {owner} with key {uiKey}");
     }
 
     protected override void Open()
@@ -37,7 +37,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
         base.Open();
 
         var owner = Owner;
-        _sawmill.Debug($"Opening UI for {owner}");
+        //_sawmill.Debug($"Opening UI for {owner}");
 
         _consoleMenu = this.CreateWindow<FancyResearchConsoleMenu>();
         _consoleMenu.SetEntity(owner);
@@ -48,7 +48,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
         {
             try
             {
-                _sawmill.Debug($"Sending ConsoleUnlockTechnologyMessage for tech ID: {id}");
+                //_sawmill.Debug($"Sending ConsoleUnlockTechnologyMessage for tech ID: {id}");
 
                 // Create and send the message
                 var message = new ConsoleUnlockTechnologyMessage(id);
@@ -56,7 +56,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
 
                 _audioSystem.PlayPvs(UnlockSound, owner, AudioParams.Default); // Play unlock sound - client-side only
 
-                _sawmill.Info($"Sent unlock message for technology: {id}"); // Log success
+                //_sawmill.Info($"Sent unlock message for technology: {id}"); // Log success
             }
             catch (Exception ex) // Log any exceptions that occur during message sending
             {
@@ -66,7 +66,7 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
 
         _consoleMenu.OnServerButtonPressed += () =>
         {
-            _sawmill.Debug("Sending ConsoleServerSelectionMessage");
+            //_sawmill.Debug("Sending ConsoleServerSelectionMessage");
             SendMessage(new ConsoleServerSelectionMessage());
         };
     }
@@ -103,14 +103,14 @@ public sealed class ResearchConsoleFrontierBoundUserInterface : BoundUserInterfa
             return;
         }
 
-        _sawmill.Debug($"Updating UI state with {castState.Points} points and {castState.Researches.Count} technologies");
+        //_sawmill.Debug($"Updating UI state with {castState.Points} points and {castState.Researches.Count} technologies");
 
         var availableTechs = castState.Researches.Count(t => t.Value == ResearchAvailability.Available);
-        _sawmill.Debug($"Available technologies: {availableTechs}");
+        //_sawmill.Debug($"Available technologies: {availableTechs}");
 
         if (!_consoleMenu.List.SequenceEqual(castState.Researches))
         {
-            _sawmill.Debug("Technologies list changed, updating panels");
+            //_sawmill.Debug("Technologies list changed, updating panels");
             _consoleMenu.UpdatePanels(castState.Researches);
         }
 
