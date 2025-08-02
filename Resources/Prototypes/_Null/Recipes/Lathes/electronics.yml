@@ -145,3 +145,9 @@
   materials:
      Steel: 350
      Glass: 350
+
+# From Frontier from Impstation
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: ImpCoffeeMachineCircuitboard
+  result: ImpCoffeeMachineCircuitboard

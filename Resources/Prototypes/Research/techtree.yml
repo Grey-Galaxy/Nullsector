@@ -562,7 +562,7 @@
   recipeUnlocks:
   - BorgModuleTreatment
   - BorgModuleSurger
-  - BorgModuleAdvancedParamedic
+  - BorgModuleAdvancedParamedicRecipe
   technologyPrerequisites:
   - NFBluespaceChemistry
   position: 2, 10
@@ -1061,6 +1061,7 @@
   - ElectricGrillMachineCircuitboard
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
+  - ImpCoffeeMachineCircuitboard
   technologyPrerequisites:
   - NFAdvancedHydroponicsEquipment
   position: 1, 24

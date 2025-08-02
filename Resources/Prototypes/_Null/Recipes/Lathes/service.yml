@@ -148,3 +148,18 @@
   completetime: 2
   materials:
     Wood: 300
+
+# Coffee cup (IMPSTATION -> FRONTIER -> NULL)
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: DrinkDisposableCup
+  result: DrinkDisposableCup
+  materials:
+    Cardboard: 25
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: DrinkDisposableMcCup
+  result: DrinkDisposableMcCup
+  materials:
+    Cardboard: 25

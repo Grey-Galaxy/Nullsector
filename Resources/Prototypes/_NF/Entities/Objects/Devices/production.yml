@@ -37,6 +37,9 @@
   name: mercenary techfab machine board
   description: A machine printed circuit board for a mercenary techfab.
   components:
+    - type: Sprite
+      sprite: _NF/Objects/Misc/module.rsi
+      state: nfsd # dumb, but we don't really have a merc module at the moment
     - type: MachineBoard
       prototype: MercenaryTechFab
       requirements:
@@ -143,6 +146,9 @@
   parent: BaseMachineCircuitboard
   name: Militia thruster machine board
   components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/module.rsi
+    state: nfsd
   - type: MachineBoard
     prototype: ThrusterNfsd
     requirements:
@@ -201,6 +207,9 @@
   parent: BaseMachineCircuitboard
   name: Militia gyroscope machine board
   components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/module.rsi
+    state: nfsd
   - type: MachineBoard
     prototype: GyroscopeNfsd
     requirements:
@@ -214,6 +223,9 @@
   parent: BaseMachineCircuitboard
   name: small Militia gyroscope machine board
   components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/module.rsi
+    state: nfsd
   - type: MachineBoard
     prototype: SmallGyroscopeNfsd
     requirements:
@@ -242,9 +254,12 @@
 - type: entity
   parent: BaseMachineCircuitboard
   id: M_EmpMachineCircuitboard
-  name: M_EMP Generator machine board
+  name: mobile EMP Generator machine board
   description: A machine printed circuit board for a mobile EMP generator.
   components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/module.rsi
+    state: nfsd
   - type: MachineBoard
     prototype: M_Emp
     requirements:
@@ -256,7 +271,7 @@
 - type: entity
   id: PortableGeneratorDKMachineCircuitboard
   parent: [ BaseMachineCircuitboard, BaseC2ContrabandUnredeemable ]
-  name: D-K-type portable generator machine board
+  name: D-K portable generator machine board
   description: A machine printed circuit board for a D-K-type portable generator.
   components:
     - type: Sprite
@@ -278,7 +293,7 @@
 - type: entity
   id: PortableGeneratorDKJrMachineCircuitboard
   parent: [ BaseMachineCircuitboard, BaseC1Contraband ]
-  name: D-K Jr.-type portable generator machine board
+  name: D-K Jr. portable generator machine board
   description: A machine printed circuit board for a D-K Jr.-type portable generator.
   components:
     - type: Sprite
@@ -401,7 +416,7 @@
 
 - type: entity
   id: CondimentDispenserCircuitboard
-  parent: BaseMachineCircuitboard  
+  parent: BaseMachineCircuitboard
   name: condiment dispenser machine board
   description: A machine printed circuit board for a condiment dispenser.
   components:
@@ -419,9 +434,45 @@
             defaultPrototype: Beaker
 
 - type: entity
+  id: ImpCoffeeMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: spacepresso machine board
+  description: A machine printed circuit board for a spacepresso machine.
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: ImpCoffeeMachineEmpty
+      stackRequirements:
+        Steel: 5
+      tagRequirements:
+          GlassBeaker:
+            amount: 1
+            defaultPrototype: Beaker
+
+- type: entity
   parent: StationAnchorCircuitboard
   id: MiniStationAnchorCircuitboard
   name: mini station anchor machine board
   components:
   - type: MachineBoard
     prototype: MiniStationAnchor
+
+#- type: entity
+#  id: PortablePumpMachineCircuitBoard
+#  parent: BaseMachineCircuitboard
+#  name: portable pump machine board
+#  description: A machine printed circuit board for a portable pump.
+#  components:
+#  - type: Sprite
+#    state: engineering
+#  - type: MachineBoard
+#    prototype: PortablePump
+#    requirements:
+#      Manipulator: 2
+#    stackRequirements:
+#      Cable: 2
+#    tagRequirements:
+#      GlassBeaker:
+#        amount: 2
+#        defaultPrototype: Beaker

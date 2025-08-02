@@ -137,7 +137,7 @@
     Diamond: 100 # MiningDrillDiamond Diamond price
 
 - type: latheRecipe
-  id: BorgModuleAdvancedParamedic
+  id: BorgModuleAdvancedParamedicRecipe
   result: BorgModuleAdvancedParamedic
   completetime: 3
   materials:
