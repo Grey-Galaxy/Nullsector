@@ -1,0 +1,19 @@
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapBase
+  name: "shuttle map"
+  description: "Detailed map of a shuttle."
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Null/Guidebook/ShuttleMaps.rsi
+    scale: 1.2, 1.2
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapCamper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: camper
