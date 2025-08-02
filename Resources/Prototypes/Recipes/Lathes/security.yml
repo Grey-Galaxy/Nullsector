@@ -386,8 +386,8 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: BoxLethalshot
-  result: BoxLethalshot
+  id: BoxLethalShot
+  result: BoxLethalShot
   materials:
     Steel: 320
 

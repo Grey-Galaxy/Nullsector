@@ -41,6 +41,7 @@
   id: MagazineLightRifleLowCapacity
   name: "low cap magazine (.30 rifle)"
   parent: MagazineLightRifleLowCapacityEmpty
+  suffix: filled
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifle
