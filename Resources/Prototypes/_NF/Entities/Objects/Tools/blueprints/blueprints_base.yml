@@ -403,6 +403,7 @@
     - Document
     - Paper
 
+# NULL SECTOR NOTE: There is no NFSD in the Null Sector, so this is worthless, or at least, needs revision.
 - type: entity
   parent: NFBaseBlueprintFaxable
   id: NFBaseBlueprintArsenalNfsd

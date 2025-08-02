@@ -371,19 +371,3 @@
   id: ClothingOuterHardsuitWarden
   parent: NFBaseHardSuitArmoredRecipe
   result: ClothingOuterHardsuitWarden
-
-# Magboots
-- type: latheRecipe
-  id: ClothingShoesBootsMagAdv
-  parent: NFBaseMagBootsRecipe
-  result: ClothingShoesBootsMagAdv
-
-- type: latheRecipe
-  id: ClothingShoesBootsMagSecurity
-  parent: NFBaseMagBootsRecipe
-  result: ClothingShoesBootsMagSecurity
-
-- type: latheRecipe
-  id: ClothingShoesBootsMagMercenary
-  parent: NFBaseMagBootsRecipe
-  result: ClothingShoesBootsMagMercenary

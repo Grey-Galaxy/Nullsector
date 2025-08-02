@@ -11,6 +11,18 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
+  id: DefibrillatorCompact
+  result: DefibrillatorCompact
+  categories:
+  - Tools
+  completetime: 2
+  materials:
+    Cloth: 200
+    Steel: 600
+    Plastic: 2100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
   id: CraftChemBag
   result: ChemBag
   categories:

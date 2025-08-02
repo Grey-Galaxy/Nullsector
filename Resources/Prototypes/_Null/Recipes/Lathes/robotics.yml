@@ -1,0 +1,147 @@
+# Modules
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleCable
+  result: BorgModuleCable
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleFireExtinguisher
+  result: BorgModuleFireExtinguisher
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleGPS
+  result: BorgModuleGPS
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleRadiationDetection
+  result: BorgModuleRadiationDetection
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleTool
+  result: BorgModuleTool
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleMercenary
+  result: BorgModuleMercenary
+
+# Engineering Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedTool
+  result: BorgModuleAdvancedTool
+
+# Janitor Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedCleaning
+  result: BorgModuleAdvancedCleaning
+
+# Medical Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedTreatment
+  result: BorgModuleAdvancedTreatment
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleDefibrillator
+  result: BorgModuleDefibrillator
+
+# Science Modules
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleArtifact
+  result: BorgModuleArtifact
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleAnomaly
+  result: BorgModuleAnomaly
+
+# Service Modules
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleGardening
+  result: BorgModuleGardening
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleHarvesting
+  result: BorgModuleHarvesting
+
+# Shitmed Recipes
+- type: latheRecipe
+  id: BorgModuleAdvancedSurgery
+  result: BorgModuleAdvancedSurgery
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50
+
+# Other Modules
+- type: latheRecipe
+  id: BorgModuleRCD
+  result: BorgModuleRCD
+  completetime: 5
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50
+    Bluespace: 30
+
+- type: latheRecipe
+  id: BorgModuleTreatment
+  result: BorgModuleTreatment
+  parent: BaseBorgModuleRecipe
+  completetime: 5
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50
+    Bluespace: 60 # SyringeBluespace Bluepsace price
+
+- type: latheRecipe
+  id: BorgModuleSurgery
+  result: BorgModuleSurgery
+  parent: BaseBorgModuleRecipe
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50
+    Bluespace: 60 # SyringeBluespace Bluepsace price
+
+- type: latheRecipe
+  id: BorgModuleAdvancedMining
+  result: BorgModuleAdvancedMining
+  parent: BaseBorgModuleRecipe
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Bluespace: 200 # OreBagOfHolding Bluepsace price
+    Diamond: 100 # MiningDrillDiamond Diamond price
+
+- type: latheRecipe
+  id: BorgModuleJetpack
+  result: BorgModuleJetpack
+  parent: BaseBorgModuleRecipe
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 50

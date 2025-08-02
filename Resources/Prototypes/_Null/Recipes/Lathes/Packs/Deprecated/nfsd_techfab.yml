@@ -4,7 +4,7 @@
 - type: latheRecipePack
   id: NFNfsdTechfabDeprecatedStatic
   recipes:
-  - BoxLethalshot
+  - BoxLethalShot
   - BoxShotgunPractice
   - BoxShotgunSlug
   - ClothingEyesHudNfsd

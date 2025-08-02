@@ -134,6 +134,16 @@
   id: CloningPodMachineCircuitboard
   result: CloningPodMachineCircuitboard
 
+- type: latheRecipe # Null Sector
+  parent: BaseGoldCircuitboardRecipe
+  id: HolopadShipMachineCircuitboard
+  result: HolopadShipMachineCircuitboard
+
+- type: latheRecipe # Null Sector
+  parent: BaseGoldCircuitboardRecipe
+  id: ResearchComputerCircuitboard
+  result: ResearchComputerCircuitboard
+
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: ThermomachineFreezerMachineCircuitBoard

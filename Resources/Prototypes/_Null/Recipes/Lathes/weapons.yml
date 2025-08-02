@@ -1,3 +1,14 @@
+- type: latheRecipe
+  id: WeaponPistolPollock
+  result: WeaponPistolPollock
+  categories:
+  - Weapons
+  completetime: 3
+  materials:
+    Steel: 1000
+    Plastic: 1200
+    Plasteel: 1200
+
 # Ranged weapons
 - type: latheRecipe
   id: WeaponLaserPistolNF
