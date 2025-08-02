@@ -1,0 +1,39 @@
+- type: latheRecipe
+  id: ClothingBackpackMessengerHolding
+  result: ClothingBackpackMessengerHolding
+  completetime: 5
+  materials:
+    Steel: 2000
+    Silver: 750
+    Plasma: 1250 #Higher Plasma due to it needing less bluespace
+    Uranium: 150
+    Bluespace: 300 #DeltaV: Bluespace Exists
+
+- type: latheRecipe
+  id: ConstructionBagOfHolding
+  result: ConstructionBagOfHolding
+  completetime: 5
+  materials:
+    Steel: 2000
+    Silver: 750
+    Plasma: 1000 #DeltaV: Bluespace Exists so less plasma used, no uranium
+    Bluespace: 200 #DeltaV: Bluespace Exists
+
+- type: latheRecipe
+  id: SolarAssemblyFlatpack
+  result: SolarAssemblyFlatpack
+  completetime: 1.5 # Completes quickly - you need a lot of the things
+  materials:
+    Steel: 500
+    Silver: 100
+    Gold: 50
+
+- type: latheRecipe
+  id: GasDepositLocator
+  result: GasDepositLocatorEmpty
+  categories:
+  - Tools
+  completetime: 3
+  materials:
+    Steel: 400
+    Glass: 100

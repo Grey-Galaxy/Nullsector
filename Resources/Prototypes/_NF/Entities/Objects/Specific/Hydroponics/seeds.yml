@@ -64,13 +64,13 @@
   productPrototypes:
     - SpaceCash
   harvestRepeat: Repeat
-  lifespan: 45
+  lifespan: 180 # Null Sector x4 Lifespan
   maturation: 15
   production: 8
-  yield: 3
+  yield: 5 # Null Sector (3⏩5)
   potency: 10
   growthStages: 2
-  idealLight: 6
+  idealLight: 5 # Null Sector (6⏩5) (COLD hard cash!)
 
 - type: seed
   id: pear

@@ -12,7 +12,7 @@
     weight: 5
     duration: 1000
     maxDuration: 1360
-    reoccurrenceDelay: 480
+    reoccurrenceDelay: 320 # Null Sector
     requiredJobs:
       LodgeSupervisor: 1
   - type: BluespaceErrorRule

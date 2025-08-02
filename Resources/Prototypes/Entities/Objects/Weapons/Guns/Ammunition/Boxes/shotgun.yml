@@ -53,7 +53,7 @@
 - type: entity
   name: shell box (lethal)
   parent: AmmoProviderShotgunShell
-  id: BoxLethalshot
+  id: BoxLethalShot
   components:
     - type: BallisticAmmoProvider
       proto: ShellShotgun

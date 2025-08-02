@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared.Examine;
 using Content.Shared.Lathe;
 using Content.Shared.Research.Components;
 using Content.Shared.Research.Prototypes;
@@ -20,12 +21,21 @@ public abstract class SharedResearchSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<TechnologyDatabaseComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<ResearchServerComponent, ExaminedEvent>(OnServerExamined); // Frontier
     }
 
     private void OnMapInit(EntityUid uid, TechnologyDatabaseComponent component, MapInitEvent args)
     {
         UpdateTechnologyCards(uid, component);
     }
+
+    // Frontier: print server ID on examine
+    private void OnServerExamined(Entity<ResearchServerComponent> ent, ref ExaminedEvent args)
+    {
+        if (args.IsInDetailsRange)
+            args.PushMarkup(Loc.GetString("research-server-examine-id", ("id", ent.Comp.Id)));
+    }
+    // End Frontier: print server ID on examine
 
     public void UpdateTechnologyCards(EntityUid uid, TechnologyDatabaseComponent? component = null)
     {
@@ -38,16 +48,20 @@ public abstract class SharedResearchSystem : EntitySystem
         component.CurrentTechnologyCards.Clear();
         foreach (var discipline in component.SupportedDisciplines)
         {
-            var selected = availableTechnology.FirstOrDefault(p => p.Discipline == discipline);
+            var selected =
+                availableTechnology.FirstOrDefault(p =>
+                    p.HasDiscipline(discipline)); // Frontier: Updated to support dual-discipline technologies
             if (selected == null)
                 continue;
 
             component.CurrentTechnologyCards.Add(selected.ID);
         }
+
         Dirty(uid, component);
     }
 
-    public List<TechnologyPrototype> GetAvailableTechnologies(EntityUid uid, TechnologyDatabaseComponent? component = null)
+    public List<TechnologyPrototype> GetAvailableTechnologies(EntityUid uid,
+        TechnologyDatabaseComponent? component = null)
     {
         if (!Resolve(uid, ref component, false))
             return new List<TechnologyPrototype>();
@@ -63,18 +77,22 @@ public abstract class SharedResearchSystem : EntitySystem
         return availableTechnologies;
     }
 
-    public bool IsTechnologyAvailable(TechnologyDatabaseComponent component, TechnologyPrototype tech, Dictionary<string, int>? disciplineTiers = null)
+    public bool IsTechnologyAvailable(TechnologyDatabaseComponent component,
+        TechnologyPrototype tech,
+        Dictionary<string, int>? disciplineTiers = null)
     {
         disciplineTiers ??= GetDisciplineTiers(component);
 
         if (tech.Hidden)
             return false;
 
-        if (!component.SupportedDisciplines.Contains(tech.Discipline))
+        var techDisciplines =
+            tech.GetAllDisciplines(); // Frontier: Updated to support dual-discipline technologies - tech is available if ANY of its disciplines are supported
+        if (!techDisciplines.Any(discipline => component.SupportedDisciplines.Contains(discipline)))
             return false;
 
-        if (tech.Tier > disciplineTiers[tech.Discipline])
-            return false;
+        // if (tech.Tier > disciplineTiers[tech.Discipline]) // Goobstation R&D Console rework - removed main discipline checks
+        //     return false;
 
         if (component.UnlockedTechnologies.Contains(tech.ID))
             return false;
@@ -107,12 +125,13 @@ public abstract class SharedResearchSystem : EntitySystem
     public int GetHighestDisciplineTier(TechnologyDatabaseComponent component, TechDisciplinePrototype techDiscipline)
     {
         var allTech = PrototypeManager.EnumeratePrototypes<TechnologyPrototype>()
-            .Where(p => p.Discipline == techDiscipline.ID && !p.Hidden).ToList();
+            .Where(p => p.HasDiscipline(techDiscipline.ID) && !p.Hidden)
+            .ToList(); // Frontier: Updated to support dual-discipline technologies
         var allUnlocked = new List<TechnologyPrototype>();
         foreach (var recipe in component.UnlockedTechnologies)
         {
             var proto = PrototypeManager.Index<TechnologyPrototype>(recipe);
-            if (proto.Discipline != techDiscipline.ID)
+            if (!proto.HasDiscipline(techDiscipline.ID)) // Frontier: Updated to support dual-discipline technologies
                 continue;
             allUnlocked.Add(proto);
         }
@@ -127,12 +146,14 @@ public abstract class SharedResearchSystem : EntitySystem
             // we need to get the tech for the tier 1 below because that's
             // what the percentage in TierPrerequisites is referring to.
             var unlockedTierTech = allUnlocked.Where(p => p.Tier == tier - 1).ToList();
-            var allTierTech = allTech.Where(p => p.Discipline == techDiscipline.ID && p.Tier == tier - 1).ToList();
+            var allTierTech =
+                allTech.Where(p => p.HasDiscipline(techDiscipline.ID) && p.Tier == tier - 1)
+                    .ToList(); // Frontier: Updated to support dual-discipline technologies
 
             if (allTierTech.Count == 0)
                 break;
 
-            var percent = (float) unlockedTierTech.Count / allTierTech.Count;
+            var percent = (float)unlockedTierTech.Count / allTierTech.Count;
             if (percent < techDiscipline.TierPrerequisites[tier])
                 break;
 
@@ -158,7 +179,9 @@ public abstract class SharedResearchSystem : EntitySystem
         {
             disciplinePrototype ??= PrototypeManager.Index(technology.Discipline);
             description.AddMarkupOrThrow(Loc.GetString("research-console-tier-discipline-info",
-                ("tier", technology.Tier), ("color", disciplinePrototype.Color), ("discipline", Loc.GetString(disciplinePrototype.Name))));
+                ("tier", technology.Tier),
+                ("color", disciplinePrototype.Color),
+                ("discipline", Loc.GetString(disciplinePrototype.Name))));
             description.PushNewline();
         }
 
@@ -178,6 +201,7 @@ public abstract class SharedResearchSystem : EntitySystem
                 description.AddMarkupOrThrow(Loc.GetString("research-console-prereqs-list-entry",
                     ("text", Loc.GetString(techProto.Name))));
             }
+
             description.PushNewline();
         }
 
@@ -189,6 +213,7 @@ public abstract class SharedResearchSystem : EntitySystem
             description.AddMarkupOrThrow(Loc.GetString("research-console-unlocks-list-entry",
                 ("name", _lathe.GetRecipeName(recipeProto))));
         }
+
         foreach (var generic in technology.GenericUnlocks)
         {
             description.PushNewline();
@@ -203,7 +228,9 @@ public abstract class SharedResearchSystem : EntitySystem
     ///     Returns whether a technology is unlocked on this database or not.
     /// </summary>
     /// <returns>Whether it is unlocked or not</returns>
-    public bool IsTechnologyUnlocked(EntityUid uid, TechnologyPrototype technology, TechnologyDatabaseComponent? component = null)
+    public bool IsTechnologyUnlocked(EntityUid uid,
+        TechnologyPrototype technology,
+        TechnologyDatabaseComponent? component = null)
     {
         return Resolve(uid, ref component) && IsTechnologyUnlocked(uid, technology.ID, component);
     }
@@ -217,9 +244,13 @@ public abstract class SharedResearchSystem : EntitySystem
         return Resolve(uid, ref component, false) && component.UnlockedTechnologies.Contains(technologyId);
     }
 
-    public void TrySetMainDiscipline(TechnologyPrototype prototype, EntityUid uid, TechnologyDatabaseComponent? component = null)
+    public void TrySetMainDiscipline(TechnologyPrototype prototype,
+        EntityUid uid,
+        TechnologyDatabaseComponent? component = null)
     {
         return;
+        // Frontier: allow unlocking all disciplines
+        /*
         if (!Resolve(uid, ref component))
             return;
 
@@ -231,6 +262,8 @@ public abstract class SharedResearchSystem : EntitySystem
 
         var ev = new TechnologyDatabaseModifiedEvent();
         RaiseLocalEvent(uid, ref ev);
+        */
+        // End Frontier: allow unlocking all disciplines
     }
 
     /// <summary>
@@ -269,6 +302,7 @@ public abstract class SharedResearchSystem : EntitySystem
             if (!hasTechElsewhere)
                 entity.Comp.UnlockedRecipes.Remove(recipe);
         }
+
         Dirty(entity, entity.Comp);
         UpdateTechnologyCards(entity, entity);
         return true;
@@ -302,7 +336,7 @@ public abstract class SharedResearchSystem : EntitySystem
         component.UnlockedRecipes.Add(recipe);
         Dirty(uid, component);
 
-        var ev = new TechnologyDatabaseModifiedEvent();
+        var ev = new TechnologyDatabaseModifiedEvent(new List<string> { recipe });
         RaiseLocalEvent(uid, ref ev);
     }
 }

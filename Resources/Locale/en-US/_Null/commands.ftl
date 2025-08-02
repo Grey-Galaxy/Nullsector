@@ -1,0 +1,1 @@
+command-whitelistadd-added = Added {$username} to the Whitelist! Don't forget the note!

@@ -28,7 +28,7 @@
 - type: latheRecipePack
   id: SecurityAmmoStatic
   recipes:
-  - BoxLethalshot
+  - BoxLethalShot
   - BoxShotgunSlug
   - MagazineBoxLightRifle
   - MagazineBoxLightRifleRubber # Frontier

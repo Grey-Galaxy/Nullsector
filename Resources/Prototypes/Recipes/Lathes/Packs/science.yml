@@ -94,6 +94,7 @@
   - APECircuitboard
   - ArtifactAnalyzerMachineCircuitboard
   - ArtifactCrusherMachineCircuitboard
+  - ResearchComputerCircuitboard
 
 - type: latheRecipePack
   id: CameraBoards

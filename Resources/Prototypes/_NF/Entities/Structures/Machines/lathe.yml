@@ -5,7 +5,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
-      - BlueprintAutolathe
+      - BlueprintLatheBasic
   - type: ContainerContainer
     containers:
       machine_board: !type:Container

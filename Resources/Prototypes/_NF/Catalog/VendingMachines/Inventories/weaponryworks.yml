@@ -11,7 +11,7 @@
     WeaponPistolUniversal: 1
     WeaponRevolverFaith: 1
     BoxShotgunSlug: 1
-    BoxLethalshot: 1
+    BoxLethalShot: 1
     BoxBeanbag: 1
     MagazineBoxRifle: 2
     MagazineBoxRifleRubber: 2
@@ -41,7 +41,7 @@
     WeaponPistolUniversal: 4294967295
     WeaponRevolverFaith: 4294967295
     BoxShotgunSlug: 4294967295
-    BoxLethalshot: 4294967295
+    BoxLethalShot: 4294967295
     BoxBeanbag: 4294967295
     MagazineBoxRifle: 4294967295
     MagazineBoxRifleRubber: 4294967295
@@ -82,4 +82,4 @@
     MagazineBoxPistol: 4294967295
     MagazineBoxMagnum: 4294967295
     BoxShotgunSlug: 4294967295
-    BoxLethalshot: 4294967295
+    BoxLethalShot: 4294967295

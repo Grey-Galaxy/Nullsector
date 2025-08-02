@@ -1,0 +1,7 @@
+- type: latheRecipe
+  id: GaslockFlatpack
+  result: GaslockFlatpack
+  completetime: 5
+  materials:
+    Steel: 3000
+    Glass: 5000

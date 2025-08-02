@@ -1,0 +1,7 @@
+- type: latheRecipe
+  id: BikeHorn
+  result: BikeHorn
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 100

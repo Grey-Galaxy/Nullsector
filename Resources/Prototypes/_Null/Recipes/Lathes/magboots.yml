@@ -1,0 +1,50 @@
+- type: latheRecipe
+  id: ClothingShoesBootsMag
+  result: ClothingShoesBootsMag
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 1000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagAdv
+  result: ClothingShoesBootsMagAdv
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 1000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagSci
+  result: ClothingShoesBootsMagSci
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 500
+
+- type: latheRecipe
+  id: ClothingShoesBootsMoon
+  result: ClothingShoesBootsMoon
+  completetime: 2
+  materials:
+    Steel: 600
+
+- type: latheRecipe
+  id: ClothingShoesBootsSpeed
+  result: ClothingShoesBootsSpeed
+  completetime: 2
+  materials:
+    Steel: 1500
+    Plastic: 1000
+    Silver: 500
+    Bluespace: 200 #DeltaV
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagSecurity
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagSecurity
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagMercenary
+  parent: NFBaseMagBootsRecipe
+  result: ClothingShoesBootsMagMercenary

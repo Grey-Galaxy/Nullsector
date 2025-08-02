@@ -63,6 +63,7 @@
     tags:
     - DoorBumpOpener
     - Bot
+    - SiliconEmotes
   - type: MobState
     allowedStates:
       - Alive
@@ -450,6 +451,7 @@
     - DoorBumpOpener
     - FootstepSound
     - Bot
+    - SiliconEmotes
   - type: ActiveRadio
     channels:
     - Common

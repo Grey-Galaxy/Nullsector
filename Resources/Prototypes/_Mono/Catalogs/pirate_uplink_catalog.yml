@@ -383,7 +383,7 @@
   id: UplinkPirateShellBoxLethal
   name:  uplink-pirate-shell-box-lethal-name
   description: uplink-pirate-shell-box-lethal-desc
-  productEntity: BoxLethalshot
+  productEntity: BoxLethalShot
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: lethal }
   cost: 
     Doubloon: 2

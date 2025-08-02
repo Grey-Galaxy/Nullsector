@@ -21,7 +21,7 @@
     contents:
       - id: WeaponShotgunEnforcer
         amount: 2
-      - id: BoxLethalshot
+      - id: BoxLethalShot
         amount: 4
 
 - type: entity

@@ -1,0 +1,11 @@
+# Base prototypes can be found in \Resources\Prototypes\Recipes\Lathes\security.yml
+# Recipes
+- type: latheRecipe
+  id: ClothingEyesHudNfsd
+  parent: ClothingEyesHudSecurity
+  result: ClothingEyesHudNfsd
+
+- type: latheRecipe
+  id: HoloprojectorNfsd
+  parent: ClothingEyesHudSecurity
+  result: HoloprojectorNfsdEmpty

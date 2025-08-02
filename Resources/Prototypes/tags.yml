@@ -6,9 +6,6 @@
 - type: Tag
   id: AccessBreakerImmune
 
-- type: Tag # Mono
-  id: AdvancedLaserPistol
-
 - type: Tag
   id: AirAlarm
 
@@ -74,9 +71,6 @@
 
 - type: Tag
   id: Bloodpack
-
-- type: Tag
-  id: BlueprintAutolathe
 
 - type: Tag
   id: BodyBag
@@ -607,9 +601,6 @@
 
 - type: Tag
   id: GeigerCounter
-
-- type: Tag # Null Sector ; for gilded pAI recipe
-  id: GildedAI
 
 - type: Tag
   id: GlassAirlock
@@ -1193,6 +1184,9 @@
   id: SignalTrigger
 
 - type: Tag
+  id: SiliconEmotes
+
+- type: Tag
   id: SkeletonMotorcycleKeys
 
 - type: Tag
@@ -1436,11 +1430,45 @@
   id: WriteIgnoreStamps
 
 # ALPHABETICAL
+# Frontier
+- type: Tag
+  id: NFBaseBlueprintEngineeringTechfab
+
+- type: Tag
+  id: NFBaseBlueprintSalvageTechfab
+
+- type: Tag
+  id: NFBaseBlueprintProtolathe
+
+- type: Tag
+  id: NFBaseBlueprintMedicalTechfab
+
+- type: Tag
+  id: NFBaseBlueprintArmoryTechfab
+
+- type: Tag
+  id: NFBaseBlueprintMercenaryTechfab
+
+- type: Tag
+  id: NFBaseBlueprintNfsdTechfab
+
+- type: Tag
+  id: NFBaseBlueprintServiceTechfab
 
 # Mono
-
+- type: Tag # Mono
+  id: AdvancedLaserPistol
+  
 - type: Tag
   id: CartridgeMachineGun
 
 - type: Tag
   id: CartridgeShell
+
+# Null Sector
+- type: Tag # For blueprints to be possibly universal.
+  id: BlueprintLatheBasic
+
+- type: Tag # for gilded pAI recipe
+  id: GildedAI
+

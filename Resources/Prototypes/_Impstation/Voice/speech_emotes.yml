@@ -10,8 +10,8 @@
     - Vocal
     - Slime
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-bubble"]
   chatTriggers:
     # Frontier: emote consistency
@@ -32,8 +32,8 @@
     - Vocal
     - Slime
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-pop"]
   chatTriggers:
     # Frontier: emote consistency
@@ -53,8 +53,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-reptilian-hiss"]
   chatTriggers:
     # Frontier: emote consistency
@@ -74,8 +74,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-crack"]
   chatTriggers:
     - crack knuckles

@@ -987,7 +987,7 @@
   id: UplinkSecurityShotLethal
   name:  uplink-security-shotlethal-name
   description: uplink-security-shotlethal-desc
-  productEntity: BoxLethalshot
+  productEntity: BoxLethalShot
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     FrontierUplinkCoin: 1
