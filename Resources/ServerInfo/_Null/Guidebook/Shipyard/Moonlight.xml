@@ -1,0 +1,17 @@
+<Document>
+  # MOONLIGHT
+  <Box>
+    <GuideEntityEmbed Entity="SignKitchen"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapMoonlight"/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color]
+
+	[color=#a4885c]Crew Slots:[/color] 1 Chef, 2 Service Staff
+
+	[color=#a4885c]Initial Power System:[/color] 2x Uranium Generators
+
+  "A relatively luxurious botany and kitchen -dining ship."
+</Document>

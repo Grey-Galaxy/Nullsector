@@ -22,8 +22,40 @@
 
 - type: entity
   parent: ShuttleMapBase
+  id: ShuttleMapArchon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: archon
+
+- type: entity
+  parent: ShuttleMapBase
   id: ShuttleMapCamper
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: camper
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapColdcap
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: coldcap
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapMoonlight
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: moonlight
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapNourishment
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: nourishment

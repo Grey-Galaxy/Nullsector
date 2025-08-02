@@ -5,12 +5,15 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
   priority: 6
   children:
+  - ShipyardAkasono
   - ShipyardArgent
-  - ShipyardSabine
-  - ShipyardJudiciary
+  - ShipyardCamper
+  - ShipyardColdcap
+  - ShipyardHelio
   - ShipyardIapetus
   - ShipyardInsight
+  - ShipyardJudiciary
+  - ShipyardMoonlight
   - ShipyardNourishment
   - ShipyardPulse
-  - ShipyardHelio
-  - ShipyardCamper
+  - ShipyardSabine
