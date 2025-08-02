@@ -1,0 +1,13 @@
+- type: entity
+  name: nexwealth's rubber stamp
+  parent: RubberStampBase # Frontier: remove BaseCommandContraband
+  id: RubberStampNexwealth
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-nexwealth
+    stampedColor: "#94F7B7"
+    stampState: "paper_stamp-nexwealth"
+  - type: Sprite
+    sprite: _Null/Objects/Misc/stamps.rsi
+    state: stamp-nexwealth

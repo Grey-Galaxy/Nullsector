@@ -1,0 +1,13 @@
+- type: entity
+  name: nexwealth pen
+  parent: Pen
+  id: PenNexwealth
+  description: A grim, austere pen.
+  components:
+  - type: Sprite
+    sprite: _Null/Objects/Misc/pens.rsi
+    state: nexwealth-pen
+  - type: Item
+    sprite: _Null/Objects/Misc/pen  s.rsi
+    heldPrefix: nexwealth-pen
+    size: Tiny

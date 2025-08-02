@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "NexWealth themed PDAs by raposa3573 (RAP0SA) and LukeZurg22",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "pda-nexwealth"
+    },
+      {
+          "name": "pda"
+      },
+      {
+          "name": "light_overlay"
+      },
+      {
+          "name": "id_overlay"
+      }
+  ]
+}

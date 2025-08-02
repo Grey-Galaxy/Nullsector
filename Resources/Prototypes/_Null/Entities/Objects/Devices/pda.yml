@@ -1,0 +1,20 @@
+- type: entity
+  parent: BasePDA
+  id: NexwealthPDA
+  name: nexwealth PDA
+  description: A mysterious and classy PDA.
+  components:
+  - type: Pda
+    id: PassengerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-nexwealth
+  - type: Sprite
+    sprite: _Null/Objects/Devices/pda.rsi #_Null
+  - type: PdaBorderColor
+    borderColor: "#717059"
+  - type: Icon
+    sprite: _Null/Objects/Devices/pda.rsi #_Null
+    state: pda-nexwealth
