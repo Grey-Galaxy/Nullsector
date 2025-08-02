@@ -19,7 +19,6 @@
   engine:
   - Uranium
 
-
 - type: guideEntry
   id: ShipyardSabine
   name: guide-entry-shipyard-sabine

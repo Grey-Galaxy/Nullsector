@@ -1,3 +1,4 @@
+# START - BASE TYPE(S)
 - type: entity
   parent: PosterBase
   id: ShuttleMapBase
@@ -9,6 +10,15 @@
   - type: Sprite
     sprite: _Null/Guidebook/ShuttleMaps.rsi
     scale: 1.2, 1.2
+# END - BASE TYPE(S)
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapAkasono
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: akasono
 
 - type: entity
   parent: ShuttleMapBase

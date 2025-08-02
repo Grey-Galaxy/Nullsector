@@ -1,0 +1,13 @@
+<Document>
+  # AKASONO
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapAkasono"/>
+  </Box>
+  [color=#a4885c]Ship Size:[/color] Small
+
+	[color=#a4885c]Recommended Crew:[/color] 1-3
+
+	[color=#a4885c]Power Gen Type:[/color] Uranium
+
+  "A small entry-level mining ship."
+</Document>
