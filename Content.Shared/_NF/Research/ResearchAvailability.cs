@@ -8,5 +8,5 @@ public enum ResearchAvailability : byte
     Researched,
     Available,
     PrereqsMet,
-    Unavailable
+    Unavailable,
 }

@@ -9,6 +9,8 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Content.Client.Guidebook.Controls;
 
 /// <summary>
@@ -29,7 +31,9 @@ public sealed partial class GuideTechDisciplineEmbed : BoxContainer, IDocumentTa
     public GuideTechDisciplineEmbed(string group) : this()
     {
         var prototypes = _prototype.EnumeratePrototypes<TechnologyPrototype>()
-            .Where(p => p.Discipline.Equals(group)).OrderBy(p => p.Tier).ThenBy(p => Loc.GetString(p.Name));
+            .Where(p => p.HasDiscipline(group))
+            .OrderBy(p => p.Tier)
+            .ThenBy(p => Loc.GetString(p.Name)); // Frontier: Updated to support dual-discipline technologies
         foreach (var tech in prototypes)
         {
             var embed = new GuideTechnologyEmbed(tech);
@@ -37,6 +41,12 @@ public sealed partial class GuideTechDisciplineEmbed : BoxContainer, IDocumentTa
         }
     }
 
+    /// <summary>
+    /// Uses Logger.Error(), which is obsolete. This will need tuning later by someone who cares. -Z
+    /// </summary>
+    /// <param name="args"></param>
+    /// <param name="control"></param>
+    /// <returns></returns>
     public bool TryParseTag(Dictionary<string, string> args, [NotNullWhen(true)] out Control? control)
     {
         control = null;
@@ -47,7 +57,9 @@ public sealed partial class GuideTechDisciplineEmbed : BoxContainer, IDocumentTa
         }
 
         var prototypes = _prototype.EnumeratePrototypes<TechnologyPrototype>()
-            .Where(p => p.Discipline.Equals(group)).OrderBy(p => p.Tier).ThenBy(p => Loc.GetString(p.Name));
+            .Where(p => p.HasDiscipline(group))
+            .OrderBy(p => p.Tier)
+            .ThenBy(p => Loc.GetString(p.Name)); // Frontier: Updated to support dual-discipline technologies
         foreach (var tech in prototypes)
         {
             var embed = new GuideTechnologyEmbed(tech);

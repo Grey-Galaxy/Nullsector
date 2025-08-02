@@ -19,21 +19,21 @@ public sealed partial class TechnologyDatabaseComponent : Component
 
     [AutoNetworkedField]
     [DataField("currentTechnologyCards")]
-    public List<string> CurrentTechnologyCards = new();
+    public List<string> CurrentTechnologyCards = [];
 
     /// <summary>
     /// Which research disciplines are able to be unlocked
     /// </summary>
     [AutoNetworkedField]
     [DataField("supportedDisciplines", customTypeSerializer: typeof(PrototypeIdListSerializer<TechDisciplinePrototype>))]
-    public List<string> SupportedDisciplines = new();
+    public List<string> SupportedDisciplines = [];
 
     /// <summary>
     /// The ids of all the technologies which have been unlocked.
     /// </summary>
     [AutoNetworkedField]
     [DataField("unlockedTechnologies", customTypeSerializer: typeof(PrototypeIdListSerializer<TechnologyPrototype>))]
-    public List<string> UnlockedTechnologies = new();
+    public List<string> UnlockedTechnologies = [];
 
     /// <summary>
     /// The ids of all the lathe recipes which have been unlocked.
@@ -42,7 +42,7 @@ public sealed partial class TechnologyDatabaseComponent : Component
     /// todo: if you unlock all the recipes in a tech, it doesn't count as unlocking the tech. sadge
     [AutoNetworkedField]
     [DataField("unlockedRecipes", customTypeSerializer: typeof(PrototypeIdListSerializer<LatheRecipePrototype>))]
-    public List<string> UnlockedRecipes = new();
+    public List<string> UnlockedRecipes = [];
 }
 
 /// <summary>
@@ -51,10 +51,10 @@ public sealed partial class TechnologyDatabaseComponent : Component
 /// </summary>
 /// <remarks>
 /// This event is forwarded from the
-/// server to all of it's clients.
+/// server to all of its clients.
 /// </remarks>
 [ByRefEvent]
-public readonly record struct TechnologyDatabaseModifiedEvent;
+public readonly record struct TechnologyDatabaseModifiedEvent(List<string>? NewlyUnlockedRecipes);
 
 /// <summary>
 /// Event raised on a database after being synchronized

@@ -1,4 +1,8 @@
+using Content.Shared._NF.Research;
 using Robust.Shared.Serialization;
+
+// Frontier
+// ReSharper disable ConvertToPrimaryConstructor
 
 namespace Content.Shared.Research.Components
 {
@@ -29,9 +33,16 @@ namespace Content.Shared.Research.Components
     public sealed class ResearchConsoleBoundInterfaceState : BoundUserInterfaceState
     {
         public int Points;
-        public ResearchConsoleBoundInterfaceState(int points)
+
+        /// <summary>
+        /// Frontier field - all researches and their availabilities
+        /// </summary>
+        public Dictionary<string, ResearchAvailability> Researches;
+
+        public ResearchConsoleBoundInterfaceState(int points, Dictionary<string, ResearchAvailability> researches) // Frontier R&D console rework = researches field
         {
             Points = points;
+            Researches = researches; // Frontier R&D console rework
         }
     }
 }

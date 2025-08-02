@@ -1,3 +1,4 @@
+# This file is from Frontier, repurposed for Null Sector
 nf-research-discipline-engineering = Engineering
 nf-research-discipline-medical = Medical
 nf-research-discipline-arsenal-mercenary = Mercenary
@@ -11,6 +12,7 @@ nf-research-technology-abnormal-artifact-manipulation = Artifact Recycling
 nf-research-technology-advanced-anomaly-research = Advanced Anomalous Research
 nf-research-technology-advanced-atmospherics = Advanced Atmospherics
 nf-research-technology-advanced-atmospherics-portable = Portable Atmospherics
+nf-research-technology-advanced-atmospherics-gaslock = Gaslock Flatpack Construction
 nf-research-technology-advanced-atmospherics-tools = Atmospheric Damage Control
 nf-research-technology-advanced-belt = Personal Tool Storage Solutions
 nf-research-technology-advanced-botanical-equipment = Advanced Botanical Equipment
