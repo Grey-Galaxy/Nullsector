@@ -4,16 +4,21 @@
   name: guide-entry-shipyard
   text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
   priority: 6
-  children: # Reserve this for primary-shipyard guides only, for now. New players may see this first more than experienced ones.
+  children:
   - ShipyardAkasono
   - ShipyardArgent
+  - ShipyardBison
+  - ShipyardBucket
   - ShipyardCamper
+  - ShipyardClemency
   - ShipyardColdcap
+  - ShipyardDuran
   - ShipyardHelio
   - ShipyardIapetus
   - ShipyardInsight
   - ShipyardJudiciary
   - ShipyardMoonlight
   - ShipyardNourishment
+  - ShipyardNugget
   - ShipyardPulse
   - ShipyardSabine
