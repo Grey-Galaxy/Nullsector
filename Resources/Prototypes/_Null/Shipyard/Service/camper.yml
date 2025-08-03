@@ -28,7 +28,7 @@
 - type: gameMap
   id: Camper
   mapName: 'Camper'
-  mapPath: /Maps/_Null/Shuttles/Civilian/camper.yml
+  mapPath: /Maps/_Null/Shuttles/Service/camper.yml
   minPlayers: 0
   stations:
     Camper:
