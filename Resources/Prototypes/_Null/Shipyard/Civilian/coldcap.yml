@@ -22,6 +22,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardColdcap
+  name: guide-entry-shipyard-coldcap
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Coldcap.xml"
+
 - type: gameMap
   id: Coldcap
   mapName: 'UNJ Coldcap'

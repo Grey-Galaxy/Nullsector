@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardSabine
+  name: guide-entry-shipyard-sabine
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Sabine.xml"
+
 - type: gameMap
   id: Sabine
   mapName: 'Sabine'

@@ -1,6 +1,7 @@
 # This File is from Frontier
 # This is in one giant hellfile to better enable adjusting position.
-
+# If a research tech cannot be researched, it is likely due to the secondary discipline, or the lack thereof! Technologies
+# as of 20250802 still have dependencies on the technology type before them.
 # region Engineering
 
 # X = 1
@@ -119,6 +120,7 @@
   cost: 5000
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedParts # Formerly NFIndustrialSilo, stays this way until its implemented
   position: 2, 1
@@ -244,7 +246,21 @@
   - NFBluespaceStorage
   position: 4, 2
 
-# region Xenoarch
+## From Monolith
+- type: technology
+  id: ShuttleWarpDriveResearch
+  name: research-technology-bluespace-drive-ctla25
+  entityIcon: MachineFTLDrive
+  discipline: Experimental
+  tier: 3
+  cost: 30500
+  recipeUnlocks:
+  - MachineDriveWarpCircuitboard
+  technologyPrerequisites:
+  - NFBluespaceStorage
+  position: 4, 3
+
+# region Xeno-Archeology
 
 # X = 0
 - type: technology
@@ -382,7 +398,8 @@
   id: NFHardsuitsField
   name: nf-research-technology-hardsuits-field
   entityIcon: ClothingOuterHardsuitSalvage
-  discipline: Salvage
+  discipline: Industrial
+  secondarydiscipline: Salvage
   tier: 1
   cost: 5000
   recipeUnlocks:
@@ -419,6 +436,23 @@
   technologyPrerequisites:
   - NFHardsuitsField
   position: 2, 8
+
+# Omnitool
+- type: technology
+  id: HighEndSurgery
+  name: research-technology-high-end-surgery
+  entityIcon: OmnimedTool
+  discipline: Medical
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - ShitmedOmnimedTool
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFMechanizedTreatment
+  - NFEngineeringMedicine
+  position: 3, 10
+
 
 - type: technology
   id: NFHardsuitsAdvanced
@@ -852,7 +886,7 @@
   id: NFAudioVisualCommunication
   name: nf-research-technology-audio-visual-communication
   entityIcon: SurveillanceCameraRouterConstructed
-  discipline: ArsenalMercenary
+  discipline: CivilianServices
   tier: 1
   cost: 1000
   recipeUnlocks:
@@ -1826,3 +1860,36 @@
   - NFSalvageWeapons
   - NFExplosiveTechnology
   position: 4, 40
+
+# From Monolith
+- type: technology
+  id: ShuttleArmamentComponentsResearch
+  name: research-technology-shuttle-armaments-components
+  entityIcon: ComputerGunneryConsole
+  discipline: Arsenal
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - GunneryControlComputerCircuitboard
+  - MachineGCSCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicShuttleArmament
+  - NFExplosiveTechnology
+  position: 5, 41
+
+# Null Sector Shield Tech
+- type: technology
+  id: ShuttleShieldsResearch
+  name: research-technology-shuttle-armaments-components
+  entityIcon: CircularShieldBase
+  discipline: Arsenal
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - ShieldControlComputerCircuitboard
+  - MachineShieldAlphaCoreCircuitboard
+  prerequisiteLineType: Tree
+  technologyPrerequisites:
+  - NFDeterrenceTechnologies
+  position: 4, 42

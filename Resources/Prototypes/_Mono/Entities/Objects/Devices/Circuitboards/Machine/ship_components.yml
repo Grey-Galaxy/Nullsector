@@ -76,3 +76,21 @@
     stackRequirements:
       Glass: 10
       Steel: 10
+
+# Null Sector
+- type: entity
+  id: EmancipationGridCircuitboard
+  parent: BaseMachineCircuitboard
+  name: emancipation grid circuit board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: EmancipationGrid
+    requirements:
+      Capacitor: 10
+      Manipulator: 4
+    stackRequirements:
+      Glass: 20
+      Steel: 20

@@ -18,6 +18,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardClemency
+  name: guide-entry-shipyard-clemency
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Clemency.xml"
+
 - type: gameMap
   id: Clemency
   mapName: 'UNJ Clemency'

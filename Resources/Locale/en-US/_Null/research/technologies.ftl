@@ -137,3 +137,6 @@ nf-research-technology-syringe-gun = Syringe Gun
 nf-research-technology-trash-power-generators = Combustion Power Generators
 nf-research-technology-vim = Vim
 nf-research-technology-wireless-audio-visual-communication = Wireless Telecommunications
+# Monolith
+research-technology-shuttle-armaments-components = Advanced Shuttle Armament Components
+research-technology-bluespace-drive-ctla25 = CTLA-25 Bluespace Drive

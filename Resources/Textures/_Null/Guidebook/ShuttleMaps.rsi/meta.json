@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by LukeZurg22",
+  "size": {
+    "x": 128,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "akasono"
+    },
+    {
+      "name": "archon"
+    },
+    {
+      "name": "bison"
+    },
+    {
+      "name": "bucket"
+    },
+    {
+      "name": "camper"
+    },
+    {
+      "name": "clemency"
+    },
+    {
+      "name": "duran"
+    },
+    {
+      "name": "coldcap"
+    },
+    {
+      "name": "moonlight"
+    },
+    {
+      "name": "nourishment"
+    },
+    {
+      "name": "nugget"
+    }
+  ]
+}

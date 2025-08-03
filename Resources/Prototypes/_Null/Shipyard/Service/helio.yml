@@ -20,6 +20,11 @@
   engine:
   - Solar
 
+- type: guideEntry
+  id: ShipyardHelio
+  name: guide-entry-shipyard-helio
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Helio.xml"
+
 - type: gameMap
   id: Helio
   mapName: 'Helio'

@@ -1,0 +1,14 @@
+<Document>
+  # DURAN (DURAN)
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapDuran"/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color] Medium
+
+  [color=#a4885c]Recommended Crew:[/color] 2-3
+
+  [color=#a4885c]Initial Generator Type:[/color] Uranium
+
+  A general-purpose expeditionary vessel with a complementary kitchen.
+</Document>

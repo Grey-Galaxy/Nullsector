@@ -12,9 +12,14 @@ using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Input;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+
+// ReSharper disable UnusedType.Local
+// ReSharper disable RedundantOverriddenMember
 
 namespace Content.Client._NF.Research.UI;
 
@@ -27,6 +32,9 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     [Dependency] private readonly IEntityManager _entity = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
+
+    private SharedAudioSystem _audioSystem = default!; // For client-side audio!
+    private static readonly SoundPathSpecifier BleepSound = new("/Audio/_Null/Research/bleep.ogg");
 
     private readonly ResearchSystem _research;
     private readonly SpriteSystem _sprite;
@@ -101,6 +109,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         _research = _entity.System<ResearchSystem>();
         _sprite = _entity.System<SpriteSystem>();
         _accessReader = _entity.System<AccessReaderSystem>();
+        _audioSystem = _entity.System<SharedAudioSystem>();
 
         // Set up scroll container properties
         TechScrollContainer.ScrollSpeedX = 100;
@@ -320,6 +329,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         }
 
         // Create and add info panel
+        _audioSystem.PlayPvs(BleepSound, _player.LocalEntity.Value, AudioParams.Default); // Play bleep sound - client-side only
         var control = new FancyTechnologyInfoPanel(proto, _accessReader.IsAllowed(_player.LocalEntity.Value, Entity), availability, _sprite);
         control.BuyAction += args => OnTechnologyCardPressed?.Invoke(args.ID);
         InfoContainer.AddChild(control);

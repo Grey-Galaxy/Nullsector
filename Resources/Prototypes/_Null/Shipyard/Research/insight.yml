@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardInsight
+  name: guide-entry-shipyard-insight
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Insight.xml"
+
 - type: gameMap
   id: Insight
   mapName: 'UCE Insight'

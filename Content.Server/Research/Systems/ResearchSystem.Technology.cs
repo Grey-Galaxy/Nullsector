@@ -151,10 +151,7 @@ public sealed partial class ResearchSystem
         if (!IsTechnologyAvailable(database, technology))
             return false;
 
-        if (technology.Cost > serverComp.Points)
-            return false;
-
-        return true;
+        return technology.Cost <= serverComp.Points; // Lastly, if there's enough points.
     }
 
     private void OnDatabaseRegistrationChanged(EntityUid uid, TechnologyDatabaseComponent component, ref ResearchRegistrationChangedEvent args)
