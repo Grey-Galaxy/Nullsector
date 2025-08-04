@@ -1,0 +1,23 @@
+# All Individual Entries are defined alongside the ship prototypes, and are referenced here as children of the main guidebook.
+- type: guideEntry
+  id: Shipyard
+  name: guide-entry-shipyard
+  text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
+  priority: 6
+  children:
+  - ShipyardAkasono
+  - ShipyardBison
+  - ShipyardBucket
+  - ShipyardCamper
+  - ShipyardClemency
+  - ShipyardColdcap
+  - ShipyardDuran
+  - ShipyardHelio
+  - ShipyardIapetus
+  - ShipyardInsight
+  - ShipyardJudiciary
+  - ShipyardMoonlight
+  - ShipyardNourishment
+  - ShipyardNugget
+  - ShipyardPulse
+  - ShipyardSabine

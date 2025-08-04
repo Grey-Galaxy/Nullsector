@@ -1,0 +1,15 @@
+<Document>
+  # CAMPER
+  <Box>
+    <GuideEntityEmbed Entity="NFSignBus"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapCamper"/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color] Small
+
+  [color=#a4885c]Recommended Crew:[/color] 1
+
+  [color=#a4885c]Initial Generator Type:[/color] Plasma
+</Document>

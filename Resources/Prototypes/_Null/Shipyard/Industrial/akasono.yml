@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardAkasono
+  name: guide-entry-shipyard-akasono
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Akasono.xml"
+
 - type: gameMap
   id: Akasono
   mapName: 'Akasono'

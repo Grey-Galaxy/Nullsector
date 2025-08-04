@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardIapetus
+  name: guide-entry-shipyard-iapetus
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Iapetus.xml"
+
 - type: gameMap
   id: Iapetus
   mapName: 'Iapetus'

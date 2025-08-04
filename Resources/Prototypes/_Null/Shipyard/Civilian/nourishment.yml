@@ -4,7 +4,6 @@
 
 # Shuttle Notes:
 
-
 - type: vessel
   id: Nourishment
   parent: BaseVessel
@@ -19,6 +18,11 @@
   - Civilian
   engine:
   - Uranium
+
+- type: guideEntry
+  id: ShipyardNourishment
+  name: guide-entry-shipyard-nourishment
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Nourishment.xml"
 
 - type: gameMap
   id: Nourishment

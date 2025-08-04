@@ -19,6 +19,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardPulse
+  name: guide-entry-shipyard-pulse
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Pulse.xml"
+
 - type: gameMap
   id: Pulse
   mapName: 'UCE Pulse'

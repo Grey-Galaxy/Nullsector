@@ -1,0 +1,20 @@
+<Document>
+  # ARGENT
+  <Box>
+    <GuideEntityEmbed Entity="SalvageTechfabNF"/>
+    <GuideEntityEmbed Entity="WeaponTurretL85Autocannon"/>
+    <GuideEntityEmbed Entity="ConveyorBelt"/>
+    <GuideEntityEmbed Entity="CrateTradeSecureNormal"/>
+  </Box>
+  [color=#a4885c]Ship Size:[/color] Medium
+
+	[color=#a4885c]Recommended Crew:[/color] 1-3
+
+	[color=#a4885c]Power Gen Type:[/color] Uranium
+
+	[color=#a4885c]Expeditions:[/color] None
+
+	[color=#a4885c]IFF Console:[/color] None
+
+  "Argent-class cargo transports are surplus frigates overhauled for mass cargo transport."
+</Document>

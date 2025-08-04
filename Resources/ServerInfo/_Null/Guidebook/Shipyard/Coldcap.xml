@@ -1,0 +1,17 @@
+<Document>
+  # COLDCAP
+  <Box>
+    <GuideEntityEmbed Entity="Spaceshroom"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapColdcap"/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color] Medium
+
+  [color=#a4885c]Recommended Crew:[/color] 3
+
+  [color=#a4885c]Initial Generator Type:[/color] Uranium
+
+  An oddly fungal-shaped vessel, courtesy of UnionJ.
+</Document>

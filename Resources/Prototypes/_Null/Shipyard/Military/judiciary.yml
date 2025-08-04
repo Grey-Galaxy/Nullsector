@@ -19,6 +19,11 @@
   engine:
   - AME
 
+- type: guideEntry
+  id: ShipyardJudiciary
+  name: guide-entry-shipyard-judiciary
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Judiciary.xml"
+
 - type: gameMap
   id: Judiciary
   mapName: 'Judiciary'

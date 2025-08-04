@@ -13,17 +13,22 @@
   price: 20000
   category: Small
   group: Service
-  shuttlePath: /Maps/_Null/Shuttles/Civilian/camper.yml
+  shuttlePath: /Maps/_Null/Shuttles/Service/camper.yml
   guidebookPage: null
   class:
   - Civilian
   engine:
   - Plasma
 
+- type: guideEntry
+  id: ShipyardCamper
+  name: guide-entry-shipyard-camper
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Camper.xml"
+
 - type: gameMap
   id: Camper
   mapName: 'Camper'
-  mapPath: /Maps/_Null/Shuttles/Civilian/camper.yml
+  mapPath: /Maps/_Null/Shuttles/Service/camper.yml
   minPlayers: 0
   stations:
     Camper:

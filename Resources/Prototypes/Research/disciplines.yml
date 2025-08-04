@@ -1,23 +1,23 @@
 # This File is from Wizden
 - type: techDiscipline
-  id: Industrial
-  name: research-discipline-industrial
-  color: "#eeac34"
-  icon:
-    sprite: Interface/Misc/research_disciplines.rsi
-    state: industrial
-  tierPrerequisites:
-    1: 0
-    2: 0.75
-    3: 0.75
-
-- type: techDiscipline
   id: Arsenal
   name: research-discipline-arsenal
   color: "#dc373b"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
     state: arsenal
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+- type: techDiscipline
+  id: CivilianServices
+  name: research-discipline-civilian-services
+  color: "#7ecd48"
+  icon:
+    sprite: Interface/Misc/research_disciplines.rsi
+    state: civilianservices
   tierPrerequisites:
     1: 0
     2: 0.75
@@ -36,12 +36,12 @@
     3: 0.75
 
 - type: techDiscipline
-  id: CivilianServices
-  name: research-discipline-civilian-services
-  color: "#7ecd48"
+  id: Industrial
+  name: research-discipline-industrial
+  color: "#eeac34"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
-    state: civilianservices
+    state: industrial
   tierPrerequisites:
     1: 0
     2: 0.75
@@ -51,10 +51,10 @@
 - type: techDiscipline
   id: ArsenalMercenary
   name: research-discipline-arsenal-mercenary
-  color: "#7ecd48"
+  color: "#B2B2B2"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
-    state: civilianservices
+    state: mercenary
   tierPrerequisites:
     1: 0
     2: 0.75
@@ -63,10 +63,10 @@
 - type: techDiscipline
   id: Salvage
   name: research-discipline-salvage
-  color: "#7ecd48"
+  color: "#A88C7A"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
-    state: civilianservices
+    state: salvage
   tierPrerequisites:
     1: 0
     2: 0.75
@@ -75,10 +75,10 @@
 - type: techDiscipline
   id: Science
   name: research-discipline-science
-  color: "#7ecd48"
+  color: "#BC6DAC"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
-    state: civilianservices
+    state: science
   tierPrerequisites:
     1: 0
     2: 0.75
@@ -87,10 +87,10 @@
 - type: techDiscipline
   id: Medical
   name: research-discipline-medical
-  color: "#7ecd48"
+  color: "#7ECDE0"
   icon:
     sprite: Interface/Misc/research_disciplines.rsi
-    state: civilianservices
+    state: biochemical
   tierPrerequisites:
     1: 0
     2: 0.75

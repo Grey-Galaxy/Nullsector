@@ -23,6 +23,11 @@
   engine:
   - AME
 
+- type: guideEntry
+  id: ShipyardMoonlight
+  name: guide-entry-shipyard-moonlight
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Moonlight.xml"
+
 - type: gameMap
   id: Moonlight
   mapName: 'Moonlight'
