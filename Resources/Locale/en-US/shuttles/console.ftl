@@ -11,6 +11,7 @@ shuttle-console-ftl-drive-unpowered = FTL drive detected but not powered
 # NAV
 
 shuttle-console-display-label = Display
+shuttle-console-additional-display-label = Additional
 
 shuttle-console-position = Position:
 shuttle-console-position-value = {$X}, {$Y}
