@@ -35,7 +35,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly ShipAutoDeleteSystem _shipAutoDelete = default!;
+    //[Dependency] private readonly ShipAutoDeleteSystem _shipAutoDelete = default!; // Null Sector
 
     public MapId? ShipyardMap { get; private set; }
     private float _shuttleIndex;

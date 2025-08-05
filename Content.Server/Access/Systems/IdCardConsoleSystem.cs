@@ -1,5 +1,6 @@
 // Frontier
 // Frontier
+
 using System.Linq;
 using Content.Server._NF.Shipyard.Systems;
 using Content.Server.Popups;
@@ -15,7 +16,6 @@ using Content.Shared.StationRecords;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 using static Content.Shared.Access.Components.IdCardConsoleComponent;
@@ -402,12 +402,13 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
             shuttleDeed.DeedHolderCard = targetId;
         }
 
-        // Add auto-delete component to shuttle for if it ever went derelict.
+        // NULL SECTOR : Removed ShipAutoDelete, for now.
+        /*// Add auto-delete component to shuttle for if it ever went derelict.
         // Auto-cleanup should handle preventing deleting people.
         if (TryComp<ActorComponent>(copiedDeed.DeedHolderCard, out var actorComp))
         {
             _shipAutoDelete.RegisterAutoDelete(copiedDeed.ShuttleUid!.Value, actorComp.PlayerSession);
-        }
+        }*/
 
 
         // Add the copied component to the target entity
