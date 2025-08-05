@@ -1,3 +1,4 @@
+// ReSharper disable RedundantUsingDirective
 // SPDX-FileCopyrightText: 2020 Tyler Young
 // SPDX-FileCopyrightText: 2022 Paul Ritter
 // SPDX-FileCopyrightText: 2023 Visne
@@ -9,6 +10,7 @@
 using System;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
+using Robust.Benchmarks.Configs;
 
 namespace Content.Benchmarks
 {
