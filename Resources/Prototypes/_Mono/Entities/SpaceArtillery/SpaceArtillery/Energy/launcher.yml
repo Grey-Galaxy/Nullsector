@@ -30,6 +30,8 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunClass: Medium
+    gunType: Energy
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
@@ -57,8 +59,7 @@
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 1
-  - type: ShipGunType
-    shipType: Energy
+
 
 # RUBICON
 
@@ -92,6 +93,7 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunType: Energy
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
@@ -119,8 +121,7 @@
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 1
-  - type: ShipGunType
-    shipType: Energy
+
 
 # DYMERE
 - type: entity
@@ -162,6 +163,8 @@
     powerChargeRate: 250
     powerUsePassive: 200
     powerUseActive: 0
+    gunClass: Medium
+    gunType: Energy
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 67
@@ -170,6 +173,4 @@
     proto: ShipDymereProjectile
     fireCost: 2400 # Adjusted from 1600 to achieve 17 total shots
   - type: RadarBlip
-    radarColor: "#FA4E5C"
-  - type: ShipGunType
-    shipType: Energy
+    radarColor: "#FA4E5C"    

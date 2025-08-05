@@ -34,6 +34,8 @@
   - type: SpaceArtillery
     powerChargeRate: 150
     powerUsePassive: 100
+    gunClass: Medium
+    gunType: Ballistic
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 500
@@ -49,8 +51,6 @@
   - type: RadarBlip
     radarColor: "#00A6FF"
     scale: 1
-  - type: ShipGunType
-    shipType: Ballistic
 
 # 90mm
 
@@ -84,6 +84,8 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunClass: Medium
+    gunType: Ballistic
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 95
@@ -94,8 +96,6 @@
   - type: RadarBlip
     radarColor: "#FF9100"
     scale: 1
-  - type: ShipGunType
-    shipType: Ballistic
 
 # 90mm
 
@@ -141,6 +141,8 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunClass: Medium
+    gunType: Ballistic
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 60
@@ -150,8 +152,6 @@
     fireCost: 350
   - type: RadarBlip
     radarColor: "#03FC9D"
-  - type: ShipGunType
-    shipType: Ballistic
 
 # Railgun
 
@@ -185,6 +185,8 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunClass: Medium
+    gunType: Ballistic
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
@@ -223,5 +225,3 @@
   - type: RadarBlip
     radarColor: "#CF0E0E"
     scale: 1
-  - type: ShipGunType
-    shipType: Ballistic

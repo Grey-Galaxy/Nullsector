@@ -3,7 +3,6 @@ using Content.Server.Shuttles.Components;
 using Content.Server.Station.Components;
 using Content.Server.Station.Events;
 using Content.Shared.CCVar;
-using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Station.Components;
 using Robust.Shared.Collections;
@@ -276,7 +275,7 @@ public sealed partial class ShuttleSystem
                 if (HasComp(grid.Value, compType))
                     continue;
 
-                var comp = _factory.GetComponent(compType);
+                var comp = Factory.GetComponent(compType);
                 AddComp(grid.Value, comp, true);
             }
         }

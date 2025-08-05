@@ -1,11 +1,25 @@
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+// SPDX-FileCopyrightText: 2025 ScyronX
+// SPDX-FileCopyrightText: 2025 ark1368
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+// SPDX-FileCopyrightText: 2025 starch
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // Copyright Rane (elijahrane@gmail.com) 2025
 // All rights reserved. Relicensed under AGPL with permission
 
 using System.Linq;
 using System.Numerics;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Salvage.Expeditions;
+using Content.Server.Shuttles.Components;
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared._Mono.FireControl;
+using Content.Shared._Mono.SpaceArtillery.Components;
+using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Physics;
 using Content.Shared.Power;
@@ -37,6 +51,8 @@ public sealed partial class FireControlSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<FireControlServerComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<FireControlServerComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<FireControlServerComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<FireControlServerComponent, EntityTerminatingEvent>(OnServerTerminating);
 
         SubscribeLocalEvent<FireControllableComponent, PowerChangedEvent>(OnControllablePowerChanged);
         SubscribeLocalEvent<FireControllableComponent, ComponentShutdown>(OnControllableShutdown);
@@ -62,17 +78,39 @@ public sealed partial class FireControlSystem : EntitySystem
         Disconnect(uid, component);
     }
 
+    private void OnServerTerminating(EntityUid uid,
+        FireControlServerComponent component,
+        ref EntityTerminatingEvent args)
+    {
+        Disconnect(uid, component);
+    }
+
+    private void OnExamined(EntityUid uid, FireControlServerComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange)
+            return;
+        args.PushMarkup(
+            Loc.GetString(
+                "gunnery-server-examine-detail",
+                ("usedProcessingPower", /*component.UsedProcessingPower*/ 0),
+                ("processingPower", /*component.ProcessingPower*/ -1), // Null Sector: THIS IS Deliberate
+                ("valueColor", /*component.UsedProcessingPower <= component.ProcessingPower - 2 ? "green" : "yellow"*/ "green")
+            )
+        );
+    }
+
     private void OnControllablePowerChanged(EntityUid uid, FireControllableComponent component, PowerChangedEvent args)
     {
         if (args.Powered)
-            TryRegister(uid, component);
+            RegisterFireControl(uid, component);
         else
             Unregister(uid, component);
     }
 
     private void OnControllableShutdown(EntityUid uid, FireControllableComponent component, ComponentShutdown args)
     {
-        if (component.ControllingServer != null && TryComp<FireControlServerComponent>(component.ControllingServer, out var server))
+        if (component.ControllingServer != null &&
+            TryComp<FireControlServerComponent>(component.ControllingServer, out var server))
         {
             Unregister(uid, component);
 
@@ -86,7 +124,9 @@ public sealed partial class FireControlSystem : EntitySystem
         }
     }
 
-    private void OnControllableParentChanged(EntityUid uid, FireControllableComponent component, ref EntParentChangedMessage args)
+    private void OnControllableParentChanged(EntityUid uid,
+        FireControllableComponent component,
+        ref EntParentChangedMessage args)
     {
         if (component.ControllingServer == null)
             return;
@@ -118,20 +158,38 @@ public sealed partial class FireControlSystem : EntitySystem
         if (!Resolve(server, ref component))
             return;
 
-        if (!Exists(component.ConnectedGrid) || !TryComp<FireControlGridComponent>(component.ConnectedGrid, out var controlGrid))
-            return;
-
-        if (controlGrid.ControllingServer == server)
+        // Clean up grid connection if it exists
+        if (component.ConnectedGrid != null && Exists(component.ConnectedGrid) &&
+            TryComp<FireControlGridComponent>(component.ConnectedGrid, out var controlGrid))
         {
-            controlGrid.ControllingServer = null;
-            RemComp<FireControlGridComponent>((EntityUid)component.ConnectedGrid);
+            if (controlGrid.ControllingServer == server)
+            {
+                controlGrid.ControllingServer = null;
+                RemComp<FireControlGridComponent>((EntityUid)component.ConnectedGrid);
+            }
         }
 
-        foreach (var controllable in(component.Controlled))
-            Unregister(controllable);
+        // Unregister all controlled entities
+        var controlledCopy = component.Controlled.ToList(); // Create copy to avoid modification during iteration
+        foreach (var controllable in controlledCopy)
+        {
+            if (Exists(controllable))
+                Unregister(controllable);
+        }
 
-        foreach (var console in component.Consoles)
-            UnregisterConsole(console);
+        // Unregister all consoles
+        var consolesCopy = component.Consoles.ToList(); // Create copy to avoid modification during iteration
+        foreach (var console in consolesCopy)
+        {
+            if (Exists(console))
+                UnregisterConsole(console);
+        }
+
+        // Clear the server's state
+        component.Controlled.Clear();
+        component.Consoles.Clear();
+        component.ConnectedGrid = null;
+        //component.UsedProcessingPower = 0;
     }
 
     public void RefreshControllables(EntityUid grid, FireControlGridComponent? component = null)
@@ -139,21 +197,34 @@ public sealed partial class FireControlSystem : EntitySystem
         if (!Resolve(grid, ref component))
             return;
 
-        if (component.ControllingServer == null || !TryComp<FireControlServerComponent>(component.ControllingServer, out var server))
+        if (component.ControllingServer == null)
             return;
 
+        // Check if the controlling server still exists
+        if (!Exists(component.ControllingServer) ||
+            !TryComp<FireControlServerComponent>(component.ControllingServer, out var server))
+        {
+            // Clear the invalid reference
+            component.ControllingServer = null;
+            return;
+        }
+
         server.Controlled.Clear();
+        //server.UsedProcessingPower = 0;
 
         var query = EntityQueryEnumerator<FireControllableComponent>();
 
         while (query.MoveNext(out var controllable, out var controlComp))
         {
-            if (_xform.GetGrid(controllable) == grid && EntityManager.GetComponent<TransformComponent>(controllable).Anchored)
-                TryRegister(controllable, controlComp);
+            if (_xform.GetGrid(controllable) == grid &&
+                EntityManager.GetComponent<TransformComponent>(controllable).Anchored)
+                RegisterFireControl(controllable, controlComp);
         }
 
         foreach (var console in server.Consoles)
+        {
             UpdateUi(console);
+        }
     }
 
     private bool TryConnect(EntityUid server, FireControlServerComponent? component = null)
@@ -168,8 +239,21 @@ public sealed partial class FireControlSystem : EntitySystem
 
         var controlGrid = EnsureComp<FireControlGridComponent>((EntityUid)grid);
 
+        // Check if there's already a controlling server and if it's valid
         if (controlGrid.ControllingServer != null)
-            return false;
+        {
+            // If the controlling server no longer exists, clear the reference
+            if (!Exists(controlGrid.ControllingServer) ||
+                !TryComp<FireControlServerComponent>(controlGrid.ControllingServer, out _))
+            {
+                controlGrid.ControllingServer = null;
+            }
+            else
+            {
+                // Valid server already exists, cannot connect
+                return false;
+            }
+        }
 
         controlGrid.ControllingServer = server;
         component.ConnectedGrid = grid;
@@ -184,32 +268,63 @@ public sealed partial class FireControlSystem : EntitySystem
         if (!Resolve(controllable, ref component))
             return;
 
-        if (component.ControllingServer == null || !TryComp<FireControlServerComponent>(component.ControllingServer, out var controlComp))
+        if (component.ControllingServer == null ||
+            !TryComp<FireControlServerComponent>(component.ControllingServer, out var controlComp))
             return;
 
         controlComp.Controlled.Remove(controllable);
+        //controlComp.UsedProcessingPower -= GetProcessingPowerCost(controllable, component);
         component.ControllingServer = null;
     }
 
-    private bool TryRegister(EntityUid controllable, FireControllableComponent? component = null)
+    private void RegisterFireControl(EntityUid controllable, FireControllableComponent? component = null)
     {
         if (!Resolve(controllable, ref component))
-            return false;
+            return;
 
         var gridServer = TryGetGridServer(controllable);
 
-        if (gridServer.ServerComponent == null)
-            return false;
+        if (gridServer.ServerUid == null || gridServer.ServerComponent == null)
+            return;
+
+        var processingPowerCost = GetProcessingPowerCost(controllable, component);
+
+        /*if (processingPowerCost > GetRemainingProcessingPower(gridServer.ServerUid.Value, gridServer.ServerComponent))
+            return;*/
 
         if (gridServer.ServerComponent.Controlled.Add(controllable))
         {
+            //gridServer.ServerComponent.UsedProcessingPower += processingPowerCost;
             component.ControllingServer = gridServer.ServerUid;
-            return true;
         }
-        else
+    }
+
+    // Null Sector : This method is removed, but left here commented for future exceptions should they arise. -Z
+    /*public int GetRemainingProcessingPower(EntityUid server, FireControlServerComponent? component = null)
+    {
+        if (!Resolve(server, ref component))
+            return 0;
+
+        return component.ProcessingPower - component.UsedProcessingPower;
+    }*/
+
+    public int GetProcessingPowerCost(EntityUid controllable, FireControllableComponent? component = null)
+    {
+        if (!Resolve(controllable, ref component))
+            return 0;
+
+        if (!TryComp<SpaceArtilleryComponent>(controllable, out var classComponent))
+            return 0;
+
+        return classComponent.Class switch
         {
-            return false;
-        }
+            ShipGunClass.SuperLight => 1,
+            ShipGunClass.Light => 3,
+            ShipGunClass.Medium => 6,
+            ShipGunClass.Heavy => 9,
+            ShipGunClass.SuperHeavy => 12,
+            _ => 0,
+        };
     }
 
     private (EntityUid? ServerUid, FireControlServerComponent? ServerComponent) TryGetGridServer(EntityUid uid)
@@ -222,24 +337,85 @@ public sealed partial class FireControlSystem : EntitySystem
         if (!TryComp<FireControlGridComponent>(grid, out var controlGrid))
             return (null, null);
 
-        if (controlGrid.ControllingServer == null || !TryComp<FireControlServerComponent>(controlGrid.ControllingServer, out var server))
+        if (controlGrid.ControllingServer == null)
             return (null, null);
+
+        // Check if the controlling server still exists and has the component
+        if (!Exists(controlGrid.ControllingServer) ||
+            !TryComp<FireControlServerComponent>(controlGrid.ControllingServer, out var server))
+        {
+            // Clear the invalid reference
+            controlGrid.ControllingServer = null;
+            return (null, null);
+        }
 
         return (controlGrid.ControllingServer, server);
     }
 
-    public void FireWeapons(EntityUid server, List<NetEntity> weapons, NetCoordinates coordinates, FireControlServerComponent? component = null)
+    /// <summary>
+    /// Cleans up all invalid server references across all grids
+    /// </summary>
+    public void CleanupInvalidServerReferences()
+    {
+        var gridQuery = EntityQueryEnumerator<FireControlGridComponent>();
+
+        while (gridQuery.MoveNext(out var gridUid, out var gridComponent))
+        {
+            if (gridComponent.ControllingServer != null)
+            {
+                if (!Exists(gridComponent.ControllingServer) ||
+                    !TryComp<FireControlServerComponent>(gridComponent.ControllingServer, out _))
+                {
+                    gridComponent.ControllingServer = null;
+                    RemComp<FireControlGridComponent>(gridUid);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Forces all powered servers on a specific grid to attempt reconnection
+    /// </summary>
+    public void ForceServerReconnectionOnGrid(EntityUid gridUid)
+    {
+        var serverQuery = EntityQueryEnumerator<FireControlServerComponent>();
+
+        while (serverQuery.MoveNext(out var serverUid, out var serverComponent))
+        {
+            var serverGrid = _xform.GetGrid(serverUid);
+            if (serverGrid == gridUid && _power.IsPowered(serverUid))
+            {
+                // Force reconnection attempt
+                TryConnect(serverUid, serverComponent);
+            }
+        }
+    }
+
+    public void FireWeapons(EntityUid server,
+        List<NetEntity> weapons,
+        NetCoordinates coordinates,
+        FireControlServerComponent? component = null)
     {
         if (!Resolve(server, ref component))
             return;
 
-        // Check if the weapon's grid is in FTL
         var grid = component.ConnectedGrid;
-        if (grid != null && TryComp<FTLComponent>((EntityUid)grid, out var ftlComp))
+        if (grid == null)
+            return; // Short-Circuit: grid does not exist
+
+        if (TryComp<FTLComponent>((EntityUid)grid, out var ftlComp))
+            return; // Short-Circuit: grid is in FTL
+
+        if (TryComp<ShuttleComponent>((EntityUid)grid, out var shuttle) && shuttle.GunsDisabled)
         {
-            // Cannot fire weapons during FTL travel
-            return;
+            return; // Short-Circuit: ship's Weapons are disabled.
         }
+
+        // Check if vessel is on an expedition
+        if (TryComp<TransformComponent>((EntityUid)grid, out var gridXform) &&
+            gridXform.MapUid != null &&
+            HasComp<SalvageExpeditionComponent>(gridXform.MapUid.Value))
+            return;
 
         var targetCoords = GetCoordinates(coordinates);
 
@@ -260,15 +436,24 @@ public sealed partial class FireControlSystem : EntitySystem
                 if (destinationMapCoords.MapId == currentMapCoords.MapId && currentMapCoords.MapId != MapId.Nullspace)
                 {
                     var diff = destinationMapCoords.Position - currentMapCoords.Position;
-                    if (diff.LengthSquared() > 0.01f)
-                    {
-                        // Only rotate the gun if it has line of sight to the target
-                        if (HasLineOfSight(localWeapon, currentMapCoords.Position, destinationMapCoords.Position, currentMapCoords.MapId))
+                    if (TryComp<FireControlRotateComponent>(localWeapon, out var rotateEnabled))
+                        if (diff.LengthSquared() > 0.01f)
                         {
-                            var goalAngle = Angle.FromWorldVec(diff);
-                            _rotateToFace.TryRotateTo(localWeapon, goalAngle, 0f, Angle.FromDegrees(1), float.MaxValue, weaponXform);
+                            // Only rotate the gun if it has line of sight to the target
+                            if (HasLineOfSight(localWeapon,
+                                    currentMapCoords.Position,
+                                    destinationMapCoords.Position,
+                                    currentMapCoords.MapId))
+                            {
+                                var goalAngle = Angle.FromWorldVec(diff);
+                                _rotateToFace.TryRotateTo(localWeapon,
+                                    goalAngle,
+                                    0f,
+                                    Angle.FromDegrees(1),
+                                    float.MaxValue,
+                                    weaponXform);
+                            }
                         }
-                    }
                 }
             }
 
@@ -350,7 +535,10 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <summary>
     /// Attempts to fire a weapon, handling aiming and firing logic.
     /// </summary>
-    public bool AttemptFire(EntityUid weapon, EntityUid user, EntityCoordinates coords, FireControllableComponent? comp = null)
+    public bool AttemptFire(EntityUid weapon,
+        EntityUid user,
+        EntityCoordinates coords,
+        FireControllableComponent? comp = null)
     {
         if (!Resolve(weapon, ref comp))
             return false;
@@ -418,7 +606,11 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="mapId">The map ID</param>
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <returns>True if the weapon has line of sight to the target</returns>
-    private bool HasLineOfSight(EntityUid weapon, Vector2 weaponPos, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    private bool HasLineOfSight(EntityUid weapon,
+        Vector2 weaponPos,
+        Vector2 targetPos,
+        MapId mapId,
+        float maxDistance = 500f)
     {
         // Calculate direction to target
         var direction = (targetPos - weaponPos);
@@ -437,7 +629,9 @@ public sealed partial class FireControlSystem : EntitySystem
         var rayDistance = Math.Min(targetDistance, maxDistance);
 
         // Initialize ray collision
-        var ray = new CollisionRay(weaponPos, direction, collisionMask: (int)(CollisionGroup.Opaque | CollisionGroup.Impassable));
+        var ray = new CollisionRay(weaponPos,
+            direction,
+            collisionMask: (int)(CollisionGroup.Opaque | CollisionGroup.Impassable));
 
         // Create a predicate that ignores entities not on the same grid
         bool IgnoreEntityNotOnSameGrid(EntityUid entity, EntityUid sourceWeapon)
@@ -460,13 +654,14 @@ public sealed partial class FireControlSystem : EntitySystem
 
         // Check if there's any obstacles in the line of sight, only considering entities on the same grid
         var raycastResults = _physics.IntersectRayWithPredicate(
-            mapId,
-            ray,
-            weapon,
-            IgnoreEntityNotOnSameGrid,
-            rayDistance,
-            returnOnFirstHit: true // We only need to know if there's ANY obstacle
-        ).ToList();
+                mapId,
+                ray,
+                weapon,
+                IgnoreEntityNotOnSameGrid,
+                rayDistance,
+                returnOnFirstHit: true // We only need to know if there's ANY obstacle
+            )
+            .ToList();
 
         // Has line of sight if there are no obstacles in the path
         return raycastResults.Count == 0;
@@ -482,7 +677,12 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="mapId">The map ID</param>
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <returns>True if the weapon can fire in that direction</returns>
-    private bool CanFireInDirection(EntityUid weapon, Vector2 weaponPos, Vector2 direction, Vector2 targetPos, MapId mapId, float maxDistance = 50f)
+    private bool CanFireInDirection(EntityUid weapon,
+        Vector2 weaponPos,
+        Vector2 direction,
+        Vector2 targetPos,
+        MapId mapId,
+        float maxDistance = 500f)
     {
         // Use the HasLineOfSight method for consistency
         return HasLineOfSight(weapon, weaponPos, targetPos, mapId, maxDistance);
@@ -495,7 +695,7 @@ public sealed partial class FireControlSystem : EntitySystem
     /// <param name="maxDistance">Maximum raycast distance in meters</param>
     /// <param name="rayCount">Number of rays to cast around the entity</param>
     /// <returns>Dictionary mapping directions (angles in degrees) to whether they're clear for firing</returns>
-    public Dictionary<float, bool> CheckAllDirections(EntityUid weapon, float maxDistance = 50f, int rayCount = 128)
+    public Dictionary<float, bool> CheckAllDirections(EntityUid weapon, float maxDistance = 500f, int rayCount = 256)
     {
         var directions = new Dictionary<float, bool>();
 
@@ -531,17 +731,20 @@ public sealed partial class FireControlSystem : EntitySystem
             var direction = new Vector2(MathF.Cos(angle), MathF.Sin(angle));
 
             // Initialize ray collision
-            var ray = new CollisionRay(position, direction, collisionMask: (int)(CollisionGroup.Opaque | CollisionGroup.Impassable));
+            var ray = new CollisionRay(position,
+                direction,
+                collisionMask: (int)(CollisionGroup.Opaque | CollisionGroup.Impassable));
 
             // Check if there's any obstacles in this direction, only considering entities on the same grid
             var raycastResults = _physics.IntersectRayWithPredicate(
-                mapId,
-                ray,
-                weapon,
-                IgnoreEntityNotOnSameGrid,
-                maxDistance,
-                returnOnFirstHit: false
-            ).ToList();
+                    mapId,
+                    ray,
+                    weapon,
+                    IgnoreEntityNotOnSameGrid,
+                    maxDistance,
+                    returnOnFirstHit: false
+                )
+                .ToList();
 
             // Direction is clear if there are no obstacles
             var canFire = raycastResults.Count == 0;

@@ -63,7 +63,7 @@ public sealed partial class CCVars
     ///     Controls the game map prototype to load. SS14 stores these prototypes in Prototypes/Maps.
     /// </summary>
     public static readonly CVarDef<string>
-        GameMap = CVarDef.Create("game.map", "Frontier", CVar.SERVERONLY); // Frontier: string.Empty<Frontier
+        GameMap = CVarDef.Create("game.map", "Lark", CVar.SERVERONLY); // Null Sector: string.Empty<Lark
 
     /// <summary>
     ///     Controls whether to use world persistence or not.
@@ -89,7 +89,7 @@ public sealed partial class CCVars
     ///     This is how long the game "remembers" that some map was put in play. Default is 16 rounds.
     /// </summary>
     public static readonly CVarDef<int>
-        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 16, CVar.SERVERONLY);
+        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 2, CVar.SERVERONLY);
 
     /// <summary>
     ///     Is map rotation enabled?

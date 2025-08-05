@@ -1,3 +1,27 @@
+// SPDX-FileCopyrightText: 2020 ComicIronic
+// SPDX-FileCopyrightText: 2020 PrPleGoo
+// SPDX-FileCopyrightText: 2020 Tyler Young
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 metalgearsloth
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2021 mirrorcult
+// SPDX-FileCopyrightText: 2021 py01
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Moony
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Sam Weaver
+// SPDX-FileCopyrightText: 2022 ShadowCommander
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2024 Jezithyr
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 Leon Friedrich
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Globalization;
 using System.Linq;
 using Robust.Shared.Serialization;
@@ -199,9 +223,9 @@ namespace Content.Shared.FixedPoint
         }
 
         // Implicit operators ftw
-        public static implicit operator FixedPoint2(float n) => FixedPoint2.New(n);
-        public static implicit operator FixedPoint2(double n) => FixedPoint2.New(n);
-        public static implicit operator FixedPoint2(int n) => FixedPoint2.New(n);
+        public static implicit operator FixedPoint2(float n) => New(n);
+        public static implicit operator FixedPoint2(double n) => New(n);
+        public static implicit operator FixedPoint2(int n) => New(n);
 
         public static explicit operator float(FixedPoint2 n) => n.Float();
         public static explicit operator double(FixedPoint2 n) => n.Double();
@@ -244,7 +268,7 @@ namespace Content.Shared.FixedPoint
 
         public static FixedPoint2 Dist(FixedPoint2 a, FixedPoint2 b)
         {
-            return FixedPoint2.Abs(a - b);
+            return Abs(a - b);
         }
 
         public static FixedPoint2 Clamp(FixedPoint2 number, FixedPoint2 min, FixedPoint2 max)
@@ -303,15 +327,7 @@ namespace Content.Shared.FixedPoint
 
         public readonly int CompareTo(FixedPoint2 other)
         {
-            if (other.Value > Value)
-            {
-                return -1;
-            }
-            if (other.Value < Value)
-            {
-                return 1;
-            }
-            return 0;
+            return Value.CompareTo(other.Value);
         }
 
     }

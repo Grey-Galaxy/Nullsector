@@ -29,6 +29,8 @@
   - type: SpaceArtillery
     powerChargeRate: 250
     powerUsePassive: 200
+    gunClass: Medium
+    gunType: Energy
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
@@ -56,5 +58,3 @@
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 1
-  - type: ShipGunType
-    shipType: Energy

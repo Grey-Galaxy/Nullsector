@@ -1,22 +1,20 @@
-using Content.Server._NF.Shuttles.Components; // Frontier
+using Content.Server._NF.Shuttles.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
-using Content.Server.Doors.Systems;
+using Content.Server.Buckle.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Parallax;
 using Content.Server.Procedural;
 using Content.Server.Shuttles.Components;
 using Content.Server.Station.Systems;
 using Content.Server.Stunnable;
-using Content.Shared.GameTicking;
-using Content.Shared.Mobs.Systems;
+using Content.Shared.Damage;
 using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Throwing;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
@@ -28,6 +26,7 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+// Frontier
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -35,7 +34,6 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleSystem : SharedShuttleSystem
 {
     [Dependency] private readonly IAdminLogManager _logger = default!;
-    [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly MapSystem _mapSystem = default!;
@@ -63,6 +61,8 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly GameTicker _ticker = default!; //frontier edit to get the main map in FTL
+    [Dependency] private readonly BuckleSystem _buckle = default!;
+    [Dependency] private readonly DamageableSystem _damageSys = default!;
 
     private EntityQuery<MapGridComponent> _gridQuery;
 

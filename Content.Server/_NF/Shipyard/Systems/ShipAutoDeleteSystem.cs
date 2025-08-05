@@ -1,12 +1,3 @@
-using System.Linq;
-using Content.Shared._NF.Shipyard.Components;
-using Content.Shared.NPC.Components;
-using Robust.Server.Player;
-using Robust.Shared.Enums;
-using Robust.Shared.Map;
-using Robust.Shared.Player;
-using Robust.Shared.Timing;
-
 namespace Content.Server._NF.Shipyard.Systems;
 
 /// <summary>
@@ -14,7 +5,11 @@ namespace Content.Server._NF.Shipyard.Systems;
 /// </summary>
 public sealed class ShipAutoDeleteSystem : EntitySystem
 {
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    // Null Sector
+    // I don't want to remove this, as it CAN be put to good use, but I also want to fix up the code quality later,
+    // when I have the time to. Until then, this will be kept in the back.
+
+    /*[Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
 
@@ -158,5 +153,5 @@ public sealed class ShipAutoDeleteSystem : EntitySystem
 
             Dirty(shipUid, ownership);
         }
-    }
+    }*/
 }

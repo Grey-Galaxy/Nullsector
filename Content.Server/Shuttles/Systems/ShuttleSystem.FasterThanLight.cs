@@ -1,7 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
-using Content.Server._NF.Shuttles.Components; // Frontier: FTL knockdown immunity
+using Content.Server._NF.Shuttles.Components;
+using Content.Server.Salvage.Expeditions;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Events;
@@ -9,7 +10,6 @@ using Content.Shared.Body.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
-using Content.Shared.Ghost;
 using Content.Shared.Maps;
 using Content.Shared.Parallax;
 using Content.Shared.Shuttles.Components;
@@ -27,8 +27,8 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
+// Frontier: FTL knockdown immunity
 using FTLMapComponent = Content.Shared.Shuttles.Components.FTLMapComponent;
-using Content.Server.Salvage.Expeditions;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -63,7 +63,20 @@ public sealed partial class ShuttleSystem
     /// <summary>
     /// Space between grids within hyperspace.
     /// </summary>
-    private const float Buffer = 5f;
+    private const float Buffer = 100f;
+
+    // Frontier: coordinate rollover
+    /// <summary>
+    /// Maximum X coordinate before rolling over.
+    /// </summary>
+    private const float MaxCoord = 20000f;
+
+    /// <summary>
+    /// Amount to subtract from X coordinate on rollover.
+    /// </summary>
+    private const float CoordRollover = 40000f;
+    // End Frontier: coordinate rollover
+
 
     /// <summary>
     /// How many times we try to proximity warp close to something before falling back to map-wideAABB.
@@ -371,6 +384,7 @@ public sealed partial class ShuttleSystem
         _dockSystem.UndockDocks(uid);
 
         component = AddComp<FTLComponent>(uid);
+        shuttle.GunsDisabled = true;
         component.State = FTLState.Starting;
         var audio = _audio.PlayPvs(_startupSound, uid);
         _audio.SetGridAudio(audio);
@@ -431,6 +445,11 @@ public sealed partial class ShuttleSystem
         _index += width + Buffer;
         comp.StateTime = StartEndTime.FromCurTime(_gameTiming, comp.TravelTime - DefaultArrivalTime);
 
+        // Frontier: rollover coordinates
+        if (_index > MaxCoord)
+            _index -= CoordRollover;
+        // End Frontier
+
         Enable(uid, component: body);
         _physics.SetLinearVelocity(uid, new Vector2(0f, 20f), body: body);
         _physics.SetAngularVelocity(uid, 0f, body: body);
@@ -461,7 +480,8 @@ public sealed partial class ShuttleSystem
 
         if (entity.Comp1.VisualizerProto != null)
         {
-            comp.VisualizerEntity = SpawnAtPosition(entity.Comp1.VisualizerProto, entity.Comp1.TargetCoordinates);
+            comp.VisualizerEntity = SpawnAttachedTo(entity.Comp1.VisualizerProto, entity.Comp1.TargetCoordinates);
+            DebugTools.Assert(Transform(comp.VisualizerEntity.Value).ParentUid == entity.Comp1.TargetCoordinates.EntityId);
             var visuals = Comp<FtlVisualizerComponent>(comp.VisualizerEntity.Value);
             visuals.Grid = entity.Owner;
             Dirty(comp.VisualizerEntity.Value, visuals);
@@ -473,6 +493,7 @@ public sealed partial class ShuttleSystem
         _thruster.EnableLinearThrustDirection(shuttle, DirectionFlag.South);
 
         _console.RefreshShuttleConsoles(entity.Owner);
+        shuttle.GunsDisabled = false; // Null Sector
     }
 
     /// <summary>
@@ -788,7 +809,7 @@ public sealed partial class ShuttleSystem
         // Set position
         var mapCoordinates = _transform.ToMapCoordinates(config.Coordinates);
         var mapUid = _mapSystem.GetMap(mapCoordinates.MapId);
-        _transform.SetCoordinates(shuttle.Owner, shuttle.Comp, new EntityCoordinates(mapUid, mapCoordinates.Position), rotation: config.Angle);
+        _transform.SetCoordinates(shuttle.Owner, shuttle.Comp, new EntityCoordinates(mapUid, mapCoordinates.Position), rotation: config.Angle + _transform.GetWorldRotation(config.Coordinates.EntityId));
 
         // Connect everything
         foreach (var (dockAUid, dockBUid, dockA, dockB) in config.Docks)
