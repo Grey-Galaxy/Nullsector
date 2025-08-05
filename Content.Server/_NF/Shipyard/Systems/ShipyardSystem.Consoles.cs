@@ -43,7 +43,6 @@ using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using static Content.Shared._NF.Shipyard.Components.ShuttleDeedComponent;
 
@@ -251,13 +250,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             Log.Debug("Locked shuttle console {0} to shuttle {1} for deed holder {2}", consoleUid, shuttleUid, targetId);
         }
 
-        // Code below was added by Ark, for Monolith.
+        // Null Sector: Disabled ShipAutoDelete
+        /*// Code below was added by Ark, for Monolith.
         // Register ship ownership for auto-deletion when owner is offline too long
         // We need to get the player's session from their entity
         if (TryComp<ActorComponent>(player, out var actorComp))
         {
             _shipAutoDelete.RegisterAutoDelete(shuttleUid, actorComp.PlayerSession);
-        }
+        }*/
 
         if (!voucherUsed)
         {
