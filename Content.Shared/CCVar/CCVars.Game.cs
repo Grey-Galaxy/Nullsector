@@ -89,7 +89,7 @@ public sealed partial class CCVars
     ///     This is how long the game "remembers" that some map was put in play. Default is 16 rounds.
     /// </summary>
     public static readonly CVarDef<int>
-        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 16, CVar.SERVERONLY);
+        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 2, CVar.SERVERONLY);
 
     /// <summary>
     ///     Is map rotation enabled?
