@@ -1,0 +1,25 @@
+- files: ["shuttle_called.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["shuttle_recalled.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["power_off.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["power_on.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["welcome.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
