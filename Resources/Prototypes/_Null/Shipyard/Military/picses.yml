@@ -12,6 +12,7 @@
   price: 85250 # plastitanium tax...
   category: Medium
   group: Security
+  access: Security
   shuttlePath: /Maps/_Null/Shuttles/Military/picses.yml
   guidebookPage: null
   class:
