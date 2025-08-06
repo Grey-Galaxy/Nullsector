@@ -5,10 +5,10 @@
   description: "Flag of Vehement worshipers of the goblinic war god of greed, Maglubiyet"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/arialial_dominion_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/arialial_dominion.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/arialial_dominion_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/arialial_dominion.rsi
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -17,10 +17,10 @@
   description: "Flag of the Armadan restorationists"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/armadan_restorationists_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/armadan_restorationists.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/armadan_restorationists_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/armadan_restorationists.rsi
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -29,10 +29,10 @@
   description: "Flag of the followers of the venerate Huemac"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/chaos_cult_hc_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/huemac.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/chaos_cult_hc_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/huemac.rsi
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -41,10 +41,10 @@
   description: "Flag of the followers of the mad god, The Headmaster"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/chaos_cult_hr_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/headmaster.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/chaos_cult_hr_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/headmaster.rsi
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -53,10 +53,10 @@
   description: "A Circiabon flag, followers of the Ascended Machine"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -65,8 +65,8 @@
   description: "A Circibon flag, followers of the blessed machines of Circi"
   components:
   - type: Sprite
-    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
     state: icon
   - type: Item
-    sprite: _Null/Objects/Misc/followers_of_circi_handy_flag.rsi
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
 
