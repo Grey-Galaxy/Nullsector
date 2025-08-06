@@ -5,9 +5,18 @@
   components:
   - type: Clickable
   - type: InteractionOutline
+  - type: IconSmooth
+    key: walls
+    base: solid
+  - type: Tag
+    tags:
+      - Wall
   - type: Sprite
-    sprite: Objects/Misc/inflatable_wall.rsi
-    state: inflatable_wall
+    sprite: _Null/Structures/Walls/inflatable_wall.rsi
+    state: full
+  - type: Icon
+    sprite: _Null/Structures/Walls/inflatable_wall.rsi
+    state: full
   - type: Physics
     bodyType: Static
   - type: Fixtures

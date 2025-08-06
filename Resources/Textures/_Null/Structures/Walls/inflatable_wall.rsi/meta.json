@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Sen for Null Sector",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "full"
+    },
+    {
+      "name": "solid0",
+      "directions": 4
+    },
+    {
+      "name": "solid1",
+      "directions": 4
+    },
+    {
+      "name": "solid2",
+      "directions": 4
+    },
+    {
+      "name": "solid3",
+      "directions": 4
+    },
+    {
+      "name": "solid4",
+      "directions": 4
+    },
+    {
+      "name": "solid5",
+      "directions": 4
+    },
+    {
+      "name": "solid6",
+      "directions": 4
+    },
+    {
+      "name": "solid7",
+      "directions": 4
+    }
+  ]
+}
