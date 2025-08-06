@@ -103,7 +103,7 @@
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
     shipyardChannel: Nfsd
-    newAccessLevels: [Captain, Security, Brig]
+    newAccessLevels: [Lodge, Lark]
 
 - type: entity
   id: ComputerShipyardSyndicate
