@@ -11,18 +11,19 @@
   description: A compact but capable expedition ship, with durable hull plating too. This ship has a military IFF designation.
   price: 85250 # plastitanium tax...
   category: Medium
-  group: Expedition
-  shuttlePath: /Maps/_Null/Shuttles/Expedition/picses.yml
+  group: Security
+  shuttlePath: /Maps/_Null/Shuttles/Military/picses.yml
   guidebookPage: null
   class:
   - Expedition
+  - Patrol
   engine:
   - AME
 
 - type: gameMap
   id: Picses
   mapName: 'Picses'
-  mapPath: /Maps/_Null/Shuttles/Expedition/picses.yml
+  mapPath: /Maps/_Null/Shuttles/Military/picses.yml
   minPlayers: 0
   stations:
     Picses:
@@ -36,5 +37,5 @@
         - type: StationJobs
           availableJobs:
             Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            Pilot: [ 1, 1 ]
+            Mercenary: [ 1, 1 ]
