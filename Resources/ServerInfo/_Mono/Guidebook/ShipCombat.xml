@@ -1,7 +1,7 @@
 <Document>
   # Ship Warfare
 
-Warfare on the frontier is usually done via the means of [color=orange]ship gunnery[/color].
+  Ship-to-ship combat is conducted via [color=orange]ship gunnery[/color]. It is only a last resort to defend one's own life and property.
 
   <Box>
     <GuideEntityEmbed Entity="WeaponTurretL85Autocannon"/>
