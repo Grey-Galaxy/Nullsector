@@ -1,0 +1,23 @@
+- type: gameMap
+  id: Pandora
+  mapName: Pandora
+  mapPath: /Maps/_DV/pandora.yml
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 0
+  maxPlayers: 128
+  stations:
+    Pandora:
+      stationProto: PlanetaryNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Pandora {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationPlanetSpawner
+        planet: PlanetPandora
+        isTerrestrialStation: true
+      - type: StationJobs
+        availableJobs:
+          Contractor: [ -1, -1 ]
