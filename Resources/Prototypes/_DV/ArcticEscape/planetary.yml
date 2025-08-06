@@ -1,0 +1,66 @@
+- type: entity
+  id: BaseStationPlanetary
+  parent:
+  - BaseStation
+  - BaseStationNews
+  - BaseStationCargo
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+#  - BaseStationArrivals  # arrivals shuttle
+#  - BaseStationGateway  # gateway portals?
+#  - BaseStationShuttles  # ats, salvage wrecks, vgroids
+  - BaseStationCentcomm
+  - BaseStationEvacuation
+  - BaseStationAlertLevels
+#  - BaseStationMagnet  # salvage magnet
+#  - BaseStationExpeditions
+  - BaseStationSiliconLawCrewsimov
+  - BaseStationAllEventsEligible
+#  - BaseStationNanotrasen
+  - BaseStationMail # Nyano component, required for station mail to function
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: PlanetaryNanotrasenStation  # starcup uses NanoTrasen faction until total rework
+  parent:
+  - BaseStationPlanetary
+  - BaseStationNanotrasen
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: BaseStationPlanetaryWreck
+  parent:
+  - BaseStation
+  - BaseStationNews
+#  - BaseStationCargo
+  - BaseStationJobsSpawning
+#  - BaseStationRecords
+  #  - BaseStationArrivals  # arrivals shuttle
+  #  - BaseStationGateway  # gateway portals?
+  #  - BaseStationShuttles  # ats, salvage wrecks, vgroids
+  - BaseStationCentcomm
+#  - BaseStationEvacuation
+#  - BaseStationAlertLevels
+  #  - BaseStationMagnet  # salvage magnet
+#  - BaseStationExpeditions
+  - BaseStationSiliconLawCrewsimov
+#  - BaseStationAllEventsEligible
+  #  - BaseStationNanotrasen
+#  - BaseStationMail # Nyano component, required for station mail to function
+#  - BaseStationLavaland # DeltaV
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: PlanetaryNanotrasenWreck  # starcup uses NanoTrasen faction until total rework
+  parent:
+  - BaseStationPlanetary
+  - BaseStationNanotrasen
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform

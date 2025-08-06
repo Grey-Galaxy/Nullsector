@@ -1,0 +1,10 @@
+- type: gamePreset
+  id: ArcticEscape
+  alias:
+  - arcticescape
+  name: arctic-escape-title
+  showInVote: true
+  description: arctic-escape-description
+  supportedMaps: ArcticEscapeMapPool
+  rules:
+  - BasicRoundstartVariation

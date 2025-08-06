@@ -1,0 +1,25 @@
+- type: planet
+  id: PlanetPandora
+  biome: Snow
+  mapName: Pandora
+  mapLight: "#72789C"
+  sunlight: "#F9F1D8"
+  moonlight: "#73757D"
+  clipLight: 3.4
+  minimumLightLevel: 0.3
+  maximumLightLevel: 4
+  atmosphere:
+    volume: 2500
+    temperature: 189.71  # -83.44 C
+    moles:
+    - 29.04
+    - 91.96
+  biomeMarkerLayers:
+  - OreIron
+  - OreQuartz
+  - OreCoal
+  - OreGold
+  - OreSilver
+  - OrePlasma
+  - OreUranium
+  - OreDiamond
