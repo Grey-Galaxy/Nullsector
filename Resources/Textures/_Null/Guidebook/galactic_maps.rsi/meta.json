@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by LukeZurg22",
+  "size": {
+    "x": 300,
+    "y": 300
+  },
+  "states": [
+    {
+      "name": "galaxy"
+    },
+    {
+      "name": "you_are_here"
+    }
+  ]
+}

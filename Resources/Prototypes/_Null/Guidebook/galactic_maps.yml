@@ -1,0 +1,29 @@
+# START - BASE TYPE(S)
+- type: entity
+  parent: PosterBase
+  id: GalacticMapBase
+  name: "galactic map"
+  description: "Detailed map of the galaxy."
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Null/Guidebook/galactic_maps.rsi
+    scale: 1, 1
+# END - BASE TYPE(S)
+
+- type: entity
+  parent: GalacticMapBase
+  id: GalacticMapMain
+  #categories: [ HideSpawnMenu ] # I could give some use to this. Maybe a war map for ingame tabletop?
+  components:
+  - type: Sprite
+    state: galaxy
+    
+- type: entity
+  parent: GalacticMapBase
+  id: GalacticMapZoom
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: you_are_here

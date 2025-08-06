@@ -336,7 +336,7 @@
     startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
     endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/power_off.ogg
+      path: /Audio/_Null/Announcements/power_off.ogg # Null Sector
       params:
         volume: -4
     duration: 60

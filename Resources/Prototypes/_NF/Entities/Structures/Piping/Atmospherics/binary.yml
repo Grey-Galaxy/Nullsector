@@ -143,6 +143,8 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Anchorable
+  - type: Rotatable
   - type: Airtight
   - type: RadiationBlocker
     resistance: 3

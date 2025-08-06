@@ -103,9 +103,9 @@
     - !type:NestedSelector
       tableId: RingTableCommon
     - id: CassetteTapesSpawner
-      weight: 0.1
+      weight: 0.3
     - id: CassettePlayer
-      weight: 0.05
+      weight: 0.2
 
 - type: entityTable
   id: SalvageTreasureUncommon
@@ -129,6 +129,7 @@
         range: 4, 7
     - id: SpaceCash1000
     - id: WristwatchGold
+    - id: CassetteTapesSpawnerRare
 
 - type: entityTable
   id: SalvageTreasureRare

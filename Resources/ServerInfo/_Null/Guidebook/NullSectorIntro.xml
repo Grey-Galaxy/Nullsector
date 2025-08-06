@@ -1,7 +1,7 @@
 <Document>
-  # Null-Rogue Sector Joint Assistance Program
+  # Null-Rogue Combined-Sectors Program
 
-You are a member of the Null Sectors Frontiers Program! You're helping to develop the furthest reaches of space, and fight back the Armada!
+You are yet another crewman inhabiting the Null Sector! You're one of the lucky survivors hoping with the development of the furthest reaches of space, fighting back to survive any Armada interventions that may happen along the way!
 
 [color=#33bbff]If you'd like a hand, ask on the radio, or talk to somebody.[/color]
 The [color=#dd0000]Valet[/color] or [color=#009933]Sector Coordinator[/color] should be able to help, they're to the lower-right of medbay.
@@ -22,13 +22,11 @@ To make money, why not:
 ## Amenities
   <Box>
     <GuideEntityEmbed Entity="VendingMachineAstroVend"/>
-    <GuideEntityEmbed Entity="VendingMachineAmmo"/>
     <GuideEntityEmbed Entity="MachineCryoSleepPod"/>
   </Box>
   Some provisions (e.g. air tanks, salvage equipment) are available from vendors on Lark Station, but most amenities (medical services, food) should be offered by players on shuttles or at the Trade Depot.
 
 Be sure to stock up at the Trade Depot if going out on an extended voyage, and take advantage of the [color=#33bbff]medical insurance tracker[/color] in your loadout, or from the NanoMed vendor in medbay.
 
-Shifts in the Null Sector typically last for [color=#33bbff]eight hours[/color].
-If you need to end your shift early or take a break, use the [color=#33bbff]cryo sleep chambers[/color] in the medbay on Lark Station.
+Shifts in the Null Sector typically last for [color=#33bbff]Seven Hours[/color]. Though you are not obligated to stay. If you need to end your ventures early or take a break, use the [color=#33bbff]cryo sleep chambers[/color] in the medbay on Lark Station.
 </Document>

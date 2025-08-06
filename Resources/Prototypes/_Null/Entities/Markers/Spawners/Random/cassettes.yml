@@ -16,7 +16,7 @@
     offset: 0.2
     rarePrototypes:
       - CassetteTapesSpawnerRare
-    rareChance: 0.09
+    rareChance: 0.5
 
 # BLANKS-ONLY
 - type: entity
