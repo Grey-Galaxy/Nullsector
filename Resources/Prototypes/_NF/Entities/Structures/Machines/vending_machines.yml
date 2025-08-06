@@ -382,8 +382,8 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdDrobe
-  name: NFSDDrobe
-  description: A vending machine for Militia clothing!
+  name: RancherDrobe
+  description: A vending machine for old-style clothing! The clothes fit perfectly for some frontier justice!
   components:
   - type: VendingMachine
     pack: NfsdDrobeInventory
@@ -402,8 +402,8 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Security"]]
+#  - type: AccessReader # NULL SECTOR
+#    access: [["Security"]] # NULL SECTOR
 
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
