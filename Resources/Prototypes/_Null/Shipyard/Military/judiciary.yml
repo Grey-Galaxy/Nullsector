@@ -11,11 +11,12 @@
   description: A refitted research vessel armed with combat equipment. NOT for expeditions.
   price: 70001 # ~20,000$ markup
   category: Medium
-  group: Expedition
+  group: Security
   shuttlePath: /Maps/_Null/Shuttles/Military/judiciary.yml
   guidebookPage: ShipyardJudiciary
   class:
   - Expedition
+  - Patrol
   engine:
   - AME
 
