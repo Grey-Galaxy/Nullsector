@@ -63,8 +63,6 @@
     softness: 2
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: RandomMetadata
-    descriptionSegments: [DescriptionsATV]
 
 #region skeleton bike
 - type: entity
