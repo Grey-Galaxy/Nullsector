@@ -1,7 +1,7 @@
 - type: planet
   id: PlanetPandora
   biome: Snow
-  mapName: Pandora
+  mapName: planet-name-pandora = Pandora
   mapLight: "#72789C"
   sunlight: "#F9F1D8"
   moonlight: "#73757D"
