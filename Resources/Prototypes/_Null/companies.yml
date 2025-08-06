@@ -3,6 +3,7 @@
   id: None
   form: Neutral # Do NOT apply "Neutral" to anywhere outside "None"
   name: None
+  description: company-none-description
   color: "#FFFFFF"
 
 # ====DO NOT TOUCH - ADMIN COMPANIES====
