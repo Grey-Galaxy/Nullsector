@@ -1,15 +1,17 @@
+using Content.Shared._EE.CCVar;
 using Content.Shared.Actions;
-using Content.Shared._EE.CCVar; // EE
 using Content.Shared.Gravity;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
-using Robust.Shared.Configuration; // EE
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
+// EE
+// EE
 
 namespace Content.Shared.Movement.Systems;
 
@@ -75,7 +77,7 @@ public abstract class SharedJetpackSystem : EntitySystem
         if (ev.HasGravity)
         {
             var activeJetpackQuery = EntityQueryEnumerator<ActiveJetpackComponent, JetpackComponent, TransformComponent>();
-            
+
             while (activeJetpackQuery.MoveNext(out var jetpackUid, out _, out var jetpackComponent, out var jetpackTransform))
             {
                 // If the jetpack is on this grid and has no user, disable it
@@ -85,7 +87,7 @@ public abstract class SharedJetpackSystem : EntitySystem
                     EntityUid? user = null;
                     Container.TryGetContainingContainer((jetpackUid, null, null), out var container);
                     user = container?.Owner;
-                    
+
                     SetEnabled(jetpackUid, jetpackComponent, false, user);
                 }
             }
@@ -248,4 +250,5 @@ public abstract class SharedJetpackSystem : EntitySystem
 public enum JetpackVisuals : byte
 {
     Enabled,
+    Layer
 }
