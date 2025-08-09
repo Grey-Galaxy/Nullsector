@@ -249,7 +249,7 @@
 ## From Monolith
 - type: technology
   id: ShuttleWarpDriveResearch
-  name: research-technology-bluespace-drive-ctla25
+  name: research-technology-bluespace-drive-warp
   entityIcon: MachineFTLDrive
   discipline: Experimental
   tier: 3
@@ -1871,7 +1871,7 @@
   cost: 25000
   recipeUnlocks:
   - GunneryControlComputerCircuitboard
-  - MachineGCSCircuitboard
+  - MachineGunneryServerCircuitboard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicShuttleArmament
@@ -1881,14 +1881,13 @@
 # Null Sector Shield Tech
 - type: technology
   id: ShuttleShieldsResearch
-  name: research-technology-shuttle-armaments-components
-  entityIcon: CircularShieldBase
+  name: research-technology-shuttle-armaments-shields
+  entityIcon: ShieldGeneratorSmall
   discipline: Arsenal
   tier: 3
   cost: 25000
   recipeUnlocks:
-  - ShieldControlComputerCircuitboard
-  - MachineShieldAlphaCoreCircuitboard
+  - MachineShieldLightCircuitboard
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFDeterrenceTechnologies
