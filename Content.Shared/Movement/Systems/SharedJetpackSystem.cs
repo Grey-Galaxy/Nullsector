@@ -10,6 +10,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
+
 // EE
 // EE
 
@@ -76,9 +77,13 @@ public abstract class SharedJetpackSystem : EntitySystem
         // Additionally, find any active jetpacks without users on the grid that need to be disabled
         if (ev.HasGravity)
         {
-            var activeJetpackQuery = EntityQueryEnumerator<ActiveJetpackComponent, JetpackComponent, TransformComponent>();
+            var activeJetpackQuery =
+                EntityQueryEnumerator<ActiveJetpackComponent, JetpackComponent, TransformComponent>();
 
-            while (activeJetpackQuery.MoveNext(out var jetpackUid, out _, out var jetpackComponent, out var jetpackTransform))
+            while (activeJetpackQuery.MoveNext(out var jetpackUid,
+                       out _,
+                       out var jetpackComponent,
+                       out var jetpackTransform))
             {
                 // If the jetpack is on this grid and has no user, disable it
                 if (jetpackTransform.GridUid == gridUid && !HasComp<JetpackUserComponent>(jetpackUid))
@@ -99,19 +104,23 @@ public abstract class SharedJetpackSystem : EntitySystem
         SetEnabled(uid, component, false, args.User);
     }
 
-    private void OnJetpackUserCanWeightless(EntityUid uid, JetpackUserComponent component, ref CanWeightlessMoveEvent args)
+    private void OnJetpackUserCanWeightless(EntityUid uid,
+        JetpackUserComponent component,
+        ref CanWeightlessMoveEvent args)
     {
         args.CanMove = true;
     }
 
-    private void OnJetpackUserEntParentChanged(EntityUid uid, JetpackUserComponent component, ref EntParentChangedMessage args)
+    private void OnJetpackUserEntParentChanged(EntityUid uid,
+        JetpackUserComponent component,
+        ref EntParentChangedMessage args)
     {
         // Frontier: note - comment from upstream, dead men tell no tales
         // No and no again! Do not attempt to activate the jetpack on a grid with gravity disabled. You will not be the first or the last to try this.
         // https://discord.com/channels/310555209753690112/310555209753690112/1270067921682694234
         if (TryComp<JetpackComponent>(component.Jetpack, out var jetpack)
             && (!CanEnableOnGrid(args.Transform.GridUid)
-            || !UserNotParented(uid, jetpack))) // EE
+                || !UserNotParented(uid, jetpack))) // EE
         {
             SetEnabled(component.Jetpack, jetpack, false, uid);
 
@@ -119,7 +128,7 @@ public abstract class SharedJetpackSystem : EntitySystem
         }
     }
 
-    private void SetupUser(EntityUid user, EntityUid jetpackUid)
+    private void SetupUser(EntityUid user, EntityUid jetpackUid, JetpackComponent component)
     {
         var userComp = EnsureComp<JetpackUserComponent>(user);
         _mover.SetRelay(user, jetpackUid);
@@ -127,13 +136,23 @@ public abstract class SharedJetpackSystem : EntitySystem
         if (TryComp<PhysicsComponent>(user, out var physics))
             _physics.SetBodyStatus(user, physics, BodyStatus.InAir);
 
+        // Frontier: fix magboots vs. jetpack quibbles
+        component.AddedCanMoveInAir = !HasComp<CanMoveInAirComponent>(user);
+        EnsureComp<CanMoveInAirComponent>(user);
+        // End Frontier
+
         userComp.Jetpack = jetpackUid;
     }
 
-    private void RemoveUser(EntityUid uid)
+    private void RemoveUser(EntityUid uid, JetpackComponent component)
     {
         if (!RemComp<JetpackUserComponent>(uid))
             return;
+
+        // Frontier: fix magboots vs. jetpack quibbles
+        if (component.AddedCanMoveInAir)
+            RemComp<CanMoveInAirComponent>(uid);
+        // End Frontier
 
         if (TryComp<PhysicsComponent>(uid, out var physics))
             _physics.SetBodyStatus(uid, physics, BodyStatus.OnGround);
@@ -161,11 +180,11 @@ public abstract class SharedJetpackSystem : EntitySystem
         // No and no again! Do not attempt to activate the jetpack on a grid with gravity disabled. You will not be the first or the last to try this.
         // https://discord.com/channels/310555209753690112/310555209753690112/1270067921682694234
         return gridUid == null // EE
-        //||(!HasComp<GravityComponent>(gridUid)); // EE
-            || _config.GetCVar(EECCVars.JetpackEnableAnywhere) // EE
-            || _config.GetCVar(EECCVars.JetpackEnableInNoGravity) // EE
-            && TryComp<GravityComponent>(gridUid, out var comp) // EE
-            && !comp.Enabled; // EE
+               //||(!HasComp<GravityComponent>(gridUid)); // EE
+               || _config.GetCVar(EECCVars.JetpackEnableAnywhere) // EE
+               || _config.GetCVar(EECCVars.JetpackEnableInNoGravity) // EE
+               && TryComp<GravityComponent>(gridUid, out var comp) // EE
+               && !comp.Enabled; // EE
     }
 
     private void OnJetpackGetAction(EntityUid uid, JetpackComponent component, GetItemActionsEvent args)
@@ -182,44 +201,29 @@ public abstract class SharedJetpackSystem : EntitySystem
     {
         if (IsEnabled(uid) == enabled ||
             enabled && !CanEnable(uid, component))
-        {
             return;
-        }
 
         if (user == null)
         {
-            Container.TryGetContainingContainer((uid, null, null), out var container);
-            user = container?.Owner;
+            if (!Container.TryGetContainingContainer((uid, null, null), out var container))
+                return;
+            user = container.Owner;
         }
-
-        // Can't activate if no one's using.
-        if (user == null && enabled)
-            return;
 
         // EE: check if user has a parent (e.g. vehicle, duffelbag, bed)
         if (enabled && !UserNotParented(user, component))
             return;
         // End EE
 
-        // EE: moved from above user check
         if (enabled)
-            EnsureComp<ActiveJetpackComponent>(uid);
-        else
-            RemComp<ActiveJetpackComponent>(uid);
-        // End EE
-
-        if (user != null)
         {
-            if (enabled)
-            {
-                SetupUser(user.Value, uid);
-            }
-            else
-            {
-                RemoveUser(user.Value);
-            }
-
-            _movementSpeedModifier.RefreshMovementSpeedModifiers(user.Value);
+            SetupUser(user.Value, uid, component);
+            EnsureComp<ActiveJetpackComponent>(uid);
+        }
+        else
+        {
+            RemoveUser(user.Value, component);
+            RemComp<ActiveJetpackComponent>(uid);
         }
 
         Appearance.SetData(uid, JetpackVisuals.Enabled, enabled);
@@ -240,8 +244,8 @@ public abstract class SharedJetpackSystem : EntitySystem
     protected virtual bool UserNotParented(EntityUid? user, JetpackComponent component)
     {
         return !TryComp(user, out TransformComponent? xform)
-            || xform.ParentUid == xform.GridUid
-            || xform.ParentUid == xform.MapUid;
+               || xform.ParentUid == xform.GridUid
+               || xform.ParentUid == xform.MapUid;
     }
     // End EE
 }

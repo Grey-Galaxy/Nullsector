@@ -1,6 +1,5 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Movement.Components;
 
@@ -22,4 +21,7 @@ public sealed partial class JetpackComponent : Component
 
     [ViewVariables(VVAccess.ReadWrite), DataField("weightlessModifier")]
     public float WeightlessModifier = 1.2f;
+
+    [DataField, AutoNetworkedField] // Frontier: fix for magboot interaction on grids
+    public bool AddedCanMoveInAir; // Frontier
 }
