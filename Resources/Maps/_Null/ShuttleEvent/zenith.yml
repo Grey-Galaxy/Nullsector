@@ -1832,19 +1832,6 @@ entities:
     - type: Transform
       pos: -2.5,9.5
       parent: 1
-- proto: CircularShieldConsole
-  entities:
-  - uid: 299
-    components:
-    - type: Transform
-      pos: -1.5,4.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: DeviceLinkSource
-      linkedPorts:
-        297:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ComputerGunneryConsole
   entities:
   - uid: 300

@@ -5288,25 +5288,6 @@ entities:
     - type: Transform
       pos: -2.5,2.5
       parent: 1
-- proto: CircularShieldBase
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,8.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 654
-    components:
-    - type: Transform
-      pos: 4.5,20.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: CleanerDispenser
   entities:
   - uid: 1403
