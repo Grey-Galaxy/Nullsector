@@ -1,18 +1,16 @@
 # Author Info
-# GitHub: LukeZurg22
-# Discord: @lukezurg22
-
+# The shuttle was made by LukeZurg22 & JordanAccount.
 # Shuttle Notes:
 #
 - type: vessel
-  id: Crapbucket
+  id: Clam
   parent: BaseVessel
-  name: Crapbucket
-  description: A rough and malleable fighting vessel designed for dubious practices. Not for expeditions.
-  price: 42005
+  name: Clam
+  description: An established lived-in rogue vessel dedicated to heists and getaways.
+  price: 50000
   category: Small
   group: Expedition
-  shuttlePath: /Maps/_Null/Shuttles/Expedition/crapbucket.yml
+  shuttlePath: /Maps/_Null/Shuttles/Expedition/clam.yml
   guidebookPage: null
   class:
   - Pirate
@@ -20,16 +18,16 @@
   - Uranium
 
 - type: gameMap
-  id: Crapbucket
-  mapName: 'Crapbucket'
-  mapPath: /Maps/_Null/Shuttles/Expedition/crapbucket.yml
+  id: Clam
+  mapName: 'Clam'
+  mapPath: /Maps/_Null/Shuttles/Expedition/clam.yml
   minPlayers: 0
   stations:
-    Crapbucket:
+    Clam:
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Crapbucket MIL{1}'
+          mapNameTemplate: 'Clam MIL{1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
