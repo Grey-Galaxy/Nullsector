@@ -7,3 +7,7 @@ ComputerShipyardSr: ComputerShipyardService
 VendingMachineYarrrDrobe: VendingMachinePirateVend
 SpawnPointStationRepresentative: SpawnPointSectorCoordinator
 RubberStampSr: RubberStampSectorCoordinator
+
+# 20250809
+CircularShieldBase: null
+CircularShieldConsole: null
