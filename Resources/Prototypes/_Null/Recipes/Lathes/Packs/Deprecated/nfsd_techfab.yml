@@ -104,6 +104,7 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
+  - WeaponAntiqueLaser # Null Sector
 
 - type: latheRecipePack
   id: NFNfsdTechfabDeprecatedEmag

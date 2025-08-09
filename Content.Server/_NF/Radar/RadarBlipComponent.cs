@@ -1,4 +1,5 @@
-using Content.Shared._NF.Radar;
+
+using Content.Shared._Mono.Radar;
 
 namespace Content.Server._NF.Radar;
 

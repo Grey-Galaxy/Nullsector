@@ -1,8 +1,9 @@
+# From Monolith
 - type: latheRecipePack
   id: MonoAdvancedShuttleComponents
   recipes:
-  - ShieldControlComputerCircuitboard
   - GunneryControlComputerCircuitboard
-  - MachineShieldAlphaCoreCircuitboard
+  - MachineShieldLightCircuitboard
+  - MachineShieldMediumCircuitboard # Null Sector
   - MachineDriveWarpCircuitboard
-  - MachineGCSCircuitboard
+  - MachineGunneryServerCircuitboard

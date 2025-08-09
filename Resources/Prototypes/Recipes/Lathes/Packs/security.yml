@@ -146,6 +146,7 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
+  - WeaponAntiqueLaser
 
 - type: latheRecipePack
   id: SecurityDisablers

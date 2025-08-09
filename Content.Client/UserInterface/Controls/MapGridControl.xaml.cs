@@ -6,6 +6,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Input;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 namespace Content.Client.UserInterface.Controls;
@@ -19,6 +20,8 @@ public partial class MapGridControl : LayoutContainer
 {
     [Dependency] protected readonly IEntityManager EntManager = default!;
     [Dependency] protected readonly IGameTiming Timing = default!;
+    [Dependency] protected readonly IPrototypeManager PrototypeManager = default!; // Mono
+    [Dependency] protected readonly IClyde DisplayManager = default!; // Mono
 
     protected static readonly Color BackingColor = new Color(0.08f, 0.08f, 0.08f);
 
@@ -41,7 +44,13 @@ public partial class MapGridControl : LayoutContainer
     protected Vector2 StartDragPosition;
     protected bool Recentering;
 
-    protected const float ScrollSensitivity = 8f;
+    protected virtual float ScrollSensitivity => 8f;
+
+    /// <summary>
+    /// Zoom factor for consistent multiplicative zoom steps.
+    /// Each scroll step zooms in/out by this factor.
+    /// </summary>
+    protected const float ZoomFactor = 3.0f;
 
     protected float RecenterMinimum = 0.05f;
 
@@ -73,13 +82,15 @@ public partial class MapGridControl : LayoutContainer
     protected Vector2 MidPointVector => new Vector2(MidPoint, MidPoint);
 
     protected int MidPoint => SizeFull / 2;
-    protected int SizeFull => (int) ((UIDisplayRadius + MinimapMargin) * 2 * UIScale);
-    protected int ScaledMinimapRadius => (int) (UIDisplayRadius * UIScale);
+    protected int SizeFull => (int)((UIDisplayRadius + MinimapMargin) * 2 * UIScale);
+    protected int ScaledMinimapRadius => (int)(UIDisplayRadius * UIScale);
     protected float MinimapScale => WorldRange != 0 ? ScaledMinimapRadius / WorldRange : 0f;
 
     public event Action<float>? WorldRangeChanged;
 
-    public MapGridControl() : this(32f, 32f, 32f) {}
+    private readonly ShaderInstance _circleMaskShader; // Mono
+
+    public MapGridControl() : this(32f, 32f, 32f) { }
 
     public MapGridControl(float minRange, float maxRange, float range)
     {
@@ -96,6 +107,8 @@ public partial class MapGridControl : LayoutContainer
 
         var cache = IoCManager.Resolve<IResourceCache>();
         _largerFont = new VectorFont(cache.GetResource<FontResource>("/EngineFonts/NotoSans/NotoSans-Regular.ttf"), 16);
+
+        _circleMaskShader = PrototypeManager.Index<ShaderPrototype>("CircleAlphaMask").InstanceUnique(); // Mono
     }
 
     public void ForceRecenter()
@@ -144,7 +157,21 @@ public partial class MapGridControl : LayoutContainer
     protected override void MouseWheel(GUIMouseWheelEventArgs args)
     {
         base.MouseWheel(args);
-        AddRadarRange(-args.Delta.Y * 1f / ScrollSensitivity * ActualRadarRange);
+
+        // Use multiplicative zoom for consistent zoom steps
+        // Positive delta = zoom in (divide), negative delta = zoom out (multiply)
+        var zoomDirection = -args.Delta.Y / ScrollSensitivity;
+
+        if (zoomDirection > 0)
+        {
+            // Zoom out - multiply by zoom factor
+            ActualRadarRange = Math.Clamp(ActualRadarRange * MathF.Pow(ZoomFactor, zoomDirection), WorldMinRange, WorldMaxRange);
+        }
+        else if (zoomDirection < 0)
+        {
+            // Zoom in - divide by zoom factor
+            ActualRadarRange = Math.Clamp(ActualRadarRange * MathF.Pow(ZoomFactor, zoomDirection), WorldMinRange, WorldMaxRange);
+        }
     }
 
     public void AddRadarRange(float value)
@@ -187,7 +214,7 @@ public partial class MapGridControl : LayoutContainer
         if (Recentering)
         {
             var frameTime = Timing.FrameTime;
-            var diff = (TargetOffset - Offset) * (float) frameTime.TotalSeconds;
+            var diff = (TargetOffset - Offset) * (float)frameTime.TotalSeconds;
 
             if (Offset.LengthSquared() < RecenterMinimum)
             {
@@ -240,8 +267,33 @@ public partial class MapGridControl : LayoutContainer
             var diff = ActualRadarRange - WorldRange;
             const float lerpRate = 10f;
 
-            WorldRange += (float) Math.Clamp(diff, -lerpRate * MathF.Abs(diff) * Timing.FrameTime.TotalSeconds, lerpRate * MathF.Abs(diff) * Timing.FrameTime.TotalSeconds);
+            WorldRange += (float)Math.Clamp(diff, -lerpRate * MathF.Abs(diff) * Timing.FrameTime.TotalSeconds, lerpRate * MathF.Abs(diff) * Timing.FrameTime.TotalSeconds);
             WorldRangeChanged?.Invoke(WorldRange);
         }
     }
+
+    #region Mono
+    /// <summary>
+    /// Masks everything drawn with the shader enabled by a circle.
+    /// If you don't want it circular, don't use this.
+    /// </summary>
+    protected void UseCircleMaskShader(DrawingHandleScreen handle)
+    {
+        // Simple, just base the radius on the width.
+        _circleMaskShader.SetParameter("radius", PixelWidth * 0.5f);
+
+        // Not nearly as simple, we transform the coordinates from top-left origin (UI space) to bottom-left origin (shader fragment space)
+        _circleMaskShader.SetParameter("center", new Vector2(GlobalPixelPosition.X + PixelWidth * 0.5f, DisplayManager.ScreenSize.Y - GlobalPixelPosition.Y - PixelHeight * 0.5f));
+
+        handle.UseShader(_circleMaskShader);
+    }
+
+    /// <summary>
+    /// Verbose shortcut for handle.UseShader(null)
+    /// </summary>
+    protected void ClearShader(DrawingHandleScreen handle)
+    {
+        handle.UseShader(null);
+    }
+    #endregion Mono
 }

@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared._NF.Radar;
+using Content.Shared._Mono.Radar;
 using Robust.Shared.Timing;
 
 namespace Content.Client._NF.Radar;

@@ -81,6 +81,17 @@
     Glass: 1000
     Gold: 850
 
+# Null Sector
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponAntiqueLaser
+  result: WeaponAntiqueLaser
+  materials: # Values actually translate to "300", "200", etc. Two digits less than expected.
+    Steel: 30000
+    Glass: 30000
+    Gold: 20000
+# End Null Sector
+
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: WeaponLaserCannon

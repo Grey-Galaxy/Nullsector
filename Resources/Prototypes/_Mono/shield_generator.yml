@@ -1,0 +1,171 @@
+# Base Abstract Type
+- type: entity
+  id: ShieldGeneratorBase
+  parent: BaseMachinePowered
+  name: Shield Generator
+  abstract: true
+  components:
+  - type: PointLight
+    enabled: false
+    castShadows: true
+    radius: 2
+    energy: 1.5
+    color: "#9933FF"
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -5
+    range: 30
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/anomaly_generator.ogg
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+    snapCardinals: true
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: Repairable
+    doAfterDelay: 8
+  - type: AnimationPlayer
+  - type: LitOnPowered
+  - type: PowerSwitch
+  - type: Appearance
+    powerUpSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_arrival.ogg"
+        params:
+          pitch: 0.5
+    powerDownSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_departure.ogg"
+        params:
+          pitch: 0.5
+  
+
+# Small
+- type: entity
+  id: ShieldGeneratorSmall
+  parent: ShieldGeneratorBase
+  suffix: CIR-C1A
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 50
+    damageExp: 1.4
+    baseDraw: 20000
+    maxDraw: 60000
+    unpoweredBonus: 2.5
+    damageLimit: 5000
+    damageOverloadTimePunishment: 80
+    shieldColor: "#3399FF"
+  - type: Sprite
+    sprite: _Null/Structures/ShuttleComponents/shield_small.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#3399FF"
+  - type: ApcPowerReceiver
+    powerLoad: 20000
+  - type: PointLight
+    color: "#3399FF"
+  - type: Machine
+    board: MachineShieldLightCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
+      
+# Medium
+- type: entity
+  id: ShieldGeneratorMedium
+  parent: ShieldGeneratorBase
+  suffix: CIR-C2B
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 200 # Base is 250
+    damageExp: 1.15 # Base is 1.1
+    baseDraw: 40000 # Base is 50000
+    maxDraw: 80000 # Base is 150000
+    unpoweredBonus: 3 # Base is 6
+    damageLimit: 10000
+    damageOverloadTimePunishment: 100
+    shieldColor: "#9933FF"
+  - type: Sprite
+    sprite: _Null/Structures/ShuttleComponents/shield_medium.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#9933FF"
+  - type: ApcPowerReceiver
+    powerLoad: 40000
+  - type: PointLight
+    color: "#9933FF"
+  - type: Machine
+    board: MachineShieldMediumCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
+
+# Large
+- type: entity
+  id: ShieldGeneratorLarge
+  parent: ShieldGeneratorBase
+  suffix: CIR-C3C
+  components:
+  - type: ShipShieldEmitter
+    healPerSecond: 250
+    damageExp: 1.15
+    baseDraw: 50000
+    maxDraw: 150000
+    unpoweredBonus: 6
+    damageLimit: 25000
+    damageOverloadTimePunishment: 120
+    shieldColor: "#FF3333"
+  - type: Sprite
+    sprite: _Null/Structures/ShuttleComponents/shield_large.rsi
+    snapCardinals: true
+    layers:
+    - state: control
+    - state: control_on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      visible: false
+      color: "#FF3333"
+  - type: ApcPowerReceiver
+    powerLoad: 60000
+  - type: PointLight
+    color: "#FF3333"
+  - type: Machine
+    board: MachineShieldLargeCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
