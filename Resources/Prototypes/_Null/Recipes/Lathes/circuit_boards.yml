@@ -155,29 +155,30 @@
 # From Monolith
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
-  id: ShieldControlComputerCircuitboard
-  result: ShieldControlComputerCircuitboard
-
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
   id: GunneryControlComputerCircuitboard
   result: GunneryControlComputerCircuitboard
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
-  id: MachineShieldAlphaCoreCircuitboard
-  result: MachineShieldAlphaCoreCircuitboard
+  id: MachineGunneryServerCircuitboard
+  result: MachineGunneryServerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldLightCircuitboard
+  result: MachineShieldLightCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MachineShieldMediumCircuitboard
+  result: MachineShieldMediumCircuitboard
 
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: MachineDriveWarpCircuitboard
   result: MachineDriveWarpCircuitboard
 
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: MachineGCSCircuitboard
-  result: MachineGCSCircuitboard
-
+# From Null Sector
 - type: latheRecipe
   parent: BaseGoldCircuitboardRecipe
   id: EmancipationGridCircuitboardRecipe

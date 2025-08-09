@@ -477,7 +477,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -488,7 +487,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 207
     components:
     - type: MetaData
@@ -499,7 +497,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 282
     components:
     - type: MetaData
@@ -510,7 +507,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 432
     components:
     - type: MetaData
@@ -521,7 +517,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 4

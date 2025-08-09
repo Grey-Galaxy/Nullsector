@@ -1,0 +1,108 @@
+- type: entity
+  id: MachineDriveWarpCircuitboard
+  parent: BaseMachineCircuitboard
+  name: warp drive circuit board
+  description: A machine board for a warp drive.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: MachineFTLDrive
+    requirements:
+      Capacitor: 4
+      Manipulator: 2
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 3
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+      Uranium: 30
+
+# Shields
+- type: entity
+  id: MachineShieldLightCircuitboard
+  parent: BaseMachineCircuitboard
+  name: light shield circuit board
+  description: A machine board for a CIR-C1A Shield Emitter.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShieldGeneratorSmall
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineShieldMediumCircuitboard
+  parent: BaseMachineCircuitboard
+  name: medium shield circuit board
+  description: A machine board for a CIR-C2B Shield Emitter.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShieldGeneratorMedium
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: MachineShieldLargeCircuitboard
+  parent: BaseMachineCircuitboard
+  name: large shield circuit board
+  description: A machine board for a CIR-C3C Shield Emitter.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ShieldGeneratorLarge
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+# Gunnery Server
+- type: entity
+  id: MachineGunneryServerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: gunnery control server board
+  description: A machine board for a Gunnery Control Server.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerow
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+
+- type: entity
+  id: EmancipationGridCircuitboard
+  parent: BaseMachineCircuitboard
+  name: emancipation grid board
+  description: A machine board for an Emancipation Grid.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: EmancipationGrid
+    requirements:
+      Capacitor: 2
+      Manipulator: 2
+    stackRequirements:
+      Glass: 10
+      Steel: 10

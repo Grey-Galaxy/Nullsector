@@ -400,7 +400,6 @@ entities:
       visibleFromOtherGrids: True
       shape: Ring
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AdvancedCapacitorStockPart
   entities:
   - uid: 3

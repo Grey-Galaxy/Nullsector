@@ -195,7 +195,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 418
     components:
     - type: MetaData
@@ -206,7 +205,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirlockEngineering
   entities:
   - uid: 397
