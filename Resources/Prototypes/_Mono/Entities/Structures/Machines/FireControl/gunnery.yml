@@ -20,7 +20,7 @@
   - type: Appearance
   - type: AmbientOnPowered
   - type: Machine
-    board: MachineGCSCircuitboard
+    board: MachineGunneryServerCircuitboard
   - type: AmbientSound
     volume: -9
     range: 5

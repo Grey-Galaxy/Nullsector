@@ -1,0 +1,38 @@
+# Author Info
+# The shuttle was made by LukeZurg22 & JordanAccount.
+# Shuttle Notes:
+#
+- type: vessel
+  id: Clam
+  parent: BaseVessel
+  name: Clam
+  description: An established lived-in rogue vessel dedicated to heists and getaways.
+  price: 50000
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_Null/Shuttles/Expedition/clam.yml
+  guidebookPage: null
+  class:
+  - Pirate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Clam
+  mapName: 'Clam'
+  mapPath: /Maps/_Null/Shuttles/Expedition/clam.yml
+  minPlayers: 0
+  stations:
+    Clam:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Clam MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 1, 1 ]

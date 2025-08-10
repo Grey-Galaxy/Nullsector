@@ -203,12 +203,13 @@
   - FlashPayload
   - ChemicalPayload
   - WeaponShotgunKammererNF
-  - WeaponAdvancedLaser # After the changes made to windows shouldn't be that much of an issue now if it's widely available
+  - WeaponAdvancedLaser
   - WeaponLaserCarbine
   - WeaponDisabler
   - WeaponDisablerSMG
   - WeaponLaserCannon
   - WeaponXrayCannon
+  - WeaponAntiqueLaser # Null Sector
 ## Ammo boxes
   - BoxBeanbag
   - BoxShellTranquilizer

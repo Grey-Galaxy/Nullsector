@@ -1,21 +1,20 @@
 using Content.Server._NF.PublicTransit.Components;
+using Content.Server._NF.Station.Systems;
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
-using Content.Shared.GameTicking;
 using Content.Shared._NF.CCVar;
+using Content.Shared.GameTicking;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Tiles;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
-using Robust.Shared.Map;
-using Robust.Shared.Timing;
-using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
-using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
 namespace Content.Server._NF.PublicTransit;
 
@@ -40,7 +39,7 @@ public sealed class PublicTransitSystem : EntitySystem
     public bool Enabled { get; private set; }
     public float FlyTime = 50f;
     public int Counter = 0;
-    public List<EntityUid> StationList = new();
+    public readonly List<EntityUid> StationList = [];
 
     public override void Initialize()
     {
@@ -96,11 +95,11 @@ public sealed class PublicTransitSystem : EntitySystem
     /// </summary>
     private void OnStationStartup(EntityUid uid, StationTransitComponent component, ComponentStartup args)
     {
-        if (Transform(uid).MapID == _ticker.DefaultMap) //best solution i could find because of componentinit/mapinit race conditions
-        {
-            if (!StationList.Contains(uid)) //if the grid isnt already in
-                StationList.Add(uid); //add it to the list
-        }
+        if (Transform(uid).MapID != _ticker.DefaultMap) //best solution i could find because of componentinit/mapinit race conditions
+            return; // Short-Circuit
+
+        if (!StationList.Contains(uid)) //if the grid isnt already in
+            StationList.Add(uid); //add it to the list
     }
 
     /// <summary>

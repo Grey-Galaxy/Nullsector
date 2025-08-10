@@ -51,7 +51,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 2
     components:
     - type: MetaData
@@ -2338,7 +2337,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 244
     components:
     - type: MetaData
@@ -2349,7 +2347,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 383
     components:
     - type: MetaData
@@ -2360,7 +2357,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 625
     components:
     - type: MetaData
@@ -2371,7 +2367,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 789
     components:
     - type: MetaData
@@ -2383,7 +2378,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 1108
     components:
     - type: MetaData
@@ -2394,7 +2388,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 1202
     components:
     - type: MetaData
@@ -2405,7 +2398,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 2221
     components:
     - type: MetaData
@@ -2416,7 +2408,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 2421
     components:
     - type: MetaData
@@ -2427,7 +2418,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 4997
     components:
     - type: MetaData
@@ -2450,7 +2440,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5036
     components:
     - type: MetaData
@@ -2461,7 +2450,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5051
     components:
     - type: MetaData
@@ -2472,7 +2460,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5075
     components:
     - type: MetaData
@@ -2483,7 +2470,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5077
     components:
     - type: MetaData
@@ -2494,7 +2480,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5083
     components:
     - type: MetaData
@@ -2505,7 +2490,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5106
     components:
     - type: MetaData
@@ -2516,7 +2500,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5132
     components:
     - type: MetaData
@@ -2527,7 +2510,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 5134
     components:
     - type: MetaData
@@ -2538,7 +2520,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 1532
@@ -9692,65 +9673,6 @@ entities:
     - type: Transform
       pos: 26.527483,-6.920726
       parent: 2
-- proto: CircularShieldBase
-  entities:
-  - uid: 5035
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 22.5,-12.5
-      parent: 2
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.45,-0.45
-            - 0.45,-0.45
-            - 0.45,0.45
-            - -0.45,0.45
-          mask:
-          - Impassable
-          - TableLayer
-          - LowImpassable
-          layer:
-          - TableLayer
-          - LowImpassable
-          density: 60
-          hard: True
-          restitution: 0
-          friction: 0.4
-        ShieldFixture:
-          shape: !type:PhysShapeCircle
-            radius: 0
-            position: 4.5079985,1.256103
-          mask: []
-          layer:
-          - BulletImpassable
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: CircularShield
-      width: 6.283185307179586 rad
-      consumptionPerM2: 0.05
-    - type: ApcPowerReceiver
-      powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 5037
-    components:
-    - type: Transform
-      pos: 20.5,-11.5
-      parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: DeviceLinkSource
-      linkedPorts:
-        5035:
-        - - CircularShieldConsoleSender
-          - CircularShieldConsoleReceiver
 - proto: ClosetMaintenanceFilledRandom
   entities:
   - uid: 4906

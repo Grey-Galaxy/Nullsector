@@ -85,7 +85,7 @@ public sealed class GridCleanupSystem : EntitySystem
         var mapId = transform.MapID;
         var mapUid = _mapManager.GetMapEntityId(mapId);
 
-        if (HasComp<SalvageExpeditionComponent>(mapUid))
+        if (HasComp<SalvageExpeditionComponent>(mapUid)) // THIS
         {
             //Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on expedition map {mapUid}");
             return;

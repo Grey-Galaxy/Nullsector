@@ -139,4 +139,9 @@ nf-research-technology-vim = Vim
 nf-research-technology-wireless-audio-visual-communication = Wireless Telecommunications
 # Monolith
 research-technology-shuttle-armaments-components = Advanced Shuttle Armament Components
-research-technology-bluespace-drive-ctla25 = CTLA-25 Bluespace Drive
+research-technology-bluespace-drive-warp = Standard Emergency Warp Drive
+# Null Sector
+research-technology-shuttle-armaments-shields = Weaponized Shield Emitters
+research-technology-shuttle-armaments-advanced-shields = Circiabonic Shield Emitters
+research-technology-automated-cleaning = Automated Waste Emancipation
+research-technology-antique-weapons = Antique Weapon Restoration

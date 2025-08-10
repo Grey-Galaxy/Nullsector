@@ -9,7 +9,7 @@
   parent: BaseVessel
   name: Crapbucket
   description: A rough and malleable fighting vessel designed for dubious practices. Not for expeditions.
-  price: 55000
+  price: 42005
   category: Small
   group: Expedition
   shuttlePath: /Maps/_Null/Shuttles/Expedition/crapbucket.yml

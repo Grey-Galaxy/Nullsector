@@ -1,0 +1,9 @@
+- type: preloadedGrid
+  id: AIZenith
+  path: /Maps/_Null/ShuttleEvent/zenith.yml
+  copies: 3
+
+- type: preloadedGrid
+  id: AIRazor
+  path: /Maps/_Null/ShuttleEvent/razor.yml
+  copies: 5

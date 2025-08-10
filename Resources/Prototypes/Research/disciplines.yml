@@ -12,7 +12,7 @@
     3: 0.75
 
 - type: techDiscipline
-  id: CivilianServices
+  id: Service
   name: research-discipline-civilian-services
   color: "#7ecd48"
   icon:

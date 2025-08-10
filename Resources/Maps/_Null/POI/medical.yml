@@ -1820,7 +1820,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 65
     components:
     - type: MetaData
@@ -1831,7 +1830,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 100
     components:
     - type: MetaData
@@ -1842,7 +1840,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 102
     components:
     - type: MetaData
@@ -1853,7 +1850,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 115
     components:
     - type: MetaData
@@ -1864,7 +1860,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 129
     components:
     - type: MetaData
@@ -1875,7 +1870,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 333
     components:
     - type: MetaData
@@ -1886,7 +1880,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 385
     components:
     - type: MetaData
@@ -1897,7 +1890,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 430
     components:
     - type: MetaData
@@ -1908,7 +1900,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 436
     components:
     - type: MetaData
@@ -1919,7 +1910,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 445
     components:
     - type: MetaData
@@ -1930,7 +1920,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 526
     components:
     - type: MetaData
@@ -1941,7 +1930,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 740
     components:
     - type: MetaData
@@ -1952,7 +1940,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 924
     components:
     - type: MetaData
@@ -1963,7 +1950,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 1030
     components:
     - type: MetaData
@@ -1974,7 +1960,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 2397
     components:
     - type: MetaData
@@ -1985,7 +1970,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 605
@@ -5304,25 +5288,6 @@ entities:
     - type: Transform
       pos: -2.5,2.5
       parent: 1
-- proto: CircularShieldBase
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,8.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 654
-    components:
-    - type: Transform
-      pos: 4.5,20.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: CleanerDispenser
   entities:
   - uid: 1403

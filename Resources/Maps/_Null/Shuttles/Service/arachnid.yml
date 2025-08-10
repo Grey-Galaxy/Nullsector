@@ -318,7 +318,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 3
     components:
     - type: MetaData
@@ -329,7 +328,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 119
     components:
     - type: MetaData
@@ -340,7 +338,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 323
     components:
     - type: MetaData
@@ -351,7 +348,6 @@ entities:
       enabled: False
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 4
@@ -974,31 +970,6 @@ entities:
     - type: Transform
       pos: -3.4851382,0.6796913
       parent: 1
-- proto: CircularShieldBase
-  entities:
-  - uid: 118
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,0.5
-      parent: 1
-    - type: ApcPowerReceiver
-      powerLoad: 0
-    - type: Battery
-- proto: CircularShieldConsole
-  entities:
-  - uid: 120
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-0.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        118:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
-    - type: ApcPowerReceiver
-      powerLoad: 5
 - proto: ComputerCriminalRecords
   entities:
   - uid: 121
