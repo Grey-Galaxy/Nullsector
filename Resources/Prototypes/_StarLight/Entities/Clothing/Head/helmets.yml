@@ -8,6 +8,6 @@
     sprite: _Starlight/Clothing/Head/Helmets/ntcc_helmet.rsi
   - type: Clothing
     sprite: _Starlight/Clothing/Head/Helmets/ntcc_helmet.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+#  - type: HideLayerClothing # THIS CAUSES YAML LINTER. MAY REQUIRE FIXING CORRESPONDING TO CURRENT SYSTEM. (SEE MOTH WINGS)
+#    layers:
+#      Hair: HEAD
