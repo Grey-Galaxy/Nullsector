@@ -4,7 +4,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
-using Content.Server._NF.Radar;
 using Content.Shared._Goobstation.Vehicles;
 using Content.Shared._Mono.Radar;
 using Content.Shared.Movement.Components;
@@ -33,7 +32,7 @@ public sealed partial class RadarBlipSystem : EntitySystem
         var blips = AssembleBlipsReport((EntityUid)radarUid, radar);
         var hitscans = AssembleHitscanReport((EntityUid)radarUid, radar);
 
-        // Combine the blips and hitscan lines
+        // Combine the blips and hit-scan lines
         var giveEv = new GiveBlipsEvent(blips, hitscans);
         RaiseNetworkEvent(giveEv, args.SenderSession);
     }

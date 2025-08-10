@@ -3,7 +3,6 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
-using Robust.Client.Physics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -34,7 +33,7 @@ public sealed class EyeLerpingSystem : EntitySystem
         SubscribeLocalEvent<LerpingEyeComponent, LocalPlayerDetachedEvent>(OnDetached);
 
         UpdatesAfter.Add(typeof(TransformSystem));
-        UpdatesAfter.Add(typeof(PhysicsSystem));
+        UpdatesAfter.Add(typeof(Robust.Client.Physics.PhysicsSystem));
         UpdatesBefore.Add(typeof(SharedEyeSystem));
         UpdatesOutsidePrediction = true;
     }

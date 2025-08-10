@@ -13,8 +13,8 @@
     duration: 1000
     maxDuration: 1360
     reoccurrenceDelay: 320 # Null Sector
-    requiredJobs:
-      LodgeSupervisor: 1
+    #requiredJobs:
+    #  LodgeSupervisor: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
