@@ -6,7 +6,6 @@
   components:
   - type: Transform
     anchored: true
-    noRot: true
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -27,7 +26,6 @@
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
     state: wall_girder
-    noRot: true
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
