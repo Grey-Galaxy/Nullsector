@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/09/2025 04:06:50
-  entityCount: 523
+  time: 08/10/2025 05:14:17
+  entityCount: 522
 maps: []
 grids:
 - 1
@@ -2388,6 +2388,19 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,-7.5
       parent: 1
+- proto: ShieldGeneratorSmall
+  entities:
+  - uid: 114
+    components:
+    - type: Transform
+      pos: -4.5,0.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
 - proto: SignalButtonDirectional
   entities:
   - uid: 473
