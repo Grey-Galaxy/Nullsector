@@ -1,17 +1,17 @@
+using Content.Client._Corvax.Respawn;
 using Content.Client.Movement.Systems;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Actions;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;
-using Content.Shared.Popups;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
-using Robust.Shared.GameStates;
-using Robust.Shared.Timing;
 using Robust.Shared.Player;
-using Content.Client._Corvax.Respawn; // Frontier
+using Robust.Shared.Timing;
+
+// Frontier
 
 namespace Content.Client.Ghost
 {
@@ -113,7 +113,11 @@ namespace Content.Client.Ghost
             {
                 // enable personal light
                 Popup.PopupEntity(Loc.GetString("ghost-gui-toggle-lighting-manager-popup-personal-light"), args.Performer);
-                _pointLightSystem.SetEnabled(uid, true, light);
+
+                TryComp<PointLightComponent>(args.Performer, out var playerLight);
+                _pointLightSystem.SetEnabled(args.Performer, true, playerLight);
+                _contentEye.RequestToggleLight(uid); // This defaults to full-bright mode, basically meaning personal light no longer functions as normal.
+
             }
             else
             {
