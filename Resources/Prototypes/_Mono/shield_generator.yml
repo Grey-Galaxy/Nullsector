@@ -46,16 +46,7 @@
   - type: LitOnPowered
   - type: PowerSwitch
   - type: Appearance
-    powerUpSound: !type:SoundPathSpecifier
-        path: "/Audio/Effects/teleport_arrival.ogg"
-        params:
-          pitch: 0.5
-    powerDownSound: !type:SoundPathSpecifier
-        path: "/Audio/Effects/teleport_departure.ogg"
-        params:
-          pitch: 0.5
-  
-
+    
 # Small
 - type: entity
   id: ShieldGeneratorSmall
@@ -71,6 +62,14 @@
     damageLimit: 5000
     damageOverloadTimePunishment: 80
     shieldColor: "#3399FF"
+    powerUpSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_arrival.ogg"
+        params:
+          pitch: 0.5
+    powerDownSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_departure.ogg"
+        params:
+          pitch: 0.5
   - type: Sprite
     sprite: _Null/Structures/ShuttleComponents/shield_small.rsi
     snapCardinals: true
@@ -109,6 +108,14 @@
     damageLimit: 10000
     damageOverloadTimePunishment: 100
     shieldColor: "#9933FF"
+    powerUpSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_arrival.ogg"
+        params:
+          pitch: 0.5
+    powerDownSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_departure.ogg"
+        params:
+          pitch: 0.5
   - type: Sprite
     sprite: _Null/Structures/ShuttleComponents/shield_medium.rsi
     snapCardinals: true
@@ -147,6 +154,14 @@
     damageLimit: 25000
     damageOverloadTimePunishment: 120
     shieldColor: "#FF3333"
+    powerUpSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_arrival.ogg"
+        params:
+          pitch: 0.5
+    powerDownSound: !type:SoundPathSpecifier
+        path: "/Audio/Effects/teleport_departure.ogg"
+        params:
+          pitch: 0.5
   - type: Sprite
     sprite: _Null/Structures/ShuttleComponents/shield_large.rsi
     snapCardinals: true
