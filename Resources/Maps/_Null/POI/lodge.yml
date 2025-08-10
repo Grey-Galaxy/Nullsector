@@ -4,7 +4,7 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 05:55:13
+  time: 08/10/2025 06:32:11
   entityCount: 2724
 maps: []
 grids:
@@ -8142,13 +8142,6 @@ entities:
     - type: Transform
       pos: -17.5,17.5
       parent: 1
-- proto: ChairFolding
-  entities:
-  - uid: 894
-    components:
-    - type: Transform
-      pos: -0.5002446,18.557165
-      parent: 1
 - proto: ChairOfficeLight
   entities:
   - uid: 2209
@@ -8312,6 +8305,17 @@ entities:
     components:
     - type: Transform
       pos: -12.5,23.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+- proto: ComputerShipyardBlackMarket
+  entities:
+  - uid: 894
+    components:
+    - type: Transform
+      pos: -0.5,18.5
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
