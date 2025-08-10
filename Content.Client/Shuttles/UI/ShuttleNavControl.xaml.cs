@@ -42,6 +42,7 @@ using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+
 // Frontier
 
 namespace Content.Client.Shuttles.UI;
@@ -264,7 +265,9 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
-        UseCircleMaskShader(handle);
+        // Adds Monolith's Circle Masking on the Radar.
+        // It's handy to know, and is left commented..
+        //UseCircleMaskShader(handle);
 
         base.Draw(handle);
 

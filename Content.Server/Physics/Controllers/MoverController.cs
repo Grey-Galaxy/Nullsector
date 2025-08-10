@@ -1,53 +1,8 @@
-// SPDX-FileCopyrightText: 2019 DamianX
-// SPDX-FileCopyrightText: 2019 Injazz
-// SPDX-FileCopyrightText: 2019 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2019 Silver
-// SPDX-FileCopyrightText: 2019 ZelteHonor
-// SPDX-FileCopyrightText: 2019 moneyl
-// SPDX-FileCopyrightText: 2020 4dplanner
-// SPDX-FileCopyrightText: 2020 ColdAutumnRain
-// SPDX-FileCopyrightText: 2020 FL-OZ
-// SPDX-FileCopyrightText: 2020 Jackson Lewis
-// SPDX-FileCopyrightText: 2020 Memory
-// SPDX-FileCopyrightText: 2020 Metal Gear Sloth
-// SPDX-FileCopyrightText: 2020 Tyler Young
-// SPDX-FileCopyrightText: 2020 Vince
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
-// SPDX-FileCopyrightText: 2020 Ygg01
-// SPDX-FileCopyrightText: 2020 chairbender
-// SPDX-FileCopyrightText: 2020 zumorica
-// SPDX-FileCopyrightText: 2021 DrSmugleaf
-// SPDX-FileCopyrightText: 2021 Galactic Chimp
-// SPDX-FileCopyrightText: 2021 Paul Ritter
-// SPDX-FileCopyrightText: 2021 ShadowCommander
-// SPDX-FileCopyrightText: 2021 Swept
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2021 Visne
-// SPDX-FileCopyrightText: 2021 tmtmtl30
-// SPDX-FileCopyrightText: 2022 Acruid
-// SPDX-FileCopyrightText: 2022 Radrark
-// SPDX-FileCopyrightText: 2022 Rane
-// SPDX-FileCopyrightText: 2022 keronshb
-// SPDX-FileCopyrightText: 2022 metalgearsloth
-// SPDX-FileCopyrightText: 2022 mirrorcult
-// SPDX-FileCopyrightText: 2023 Doru991
-// SPDX-FileCopyrightText: 2023 TemporalOroboros
-// SPDX-FileCopyrightText: 2023 router
-// SPDX-FileCopyrightText: 2024 Errant
-// SPDX-FileCopyrightText: 2024 Ilya246
-// SPDX-FileCopyrightText: 2024 Leon Friedrich
-// SPDX-FileCopyrightText: 2024 Plykiya
-// SPDX-FileCopyrightText: 2024 Tayrtahn
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 checkraze
-// SPDX-FileCopyrightText: 2024 {Koks}
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
+using Content.Shared.Ghost;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Shuttles.Components;
@@ -55,6 +10,7 @@ using Content.Shared.Shuttles.Systems;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
+// Frontier
 using DroneConsoleComponent = Content.Server.Shuttles.DroneConsoleComponent;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
@@ -103,57 +59,47 @@ public sealed class MoverController : SharedMoverController
         return true;
     }
 
+    private HashSet<EntityUid> _moverAdded = new();
+    private List<Entity<InputMoverComponent>> _movers = new();
+
+    private void InsertMover(Entity<InputMoverComponent> source)
+    {
+        if (TryComp(source, out MovementRelayTargetComponent? relay))
+        {
+            if (TryComp(relay.Source, out InputMoverComponent? relayMover))
+            {
+                InsertMover((relay.Source, relayMover));
+            }
+        }
+
+        // Already added
+        if (!_moverAdded.Add(source.Owner))
+            return;
+
+        _movers.Add(source);
+    }
+
     public override void UpdateBeforeSolve(bool prediction, float frameTime)
     {
         base.UpdateBeforeSolve(prediction, frameTime);
 
+        _moverAdded.Clear();
+        _movers.Clear();
         var inputQueryEnumerator = AllEntityQuery<InputMoverComponent>();
 
+        // Need to order mob movement so that movers don't run before their relays.
         while (inputQueryEnumerator.MoveNext(out var uid, out var mover))
         {
-            var physicsUid = uid;
+            if (IsPaused(uid) && !HasComp<GhostComponent>(uid)) // Frontier: Skip processing paused entities. Ghosts are excepted for mapping reasons
+                continue; // Frontier
 
-            // if (RelayQuery.HasComponent(uid)) // Upstream - #34015
-            //     continue; // Upstream - #34015
-
-            if (!XformQuery.TryGetComponent(uid, out var xform))
-            {
-                continue;
-            }
-
-            PhysicsComponent? body;
-            var xformMover = xform;
-
-            if (mover.ToParent && RelayQuery.HasComponent(xform.ParentUid))
-            {
-                if (!PhysicsQuery.TryGetComponent(xform.ParentUid, out body) ||
-                    !XformQuery.TryGetComponent(xform.ParentUid, out xformMover))
-                {
-                    continue;
-                }
-
-                physicsUid = xform.ParentUid;
-            }
-            else if (!PhysicsQuery.TryGetComponent(uid, out body))
-            {
-                continue;
-            }
-
-            HandleMobMovement(uid,
-                mover,
-                physicsUid,
-                body,
-                xformMover,
-                frameTime);
+            InsertMover((uid, mover));
         }
 
-        // Upstream - #34016
-        var movementRelayTargetEnumerator = AllEntityQuery<MovementRelayTargetComponent, InputMoverComponent>();
-        while (movementRelayTargetEnumerator.MoveNext(out var uid, out var relay, out var mover))
+        foreach (var mover in _movers)
         {
-            HandleRelayMovement((uid, relay, mover));
+            HandleMobMovement(mover, frameTime);
         }
-        // End Upstream - #34016
 
         HandleShuttleMovement(frameTime);
     }
@@ -570,7 +516,7 @@ public sealed class MoverController : SharedMoverController
                 var finalForce = Vector2Dot(totalForce, properAccel.Normalized()) * properAccel.Normalized();
 
                 if (localVel.Length() >= maxVelocity.Length() && Vector2.Dot(totalForce, localVel) > 0f)
-                    finalForce = Vector2.Zero; // burn would be faster if used as such
+                    finalForce -= Vector2.Dot(totalForce, localVel.Normalized()) * localVel.Normalized(); // Frontier: instead of setting to zero, subtract the inline component
 
                 if (finalForce.Length() > properAccel.Length())
                     finalForce = properAccel; // don't overshoot

@@ -1,6 +1,6 @@
 using Content.Server._Mono.Radar;
-using Content.Server._NF.Radar;
 using Content.Shared._Goobstation.Vehicles;
+using Content.Shared._Mono.Radar;
 using Content.Shared.Buckle.Components;
 
 // Frontier: migrate under _Goobstation

@@ -6,7 +6,6 @@ using System.Numerics;
 using Content.Client.Resources;
 using Content.Shared._Crescent.ShipShields;
 using Robust.Client.Graphics;
-using Robust.Client.Physics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Enums;
 using Robust.Shared.Physics;
@@ -30,7 +29,7 @@ public sealed class ShipShieldOverlay : Overlay
         _resourceCache = resourceCache;
         _entManager = entityManager;
         _fixture = _entManager.EntitySysManager.GetEntitySystem<FixtureSystem>();
-        _physics = _entManager.EntitySysManager.GetEntitySystem<PhysicsSystem>();
+        _physics = _entManager.EntitySysManager.GetEntitySystem<Robust.Client.Physics.PhysicsSystem>();
 
         _unshadedShader = prototypeManager.Index<ShaderPrototype>("unshaded").Instance();
 

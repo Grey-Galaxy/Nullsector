@@ -6,6 +6,9 @@ namespace Content.Shared.Movement.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class JetpackComponent : Component
 {
+    [DataField, AutoNetworkedField]
+    public EntityUid? JetpackUser;
+
     [ViewVariables(VVAccess.ReadWrite), DataField("moleUsage")]
     public float MoleUsage = 0.012f;
 
@@ -24,4 +27,7 @@ public sealed partial class JetpackComponent : Component
 
     [DataField, AutoNetworkedField] // Frontier: fix for magboot interaction on grids
     public bool AddedCanMoveInAir; // Frontier
+
+    [ViewVariables, DataField, AutoNetworkedField]
+    public bool RadarBlip = true;
 }
