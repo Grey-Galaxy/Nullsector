@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: SenSlime-dev
+# Discord: Sen
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Bossman
+  parent: BaseVessel
+  name: Bossman
+  description: A junker hauler, fixed up enough to withstand the expedition lifestyle
+  price: 21000
+  category: small
+  group: Expedition
+  shuttlePath: /Maps/_Null/Shuttles/Expedition/Bossman.yml
+  guidebookPage: null
+  class:
+  - Expedition
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Bossman
+  mapName: 'Bossman'
+  mapPath: /Maps/_Null/Shuttles/Expedition/Bossman.yml
+  minPlayers: 0
+  stations:
+    Bossman:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Bossman EXP{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
