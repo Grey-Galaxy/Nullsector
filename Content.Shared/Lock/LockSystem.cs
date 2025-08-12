@@ -16,8 +16,8 @@ using Content.Shared.Wires;
 using JetBrains.Annotations;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Utility;
-using Content.Shared.Emag.Components;
-using Robust.Shared.Audio; // Frontier - DEMAG
+
+// Frontier - DEMAG
 
 namespace Content.Shared.Lock;
 
@@ -281,7 +281,7 @@ public sealed class LockSystem : EntitySystem
 
     private void AddToggleLockVerb(EntityUid uid, LockComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!args.CanAccess || !args.CanInteract)
+        if (!args.CanAccess || !args.CanInteract || !args.CanComplexInteract)
             return;
 
         AlternativeVerb verb = new()
