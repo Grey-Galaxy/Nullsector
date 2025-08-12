@@ -3,7 +3,6 @@
   parent: VehicleATV
   id: NFVehicleATV
   name: ATV
-  description: An all-terrain vehicle. It's illegal on some planets.
   components:
   - type: Sprite
     sprite: _NF/Objects/Vehicles/atv.rsi
@@ -63,6 +62,8 @@
     softness: 2
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
+  - type: RandomMetadata
+    descriptionSegments: [DescriptionsATV]
 
 #region skeleton bike
 - type: entity

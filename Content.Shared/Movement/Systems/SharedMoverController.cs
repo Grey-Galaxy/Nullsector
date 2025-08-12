@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using Content.Shared._Goobstation.Vehicles;
 using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
 using Content.Shared.Friction;
@@ -158,7 +159,18 @@ public abstract partial class SharedMoverController : VirtualController
 
             if (relayTargetMover.CanMove != mover.CanMove)
             {
-                relayTargetMover.CanMove = mover.CanMove;
+                // Null Sector Start : This is a hacky fix. After a while of tracing, this was the root of ATVs not being pilot-able.
+                // If the relay entity is a vehicle, has a running engine, and has a driver, then it can move.
+                if (TryComp<VehicleComponent>(relay.RelayEntity, out var vehicleComp) && vehicleComp.EngineRunning && vehicleComp.Driver != null)
+                {
+                    relayTargetMover.CanMove = !mover.CanMove;
+                }
+                else
+                {
+
+                    relayTargetMover.CanMove = mover.CanMove;
+                }
+                // Null Sector End
                 dirtied = true;
             }
 

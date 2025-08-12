@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Atmos.EntitySystems;
 using Content.Server.Atmos.Components;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
@@ -67,6 +67,9 @@ public sealed class RadiationCollectorSystem : EntitySystem
 
     private void OnActivate(EntityUid uid, RadiationCollectorComponent component, ActivateInWorldEvent args)
     {
+        if (!args.Complex)
+            return;
+
         if (TryComp(uid, out UseDelayComponent? useDelay) && !_useDelay.TryResetDelay((uid, useDelay), true))
             return;
 

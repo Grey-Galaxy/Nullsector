@@ -4,7 +4,6 @@ using Content.Shared.Construction;
 using Content.Shared.Destructible;
 using Content.Shared.Foldable;
 using Content.Shared.Storage;
-using Content.Shared.Stunnable;
 using Robust.Shared.Containers;
 
 namespace Content.Shared.Buckle;
@@ -15,8 +14,8 @@ public abstract partial class SharedBuckleSystem
     {
         SubscribeLocalEvent<StrapComponent, ComponentStartup>(OnStrapStartup);
         SubscribeLocalEvent<StrapComponent, ComponentShutdown>(OnStrapShutdown);
-        SubscribeLocalEvent<StrapComponent, ComponentRemove>((e, c, _) => StrapRemoveAll(e, c));
         SubscribeLocalEvent<StrapComponent, EntityTerminatingEvent>(OnStrapTerminating);
+        SubscribeLocalEvent<StrapComponent, ComponentRemove>((e, c, _) => StrapRemoveAll(e, c));
 
         SubscribeLocalEvent<StrapComponent, ContainerGettingInsertedAttemptEvent>(OnStrapContainerGettingInsertedAttempt);
         SubscribeLocalEvent<StrapComponent, DestructionEventArgs>((e, c, _) => StrapRemoveAll(e, c));
@@ -37,13 +36,9 @@ public abstract partial class SharedBuckleSystem
             StrapRemoveAll(uid, component);
     }
 
-    /// <summary>
-    /// Handle the case when a strap entity is being terminated.
-    /// This ensures buckled entities are properly unbuckled before the strap is deleted.
-    /// </summary>
-    private void OnStrapTerminating(EntityUid uid, StrapComponent component, ref EntityTerminatingEvent args)
+    private void OnStrapTerminating(Entity<StrapComponent> entity, ref EntityTerminatingEvent args)
     {
-        StrapRemoveAll(uid, component);
+        StrapRemoveAll(entity, entity.Comp);
     }
 
     private void OnStrapContainerGettingInsertedAttempt(EntityUid uid, StrapComponent component, ContainerGettingInsertedAttemptEvent args)
@@ -66,60 +61,9 @@ public abstract partial class SharedBuckleSystem
     /// </summary>
     private void StrapRemoveAll(EntityUid uid, StrapComponent strapComp)
     {
-        // Making a copy since we'll be modifying the collection while iterating
-        var buckledEntities = strapComp.BuckledEntities.ToArray();
-
-        foreach (var entity in buckledEntities)
+        foreach (var entity in strapComp.BuckledEntities.ToArray())
         {
-            // If this strap is being terminated, we need special handling to ensure
-            // entities are safely moved before it's fully deleted
-            if (Terminating(uid))
-            {
-                if (TryComp<BuckleComponent>(entity, out var buckleComp) &&
-                    buckleComp.BuckledTo == uid &&
-                    !Terminating(entity))
-                {
-                    // Manually set the buckle status without trying to reposition
-                    SetBuckledTo((entity, buckleComp), null);
-
-                    // Manually place the entity next to the strap if possible
-                    var entityXform = Transform(entity);
-                    var strapXform = Transform(uid);
-
-                    if (entityXform.ParentUid == uid)
-                    {
-                        // Try to place the entity nearby if we can
-                        if (strapXform.ParentUid.IsValid() && !Terminating(strapXform.ParentUid))
-                        {
-                            var worldPos = _transform.GetWorldPosition(uid);
-                            _transform.SetWorldPosition(entity, worldPos);
-                            entityXform.AttachParent(strapXform.ParentUid);
-                        }
-
-                        // Reset other states
-                        _rotationVisuals.ResetHorizontalAngle(entity);
-                        Appearance.SetData(entity, BuckleVisuals.Buckled, false);
-
-                        if (HasComp<KnockedDownComponent>(entity) || _mobState.IsIncapacitated(entity))
-                            _standing.Down(entity, playSound: false);
-                        else
-                            _standing.Stand(entity);
-
-                        _joints.RefreshRelay(entity);
-
-                        // Raise events to inform other systems
-                        var buckleEv = new UnbuckledEvent((uid, strapComp), (entity, buckleComp));
-                        RaiseLocalEvent(entity, ref buckleEv);
-
-                        var strapEv = new UnstrappedEvent((uid, strapComp), (entity, buckleComp));
-                        RaiseLocalEvent(uid, ref strapEv);
-                    }
-                }
-            }
-            else
-            {
-                Unbuckle(entity, entity);
-            }
+            Unbuckle(entity, entity);
         }
     }
 

@@ -48,9 +48,9 @@ public sealed class VehicleSystem : SharedVehicleSystem
             VehicleRenderOver renderOver = (VehicleRenderOver)(1 << (int)dir);
 
             if ((vehicle.RenderOver & renderOver) == renderOver)
-                sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.OverMobs;
+                sprite.DrawDepth = (int)Shared.DrawDepth.DrawDepth.OverMobs;
             else
-                sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.Objects;
+                sprite.DrawDepth = (int)Shared.DrawDepth.DrawDepth.Objects;
 
             Vector2 offset = Vector2.Zero;
             if (vehicle.Driver != null)
@@ -78,6 +78,11 @@ public sealed class VehicleSystem : SharedVehicleSystem
                 sprite.Offset = offset;
         }
     }
+
+    // NOOPs
+    protected override void HandleEmag(Entity<VehicleComponent> ent) { }
+
+    protected override void HandleUnemag(Entity<VehicleComponent> ent) { }
 }
 
 public enum VehicleVisualLayers : byte

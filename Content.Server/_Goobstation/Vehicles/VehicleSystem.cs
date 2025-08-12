@@ -2,13 +2,12 @@ using Content.Server._Mono.Radar;
 using Content.Shared._Goobstation.Vehicles;
 using Content.Shared._Mono.Radar;
 using Content.Shared.Buckle.Components;
-
 // Frontier: migrate under _Goobstation
 // Frontier
 
 // Frontier
-    // Frontier: migrate under _Goobstation
-namespace Content.Server._Goobstation.Vehicles;
+
+namespace Content.Server._Goobstation.Vehicles; // Frontier: migrate under _Goobstation
 
 public sealed class VehicleSystem : SharedVehicleSystem
 {
@@ -28,6 +27,17 @@ public sealed class VehicleSystem : SharedVehicleSystem
     {
         RemComp<RadarBlipComponent>(ent);
         base.OnUnstrapped(ent, ref args);
+    }
+
+    protected override void HandleEmag(Entity<VehicleComponent> ent)
+    {
+        RemComp<RadarBlipComponent>(ent);
+    }
+
+    protected override void HandleUnemag(Entity<VehicleComponent> ent)
+    {
+        if (ent.Comp.Driver != null)
+            _radar.SetupVehicleRadarBlip(ent);
     }
     // End Frontier
 }

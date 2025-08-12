@@ -90,7 +90,7 @@ public sealed class MoverController : SharedMoverController
         // Need to order mob movement so that movers don't run before their relays.
         while (inputQueryEnumerator.MoveNext(out var uid, out var mover))
         {
-            if (IsPaused(uid) && !HasComp<GhostComponent>(uid)) // Frontier: Skip processing paused entities. Ghosts are excepted for mapping reasons
+            if (IsPaused(uid) && !HasComp<GhostComponent>(uid)) // Frontier: Skip processing paused entities. Ghosts are given exception for mapping reasons
                 continue; // Frontier
 
             InsertMover((uid, mover));

@@ -1,8 +1,6 @@
 using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
-//using Content.Server.Emp; // Frontier: Upstream - #28984
-using Content.Server.Power.Components;
 using Content.Shared.ActionBlocker;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.Power;
@@ -11,6 +9,7 @@ using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+//using Content.Server.Emp; // Frontier: Upstream - #28984
 
 namespace Content.Server.SurveillanceCamera;
 
@@ -130,7 +129,7 @@ public sealed class SurveillanceCameraSystem : EntitySystem
 
     private void AddVerbs(EntityUid uid, SurveillanceCameraComponent component, GetVerbsEvent<AlternativeVerb> verbs)
     {
-        if (!_actionBlocker.CanInteract(verbs.User, uid))
+        if (!_actionBlocker.CanInteract(verbs.User, uid) || !_actionBlocker.CanComplexInteract(verbs.User))
         {
             return;
         }

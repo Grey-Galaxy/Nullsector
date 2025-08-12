@@ -43,9 +43,10 @@
         length: 1.0
   - type: Clothing
     sprite: Objects/Tanks/Jetpacks/blue.rsi
-    quickEquip: false
+    quickEquip: true
     slots:
-    - Back
+    - back
+    - suitStorage
   - type: GasTank
     outputPressure: 21.3
     air:
@@ -86,13 +87,9 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-  - type: Clothing
-    sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-    # DeltaV modifications - Covered by modifications on parent
-    #slots:
-    #  - Back
-    # End DeltaV modifications
+    sprite: Objects/Tanks/Jetpacks/blue.rsi
+  - type: Clothing # Suit Storage Covered By Parent
+    sprite: Objects/Tanks/Jetpacks/blue.rsi
 
 # Filled blue
 - type: entity
@@ -119,15 +116,11 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: Objects/Tanks/Jetpacks/black.rsi
   - type: Sprite
-    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-  - type: Clothing
-    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-    # DeltaV modifications - Covered by modifications on parent
-    #slots:
-    #  - Back
-    # End DeltaV modifications
+    sprite: Objects/Tanks/Jetpacks/black.rsi
+  - type: Clothing # Suit Storage Covered By Parent
+    sprite: Objects/Tanks/Jetpacks/black.rsi
 
 # Filled black
 - type: entity
@@ -155,12 +148,9 @@
   components:
   - type: Sprite
     sprite: Objects/Tanks/Jetpacks/captain.rsi
-  - type: Clothing
+  - type: Clothing # Suit Storage Covered By Parent
     sprite: Objects/Tanks/Jetpacks/captain.rsi
-    # DeltaV modifications - Covered by modifications on parent
-    #slots:
-    #  - Back
-    # End DeltaV modifications
+
   - type: Item
     sprite: Objects/Tanks/Jetpacks/captain.rsi
     size: Normal
@@ -199,7 +189,7 @@
       sprite: Objects/Tanks/Jetpacks/mini.rsi
     - type: Sprite
       sprite: Objects/Tanks/Jetpacks/mini.rsi
-    - type: Clothing
+    - type: Clothing # Suit Storage Covered By Parent
       sprite: Objects/Tanks/Jetpacks/mini.rsi
       slots:
         - Back
@@ -237,15 +227,12 @@
   suffix: Empty
   components:
   - type: Item
-    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: Objects/Tanks/Jetpacks/security.rsi
   - type: Sprite
-    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-  - type: Clothing
-    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
-    # DeltaV modifications - Covered by modifications on parent
-    #slots:
-    #  - Back
-    # End DeltaV modifications
+    sprite: Objects/Tanks/Jetpacks/security.rsi
+  - type: Clothing # Suit Storage Covered By Parent
+    sprite: Objects/Tanks/Jetpacks/security.rsi
+
 
 #Filled security
 - type: entity
@@ -275,7 +262,7 @@
     sprite: Objects/Tanks/Jetpacks/void.rsi
   - type: Sprite
     sprite: Objects/Tanks/Jetpacks/void.rsi
-  - type: Clothing
+  - type: Clothing # Suit Storage Covered By Parent
     sprite: Objects/Tanks/Jetpacks/void.rsi
     slots:
       - Back
