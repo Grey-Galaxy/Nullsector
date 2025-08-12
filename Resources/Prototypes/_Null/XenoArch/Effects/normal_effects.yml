@@ -1,0 +1,25 @@
+# Effects were Ported to Null Sector from Frontier to Suit New Xeno Archeology UI
+- type: entity
+  id: XenoArtifactBluespaceCrystalSpawn
+  parent: BaseXenoArtifactEffect
+  description: Creates Bluespace Crystals
+  categories: [ HideSpawnMenu ]
+  targetDepth: 4
+  components:
+  - type: XenoArtifactNode
+    maxDurability: 3
+    maxDurabilityCanDecreaseBy:
+      min: 0
+      max: 2
+  - type: XAEApplyComponents
+    applyIfAlreadyHave: true
+    refreshOnReactivate: true
+    components:
+    - type: EntityTableSpawner
+      deleteSpawnerAfterSpawn: false
+      table: !type:GroupSelector
+        children:
+        - id: MaterialBluespace1
+          rolls: !type:ConstantNumberSelector
+            value: 5
+            prob: 0.3
