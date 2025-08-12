@@ -1,4 +1,3 @@
-using Content.Server.Xenoarchaeology.XenoArtifacts;
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
@@ -28,8 +27,8 @@ public sealed partial class NFActivateArtifact : EntityEffect
     {
         if (args is not EntityEffectReagentArgs reagentArgs)
             return;
-        var artifact = args.EntityManager.EntitySysManager.GetEntitySystem<ArtifactSystem>();
-        artifact.NFActivateArtifact(reagentArgs.TargetEntity, ProbabilityBase, ProbabilityBonusOffStationGrid, Range);
+        //var artifact = args.EntityManager.EntitySysManager.GetEntitySystem<XenoArtifactSystem>();
+        //artifact.TryActivateXenoArtifact(reagentArgs.TargetEntity, ProbabilityBase, ProbabilityBonusOffStationGrid, Range);
     }
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys) =>

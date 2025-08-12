@@ -1,22 +1,27 @@
-using Content.Server.Entry;
+using Content.Server.Examine;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Power.Components;
-using Content.Server.Power.EntitySystems;
 using Content.Server.Radio;
-using Content.Server.Station.Components;
-using Content.Server.SurveillanceCamera;
+using Content.Shared._NF.Emp.Components;
 using Content.Shared.Emp;
 using Content.Shared.Examine;
-using Content.Shared.Tiles; // Frontier
+using Content.Shared.Tiles;
+using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
+using Robust.Server.GameStates;
+using Robust.Shared;
+using Robust.Shared.Configuration;
 using Robust.Shared.Map;
-using Content.Shared._NF.Emp.Components; // Frontier
-using Robust.Server.GameStates; // Frontier: EMP Blast PVS
-using Robust.Shared.Configuration; // Frontier: EMP Blast PVS
-using Robust.Shared; // Frontier: EMP Blast PVS
-using Content.Shared.Verbs; // Frontier: examine verb
-using Robust.Shared.Utility; // Frontier: examine verb
-using Content.Server.Examine; // Frontier: examine verb
+using Robust.Shared.Utility;
+// Frontier
+// Frontier
+// Frontier: EMP Blast PVS
+// Frontier: EMP Blast PVS
+// Frontier: EMP Blast PVS
+// Frontier: examine verb
+// Frontier: examine verb
+
+// Frontier: examine verb
 
 namespace Content.Server.Emp;
 
@@ -75,6 +80,22 @@ public sealed class EmpSystem : SharedEmpSystem
             _pvs.AddGlobalOverride(empBlast); // Frontier
 
         Dirty(empBlast, empBlastComp); // Frontier
+    }
+
+    /// <summary>
+    ///   Triggers an EMP pulse at the given location, by first raising an <see cref="EmpAttemptEvent"/>, then a raising <see cref="EmpPulseEvent"/> on all entities in range.
+    /// </summary>
+    /// <param name="coordinates">The location to trigger the EMP pulse at.</param>
+    /// <param name="range">The range of the EMP pulse.</param>
+    /// <param name="energyConsumption">The amount of energy consumed by the EMP pulse.</param>
+    /// <param name="duration">The duration of the EMP effects.</param>
+    public void EmpPulse(EntityCoordinates coordinates, float range, float energyConsumption, float duration)
+    {
+        foreach (var uid in _lookup.GetEntitiesInRange(coordinates, range))
+        {
+            TryEmpEffects(uid, energyConsumption, duration);
+        }
+        Spawn(EmpPulseEffectPrototype, coordinates);
     }
 
     /// <summary>

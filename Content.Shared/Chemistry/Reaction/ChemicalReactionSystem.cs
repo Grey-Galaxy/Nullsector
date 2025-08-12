@@ -1,3 +1,5 @@
+using System.Collections.Frozen;
+using System.Linq;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
@@ -7,14 +9,16 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using System.Collections.Frozen;
-using System.Linq;
-
 
 namespace Content.Shared.Chemistry.Reaction
 {
     public sealed class ChemicalReactionSystem : EntitySystem
     {
+        /// <summary>
+        /// Foam reaction protoId.
+        /// </summary>
+        public static readonly ProtoId<ReactionPrototype> FoamReaction = "Foam";
+
         /// <summary>
         ///     The maximum number of reactions that may occur when a solution is changed.
         /// </summary>
