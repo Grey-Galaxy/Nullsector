@@ -8,8 +8,10 @@
     sprite: _Null/Objects/Specific/Chapel/arialial_dominion.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/arialial_dominion.rsi
-
-
+  - type: Tag
+    tags:
+    - BibleArialialDominion
+  
 - type: entity
   parent: Bible
   suffix: armadan restorationism
@@ -20,7 +22,10 @@
     sprite: _Null/Objects/Specific/Chapel/armadan_restorationists.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/armadan_restorationists.rsi
-
+  - type: Tag
+    tags:
+    - BibleArmadanRestorationists
+    
 - type: entity
   parent: Bible
   suffix: huemac's cult
@@ -31,6 +36,9 @@
     sprite: _Null/Objects/Specific/Chapel/chaos_cult_hc.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/chaos_cult_hc.rsi
+  - type: Tag
+    tags:
+    - BibleChaosCultHC
 
 - type: entity
   parent: Bible
@@ -42,6 +50,9 @@
     sprite: _Null/Objects/Specific/Chapel/chaos_cult_hr.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/chaos_cult_hr.rsi
+  - type: Tag
+    tags:
+    - BibleChaosCultHR
 
 - type: entity
   parent: Bible
@@ -53,7 +64,10 @@
     sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
-
+  - type: Tag
+    tags:
+    - BibleFollowersOfCirci
+    
 - type: entity
   parent: Bible
   suffix: new circibonic
@@ -64,3 +78,6 @@
     sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
   - type: Item
     sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
+  - type: Tag
+    tags:
+    - BibleNewCircibonic

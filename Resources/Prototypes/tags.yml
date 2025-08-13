@@ -1466,6 +1466,21 @@
   id: CartridgeShell
 
 # Null Sector
+- type: Tag # Blank Handy Flag (For Flags & Banners Crafting)
+  id: BlankHandyFlag
+- type: Tag # Religious Texts (For Flags & Banners Crafting)
+  id: BibleArialialDominion
+- type: Tag
+  id: BibleArmadanRestorationists
+- type: Tag
+  id: BibleChaosCultHC
+- type: Tag
+  id: BibleChaosCultHR
+- type: Tag
+  id: BibleFollowersOfCirci
+- type: Tag
+  id: BibleNewCircibonic
+
 - type: Tag # For blueprints to be possibly universal.
   id: BlueprintLatheBasic
 

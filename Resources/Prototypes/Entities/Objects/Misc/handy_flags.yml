@@ -9,6 +9,12 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+  - type: Construction
+    graph: HandheldFlag
+    node: blankflag
+  - type: Tag
+    tags:
+    - BlankHandyFlag
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall

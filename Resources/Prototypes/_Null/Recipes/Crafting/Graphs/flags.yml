@@ -1,0 +1,136 @@
+- type: constructionGraph
+  id: HandheldFlag
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: blankflag
+          steps:
+            - material: Cloth
+              amount: 5
+              doAfter: 1
+            - material: MetalRod
+              amount: 1
+              doAfter: 1
+        - to: flag_handy_restorationist
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleArmadanRestorationists
+              name: a butchered armadan code
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/armadan_restorationists.rsi
+                state: icon
+              doAfter: 1
+        - to: flag_handy_arialial_dominion
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleArialialDominion
+              name: a tome of maglubiyet
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/arialial_dominion.rsi
+                state: icon
+              doAfter: 1
+        - to: flag_handy_huemac_cult
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleChaosCultHC
+              name: an accursed text of Huemac
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/chaos_cult_hc.rsi
+                state: icon
+              doAfter: 1
+        - to: flag_handy_headmaster_cult
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleChaosCultHR
+              name: confusing chaos tenets
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/chaos_cult_hr.rsi
+                state: icon
+              doAfter: 1
+        - to: flag_handy_circiabon
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleFollowersOfCirci
+              name: antiquated worship of circi
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
+                state: icon
+              doAfter: 1
+        - to: flag_handy_circibon
+          steps:
+            - tag: BlankHandyFlag
+              name: a blank flag
+              icon:
+                sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+                state: icon
+              doAfter: 1
+            - tag: BibleNewCircibonic
+              name: robotic doctrines
+              icon:
+                sprite: _Null/Objects/Specific/Chapel/followers_of_circi.rsi
+                state: icon
+              doAfter: 1
+        
+        
+    - node: blankflag
+      entity: BlankHandyFlag
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 5
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Slicing
+              doAfter: 1
+    
+    # Maglubiyet Worshippers
+    - node: flag_handy_arialial_dominion
+      entity: FlagArialialDominion
+      
+    # Armadan Restorationist
+    - node: flag_handy_restorationist
+      entity: FlagArmadanRestorationists
+
+    # Huemac Cultist
+    - node: flag_handy_huemac_cult
+      entity: FlagChaosCultHC
+      
+    # Headmaster Cultist
+    - node: flag_handy_headmaster_cult
+      entity: FlagChaosCultHR
+      
+    # Circiabon Cultist
+    - node: flag_handy_circiabon
+      entity: FlagFollowersOfCirci
+    
+    # Circibon
+    - node: flag_handy_circibon
+      entity: FlagNewCircibonic

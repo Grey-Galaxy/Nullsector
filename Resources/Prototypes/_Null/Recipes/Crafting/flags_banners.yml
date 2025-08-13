@@ -1,0 +1,91 @@
+# For the Icon in The Crafting Menu!
+- type: construction
+  name: flag (blank)
+  id: blankflag
+  graph: HandheldFlag
+  startNode: start
+  targetNode: blankflag
+  category: construction-category-misc
+  description: A white-blank handheld flag... I surrender!
+  icon:
+    sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+    state: icon
+  objectType: Item
+  
+- type: construction
+  name: flag (restorationist)
+  id: flag_handy_restorationist
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_restorationist
+  category: construction-category-misc
+  description: For those who think the things just aren't totalitarian enough.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/armadan_restorationists.rsi
+    state: icon
+  objectType: Item
+
+- type: construction
+  name: flag (maglubiyet)
+  id: flag_handy_arialial_dominion
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_arialial_dominion
+  category: construction-category-misc
+  description: For the goblinic worshippers of the dead god, Maglubiyet.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/arialial_dominion.rsi
+    state: icon
+  objectType: Item
+
+- type: construction
+  name: flag (huemac)
+  id: flag_handy_huemac_cult
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_huemac_cult
+  category: construction-category-misc
+  description: For those with a bit of inane greed and chaos in their lives.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/huemac.rsi
+    state: icon
+  objectType: Item
+  
+- type: construction
+  name: flag (headmaster)
+  id: flag_handy_headmaster_cult
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_headmaster_cult
+  category: construction-category-misc
+  description: For the followers of frequent self-contradiction.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/headmaster.rsi
+    state: icon
+  objectType: Item
+  
+- type: construction
+  name: flag (circiabon)
+  id: flag_handy_circiabon
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_circiabon
+  category: construction-category-misc
+  description: Perhaps one day The Great Machine will return.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
+    state: icon
+  objectType: Item
+  
+- type: construction
+  name: flag (circibon)
+  id: flag_handy_circibon
+  graph: HandheldFlag
+  startNode: start
+  targetNode: flag_handy_circibon
+  category: construction-category-misc
+  description: The Great Machine is gone, machines and knowledge remains.
+  icon:
+    sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
+    state: icon
+  objectType: Item
