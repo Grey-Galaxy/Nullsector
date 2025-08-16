@@ -1,6 +1,7 @@
 analysis-console-menu-title = Broad-Spectrum Artifact Analysis Console
 analysis-console-server-list-button = Server
 analysis-console-extract-button = Extract points
+analysis-console-points-total = [font="Monospace" size=11]Total Current Points:[/font]
 
 analysis-console-info-no-scanner = No analyzer connected! Please connect one using a multitool.
 analysis-console-info-no-artifact = No artifact present! Place one on the pad to view node information.
