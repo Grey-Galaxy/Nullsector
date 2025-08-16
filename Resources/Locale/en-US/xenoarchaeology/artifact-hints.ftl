@@ -25,8 +25,8 @@ artifact-effect-hint-visual = Visual distortions
 # the triggers should be more obvious than the effects
 # gives people an idea of what to do: don't be too specific (i.e. no "welders")
 
-artifact-trigger-hint-electricity = Electricity
-artifact-trigger-hint-heat = High temperatures
+artifact-trigger-hint-electricity = Electric Pulse
+artifact-trigger-hint-heat = Elevated Thermal Energy
 artifact-trigger-hint-physical = Physical trauma
 artifact-trigger-hint-tool = Tool usage
 artifact-trigger-hint-music = Sonic vibrations
@@ -46,27 +46,27 @@ xenoarch-trigger-tip-music = Harmonical sound vibrations
 xenoarch-trigger-tip-heat = High temperature gas
 xenoarch-trigger-tip-cold = Low temperature gas
 xenoarch-trigger-tip-no-oxygen = Oxygen-free environment
-xenoarch-trigger-tip-water = Water
-xenoarch-trigger-tip-co2 = Carbon dioxide
-xenoarch-trigger-tip-plasma = Non-solid plasma
-xenoarch-trigger-tip-tritium = Tritium
-xenoarch-trigger-tip-ammonia = Ammonia
-xenoarch-trigger-tip-n2o = Nitrous oxide
+xenoarch-trigger-tip-water = H₂O Coating
+xenoarch-trigger-tip-co2 = CO₂ Gas
+xenoarch-trigger-tip-plasma = Ionized Plamsic Fluid
+xenoarch-trigger-tip-tritium = Radioactive hydrogen gas
+xenoarch-trigger-tip-ammonia = NH₃ Gas
+xenoarch-trigger-tip-n2o = N₂O Gas
 xenoarch-trigger-tip-frezon = Frezon
 xenoarch-trigger-tip-radiation = Radiation
 xenoarch-trigger-tip-brute-damage = Physical damage
 xenoarch-trigger-tip-interaction = Physical interaction
 xenoarch-trigger-tip-wrenching = Tightening
-xenoarch-trigger-tip-prying = Prying
-xenoarch-trigger-tip-screwing = Screwing
+xenoarch-trigger-tip-prying = Lever-Based force application
+xenoarch-trigger-tip-screwing = Rotational fastener insertion
 xenoarch-trigger-tip-pulsing = Pulsing
 xenoarch-trigger-tip-pressure-low = Low pressure
 xenoarch-trigger-tip-pressure-high = High pressure
-xenoarch-trigger-tip-examine = Close inspection
+xenoarch-trigger-tip-examine = Detailed Examination
 xenoarch-trigger-tip-timer = Regular self-activation
-xenoarch-trigger-tip-blood = Blood
-xenoarch-trigger-tip-throw = Being thrown
-xenoarch-trigger-tip-death = Death
+xenoarch-trigger-tip-blood = Hemal fluid
+xenoarch-trigger-tip-throw = Propelled displacement
+xenoarch-trigger-tip-death = Biological cessation
 xenoarch-trigger-tip-magnet = Magnetic waves
 
 ### Description hints
