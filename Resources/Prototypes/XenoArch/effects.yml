@@ -518,6 +518,7 @@
   id: XenoArtifactEffectLightFlicker
   parent: BaseXenoArtifactEffect
   description: Minor electromagnetic interference
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAELightFlicker
 
@@ -553,6 +554,7 @@
   id: XenoArtifactFloraSpawn
   parent: BaseXenoArtifactEffect
   description: Produces flora
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEApplyComponents
     applyIfAlreadyHave: true
@@ -605,6 +607,7 @@
   id: XenoArtifactThrowThingsAround
   parent: BaseXenoArtifactEffect
   description: Minor implosion
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEThrowThingsAround
 
@@ -630,6 +633,7 @@
   id: XenoArtifactFoamMild
   parent: BaseXenoArtifactEffect
   description: Produces chemical foam # todo: separate in 1 for each chemical for description? actually sounds like a very good idea
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEFoam
     replaceDescription: true
@@ -671,6 +675,7 @@
   id: XenoArtifactMonkeySpawn
   parent: BaseXenoArtifactEffect
   description: Creates primate
+  categories: [ HideSpawnMenu ]
   components:
   - type: XenoArtifactNode
     maxDurability: 3
@@ -708,6 +713,7 @@
   id: XenoArtifactChargeBattery
   parent: BaseXenoArtifactEffect
   description: Charges up batteries
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEChargeBattery
   - type: XAETelepathic
@@ -718,6 +724,7 @@
   id: XenoArtifactKnock
   parent: BaseXenoArtifactEffect
   description: Mild electromagnetic interference
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEKnock
   - type: XAELightFlicker
@@ -726,6 +733,7 @@
   id: XenoArtifactMagnet
   parent: BaseOneTimeXenoArtifactEffect
   description: Create small gravity well
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEApplyComponents
     applyIfAlreadyHave: true
@@ -755,6 +763,7 @@
   id: XenoArtifactStealth
   parent: BaseOneTimeXenoArtifactEffect
   description: Create light interference
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEApplyComponents
     components:
@@ -895,6 +904,7 @@
   id: XenoArtifactAngryCarpSpawn
   parent: BaseXenoArtifactEffect
   description: Create hostile fish
+  categories: [ HideSpawnMenu ]
   components:
   - type: XenoArtifactNode
     maxDurability: 3
@@ -1133,6 +1143,7 @@
   id: XenoArtifactTeleport
   parent: BaseXenoArtifactEffect
   description: Teleportation
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAERandomTeleportInvoker
 
@@ -1270,6 +1281,7 @@
   id: XenoArtifactShuffle
   parent: BaseXenoArtifactEffect
   description: Switch places of sentient beings #not ALL beings, but oh well...
+  categories: [ HideSpawnMenu ]
   components:
   - type: XAEShuffle
   - type: XAETelepathic
