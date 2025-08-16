@@ -1,4 +1,4 @@
-analysis-console-menu-title = Broad-Spectrum Mark 3 Analysis Console
+analysis-console-menu-title = Broad-Spectrum Artifact Analysis Console
 analysis-console-server-list-button = Server
 analysis-console-extract-button = Extract points
 
