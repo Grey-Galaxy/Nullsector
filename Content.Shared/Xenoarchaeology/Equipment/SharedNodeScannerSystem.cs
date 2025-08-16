@@ -80,7 +80,7 @@ public abstract class SharedNodeScannerSystem : EntitySystem
         ArtifactState artifactState;
         if (unlockingEnt.Comp == null)
         {
-            triggeredNodeNames = new HashSet<string>();
+            triggeredNodeNames = [];
             var timeToUnlockAvailable = artifactComponent.NextUnlockTime - _timing.CurTime;
             if (timeToUnlockAvailable > TimeSpan.Zero)
             {
