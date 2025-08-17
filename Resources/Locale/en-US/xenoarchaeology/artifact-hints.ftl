@@ -1,5 +1,8 @@
-# you shouldn't be creating new hints for every effect/trigger
-# try and reuse them so that a hint isn't a dead giveaway. -emo
+# Null Sector
+artifact-effect-unknown = Unknown Effect
+
+# One shouldn't be creating new hints for every effect/trigger. Try to reuse them so that a hint isn't a dead giveaway.
+# -Emo
 
 artifact-effect-hint-mental = Cerebral influence
 artifact-effect-hint-environment = Environmental disruption
@@ -22,8 +25,8 @@ artifact-effect-hint-polymorph = Transmogrificational activity
 artifact-effect-hint-magnet = Magnetic waves
 artifact-effect-hint-visual = Visual distortions
 
-# the triggers should be more obvious than the effects
-# gives people an idea of what to do: don't be too specific (i.e. no "welders")
+# The triggers should be more obvious than the effects.
+# It gives people an idea of what to do: don't be too specific (i.e. no "welders")
 
 artifact-trigger-hint-electricity = Electric Pulse
 artifact-trigger-hint-heat = Elevated Thermal Energy
