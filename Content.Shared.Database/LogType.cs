@@ -474,11 +474,19 @@ public enum LogType
     /// </summary>
     BountyContractRemoved = 206,
     /// <summary>
+    /// Logs related to botany, such as planting and harvesting crops
+    /// </summary>
+    Botany = 100,
+    /// <summary>
+    /// Artifact node got activated.
+    /// </summary>
+    ArtifactNode = 101,
+    /// <summary>
     /// Shuttle info was changed.
     /// </summary>
     ShuttleInfoChanged = 208,
     /// <summary>
     /// Damaging grid collision has occurred.
     /// </summary>
-    ShuttleImpact = 102
+    ShuttleImpact = 102,
 }

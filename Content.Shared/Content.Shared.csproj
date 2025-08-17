@@ -24,6 +24,12 @@
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Xenoarchaeology\Equipment\ArtifactCrusherComponent.cs" />
+    <Compile Remove="Xenoarchaeology\Equipment\SharedArtifactAnalyzer.cs" />
+    <Compile Remove="Xenoarchaeology\XenoArtifacts\ArtifactEffectPrototype.cs" />
+    <Compile Remove="Xenoarchaeology\XenoArtifacts\ArtifactTriggerPrototype.cs" />
+  </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
 </Project>

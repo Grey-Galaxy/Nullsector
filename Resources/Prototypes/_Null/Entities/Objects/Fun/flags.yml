@@ -9,6 +9,9 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/arialial_dominion.rsi
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_arialial_dominion
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -21,6 +24,9 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/armadan_restorationists.rsi
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_restorationist
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -33,7 +39,10 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/huemac.rsi
-
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_huemac_cult
+    
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
   id: FlagChaosCultHR
@@ -45,7 +54,10 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/headmaster.rsi
-
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_headmaster_cult
+  
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
   id: FlagFollowersOfCirci
@@ -57,6 +69,9 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_circiabon
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall]
@@ -69,4 +84,6 @@
     state: icon
   - type: Item
     sprite: _Null/Objects/Fun/Flags/followers_of_circi.rsi
-
+  - type: Construction
+    graph: HandheldFlag
+    node: flag_handy_circibon

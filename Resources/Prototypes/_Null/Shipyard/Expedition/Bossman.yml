@@ -9,7 +9,7 @@
   parent: BaseVessel
   name: Bossman
   description: A junker hauler, fixed up enough to withstand the expedition lifestyle
-  price: 21000
+  price: 30000
   category: small
   group: Expedition
   shuttlePath: /Maps/_Null/Shuttles/Expedition/Bossman.yml
@@ -35,6 +35,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
+            Contractor: [ 1, 1 ]
             Pilot: [ 0, 0 ]
             Mercenary: [ 0, 0 ]

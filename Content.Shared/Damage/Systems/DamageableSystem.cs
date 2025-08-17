@@ -1,4 +1,6 @@
 using System.Linq;
+using Content.Shared._Shitmed.Targeting;
+using Content.Shared.Body.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry;
 using Content.Shared.Damage.Prototypes;
@@ -13,12 +15,9 @@ using Robust.Shared.Configuration;
 using Robust.Shared.GameStates;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
-
-// Shitmed Change
-using Content.Shared.Body.Systems;
-using Content.Shared._Shitmed.Targeting;
 using Robust.Shared.Random;
+using Robust.Shared.Utility;
+// Shitmed Change
 
 namespace Content.Shared.Damage
 {
@@ -359,7 +358,7 @@ namespace Content.Shared.Damage
                 damage.DamageDict.Add(typeId, damageValue);
             }
 
-            TryChangeDamage(uid, damage, interruptsDoAfters: false);
+            TryChangeDamage(uid, damage, interruptsDoAfters: false, origin: args.Origin);
         }
 
         private void OnRejuvenate(EntityUid uid, DamageableComponent component, RejuvenateEvent args)

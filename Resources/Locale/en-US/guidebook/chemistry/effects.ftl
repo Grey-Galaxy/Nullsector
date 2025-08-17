@@ -105,9 +105,9 @@ reagent-effect-guidebook-status-effect =
 
 reagent-effect-guidebook-activate-artifact =
     { $chance ->
-        [1] Attempts
-        *[other] attempt
-    } to activate an artifact
+    [1] Attempts
+    *[other] attempt
+            } to activate an artifact
 
 reagent-effect-guidebook-set-solution-temperature-effect =
     { $chance ->
