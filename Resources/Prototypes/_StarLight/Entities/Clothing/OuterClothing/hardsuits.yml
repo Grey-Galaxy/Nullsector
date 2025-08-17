@@ -86,7 +86,6 @@
           Caustic: 0.75
           Heat: 0.75
           Radiation: 0.75
-      staminaModifier: 0.9
     - type: ExplosionResistance
       damageCoefficient: 0.75
     - type: ToggleableClothing
@@ -139,7 +138,6 @@
         Heat: 0.35
         Radiation: 0.1
         Caustic: 0.4
-    staminaModifier: 1
   - type: ClothingSpeedModifier
     walkModifier: 0.90
     sprintModifier: 0.90
