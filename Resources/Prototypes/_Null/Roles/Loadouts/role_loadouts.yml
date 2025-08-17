@@ -3,6 +3,7 @@
   id: JobSectorCoordinator
   groups:
   - StationRepHead
+  - StationRepEars
   - StationRepNeck
   - StationRepJumpsuit
   - StationRepGloves
@@ -12,7 +13,6 @@
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
-  - StationRepEars
   - ContractorBoxSurvival
   - StationRepPDA
   - ContractorWallet
@@ -28,11 +28,12 @@
   id: JobMilitiaCoordinator
   groups:
   - HeadofSecurityHead
+  - StationRepEars
   - HeadofSecurityNeck
   - MilitiaCoordinatorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
-  - HeadofSecurityOuterClothing
+  - LodgeOuterClothing
   - SecurityShoes
   - Trinkets
   - SecurityStar
@@ -45,11 +46,12 @@
   id: JobLodgeSupervisor
   groups:
   - HeadofSecurityHead
-  - HeadofSecurityNeck
-  - MilitiaCoordinatorJumpsuitGroup
+  - StationRepEars
+  - LodgeSupervisorNeckGroup
+  - LodgeSupervisorJumpsuitGroup
   - SecurityBackpack
   - SecurityBelt
-  - HeadofSecurityOuterClothing
+  - LodgeOuterClothing
   - SecurityShoes
   - Trinkets
   - SecurityStar
