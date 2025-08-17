@@ -50,10 +50,9 @@ public abstract partial class SharedXenoArtifactSystem
         if (artiComp.Suppressed)
             return false;
 
-        if (!HasUnlockedPredecessor((artifact.Value, artiComp), ent)
-            // unlocked final nodes should not listen for unlocking
-            || (!ent.Comp.Locked && GetSuccessorNodes((artifact.Value, artiComp), (ent.Owner, ent.Comp)).Count == 0)
-            )
+        var hasNotUnlockedPredecessor = !HasUnlockedPredecessor((artifact.Value, artiComp), ent);
+        // unlocked final nodes should not listen for unlocking
+        if (hasNotUnlockedPredecessor || !ent.Comp.Locked && GetSuccessorNodes((artifact.Value, artiComp), (ent.Owner, ent.Comp)).Count == 0)
             return false;
 
         return true;

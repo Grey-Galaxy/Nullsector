@@ -22,6 +22,15 @@ public sealed partial class XenoArtifactSystem : SharedXenoArtifactSystem
             GenerateArtifactStructure(ent);
     }
 
+    /// <summary>
+    /// Calculates the price of an artifact based on how many nodes have been unlocked and triggered.
+    /// </summary>
+    /// <remarks>
+    /// General balancing (for fully unlocked artifacts):<br/>
+    /// Simple (1-2 Nodes): 1-2K<br/>
+    /// Medium (5-8 Nodes): 6-7K<br/>
+    /// Complex (7-12 Nodes): 10-11K<br/>
+    /// </remarks>
     private void OnCalculatePrice(Entity<XenoArtifactComponent> ent, ref PriceCalculationEvent args)
     {
         foreach (var node in GetAllNodes(ent))

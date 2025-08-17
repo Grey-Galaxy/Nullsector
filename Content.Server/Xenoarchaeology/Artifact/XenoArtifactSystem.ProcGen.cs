@@ -79,55 +79,55 @@ public sealed partial class XenoArtifactSystem
         var segments = GetSegmentsFromNodes(ent, populatedNodes).ToList();
 
         // We didn't connect all of our nodes: do extra work to make sure there's a connection.
-        if (segments.Count > 1)
+        if (segments.Count <= 1)
+            return; // Short-Circuit if all notes are connected just fine.
+
+        var parent = segments.MaxBy(s => s.Count)!;
+        var minP = parent.Min(n => n.Comp.Depth);
+        var maxP = parent.Max(n => n.Comp.Depth);
+
+        segments.Remove(parent);
+        foreach (var segment in segments)
         {
-            var parent = segments.MaxBy(s => s.Count)!;
-            var minP = parent.Min(n => n.Comp.Depth);
-            var maxP = parent.Max(n => n.Comp.Depth);
+            // calculate the range of the depth of the nodes in the segment
+            var minS = segment.Min(n => n.Comp.Depth);
+            var maxS = segment.Max(n => n.Comp.Depth);
 
-            segments.Remove(parent);
-            foreach (var segment in segments)
+            // Figure out the range of depths that allows for a connection between these two.
+            // The range is essentially the lower values + 1 on each side.
+            var min = Math.Max(minS, minP) - 1;
+            var max = Math.Min(maxS, maxP) + 1;
+
+            // How did this happen? Nobody knows! No parent is assigned.
+            if (min > max || min == max)
+                continue; // If the impossible is achieved, short-circuit.
+
+            var node1Options = segment.Where(n => n.Comp.Depth >= min && n.Comp.Depth <= max)
+                .ToList();
+            if (node1Options.Count == 0)
             {
-                // calculate the range of the depth of the nodes in the segment
-                var minS = segment.Min(n => n.Comp.Depth);
-                var maxS = segment.Max(n => n.Comp.Depth);
+                continue;
+            }
 
-                // Figure out the range of depths that allows for a connection between these two.
-                // The range is essentially the lower values + 1 on each side.
-                var min = Math.Max(minS, minP) - 1;
-                var max = Math.Min(maxS, maxP) + 1;
+            var node1 = RobustRandom.Pick(node1Options);
+            var node1Depth = node1.Comp.Depth;
 
-                // how the fuck did you do this? you don't even deserve to get a parent. fuck you.
-                if (min > max || min == max)
-                    continue;
+            var node2Options = parent.Where(n => n.Comp.Depth >= node1Depth - 1 && n.Comp.Depth <= node1Depth + 1 && n.Comp.Depth != node1Depth)
+                .ToList();
+            if (node2Options.Count == 0)
+            {
+                continue;
+            }
 
-                var node1Options = segment.Where(n => n.Comp.Depth >= min && n.Comp.Depth <= max)
-                                          .ToList();
-                if (node1Options.Count == 0)
-                {
-                    continue;
-                }
+            var node2 = RobustRandom.Pick(node2Options);
 
-                var node1 = RobustRandom.Pick(node1Options);
-                var node1Depth = node1.Comp.Depth;
-
-                var node2Options = parent.Where(n => n.Comp.Depth >= node1Depth - 1 && n.Comp.Depth <= node1Depth + 1 && n.Comp.Depth != node1Depth)
-                                         .ToList();
-                if (node2Options.Count == 0)
-                {
-                    continue;
-                }
-
-                var node2 = RobustRandom.Pick(node2Options);
-
-                if (node1.Comp.Depth < node2.Comp.Depth)
-                {
-                    AddEdge((ent, ent.Comp), node1, node2, false);
-                }
-                else
-                {
-                    AddEdge((ent, ent.Comp), node2, node1, false);
-                }
+            if (node1.Comp.Depth < node2.Comp.Depth)
+            {
+                AddEdge((ent, ent.Comp), node1, node2, false);
+            }
+            else
+            {
+                AddEdge((ent, ent.Comp), node2, node1, false);
             }
         }
     }

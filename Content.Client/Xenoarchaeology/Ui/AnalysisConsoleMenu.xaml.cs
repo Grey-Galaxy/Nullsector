@@ -93,16 +93,34 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
         NodeViewContainer.Visible = false;
 
         _extractionSum = 0;
-        var extractionMessage = new FormattedMessage();
+        var countAndFormattedMessage = GetSummary(artifact.Value);
 
-        var nodes = _xenoArtifact.GetAllNodes(artifact.Value);
+        _hideExtractInfoIn = _timing.CurTime + ExtractInfoDisplayForDuration;
+
+        ExtractionResearchLabel.SetMessage(countAndFormattedMessage.Item2);
+
+        ExtractionSumLabel.SetMarkup(Loc.GetString("analysis-console-extract-sum", ("value", _extractionSum)));
+
+        _audio.PlayGlobal(_owner.Comp.ScanFinishedSound, _owner, AudioParams.Default.WithVolume(1f));
+        OnExtractButtonPressed?.Invoke();
+    }
+
+    /// <summary>
+    /// Returns the sum total of points in an Analysis console in a message.
+    /// </summary>
+    private (int, FormattedMessage) GetSummary(Entity<XenoArtifactComponent> artifact)
+    {
+        var extractionMessage = new FormattedMessage();
+        var nodes = _xenoArtifact.GetAllNodes(artifact);
 
         var count = 0;
+        var sumPointValue = 0;
         foreach (var node in nodes)
         {
             var pointValue = _xenoArtifact.GetResearchValue(node);
             if (pointValue <= 0)
                 continue;
+            sumPointValue += pointValue;
 
             count++;
 
@@ -116,14 +134,7 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
         if (count == 0)
             extractionMessage.AddMarkupOrThrow(Loc.GetString("analysis-console-extract-none"));
 
-        _hideExtractInfoIn = _timing.CurTime + ExtractInfoDisplayForDuration;
-
-        ExtractionResearchLabel.SetMessage(extractionMessage);
-
-        ExtractionSumLabel.SetMarkup(Loc.GetString("analysis-console-extract-sum", ("value", _extractionSum)));
-
-        _audio.PlayGlobal(_owner.Comp.ScanFinishedSound, _owner, AudioParams.Default.WithVolume(1f));
-        OnExtractButtonPressed?.Invoke();
+        return (sumPointValue, extractionMessage);
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
@@ -140,26 +151,33 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
 
     public void Update(Entity<AnalysisConsoleComponent> ent)
     {
-        _artifactAnalyzer.TryGetArtifactFromConsole(ent, out var arti);
-        ArtifactView.SetEntity(arti);
-        GraphControl.SetArtifact(arti);
+        _artifactAnalyzer.TryGetArtifactFromConsole(ent, out var artifact);
+        ArtifactView.SetEntity(artifact);
+        GraphControl.SetArtifact(artifact);
 
-        ExtractButton.Disabled = arti == null;
+        var isArtifactNull = artifact == null;
+        ExtractButton.Disabled = isArtifactNull;
+        TotalPointsLabel.Visible = !isArtifactNull;
+        NoneSelectedLabel.Visible = !isArtifactNull;
 
-        if (arti == null)
-            NoneSelectedLabel.Visible = false;
+        // Null Sector Refactor
+        if (!isArtifactNull)
+        {
+            var summation = GetSummary(artifact!.Value);
+            TotalPointsLabel.Text = Loc.GetString("analysis-console-extract-sum", ("value", summation.Item1));
+        }
 
         NoArtiLabel.Visible = true;
         if (!_artifactAnalyzer.TryGetAnalyzer(ent, out _))
             NoArtiLabel.Text = Loc.GetString("analysis-console-info-no-scanner");
-        else if (arti == null)
+        else if (isArtifactNull)
             NoArtiLabel.Text = Loc.GetString("analysis-console-info-no-artifact");
         else
             NoArtiLabel.Visible = false;
 
         if (_currentNode == null
-            || arti == null
-            || !_xenoArtifact.TryGetIndex((arti.Value, arti.Value), _currentNode.Value, out _))
+            || artifact == null
+            || !_xenoArtifact.TryGetIndex((artifact.Value, artifact.Value), _currentNode.Value, out _))
         {
             SetSelectedNode(null);
         }
@@ -193,7 +211,7 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
         {
             >= 0.75f => Color.Lime,
             >= 0.50f => Color.Yellow,
-            _ => Color.Red
+            _ => Color.Red,
         };
         DurabilityValueLabel.SetMarkup(Loc.GetString("analysis-console-info-durability-value",
             ("color", color),
@@ -202,9 +220,15 @@ public sealed partial class AnalysisConsoleMenu : FancyWindow
 
         var hasInfo = _xenoArtifact.HasUnlockedPredecessor(artifact.Value, node.Value);
 
-        EffectValueLabel.SetMarkup(Loc.GetString("analysis-console-info-effect-value",
-            ("state", hasInfo),
-            ("info", _ent.GetComponentOrNull<MetaDataComponent>(node.Value)?.EntityDescription ?? string.Empty)));
+        // Null Sector - If the node hasn't been unlocked, don't display its effects. Else, do so.
+        if (!node.Value.Comp.Locked)
+        {
+            EffectValueLabel.SetMarkup(Loc.GetString("analysis-console-info-effect-value",
+                ("state", hasInfo),
+                ("info", _ent.GetComponentOrNull<MetaDataComponent>(node.Value)?.EntityDescription ?? string.Empty)));
+        }
+        else // Hide the effects, since we don't know what they are yet.
+            EffectValueLabel.SetMarkup(Loc.GetString("artifact-effect-unknown"));
 
         var predecessorNodes = _xenoArtifact.GetPredecessorNodes(artifact.Value.Owner, node.Value);
         if (!hasInfo)
