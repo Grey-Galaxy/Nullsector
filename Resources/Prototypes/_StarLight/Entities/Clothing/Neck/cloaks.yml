@@ -1,0 +1,77 @@
+- type: entity
+  parent:  [ClothingNeckBase]
+  id: ClothingNeckCloakHosElite
+  name: elite security's cloak
+  description: An elite security cloak crafted for a true paladin.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/hos_elite.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 2000
+
+
+- type: entity
+  parent:  [ClothingNeckBase]
+  id: ClothingNeckCloakRdElite
+  name: elite research cloak
+  description: Research cloak that ensure you stand out. Make sure to tell everyone you invented it.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/rd_elite.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 2000
+
+
+- type: entity
+  parent: [ ClothingNeckBase]
+  id: ClothingNeckCloakBlueElite
+  name: Elite Blue Officer's cloak
+  description: An elite Blue cloak!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/bso_elite.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 2000
+
+
+- type: entity
+  parent: [ ClothingNeckBase]
+  id: ClothingNeckCloakGoldBlack
+  name: Gold cloak
+  description: A cloak embroidered in gold speaks for itself.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/centcom_officer_black.rsi
+
+- type: entity
+  parent: [ ClothingNeckBase]
+  id: ClothingNeckCloakGreen
+  name: green cloak
+  description: A stylish cloak, with great green color.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/admiral.rsi
+
+- type: entity
+  parent: [ ClothingNeckBase]
+  id: ClothingNeckCloakBlue
+  name: blue cloak
+  description: A stylish cloak, with great blue color.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/admiral_blue.rsi
+
+- type: entity
+  parent: [ ClothingNeckBase]
+  id: ClothingNeckCloakRed
+  name: green cloak
+  description: A stylish cloak, with great red color.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Neck/Cloaks/admiral_red.rsi

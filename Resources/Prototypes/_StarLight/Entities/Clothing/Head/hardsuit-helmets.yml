@@ -1,0 +1,126 @@
+#BSO Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitBlue
+  categories: [ HideSpawnMenu ]
+  name: blues hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hardsuits/blueshield.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hardsuits/blueshield.rsi
+  - type: PointLight
+    color: "#adeeff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitRep
+  categories: [ HideSpawnMenu ]
+  name: Stylish hardsuit helmet
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hardsuits/ntrep.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hardsuits/ntrep.rsi
+  - type: PointLight
+    color: "#adeeff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 10000
+
+
+#Mercenary Hardsuit
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitAdvanceMercenary
+  name: mercenary hardsuit helmet
+  components:
+    - type: Sprite
+      sprite: _Starlight/Clothing/Head/Hardsuits/mercenary.rsi
+    - type: Clothing
+      sprite: _Starlight/Clothing/Head/Hardsuits/mercenary.rsi
+    - type: PressureProtection
+      highPressureMultiplier: 0.45
+      lowPressureMultiplier: 10000
+    - type: Armor
+      modifiers:
+        coefficients:
+          Blunt: 0.9
+          Slash: 0.9
+          Piercing: 0.9
+          Heat: 0.9
+
+- type: entity
+  parent: [ClothingHeadHelmetHardsuitSyndie ]
+  id: ClothingHeadHelmetHardsuitConsortium
+  name: consortium hardsuit helmet
+  description: A protective hardsuit helmet Consotrium Officers.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hardsuits/ntcc_hardsuit_helmet.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hardsuits/ntcc_hardsuit_helmet.rsi
+  - type: PointLight
+    color: "#addbff"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# USSP
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase]
+  id: ClothingHeadHelmetHardsuitSovietMarine
+  name: SSF marine hardsuit helmet
+  description: From the soviet dieselpunk world.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Helmets/sovietmarine_helmet.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Helmets/sovietmarine_helmet.rsi
+  - type: ToggleableVisuals
+    clothingVisuals:
+      head:
+      - state: on-equipped-HELMET-unshaded
+        shader: unshaded
+      head-vox:
+      - state: on-equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-resomi:
+      - state: on-equipped-HELMET-unshaded-resomi
+        shader: unshaded
+      head-felionoid:
+      - state: on-equipped-HELMET-unshaded-felionoid
+        shader: unshaded
+      head-vulpkanin:
+      - state: on-equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+  - type: PointLight
+    color: green
+    radius: 6
+    energy: 5
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
