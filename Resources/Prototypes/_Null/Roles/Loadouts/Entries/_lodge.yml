@@ -1,0 +1,30 @@
+# PDA
+- type: loadout
+  id: LodgePDAEntry
+  equipment:
+    id: SheriffPDA
+    
+# Outer Clothing / Coats
+- type: loadout
+  id: LodgeClothingOuterCoatNfsdLongCoat
+  price: 3000
+  equipment:
+    outerClothing: ClothingOuterCoatNfsdLongCoat
+
+- type: loadout
+  id: LodgeClothingOuterCoatNfsdBomber
+  price: 3000
+  equipment:
+    outerClothing: ClothingOuterCoatNfsdBomber
+
+- type: loadout
+  id: LodgeClothingOuterCoatNfsdFormal
+  price: 3000
+  equipment:
+    outerClothing: ClothingOuterCoatNfsdFormal
+
+- type: loadout
+  id: LodgeClothingOuterCoatJacketBiker
+  price: 3000
+  equipment:
+    outerClothing: ClothingOuterCoatJacketBiker

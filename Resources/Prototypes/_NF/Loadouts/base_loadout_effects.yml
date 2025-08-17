@@ -5,7 +5,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 0
+      time: 0 # mono
 
 # Tier 2 generic playtime. 30 hours, 5 full shifts.
 - type: loadoutEffectGroup
@@ -14,7 +14,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 0
+      time: 0 # mono
 
 # Tier 3 generic playtime. 50 hours, 8+ full shifts. Premium toy rewards.
 - type: loadoutEffectGroup
@@ -23,5 +23,5 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:OverallPlaytimeRequirement
-      time: 0
+      time: 0 # mono
 

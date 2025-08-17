@@ -1,0 +1,41 @@
+# 20 Hour MilitiaCoordinator Time Requirement
+- type: loadoutEffectGroup
+  id: LSHourRequirement
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLodgeSupervisor
+      time: 72000 #20 hrs
+
+# Jumpsuits / Jumpskirts
+- type: loadout
+  id: LSMilitaryJumpsuitPurpleEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryColorPurple
+
+- type: loadout
+  id: LSJumpsuitPurpleEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPurple
+
+- type: loadout
+  id: LSJumpskirtPurpleEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorPurple
+
+- type: loadout
+  id: LSJumpsuitCasualPurpleEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCasualPurple
+
+- type: loadout
+  id: LSJumpskirtCasualPurpleEntry
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCasualPurple
+
+# Neck
+- type: loadout
+  id: LSPurpleScarfEntry
+  equipment:
+    neck: ClothingNeckScarfStripedPurple 

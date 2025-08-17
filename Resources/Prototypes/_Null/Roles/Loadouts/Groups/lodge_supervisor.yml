@@ -1,0 +1,27 @@
+# PDA
+- type: loadoutGroup
+  id: LodgeSupervisorPDA
+  name: loadout-group-contractor-pda    # Name is not important
+  hidden: true                          # No point in showing this, it gets auto-selected.
+  loadouts:
+  - LodgePDAEntry
+  fallbacks:
+  - LodgePDAEntry
+  
+# Jumpsuit
+- type: loadoutGroup
+  id: LodgeSupervisorJumpsuitGroup
+  name: loadout-group-ls-jumpsuit
+  loadouts:
+  - LSMilitaryJumpsuitPurpleEntry
+  - LSJumpsuitPurpleEntry
+  - LSJumpskirtPurpleEntry
+  - LSJumpsuitCasualPurpleEntry
+  - LSJumpskirtCasualPurpleEntry
+
+# Neck
+- type: loadoutGroup
+  id: LodgeSupervisorNeckGroup
+  name: loadout-group-ls-neck
+  loadouts:
+  - LSPurpleScarfEntry

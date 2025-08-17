@@ -562,3 +562,14 @@ WeaponSubMachineGunVectorRubber: null
 SellOnlyMothershipComputer: null # Mono
 
 # Frontier: put Frontier-related migrations in nf_migration.yml. Thank you.
+
+# 2025-05-02
+CigPackMixedNasty: CigPackMixed
+CigPackMixedMedical: CigPackMixed
+CigaretteIpecac: CigaretteNutriment
+CigarettePax: CigaretteSaline
+CigaretteTHC: CigaretteRobustHarvest
+CigaretteMuteToxin: CigaretteSodiumPolyacrylate
+CigaretteSpaceDrugs: CigaretteLipolicide
+CigaretteMilk: CigaretteHaloperidol
+CigaretteBread: CigaretteBbqSauce

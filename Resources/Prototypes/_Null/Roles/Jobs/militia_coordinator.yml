@@ -43,3 +43,6 @@
     - MagazinePistolRubber
     #- BaseSecurityUplinkRadioOfficer # Militia coordinator not given base uplink. May make custom one later.
     - RubberStampMilitiaCoordinator
+    - EncryptionKeySecurity
+    - EncryptionKeyCommand
+    - EncryptionKeyMedical
