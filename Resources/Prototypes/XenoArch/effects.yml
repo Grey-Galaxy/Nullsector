@@ -571,7 +571,7 @@
   parent: BaseXenoArtifactEffect
   description: Produces puddle of chemical mixture # todo: make description say what exact chemical is produced, maybe add mixes into possible chemicals
   categories: [ HideSpawnMenu ]
-  omponents:
+  components:
   - type: XAECreatePuddle
     chemAmount:
       min: 1

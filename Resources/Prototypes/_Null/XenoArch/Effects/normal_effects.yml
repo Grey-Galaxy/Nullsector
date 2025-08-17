@@ -4,7 +4,6 @@
   parent: BaseXenoArtifactEffect
   description: Creates Bluespace Crystals
   categories: [ HideSpawnMenu ]
-  targetDepth: 4
   components:
   - type: XenoArtifactNode
     maxDurability: 3
