@@ -1,6 +1,11 @@
+# Musical
 - files: ["meme_barbaree.ogg"]
   license: "CC-BY-SA-3.0"
   copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
   source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
 
-
+# Player-Character Callouts
+- files: ["player_phaeton_uranium.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
