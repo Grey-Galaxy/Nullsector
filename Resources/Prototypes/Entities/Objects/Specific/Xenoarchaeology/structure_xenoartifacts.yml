@@ -20,7 +20,7 @@
       map: [ "enum.ArtifactsVisualLayers.ActivationEffect" ]
       visible: false
   - type: RandomArtifactSprite
-    maxSprite: 36
+    maxSprite: 37
   - type: RandomSprite
     available:
     - enum.ArtifactsVisualLayers.UnlockingEffect:
