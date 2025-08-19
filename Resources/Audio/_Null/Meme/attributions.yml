@@ -14,3 +14,19 @@
   license: "CC-BY-SA-3.0"
   copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
   source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+# Random Callouts
+- files: ["callout_small_vessels.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["callout_mesothelioma.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
+
+- files: ["callout_space_trash.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Created by LukeZurg22 using ElevenLabs & Audio Editing (It was convenient, don't lynch me.)"
+  source: "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
