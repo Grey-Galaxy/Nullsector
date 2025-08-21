@@ -33,6 +33,9 @@
     Medical:
       stationProto: RecordsFrontierOutpost
       components:
+        - type: StationTransit
+          routes:
+            MinorPointsOfInterest: 80
         - type: StationNameSetup
           mapNameTemplate: 'Kemak Station'
         - type: ExtraStationInformation
