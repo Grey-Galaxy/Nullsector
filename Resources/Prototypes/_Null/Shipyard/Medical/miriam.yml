@@ -5,7 +5,7 @@
 - type: vessel
   id: Miriam
   parent: BaseVessel
-  name: Miriam
+  name: UCE Miriam
   description: A fully supported cryogenics laboratory with a unique dual-hull design.
   price: 41070
   category: Medium
@@ -19,7 +19,7 @@
 
 - type: gameMap
   id: Miriam
-  mapName: 'Miriam'
+  mapName: 'UCE Miriam'
   mapPath: /Maps/_Null/Shuttles/Medical/miriam.yml
   minPlayers: 0
   stations:
