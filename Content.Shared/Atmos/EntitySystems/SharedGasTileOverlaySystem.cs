@@ -13,6 +13,10 @@ namespace Content.Shared.Atmos.EntitySystems
         protected bool PvsEnabled;
 
         [Dependency] protected readonly IPrototypeManager ProtoMan = default!;
+        private const float TempAtMinHeatDistortion = 325.0f;
+        private const float TempAtMaxHeatDistortion = 1000.0f;
+        private const float HeatDistortionSlope = 1.0f / (TempAtMaxHeatDistortion - TempAtMinHeatDistortion);
+        private const float HeatDistortionIntercept = -TempAtMinHeatDistortion * HeatDistortionSlope;
 
         /// <summary>
         ///     array of the ids of all visible gases.
@@ -55,8 +59,9 @@ namespace Content.Shared.Atmos.EntitySystems
                     data[index] = chunk;
             }
 
-            args.State = new GasTileOverlayDeltaState(data, new(component.Chunks.Keys));
+            args.State = new GasTileOverlayDeltaState(data, [..component.Chunks.Keys]);
         }
+
 
         public static Vector2i GetGasChunkIndices(Vector2i indices)
         {
@@ -72,14 +77,18 @@ namespace Content.Shared.Atmos.EntitySystems
             [ViewVariables]
             public readonly byte[] Opacity;
 
+            [ViewVariables]
+            public readonly float Temperature;
+
             // TODO change fire color based on temps
-            // But also: dont dirty on a 0.01 kelvin change in temperatures.
+            // But also: don't dirty on a 0.01 kelvin change in temperatures.
             // Either have a temp tolerance, or map temperature -> byte levels
 
-            public GasOverlayData(byte fireState, byte[] opacity)
+            public GasOverlayData(byte fireState, byte[] opacity, float temperature)
             {
                 FireState = fireState;
                 Opacity = opacity;
+                Temperature = temperature;
             }
 
             public bool Equals(GasOverlayData other)
@@ -99,8 +108,22 @@ namespace Content.Shared.Atmos.EntitySystems
                     }
                 }
 
+                if (!MathHelper.CloseToPercent(Temperature, other.Temperature))
+                    return false;
+
                 return true;
             }
+        }
+
+        /// <summary>
+        /// Calculate the heat distortion from a temperature.
+        /// Returns 0.0f below TempAtMinHeatDistortion and 1.0f above TempAtMaxHeatDistortion.
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <returns></returns>
+        public static float GetHeatDistortionStrength(float temp)
+        {
+            return MathHelper.Clamp01(temp * HeatDistortionSlope + HeatDistortionIntercept);
         }
 
         [Serializable, NetSerializable]

@@ -1,6 +1,4 @@
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Content.Server.Atmos.Components;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
@@ -40,6 +38,7 @@ namespace Content.Server.Atmos.EntitySystems
         /// Per-tick cache of sessions.
         /// </summary>
         private readonly List<ICommonSession> _sessions = new();
+
         private UpdatePlayerJob _updateJob;
 
         private readonly Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> _lastSentChunks = new();
@@ -47,10 +46,13 @@ namespace Content.Server.Atmos.EntitySystems
         // Oh look its more duplicated decal system code!
         private ObjectPool<HashSet<Vector2i>> _chunkIndexPool =
             new DefaultObjectPool<HashSet<Vector2i>>(
-                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(), 64);
+                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(),
+                64);
+
         private ObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>> _chunkViewerPool =
             new DefaultObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>>(
-                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(), 64);
+                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(),
+                64);
 
         private bool _doSessionUpdate;
 
@@ -61,6 +63,12 @@ namespace Content.Server.Atmos.EntitySystems
 
         private int _thresholds;
         private EntityQuery<GasTileOverlayComponent> _query;
+
+        /// <summary>
+        /// How much the distortion strength should change for the temperature of a tile to be dirtied.
+        /// The strength goes from 0.0f to 1.0f, so 0.05f gives it essentially 20 "steps"
+        /// </summary>
+        private const float HeatDistortionStrengthChangeTolerance = 0.05f;
 
         public override void Initialize()
         {
@@ -118,6 +126,7 @@ namespace Content.Server.Atmos.EntitySystems
                     set.Clear();
                     _chunkIndexPool.Return(set);
                 }
+
                 lastSent.Clear();
             }
 
@@ -162,15 +171,18 @@ namespace Content.Server.Atmos.EntitySystems
 
         private byte GetOpacity(float moles, float molesVisible, float molesVisibleMax)
         {
-            return (byte) (ContentHelpers.RoundToLevels(
+            return (byte)(ContentHelpers.RoundToLevels(
                 MathHelper.Clamp01((moles - molesVisible) /
-                                   (molesVisibleMax - molesVisible)) * 255, byte.MaxValue,
+                                   (molesVisibleMax - molesVisible)) * 255,
+                byte.MaxValue,
                 _thresholds) * 255 / (_thresholds - 1));
         }
 
         public GasOverlayData GetOverlayData(GasMixture? mixture)
         {
-            var data = new GasOverlayData(0, new byte[VisibleGasId.Length]);
+            var data = new GasOverlayData(0,
+                new byte[VisibleGasId.Length],
+                mixture?.Temperature ?? Atmospherics.T20C);
 
             for (var i = 0; i < VisibleGasId.Length; i++)
             {
@@ -184,9 +196,10 @@ namespace Content.Server.Atmos.EntitySystems
                     continue;
                 }
 
-                opacity = (byte) (ContentHelpers.RoundToLevels(
+                opacity = (byte)(ContentHelpers.RoundToLevels(
                     MathHelper.Clamp01((moles - gas.GasMolesVisible) /
-                                       (gas.GasMolesVisibleMax - gas.GasMolesVisible)) * 255, byte.MaxValue,
+                                       (gas.GasMolesVisibleMax - gas.GasMolesVisible)) * 255,
+                    byte.MaxValue,
                     _thresholds) * 255 / (_thresholds - 1));
             }
 
@@ -210,18 +223,20 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             var changed = false;
+            var temp = tile.Hotspot.Valid ? tile.Hotspot.Temperature : tile.Air?.Temperature ?? Atmospherics.TCMB;
             if (oldData.Equals(default))
             {
                 changed = true;
-                oldData = new GasOverlayData(tile.Hotspot.State, new byte[VisibleGasId.Length]);
+                oldData = new GasOverlayData(tile.Hotspot.State, new byte[VisibleGasId.Length], temp);
             }
-            else if (oldData.FireState != tile.Hotspot.State)
+            else if (oldData.FireState != tile.Hotspot.State ||
+                     CheckTemperatureTolerance(oldData.Temperature, temp, HeatDistortionStrengthChangeTolerance))
             {
                 changed = true;
-                oldData = new GasOverlayData(tile.Hotspot.State, oldData.Opacity);
+                oldData = new GasOverlayData(tile.Hotspot.State, oldData.Opacity, temp);
             }
 
-            if (tile is {Air: not null, NoGridTile: false})
+            if (tile is { Air: not null, NoGridTile: false })
             {
                 for (var i = 0; i < VisibleGasId.Length; i++)
                 {
@@ -264,6 +279,20 @@ namespace Content.Server.Atmos.EntitySystems
 
             chunk.LastUpdate = _gameTiming.CurTick;
             return true;
+        }
+
+        /// <summary>
+        /// This function determines whether the change in temperature is significant enough to warrant dirtying the tile data.
+        /// </summary>
+        private static bool CheckTemperatureTolerance(float tempA, float tempB, float tolerance)
+        {
+            var (strengthA, strengthB) = (GetHeatDistortionStrength(tempA), GetHeatDistortionStrength(tempB));
+
+            return (strengthA <= 0f && strengthB > 0f) || // change to or from 0
+                   (strengthB <= 0f && strengthA > 0f) ||
+                   (strengthA >= 1f && strengthB < 1f) || // change to or from 1
+                   (strengthB >= 1f && strengthA < 1f) ||
+                   Math.Abs(strengthA - strengthB) > tolerance; // other change within tolerance
         }
 
         private void UpdateOverlayData()
@@ -378,7 +407,8 @@ namespace Content.Server.Atmos.EntitySystems
             public void Execute(int index)
             {
                 var playerSession = Sessions[index];
-                var chunksInRange = ChunkingSys.GetChunksForSession(playerSession, ChunkSize, ChunkIndexPool, ChunkViewerPool);
+                var chunksInRange =
+                    ChunkingSys.GetChunksForSession(playerSession, ChunkSize, ChunkIndexPool, ChunkViewerPool);
                 var previouslySent = LastSentChunks[playerSession];
 
                 var ev = new GasOverlayUpdateEvent();
@@ -419,7 +449,8 @@ namespace Content.Server.Atmos.EntitySystems
                 foreach (var (netGrid, gridChunks) in chunksInRange)
                 {
                     // Not all grids have atmospheres.
-                    if (!EntManager.TryGetEntity(netGrid, out var grid) || !EntManager.TryGetComponent(grid, out GasTileOverlayComponent? overlay))
+                    if (!EntManager.TryGetEntity(netGrid, out var grid) ||
+                        !EntManager.TryGetComponent(grid, out GasTileOverlayComponent? overlay))
                         continue;
 
                     List<GasOverlayChunk> dataToSend = new();
