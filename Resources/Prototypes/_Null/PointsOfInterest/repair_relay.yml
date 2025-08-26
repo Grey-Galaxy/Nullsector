@@ -32,6 +32,9 @@
     EventRepairRelay:
       stationProto: StandardFrontierStation
       components:
+        - type: StationTransit
+          routes:
+            MinorPointsOfInterest: 55
         - type: StationNameSetup
           mapNameTemplate: 'Lark Repair Orbital'
         - type: ExtraStationInformation

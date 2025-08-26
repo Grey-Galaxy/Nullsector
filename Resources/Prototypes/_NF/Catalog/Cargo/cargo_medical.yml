@@ -22,24 +22,24 @@
 - type: cargoProduct
   id: CargoBarrelCarbon
   name: barrel of carbon
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/black.rsi
     state: icon
   product: ChemicalBarrelCarbon
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelIodine
   name: barrel of iodine
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/red.rsi
     state: icon
   product: ChemicalBarrelIodine
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -51,7 +51,7 @@
     sprite: _NF/Objects/Storage/Barrels/blue.rsi
     state: icon
   product: ChemicalBarrelFluorine
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -63,7 +63,7 @@
     sprite: _NF/Objects/Storage/Barrels/green.rsi
     state: icon
   product: ChemicalBarrelChlorine
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -75,7 +75,7 @@
     sprite: _NF/Objects/Storage/Barrels/white.rsi
     state: icon
   product: ChemicalBarrelAluminium
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -87,19 +87,19 @@
     sprite: _NF/Objects/Storage/Barrels/red.rsi
     state: icon
   product: ChemicalBarrelPhosphorus
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelSulfur
   name: barrel of sulfur
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/yellow.rsi
     state: icon
   product: ChemicalBarrelSulfur
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -111,7 +111,7 @@
     sprite: _NF/Objects/Storage/Barrels/black.rsi
     state: icon
   product: ChemicalBarrelSilicon
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -123,7 +123,7 @@
     sprite: _NF/Objects/Storage/Barrels/white.rsi
     state: icon
   product: ChemicalBarrelHydrogen
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -135,7 +135,7 @@
     sprite: _NF/Objects/Storage/Barrels/grey.rsi
     state: icon
   product: ChemicalBarrelLithium
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -147,7 +147,7 @@
     sprite: _NF/Objects/Storage/Barrels/grey.rsi
     state: icon
   product: ChemicalBarrelSodium
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -159,7 +159,7 @@
     sprite: _NF/Objects/Storage/Barrels/yellow.rsi
     state: icon
   product: ChemicalBarrelPotassium
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -171,7 +171,7 @@
     sprite: _NF/Objects/Storage/Barrels/green.rsi
     state: icon
   product: ChemicalBarrelRadium
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -183,7 +183,7 @@
     sprite: _NF/Objects/Storage/Barrels/grey.rsi
     state: icon
   product: ChemicalBarrelIron
-  cost: 5000
+#  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -195,19 +195,19 @@
     sprite: _NF/Objects/Storage/Barrels/red.rsi
     state: icon
   product: ChemicalBarrelCopper
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelGold
   name: barrel of gold
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/yellow.rsi
     state: icon
   product: ChemicalBarrelGold
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -219,19 +219,19 @@
     sprite: _NF/Objects/Storage/Barrels/grey.rsi
     state: icon
   product: ChemicalBarrelMercury
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelSilver
   name: barrel of silver
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/white.rsi
     state: icon
   product: ChemicalBarrelSilver
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -243,19 +243,19 @@
     sprite: _NF/Objects/Storage/Barrels/blue.rsi
     state: icon
   product: ChemicalBarrelEthanol
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelSugar
   name: barrel of sugar
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/white.rsi
     state: icon
   product: ChemicalBarrelSugar
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
@@ -267,42 +267,42 @@
     sprite: _NF/Objects/Storage/Barrels/red.rsi
     state: icon
   product: ChemicalBarrelNitrogen
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelOxygen
   name: barrel of oxygen
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/blue.rsi
     state: icon
   product: ChemicalBarrelOxygen
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelOil
   name: barrel of oil
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/black.rsi
     state: icon
   product: ChemicalBarrelOil
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CargoBarrelDiethylamine
   name: barrel of diethylamine
-  abstract: true
+#  abstract: true
   icon:
     sprite: _NF/Objects/Storage/Barrels/green.rsi
     state: icon
   product: ChemicalBarrelDiethylamine
-  cost: 5000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
