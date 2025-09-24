@@ -139,7 +139,6 @@
   - type: GunRequiresWield
   - type: Wieldable
   - type: MeleeRequiresWield
-    fumbleOnAttempt: true
   - type: StaticPrice
     price: 135
 
