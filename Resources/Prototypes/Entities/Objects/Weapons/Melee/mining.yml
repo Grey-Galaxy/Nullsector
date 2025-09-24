@@ -109,7 +109,7 @@
     tags:
     - Pickaxe
   - type: Sprite
-    sprite: Objects/Weapons/Melee/crusher.rsi
+    sprite: Objects/Weapons/Crusher/crusher.rsi
     state: icon
   - type: AmmoCounter
   - type: UseDelayOnShoot
@@ -150,7 +150,7 @@
   - type: GunRequiresWield
   - type: Item
     size: Ginormous
-    sprite: Objects/Weapons/Melee/crusher-inhands.rsi
+    sprite: Objects/Weapons/Crusher/crusher-inhands.rsi
   - type: DisarmMalus
   - type: Prying
   - type: Clothing # Frontier
@@ -166,7 +166,7 @@
   description: A scaled down version of a proto-kinetic crusher. Uses kinetic energy to vibrate the blade at high speeds.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Melee/crusher_dagger.rsi
+    sprite: Objects/Weapons/Crusher/crusher_dagger.rsi
     state: icon
   - type: MeleeWeapon
     autoAttack: true
@@ -196,7 +196,7 @@
   description: An early design of the proto-kinetic accelerator, in glaive form.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Melee/crusher_glaive.rsi
+    sprite: Objects/Weapons/Crusher/crusher_glaive.rsi
   - type: UseDelay
     delay: 1.9
   - type: LeechOnMarker
@@ -209,4 +209,4 @@
     - Pickaxe
   - type: Item
     size: Ginormous
-    sprite: Objects/Weapons/Melee/crusher_glaive-inhands.rsi
+    sprite: Objects/Weapons/Crusher/crusher_glaive-inhands.rsi

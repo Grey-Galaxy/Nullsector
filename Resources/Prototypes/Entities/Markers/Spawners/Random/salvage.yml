@@ -48,7 +48,7 @@
     - type: Sprite
       layers:
         - state: red
-        - sprite: Objects/Weapons/Melee/crusher.rsi
+        - sprite: Objects/Weapons/Crusher/crusher.rsi
           state: icon
     - type: RandomSpawner
       prototypes:

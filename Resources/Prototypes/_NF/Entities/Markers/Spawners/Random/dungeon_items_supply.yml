@@ -41,7 +41,7 @@
     layers:
       - state: green
         scale: 0.7, 0.7
-      - sprite: Objects/Weapons/Melee/crusher_dagger.rsi
+      - sprite: Objects/Weapons/Crusher/crusher_dagger.rsi
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark
