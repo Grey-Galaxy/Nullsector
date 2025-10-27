@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/27/2025 22:46:18
-  entityCount: 6438
+  time: 10/27/2025 22:56:01
+  entityCount: 6444
 maps: []
 grids:
 - 1
@@ -2311,13 +2311,13 @@ entities:
           16,2:
             1: 56785
           16,-1:
-            1: 65281
+            1: 65409
           17,0:
             1: 31
           17,2:
             1: 4080
           17,-1:
-            1: 65280
+            1: 65395
           17,1:
             1: 2176
           18,0:
@@ -2376,9 +2376,11 @@ entities:
           16,-3:
             1: 61439
           16,-2:
-            1: 4368
+            1: 39312
           17,-3:
             1: 16383
+          17,-2:
+            1: 30576
           18,-3:
             1: 4095
           18,-4:
@@ -3294,7 +3296,7 @@ entities:
       pos: 65.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1263.3083
+      secondsUntilStateChange: -1388.9711
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7324,6 +7326,36 @@ entities:
     components:
     - type: Transform
       pos: 26.5,0.5
+      parent: 1
+  - uid: 6439
+    components:
+    - type: Transform
+      pos: 68.5,-1.5
+      parent: 1
+  - uid: 6440
+    components:
+    - type: Transform
+      pos: 68.5,-2.5
+      parent: 1
+  - uid: 6441
+    components:
+    - type: Transform
+      pos: 68.5,-3.5
+      parent: 1
+  - uid: 6442
+    components:
+    - type: Transform
+      pos: 68.5,-4.5
+      parent: 1
+  - uid: 6443
+    components:
+    - type: Transform
+      pos: 68.5,-5.5
+      parent: 1
+  - uid: 6444
+    components:
+    - type: Transform
+      pos: 69.5,-5.5
       parent: 1
 - proto: CableHV
   entities:
