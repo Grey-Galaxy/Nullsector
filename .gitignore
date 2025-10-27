@@ -6,6 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.lnk
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -307,6 +308,3 @@ Resources/MapImages
 
 # Direnv stuff
 .direnv/
-
-# Link Files
-*.lnk
