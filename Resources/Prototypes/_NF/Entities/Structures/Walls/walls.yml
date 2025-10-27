@@ -90,6 +90,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceBluespace
@@ -113,6 +114,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceCoal
@@ -137,6 +139,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceDiamond
@@ -160,6 +163,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceGold
@@ -183,6 +187,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceTin
@@ -206,6 +211,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIcePlasma
@@ -229,6 +235,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceQuartz
@@ -252,6 +259,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceSalt
@@ -275,6 +283,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceSilver
@@ -298,6 +307,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceUranium
@@ -321,6 +331,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallIceArtifactFragment
@@ -344,6 +355,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion Cobblebrick Ores
 
 # region Cobblebrick Mobs
@@ -551,6 +563,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickBluespace
@@ -574,6 +587,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickCoal
@@ -598,6 +612,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickDiamond
@@ -621,6 +636,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickGold
@@ -644,6 +660,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickTin
@@ -667,6 +684,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickPlasma
@@ -690,6 +708,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickQuartz
@@ -713,6 +732,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickSalt
@@ -736,6 +756,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickSilver
@@ -759,6 +780,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickUranium
@@ -782,6 +804,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallCobblebrickArtifactFragment
@@ -805,6 +828,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion Ice Ores
 
 # region Ice Mobs
@@ -1012,6 +1036,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneBluespace
@@ -1035,6 +1060,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneCoal
@@ -1059,6 +1085,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneDiamond
@@ -1082,6 +1109,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneGold
@@ -1105,6 +1133,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneTin
@@ -1128,6 +1157,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstonePlasma
@@ -1151,6 +1181,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneQuartz
@@ -1174,6 +1205,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneSalt
@@ -1197,6 +1229,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneSilver
@@ -1220,6 +1253,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneUranium
@@ -1243,6 +1277,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallSandstoneArtifactFragment
@@ -1266,6 +1301,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 # endregion Sandstone Ores
 
@@ -1474,6 +1510,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisBluespace
@@ -1497,6 +1534,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisCoal
@@ -1521,6 +1559,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisDiamond
@@ -1544,6 +1583,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisGold
@@ -1567,6 +1607,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisTin
@@ -1590,6 +1631,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisPlasma
@@ -1613,6 +1655,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisQuartz
@@ -1636,6 +1679,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisSalt
@@ -1659,6 +1703,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisSilver
@@ -1682,6 +1727,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisUranium
@@ -1705,6 +1751,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallNecropolisArtifactFragment
@@ -1728,6 +1775,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion Necropolis Ores
 
 # region Necropolis Mobs
@@ -1935,6 +1983,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickBluespace
@@ -1958,6 +2007,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickCoal
@@ -1982,6 +2032,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickDiamond
@@ -2005,6 +2056,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickGold
@@ -2028,6 +2080,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickTin
@@ -2051,6 +2104,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickPlasma
@@ -2074,6 +2128,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickQuartz
@@ -2097,6 +2152,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickSalt
@@ -2120,6 +2176,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickSilver
@@ -2143,6 +2200,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickUranium
@@ -2166,6 +2224,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallBasaltCobblebrickArtifactFragment
@@ -2189,6 +2248,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion BasaltCobblebrick Ores
 
 # region BasaltCobblebrick Mobs
@@ -2396,6 +2456,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickBluespace
@@ -2419,6 +2480,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickCoal
@@ -2443,6 +2505,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickDiamond
@@ -2466,6 +2529,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickGold
@@ -2489,6 +2553,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickTin
@@ -2512,6 +2577,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickPlasma
@@ -2535,6 +2601,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickQuartz
@@ -2558,6 +2625,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickSalt
@@ -2581,6 +2649,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickSilver
@@ -2604,6 +2673,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickUranium
@@ -2627,6 +2697,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallChromiteCobblebrickArtifactFragment
@@ -2650,6 +2721,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion ChromiteCobblebrick Ores
 
 # region ChromiteCobblebrick Mobs
@@ -2857,6 +2929,7 @@
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickBluespace
@@ -2880,6 +2953,7 @@
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickCoal
@@ -2904,6 +2978,7 @@
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickDiamond
@@ -2927,6 +3002,7 @@
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickGold
@@ -2950,6 +3026,7 @@
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickTin
@@ -2973,6 +3050,7 @@
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickPlasma
@@ -2996,6 +3074,7 @@
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickQuartz
@@ -3019,6 +3098,7 @@
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickSalt
@@ -3042,6 +3122,7 @@
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickSilver
@@ -3065,6 +3146,7 @@
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickUranium
@@ -3088,6 +3170,7 @@
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 
 - type: entity
   id: NFWallAndesiteCobblebrickArtifactFragment
@@ -3111,6 +3194,7 @@
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+          visible: false
 # endregion AndesiteCobblebrick Ores
 
 # region AndesiteCobblebrick Mobs
