@@ -15,6 +15,7 @@
   - BorgModuleFireExtinguisher
   - BorgModuleRadiationDetection
   - BorgModuleTool
+  - BorgModuleRCD
   - BorgModuleSurgery # Shitmed Change
 
 - type: latheRecipePack
