@@ -68,7 +68,17 @@
   - type: StaticPrice
     price: 100 # mono
   - type: FireOnLand # DeltaV - gun safety
-
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: PistolsPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: PistolsDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: PistolsDrop
+  # Goobstation edit end
 - type: entity
   name: viper
   parent: [BaseWeaponPistol, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband

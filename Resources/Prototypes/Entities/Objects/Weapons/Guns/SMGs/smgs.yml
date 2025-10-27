@@ -57,7 +57,17 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
-
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: SMGPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: SMGDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: SMGDrop
+  # Goobstation edit end
 - type: entity
   name: Atreides
   parent: [BaseWeaponSubMachineGun, BaseC3SyndicateContraband] # Frontier: BaseMajorContraband<BaseC3SyndicateContraband
