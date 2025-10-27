@@ -80,12 +80,12 @@
   tags: ["station"]
   sprite:
     sprite: Decals/null_sign.rsi
-    state: nullsign11
+    state: nullsign12
     
 - type: decal
   id: NullSign13
   tags: ["station"]
   sprite:
     sprite: Decals/null_sign.rsi
-    state: nullsign11
+    state: nullsign13
 
