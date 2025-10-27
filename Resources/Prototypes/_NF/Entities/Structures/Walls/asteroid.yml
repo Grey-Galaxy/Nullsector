@@ -121,6 +121,7 @@
     - sprite: _NF/Structures/Walls/rock.rsi
       state: rock_bluespace
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: IronRockBluespace
@@ -145,6 +146,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockBluespace
@@ -176,6 +178,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockBasaltBluespace
@@ -200,6 +203,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockSnowBluespace
@@ -224,6 +228,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockSandBluespace
@@ -248,6 +253,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockChromiteBluespace
@@ -272,6 +278,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 
 - type: entity
   id: WallRockAndesiteBluespace
@@ -296,6 +303,7 @@
       - sprite: _NF/Structures/Walls/rock.rsi
         state: rock_bluespace
         map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+        visible: false
 # endregion Ore
 
 # region Scrap with Ore
@@ -327,6 +335,7 @@
       state: scraprock_west
     - state: rock_scrap
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
   - type: RandomSprite
     available:
       - scraprock_variant:
@@ -370,6 +379,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileCoalBot
@@ -403,6 +413,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileGoldBot
@@ -436,6 +447,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileDiamondBot
@@ -469,6 +481,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPilePlasmaBot
@@ -502,6 +515,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileQuartzBot
@@ -535,6 +549,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileSilverBot
@@ -568,6 +583,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileIronBot
@@ -601,6 +617,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileUraniumBot
@@ -634,6 +651,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileBananiumBot
@@ -667,6 +685,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileSaltBot
@@ -700,6 +719,7 @@
     - sprite: Structures/Walls/rock.rsi
       state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileArtifactFragmentBot
@@ -732,6 +752,7 @@
       state: scraprock_west
     - state: rock_bluespace
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+      visible: false
 
 - type: entity
   id: WallRockScrapPileBluespaceBot
