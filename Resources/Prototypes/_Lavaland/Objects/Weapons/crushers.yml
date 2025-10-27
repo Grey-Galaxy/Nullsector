@@ -40,7 +40,7 @@
   - type: AmmoCounter
   - type: UseDelayOnShoot
   - type: UseDelay
-    delay: 0.9
+    delay: 1
   - type: Gun
     soundGunshot: /Audio/Weapons/plasma_cutter.ogg
     fireRate: 1
@@ -98,15 +98,13 @@
     animation: WeaponArcThrust
     range: 2.2
   - type: GunRequiresWield
+  - type: MeleeRequiresWield
   - type: Item
     size: Ginormous
     sprite: Objects/Weapons/Crusher/crusher_spear-inhands.rsi
   - type: DisarmMalus
   - type: Wieldable
   - type: Sharp
-  - type: MeleeRequiresWield
-  - type: StaticPrice
-    price: 125
 
 - type: entity
   parent: LavalandWeaponKineticBase
@@ -117,8 +115,6 @@
   - type: Sprite
     sprite: Objects/Weapons/Crusher/crusher_hammer.rsi
     state: icon
-  - type: UseDelay
-    delay: 1
   - type: MeleeWeapon
     attackRate: 0.70 # slightly slower than the fireaxe
     wideAnimationRotation: -135
@@ -151,8 +147,6 @@
   - type: Sprite
     sprite: Objects/Weapons/Crusher/crusher_claws.rsi
     state: icon
-  - type: UseDelay
-    delay: 1
   - type: Clothing
     sprite: Objects/Weapons/Crusher/crusher_claws-inhands.rsi
   - type: Fiber
@@ -173,8 +167,6 @@
     size: Normal
     sprite: Objects/Weapons/Crusher/crusher_claws-inhands.rsi
   - type: Sharp
-  - type: StaticPrice
-    price: 125
  
 - type: entity
   parent: LavalandWeaponKineticBase
@@ -185,8 +177,6 @@
   - type: Sprite
     sprite: Objects/Weapons/Crusher/crusher_machete.rsi
     state: icon
-  - type: UseDelay
-    delay: 1
   - type: MeleeWeapon
     attackRate: 1.0 # slightly slower than a combat/utility knife, but in return is slightly stronger than one
     damage:
@@ -199,8 +189,6 @@
     range: 1.6
   - type: Item
     size: Ginormous
-    sprite: Objects/Weapons/Crushers/crusher_machete-inhands.rsi
+    sprite: Objects/Weapons/Crusher/crusher_machete-inhands.rsi
   # Refrained from porting parrying due to possible... issues. -Lavaland Dev
   - type: Sharp
-  - type: StaticPrice
-    price: 125
