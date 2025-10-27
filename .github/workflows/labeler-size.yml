@@ -1,7 +1,7 @@
 name: "Labels: Size"
 on: pull_request_target
-env:
-  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+#env:
+#  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 permissions:
   contents: read
   issues: write
