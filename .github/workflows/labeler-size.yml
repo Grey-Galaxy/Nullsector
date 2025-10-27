@@ -1,5 +1,7 @@
 name: "Labels: Size"
 on: pull_request_target
+env:
+  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 permissions:
   contents: read
   issues: write
@@ -7,8 +9,6 @@ permissions:
 jobs:
   size-label:
     runs-on: ubuntu-latest
-    env:
-          GITHUB_TOKEN: "${{ secrets.PERSONAL_TOKEN }}"
     steps:
       - name: size-label
         uses: "pascalgn/size-label-action@v0.5.5"
