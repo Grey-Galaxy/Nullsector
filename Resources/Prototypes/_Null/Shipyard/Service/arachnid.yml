@@ -15,6 +15,11 @@
   engine:
   - Uranium
 
+- type: guideEntry
+  id: ShipyardArachnid
+  name: guide-entry-shipyard-arachnid
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Arachnid.xml"
+
 - type: gameMap
   id: Arachnid
   mapName: 'Arachnid'
