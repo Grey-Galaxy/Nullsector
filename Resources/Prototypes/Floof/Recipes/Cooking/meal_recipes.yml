@@ -123,18 +123,6 @@
   reagents:
     IceCream: 20
     CocoaPowder: 5
-  solids:
-    IceCreamBowl: 1
-    FoodCherry: 1
-
-- type: microwaveMealRecipe
-  id: RecipeIceCreamBananaSplit
-  name: strawberry ice cream recipe
-  result: IceCreamBananaSplit
-  time: 5
-  reagents:
-    IceCream: 20
-    CocoaPowder: 5
     JuiceBerry: 5
   solids:
     IceCreamBowl: 1
