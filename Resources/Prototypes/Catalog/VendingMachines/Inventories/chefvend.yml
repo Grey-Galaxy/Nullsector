@@ -33,8 +33,6 @@
     FoodCheese: 2 # Frontier: 1<2
     BoxChocolateBar: 1 # Floof
     BoxRaisins: 1 # Floof
-    FoodButter: 4
-    FoodCheese: 1
     FoodMeat: 6
   contrabandInventory:
     EggBoxBroken: 1
