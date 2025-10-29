@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/06/2025 08:52:21
-  entityCount: 5139
+  time: 10/29/2025 21:20:35
+  entityCount: 5135
 maps:
 - 4997
 grids:
@@ -1302,7 +1302,7 @@ entities:
             id: ConcreteTrimCornerNe
           decals:
             898: -3,12
-            934: -8,9
+            958: -7,9
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimCornerNw
@@ -1310,19 +1310,19 @@ entities:
             899: -12,12
             900: -13,11
             901: -14,8
-            933: -10,9
+            959: -9,9
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimCornerSe
           decals:
             897: -3,7
-            932: -8,8
+            957: -7,8
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimCornerSw
           decals:
             896: -14,7
-            931: -10,8
+            955: -9,8
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimEndN
@@ -1363,7 +1363,7 @@ entities:
             914: -11,12
             925: -9,12
             926: -7,12
-            936: -9,9
+            960: -8,9
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimLineS
@@ -1378,7 +1378,7 @@ entities:
             909: -6,7
             910: -5,7
             911: -4,7
-            935: -9,8
+            956: -8,8
         - node:
             color: '#FFFFFFFF'
             id: ConcreteTrimLineW
@@ -1471,6 +1471,71 @@ entities:
             943: -9,6
             944: -8,6
             945: -7,6
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign1
+          decals:
+            965: -9,12
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign10
+          decals:
+            971: -5,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign11
+          decals:
+            963: -9,10
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign12
+          decals:
+            961: -8,10
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign13
+          decals:
+            962: -7,10
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign2
+          decals:
+            964: -8,12
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign3
+          decals:
+            966: -7,12
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign4
+          decals:
+            972: -11,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign5
+          decals:
+            973: -10,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign6
+          decals:
+            967: -9,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign7
+          decals:
+            968: -8,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign8
+          decals:
+            969: -7,11
+        - node:
+            color: '#FFFFFFFF'
+            id: NullSign9
+          decals:
+            970: -6,11
         - node:
             color: '#9C2020FF'
             id: WarnCornerSmallSE
@@ -2314,6 +2379,7 @@ entities:
     - type: BecomesStation
       id: Lark
     - type: StationTransit
+      routes: {}
     - type: ProtectedGrid
       hostileMobKillSound: !type:SoundPathSpecifier
         path: /Audio/Effects/holy.ogg
@@ -2591,8 +2657,8 @@ entities:
       devices:
       - 3322
       - 3323
-      - 2488
-      - 2489
+      - 278
+      - 394
       - 3324
       - 3325
   - uid: 3263
@@ -9990,21 +10056,21 @@ entities:
       powerLoad: 5
     - type: Battery
       startingCharge: 0
-  - uid: 392
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -7.5,8.5
-      parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 5
-    - type: Battery
-      startingCharge: 0
   - uid: 1139
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 16.5,-16.5
+      parent: 2
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
+  - uid: 2492
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,8.5
       parent: 2
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -10035,10 +10101,10 @@ entities:
       startingCharge: 0
 - proto: ComputerTabletopRadar
   entities:
-  - uid: 393
+  - uid: 2493
     components:
     - type: Transform
-      pos: -8.5,9.5
+      pos: -7.5,9.5
       parent: 2
     - type: ApcPowerReceiver
       powerLoad: 5
@@ -10214,13 +10280,13 @@ entities:
       parent: 2
 - proto: CrateToyBox
   entities:
-  - uid: 5128
+  - uid: 63
     components:
     - type: MetaData
-      desc: Goodies left behind spacegoers-past as tools for spacegoers-present.
-      name: donations box
+      desc: Goodies left over from spacegoers past for upcoming crews.
+      name: gift box
     - type: Transform
-      pos: -6.5,8.5
+      pos: -5.5,8.5
       parent: 2
     - type: ContainerContainer
       containers:
@@ -11427,10 +11493,10 @@ entities:
       name: Lark Medical Wing
 - proto: FaxMachineNFOutpostReception
   entities:
-  - uid: 63
+  - uid: 20
     components:
     - type: Transform
-      pos: -9.5,9.5
+      pos: -8.5,9.5
       parent: 2
 - proto: FaxMachineNFOutpostSR
   entities:
@@ -11441,10 +11507,10 @@ entities:
       parent: 2
 - proto: filingCabinetDrawer
   entities:
-  - uid: 395
+  - uid: 520
     components:
     - type: Transform
-      pos: -10.5,8.5
+      pos: -9.5,8.5
       parent: 2
   - uid: 861
     components:
@@ -12572,6 +12638,12 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#03FCD3FF'
+  - uid: 392
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,11.5
+      parent: 2
   - uid: 660
     components:
     - type: Transform
@@ -12759,14 +12831,6 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#03FCD3FF'
-  - uid: 2493
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -9.5,11.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#990000FF'
   - uid: 2512
     components:
     - type: Transform
@@ -14324,27 +14388,11 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#03FCD3FF'
-  - uid: 2490
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -6.5,10.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#03FCD3FF'
   - uid: 2491
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -7.5,11.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#990000FF'
-  - uid: 2492
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -8.5,11.5
       parent: 2
     - type: AtmosPipeColor
       color: '#990000FF'
@@ -19323,17 +19371,17 @@ entities:
       color: '#03FCD3FF'
 - proto: GasVentPump
   entities:
-  - uid: 2489
+  - uid: 394
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -7.5,10.5
+      pos: -6.5,10.5
       parent: 2
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 2369
-    - type: AtmosPipeColor
-      color: '#03FCD3FF'
   - uid: 2495
     components:
     - type: Transform
@@ -19587,17 +19635,17 @@ entities:
       color: '#03FCD3FF'
 - proto: GasVentScrubber
   entities:
-  - uid: 2488
+  - uid: 278
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -9.5,10.5
+      pos: -8.5,10.5
       parent: 2
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 2369
-    - type: AtmosPipeColor
-      color: '#990000FF'
   - uid: 2494
     components:
     - type: Transform
@@ -20564,12 +20612,6 @@ entities:
     - type: Transform
       pos: -12.5,1.5
       parent: 2
-  - uid: 419
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,1.5
-      parent: 2
   - uid: 423
     components:
     - type: Transform
@@ -20652,12 +20694,6 @@ entities:
     components:
     - type: Transform
       pos: -13.5,0.5
-      parent: 2
-  - uid: 520
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -10.5,1.5
       parent: 2
   - uid: 530
     components:
@@ -23774,10 +23810,10 @@ entities:
       bodyType: Static
 - proto: PaperBin5
   entities:
-  - uid: 394
+  - uid: 276
     components:
     - type: Transform
-      pos: -9.5,8.5
+      pos: -8.5,8.5
       parent: 2
   - uid: 596
     components:
@@ -23790,7 +23826,7 @@ entities:
   - uid: 5129
     components:
     - type: Transform
-      parent: 5128
+      parent: 63
     - type: Paper
       content: >2-
 
@@ -25899,12 +25935,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -19.5,-3.5
       parent: 2
-  - uid: 422
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,1.5
-      parent: 2
   - uid: 490
     components:
     - type: Transform
@@ -25960,12 +25990,6 @@ entities:
     components:
     - type: Transform
       pos: -12.5,1.5
-      parent: 2
-  - uid: 519
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -10.5,1.5
       parent: 2
   - uid: 523
     components:
@@ -28655,6 +28679,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 12.5,12.5
       parent: 2
+- proto: SignLaundromat
+  entities:
+  - uid: 395
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,13.5
+      parent: 2
 - proto: SignMail
   entities:
   - uid: 4554
@@ -28672,6 +28704,12 @@ entities:
       parent: 2
 - proto: SignReception
   entities:
+  - uid: 393
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -6.5,1.5
+      parent: 2
   - uid: 438
     components:
     - type: Transform
@@ -28861,10 +28899,10 @@ entities:
       parent: 2
 - proto: SpawnPointValet
   entities:
-  - uid: 4963
+  - uid: 2488
     components:
     - type: Transform
-      pos: -8.5,8.5
+      pos: -7.5,8.5
       parent: 2
 - proto: SpawnVehicleSecway
   entities:
@@ -29709,25 +29747,10 @@ entities:
     - type: Transform
       pos: 11.5,-5.5
       parent: 2
-  - uid: 20
-    components:
-    - type: Transform
-      pos: -9.5,8.5
-      parent: 2
   - uid: 133
     components:
     - type: Transform
       pos: -8.5,9.5
-      parent: 2
-  - uid: 276
-    components:
-    - type: Transform
-      pos: -9.5,9.5
-      parent: 2
-  - uid: 278
-    components:
-    - type: Transform
-      pos: -7.5,8.5
       parent: 2
   - uid: 284
     components:
@@ -29748,6 +29771,11 @@ entities:
     components:
     - type: Transform
       pos: -12.5,11.5
+      parent: 2
+  - uid: 519
+    components:
+    - type: Transform
+      pos: -8.5,8.5
       parent: 2
   - uid: 827
     components:
@@ -29781,6 +29809,16 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 15.5,-6.5
+      parent: 2
+  - uid: 2489
+    components:
+    - type: Transform
+      pos: -6.5,8.5
+      parent: 2
+  - uid: 2490
+    components:
+    - type: Transform
+      pos: -6.5,9.5
       parent: 2
 - proto: TwoWayLever
   entities:
@@ -33730,6 +33768,18 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,-3.5
+      parent: 2
+  - uid: 419
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -6.5,1.5
+      parent: 2
+  - uid: 422
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -10.5,1.5
       parent: 2
   - uid: 428
     components:
