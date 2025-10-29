@@ -117,18 +117,6 @@
       effects:
       - !type:SatiateThirst
         factor: 1.5
-      - !type:ChemAddMoodlet
-        moodPrototype: IceCreamBenefit
-        conditions:
-        - !type:ReagentThreshold
-          reagent: IceCream
-          min: 5
-      - !type:ChemAddMoodlet
-        moodPrototype: IceCreamBrainFreeze
-        conditions:
-        - !type:ReagentThreshold
-          reagent: IceCream
-          min: 20
       - !type:HealthChange
         scaleByQuantity: true
         ignoreResistances: false
