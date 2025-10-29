@@ -182,10 +182,11 @@
   time: 5
   reagents:
     IceCream: 20
-    JuicePomegranate: 20
+    JuiceBerry: 15
+    CocoaPowder: 5
   solids:
     IceCreamBowl: 1
-
+    FoodCherry: 1
 - type: microwaveMealRecipe
   id: RecipeIceCreamMintChoco
   name: mint chocolate ice cream recipe
@@ -193,7 +194,7 @@
   time: 5
   reagents:
     IceCream: 20
-    Frostoil: 10
+    FrostOil: 10
     CocoaPowder: 5
   solids:
     IceCreamBowl: 1
