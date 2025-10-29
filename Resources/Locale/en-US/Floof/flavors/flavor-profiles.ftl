@@ -1,4 +1,4 @@
-flavor-complex-blooddrop = crimson lust
+flavor-complex-blooddrop = vampire treat
 flavor-complex-strawberry = strawberry
 flavor-complex-whitechocolatechip = like white chocolate chips
 flavor-complex-caramel = caramel
