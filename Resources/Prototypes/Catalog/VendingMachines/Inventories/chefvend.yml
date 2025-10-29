@@ -31,8 +31,6 @@
     DrinkSoyMilkCarton: 1
     FoodButter: 3
     FoodCheese: 2 # Frontier: 1<2
-    BoxChocolateBar: 1 # Floof
-    BoxRaisins: 1 # Floof
     FoodMeat: 6
   contrabandInventory:
     EggBoxBroken: 1
