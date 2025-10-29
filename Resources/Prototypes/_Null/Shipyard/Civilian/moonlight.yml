@@ -15,7 +15,7 @@
   category: Large
   group: Shipyard
   shuttlePath: /Maps/_Null/Shuttles/Civilian/moonlight.yml
-  guidebookPage: null
+  guidebookPage: ShipyardMoonlight
   class:
   - Civilian
   - Kitchen

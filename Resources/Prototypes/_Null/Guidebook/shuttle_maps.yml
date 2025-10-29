@@ -9,7 +9,19 @@
   components:
   - type: Sprite
     sprite: _Null/Guidebook/ShuttleMaps.rsi
-    scale: 1.2, 1.2
+    scale: 1, 1
+    
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapLegend
+  name: "shuttle map legend"
+  description: "List of Room Colours for shuttle maps."
+  abstract: false
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Null/Guidebook/legend.rsi
+    state: legend
 # END - BASE TYPE(S)
 
 - type: entity
@@ -19,6 +31,14 @@
   components:
   - type: Sprite
     state: akasono
+
+- type: entity
+  parent: ShuttleMapBase
+  id: ShuttleMapArachnid
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: arachnid
 
 - type: entity
   parent: ShuttleMapBase

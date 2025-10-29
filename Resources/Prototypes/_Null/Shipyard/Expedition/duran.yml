@@ -13,7 +13,7 @@
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_Null/Shuttles/Expedition/duran.yml
-  guidebookPage: null
+  guidebookPage: ShipyardDuran
   class:
   - Expedition
   engine:
