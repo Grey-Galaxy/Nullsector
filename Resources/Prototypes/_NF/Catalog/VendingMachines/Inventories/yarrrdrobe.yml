@@ -1,26 +1,26 @@
 - type: vendingMachineInventory
   id: PirateVendInventory
   startingInventory:
-    ClothingNeckCloakPirateCap: 4
-    CageParrot: 2
-    ClothingShoesBootsMagPirateFilled: 4
-    ClothingHeadHatPirate: 4
-    ClothingHeadHatPirateTricord: 4
-    ClothingHeadHatPirates: 4
-    ClothingHeadHatPirateLuffy: 4
-    ClothingUniformJumpsuitPirateSlops: 4
-    ClothingUniformJumpsuitPirateLuffy: 4
-    ClothingUniformJumpsuitPirate: 4
-    ClothingOuterCoatPirate: 4
-    ClothingShoesBootsPirate: 4
-    ClothingShoesBootsPirateLuffy: 4
-    PirateHandyFlag: 4
-    ClothingHeadHatFez: 5
+    ClothingNeckCloakPirateCap: 4294967295
+    CageParrot: 4294967295
+    ClothingShoesBootsMagPirateFilled: 4294967295
+    ClothingHeadHatPirate: 4294967295
+    ClothingHeadHatPirateTricord: 4294967295
+    ClothingHeadHatPirates: 4294967295
+    ClothingHeadHatPirateLuffy: 4294967295
+    ClothingUniformJumpsuitPirateSlops: 4294967295
+    ClothingUniformJumpsuitPirateLuffy: 4294967295
+    ClothingUniformJumpsuitPirate: 4294967295
+    ClothingOuterCoatPirate: 4294967295
+    ClothingShoesBootsPirate: 4294967295
+    ClothingShoesBootsPirateLuffy: 4294967295
+    PirateHandyFlag: 4294967295
+    ClothingHeadHatFez: 4294967295
     ContrabandAppraisalToolPirate: 2
     WeaponShotgunBlunderbuss: 1
-    ClothingWalletLeatherPirate: 5
+    ClothingWalletLeatherPirate: 4294967295
     Cutlass: 2
     WeaponRevolverPirate: 3
-    PirateHook: 2
+    PirateHook: 4294967295
   contrabandInventory:
     ClothingOuterCoatPirateCaptain: 1
