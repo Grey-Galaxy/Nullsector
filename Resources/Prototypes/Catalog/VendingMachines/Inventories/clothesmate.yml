@@ -2,25 +2,25 @@
 - type: vendingMachineInventory
   id: ClothesMateInventory
   startingInventory:
-    ClothingBackpack: 5
-    ClothingBackpackDuffel: 5
-    ClothingBackpackSatchel: 3
-    ClothingBackpackMessenger: 5 # Frontier
-    ClothingBackpackSatchelLeather: 2
-    ClothingWalletLeatherBrown: 5 # Frontier
-    ClothingWalletLeatherBlack: 5 # Frontier
+    ClothingBackpack: 4294967295
+    ClothingBackpackDuffel: 4294967295
+    ClothingBackpackSatchel: 4294967295
+    ClothingBackpackMessenger: 4294967295 # Frontier
+    ClothingBackpackSatchelLeather: 4294967295
+    ClothingWalletLeatherBrown: 4294967295 # Frontier
+    ClothingWalletLeatherBlack: 4294967295 # Frontier
     # ClothingRandomSpawner: 8 # Frontier
     # ClothingSkirtRandomSpawner: 8 # Frontier
-    ClothingUniformRandomArmless: 6 # Frontier
-    ClothingUniformRandomStandard: 6 # Frontier
-    ClothingUniformRandomBra: 6 # Frontier
-    ClothingUniformRandomShorts: 6 # Frontier
-    ClothingUniformRandomShirt: 6 # Frontier
-    ClothingSkirtUniformRandomArmless: 6 # Frontier
-    ClothingSkirtUniformRandomStandard: 6 # Frontier
-    ClothingSkirtUniformRandomBra: 6 # Frontier
-    ClothingSkirtUniformRandomShorts: 6 # Frontier
-    ClothingSkirtUniformRandomShirt: 6 # Frontier
+    ClothingUniformRandomArmless: 4294967295 # Frontier
+    ClothingUniformRandomStandard: 4294967295 # Frontier
+    ClothingUniformRandomBra: 4294967295 # Frontier
+    ClothingUniformRandomShorts: 4294967295 # Frontier
+    ClothingUniformRandomShirt: 4294967295 # Frontier
+    ClothingSkirtUniformRandomArmless: 4294967295 # Frontier
+    ClothingSkirtUniformRandomStandard: 4294967295 # Frontier
+    ClothingSkirtUniformRandomBra: 4294967295 # Frontier
+    ClothingSkirtUniformRandomShorts: 4294967295 # Frontier
+    ClothingSkirtUniformRandomShirt: 4294967295 # Frontier
     # ClothingHeadHatBeret: 4
     # ClothingHeadBandBlack: 2
     # ClothingHeadBandBlue: 2
@@ -29,8 +29,8 @@
     # ClothingHeadBandSkull: 2
     # ClothingHeadHatGreyFlatcap: 3
     # ClothingHeadHatBrownFlatcap: 3
-    ClothingUniformJumpsuitColorGrey: 8
-    ClothingUniformJumpskirtColorGrey: 8
+    ClothingUniformJumpsuitColorGrey: 4294967295
+    ClothingUniformJumpskirtColorGrey: 4294967295
     # ClothingUniformJumpsuitColorWhite: 3
     # ClothingUniformJumpskirtColorWhite: 3
     # ClothingUniformJumpsuitColorBlack: 3
@@ -70,7 +70,7 @@
     # ClothingUniformJumpsuitCasualGreen: 2
     # ClothingUniformJumpskirtCasualGreen: 2
    # DO NOT ADD MORE, USE UNIFORM DYING
-    ClothingShoesColorBlack: 8
+    ClothingShoesColorBlack: 4294967295
     # ClothingShoesColorBrown: 4
     # ClothingShoesColorWhite: 3
     # ClothingShoesColorBlue: 2
