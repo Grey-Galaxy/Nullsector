@@ -1,22 +1,22 @@
 - type: vendingMachineInventory
   id: JaniDrobeInventory
   startingInventory:
-    NFClothingBackpackDuffelJanitor: 2 # Frontier
-    ClothingBackpackMessengerJanitor: 2 # Frontier
-    ClothingUniformJumpsuitJanitor: 2
-    ClothingUniformJumpskirtJanitor: 2
-    ClothingHandsGlovesJanitor: 2
-    ClothingShoesColorBlack: 2
-    ClothingHeadHatPurplesoft: 2
-    ClothingBeltJanitor: 2
-    NFPouchJanitor: 2 # Frontier - Pouch
+    NFClothingBackpackDuffelJanitor: 4294967295 # Frontier
+    ClothingBackpackMessengerJanitor: 4294967295 # Frontier
+    ClothingUniformJumpsuitJanitor: 4294967295
+    ClothingUniformJumpskirtJanitor: 4294967295
+    ClothingHandsGlovesJanitor: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingHeadHatPurplesoft: 4294967295
+    ClothingBeltJanitor: 4294967295
+    NFPouchJanitor: 4 # Frontier - Pouch
 #    ClothingHeadsetService: 2 # Frontier
-    ClothingOuterWinterJani: 2
-    ClothingShoesBootsWinterJani: 2 #Delta V: Add departmental winter boots
-    ClothingNeckScarfStripedPurple: 3
-    ClothingHeadHatHoodBioJanitor: 1 # Frontier - Bio suit
-    ClothingOuterBioJanitor: 1 # Frontier - Bio suit
-    ClothingOuterEVASuitJanitor: 1 # Frontier - EVA
+    ClothingOuterWinterJani: 4294967295
+    ClothingShoesBootsWinterJani: 4294967295 #Delta V: Add departmental winter boots
+    ClothingNeckScarfStripedPurple: 4294967295
+    ClothingHeadHatHoodBioJanitor: 4294967295 # Frontier - Bio suit
+    ClothingOuterBioJanitor: 4294967295 # Frontier - Bio suit
+    ClothingOuterEVASuitJanitor: 4294967295 # Frontier - EVA
   contrabandInventory:
     ToyFigurineJanitor: 1
     ClothingUniformJumpskirtJanimaid: 2 # Frontier
