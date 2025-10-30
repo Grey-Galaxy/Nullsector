@@ -10,10 +10,9 @@
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
     WeaponProtoKineticAccelerator: 4
-    LavalandWeaponKineticSpear: 4
-    LavalandWeaponKineticClaws: 4
-    LavalandWeaponKineticMachete: 4
-    LavalandWeaponKineticHammer: 2
+    LavalandWeaponKineticMachete: 1
+    SeismicCharge: 3
+    NFPouchUtility: 10
 
 - type: vendingMachineInventory
   id: NFSalvageEquipmentPOIInventory
