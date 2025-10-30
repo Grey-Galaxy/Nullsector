@@ -64,7 +64,7 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase]
   id: ClothingOuterHardsuitAdvanceMercenary
-  name: mercenary hardsuit
+  name: advanced mercenary hardsuit
   description: It's a hardsuit. It could stop a bullet. It's sealed with top of the line duct tape.
   components:
     - type: Sprite

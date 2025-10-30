@@ -5,6 +5,9 @@
   - StationRepClothingUniformJumpsuitSr
   - StationRepClothingUniformJumpskirtSr
   - StationRepClothingUniformJumpsuitMilitarySr
+  - ContractorClothingUniformJumpskirtVictorianBlack
+  - ContractorClothingUniformJumpsuitLawyerBlue
+  - ContractorClothingUniformJumpskirtLawyerBlue
   fallbacks:
   - StationRepClothingUniformJumpsuitSr
   - StationRepClothingUniformJumpskirtSr
