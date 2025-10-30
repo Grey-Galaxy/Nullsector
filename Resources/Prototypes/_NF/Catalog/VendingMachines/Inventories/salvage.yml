@@ -9,9 +9,9 @@
     RadioHandheldNF: 5
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
-    WeaponProtoKineticAccelerator: 4
-    NFPouchUtility: 10
+    WeaponProtoKineticAccelerator: 1
     LavalandWeaponKineticMachete: 1
+    NFPouchUtility: 3
     SeismicCharge: 1
 
 - type: vendingMachineInventory
@@ -26,6 +26,9 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
+    LavalandWeaponKineticSpear: 4
+    LavalandWeaponKineticClaws: 4
+    LavalandWeaponKineticMachete: 4
+    LavalandWeaponKineticHammer: 2
     NFPouchUtility: 25
-    LavalandWeaponKineticMachete: 3
     SeismicCharge: 3
