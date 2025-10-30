@@ -67,7 +67,7 @@
       - PhysicalComposition
       - SpaceGarbage
       - Log
-      - Cartridge # PDA app cartriges
+      - Cartridge # PDA app cartridges
       tags:
       - Trash
       - Recyclable
@@ -83,6 +83,7 @@
       - Brain
       tags:
       - HighRiskItem
+      - Wrench
     soundCooldown: 0
     sound:
       path: /Audio/Ambience/Objects/crushing.ogg

@@ -75,7 +75,7 @@ public partial class ChatBox : UIWidget
             return;
         }
 
-        if (msg is { Read: false, AudioPath: { } })
+        if (msg is { Read: false, AudioPath: not null })
             _entManager.System<AudioSystem>().PlayGlobal(msg.AudioPath, Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));
 
         msg.Read = true;

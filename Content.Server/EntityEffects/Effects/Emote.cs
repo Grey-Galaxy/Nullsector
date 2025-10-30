@@ -24,7 +24,9 @@ public sealed partial class Emote : EntityEffect
 
     // JUSTIFICATION: Emoting is flavor, so same reason popup messages are not in here.
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
-        => null;
+    {
+        return null;
+    }
 
     public override void Effect(EntityEffectBaseArgs args)
     {

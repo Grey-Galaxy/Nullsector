@@ -5,9 +5,8 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
-using Content.Server.Players.RateLimiting;
-using Content.Server.Speech.Prototypes;
 using Content.Server.Speech.EntitySystems;
+using Content.Server.Speech.Prototypes;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.ActionBlocker;
@@ -472,11 +471,15 @@ public sealed partial class ChatSystem : SharedChatSystem
         else
         {
             if (name != Name(source))
+            {
                 _adminLogger.Add(LogType.Chat, LogImpact.Low,
                     $"Say from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {message}.");
+            }
             else
+            {
                 _adminLogger.Add(LogType.Chat, LogImpact.Low,
                     $"Say from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {message}.");
+            }
         }
     }
 

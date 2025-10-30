@@ -1,6 +1,7 @@
 ﻿using Content.Client.Chat.UI;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
+using Content.Client.UserInterface.Systems.MenuBar.Widgets;
 using Content.Shared.Chat;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Input;
@@ -21,7 +22,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
     [Dependency] private readonly IClyde _displayManager = default!;
     [Dependency] private readonly IInputManager _inputManager = default!;
 
-    private MenuButton? EmotesButton => UIManager.GetActiveUIWidgetOrNull<MenuBar.Widgets.GameTopMenuBar>()?.EmotesButton;
+    private MenuButton? EmotesButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.EmotesButton;
     private EmotesMenu? _menu;
 
     public void OnStateEntered(GameplayState state)
@@ -47,8 +48,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             _menu.OnOpen += OnWindowOpen;
             _menu.OnPlayEmote += OnPlayEmote;
 
-            if (EmotesButton != null)
-                EmotesButton.SetClickPressed(true);
+            EmotesButton?.SetClickPressed(true);
 
             if (centered)
             {
@@ -67,8 +67,7 @@ public sealed class EmotesUIController : UIController, IOnStateChanged<GameplayS
             _menu.OnOpen -= OnWindowOpen;
             _menu.OnPlayEmote -= OnPlayEmote;
 
-            if (EmotesButton != null)
-                EmotesButton.SetClickPressed(false);
+            EmotesButton?.SetClickPressed(false);
 
             CloseMenu();
         }
