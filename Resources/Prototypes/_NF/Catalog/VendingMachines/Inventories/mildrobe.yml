@@ -43,6 +43,7 @@
     ClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary: 3
     ClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic: 3
     ClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic: 3
+    ClothingBeltMilitaryWebbing: 4294967295
   contrabandInventory:
     ClothingUniformJumpskirtOfLife: 1 # Frontier
     ClothingMaskClownSecurity: 1
