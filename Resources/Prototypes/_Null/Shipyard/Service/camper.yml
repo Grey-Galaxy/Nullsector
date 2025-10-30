@@ -14,7 +14,7 @@
   category: Small
   group: Service
   shuttlePath: /Maps/_Null/Shuttles/Service/camper.yml
-  guidebookPage: null
+  guidebookPage: ShipyardCamper
   class:
   - Civilian
   engine:

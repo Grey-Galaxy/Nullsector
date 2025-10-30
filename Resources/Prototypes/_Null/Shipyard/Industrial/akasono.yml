@@ -13,7 +13,7 @@
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Null/Shuttles/Industrial/akasono.yml
-  guidebookPage: Null
+  guidebookPage: ShipyardAkasono
   class:
   - Atmospherics
   engine:

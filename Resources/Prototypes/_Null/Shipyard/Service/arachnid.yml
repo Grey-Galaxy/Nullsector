@@ -9,11 +9,16 @@
   access: Brig # Oddball, matches guard ID, specific enough to exclude cadets
   mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
   shuttlePath: /Maps/_Null/Shuttles/Service/arachnid.yml
-  guidebookPage: Null
+  guidebookPage: ShipyardArachnid
   class:
   - Civilian
   engine:
   - Uranium
+
+- type: guideEntry
+  id: ShipyardArachnid
+  name: guide-entry-shipyard-arachnid
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Arachnid.xml"
 
 - type: gameMap
   id: Arachnid

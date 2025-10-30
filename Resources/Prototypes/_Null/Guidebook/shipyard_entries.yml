@@ -6,6 +6,8 @@
   priority: 6
   children:
   - ShipyardAkasono
+  - ShipyardArachnid
+  - ShipyardArchon
   - ShipyardBison
   - ShipyardBucket
   - ShipyardCamper

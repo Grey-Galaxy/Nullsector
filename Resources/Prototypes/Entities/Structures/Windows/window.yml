@@ -67,6 +67,11 @@
   - type: Sprite
     drawdepth: WallTops
     sprite: _NF/Structures/Windows/window.rsi # Frontier
+    layers:
+    - map: [ "enum.CornerLayers.SE" ]
+    - map: [ "enum.CornerLayers.NE" ]
+    - map: [ "enum.CornerLayers.NW" ]
+    - map: [ "enum.CornerLayers.SW" ]
   - type: Icon
     sprite: _NF/Structures/Windows/window.rsi # Frontier
     state: full

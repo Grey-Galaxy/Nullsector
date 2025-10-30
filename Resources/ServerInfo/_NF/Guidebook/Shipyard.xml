@@ -44,4 +44,6 @@ To sell your rental:
 Ships, especially larger ones, work best with a crew. Refer to the [bold]Hiring[/bold] section for more info.
 Space is a lonely, dangerous place, and you'll have a much better time when you work with a crew.
 
+    <GuideEntityEmbed Entity="ShuttleMapLegend"/>
+
 </Document>

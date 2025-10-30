@@ -1,0 +1,13 @@
+<Document>
+  # ARACHNID
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapArachnid"/>
+  </Box>
+  [color=#a4885c]Ship Size:[/color] Small
+
+	[color=#a4885c]Recommended Crew:[/color] 1-2
+
+	[color=#a4885c]Power Gen Type:[/color] Uranium
+
+  "A plucky militias security vessel equipped with spider-esque meteor shielding."
+</Document>
