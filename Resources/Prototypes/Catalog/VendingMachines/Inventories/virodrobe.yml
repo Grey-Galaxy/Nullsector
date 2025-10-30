@@ -1,14 +1,14 @@
 - type: vendingMachineInventory
   id: ViroDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitVirology: 2
-    ClothingUniformJumpskirtVirology: 2
-    ClothingShoesColorWhite: 2
-    ClothingOuterCoatLabViro: 2
-    ClothingOuterWinterViro: 2
-    ClothingMaskSterile: 2
-    ClothingBackpackVirology: 2
-    ClothingBackpackSatchelVirology: 2
-    ClothingBackpackDuffelVirology: 2
-    ClothingShoesBootsWinterViro: 2 #Delta V: Add departmental winter boots
-    ClothingBackpackMessengerVirology: 2 # Frontier
+    ClothingUniformJumpsuitVirology: 4294967295
+    ClothingUniformJumpskirtVirology: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingOuterCoatLabViro: 4294967295
+    ClothingOuterWinterViro: 4294967295
+    ClothingMaskSterile: 4294967295
+    ClothingBackpackVirology: 4294967295
+    ClothingBackpackSatchelVirology: 4294967295
+    ClothingBackpackDuffelVirology: 4294967295
+    ClothingShoesBootsWinterViro: 4294967295 #Delta V: Add departmental winter boots
+    ClothingBackpackMessengerVirology: 4294967295 # Frontier
