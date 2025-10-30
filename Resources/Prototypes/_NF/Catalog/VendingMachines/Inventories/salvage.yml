@@ -10,7 +10,10 @@
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
     WeaponProtoKineticAccelerator: 1
+    LavalandWeaponKineticSpear: 1
+    LavalandWeaponKineticClaws: 1
     LavalandWeaponKineticMachete: 1
+    LavalandWeaponKineticHammer: 1
     NFPouchUtility: 3
     SeismicCharge: 1
 
