@@ -27,3 +27,6 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
+    NFPouchUtility: 20 # Infinite
+    LavalandWeaponKineticMachete: 1
+    SeismicCharge: 3
