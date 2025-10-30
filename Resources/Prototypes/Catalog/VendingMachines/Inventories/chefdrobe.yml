@@ -1,18 +1,18 @@
 - type: vendingMachineInventory
   id: ChefDrobeInventory
   startingInventory:
-    ClothingOuterEVASuitServiceWorker: 2 # Frontier
+    ClothingOuterEVASuitServiceWorker: 4294967295 # Frontier
 #    ClothingHeadsetService: 2 # Frontier
-    ClothingOuterApronChef: 3
-    ClothingOuterWinterChef: 2
-    ClothingOuterJacketChef: 2
-    ClothingUniformJumpsuitChef: 2
-    ClothingMaskItalianMoustache: 2
-    ClothingUniformJumpskirtChef:  2
-    ClothingHeadHatChef: 2
-    ClothingShoesColorBlack: 2
-    ClothingShoesChef: 2
-    ClothingBeltChef: 2
-    ClothingShoesBootsWinterChef: 2 #Delta V: Add departmental winter boots
+    ClothingOuterApronChef: 4294967295
+    ClothingOuterWinterChef: 4294967295
+    ClothingOuterJacketChef: 4294967295
+    ClothingUniformJumpsuitChef: 4294967295
+    ClothingMaskItalianMoustache: 4294967295
+    ClothingUniformJumpskirtChef:  4294967295
+    ClothingHeadHatChef: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingShoesChef: 4294967295
+    ClothingBeltChef: 4294967295
+    ClothingShoesBootsWinterChef: 4294967295 #Delta V: Add departmental winter boots
   contrabandInventory:
     ToyFigurineChef: 1
