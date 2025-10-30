@@ -63,3 +63,5 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
+  - type: FireOnLand
+    probability: 0.5
