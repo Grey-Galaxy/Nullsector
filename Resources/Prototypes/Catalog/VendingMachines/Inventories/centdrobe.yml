@@ -1,23 +1,23 @@
 - type: vendingMachineInventory
   id: CentDrobeInventory
   startingInventory:
-    ClothingShoesBootsLaceup: 3
-    ClothingShoesBootsJack: 3
-    ClothingHandsGlovesCombat: 3
-    ClothingEyesGlassesSunglasses: 3
-    ClothingUniformJumpsuitCentcomOfficer: 3
-    ClothingUniformJumpsuitCentcomOfficial: 3
-    ClothingUniformJumpsuitCentcomAgent: 3
-    ClothingUniformJumpsuitCentcomFormal: 3
-    ClothingUniformJumpskirtCentcomFormalDress: 3
-    ClothingHeadHatCentcom: 3
-    ClothingHeadHatCentcomcap: 3
-    ClothingMaskGasCentcom: 3
-    ClothingHeadsetCentCom: 3
-    ClothingOuterWinterCentcom: 3
-    ClothingOuterCoatExpensive: 1
-    ClothingNeckScarfStripedCentcom: 3
-    ClothingNeckCloakCentcom: 3
+    ClothingShoesBootsLaceup: 4294967295
+    ClothingShoesBootsJack: 4294967295
+    ClothingHandsGlovesCombat: 4294967295
+    ClothingEyesGlassesSunglasses: 4294967295
+    ClothingUniformJumpsuitCentcomOfficer: 4294967295
+    ClothingUniformJumpsuitCentcomOfficial: 4294967295
+    ClothingUniformJumpsuitCentcomAgent: 4294967295
+    ClothingUniformJumpsuitCentcomFormal: 4294967295
+    ClothingUniformJumpskirtCentcomFormalDress: 4294967295
+    ClothingHeadHatCentcom: 4294967295
+    ClothingHeadHatCentcomcap: 4294967295
+    ClothingMaskGasCentcom: 4294967295
+    ClothingHeadsetCentCom: 4294967295
+    ClothingOuterWinterCentcom: 4294967295
+    ClothingOuterCoatExpensive: 4294967295
+    ClothingNeckScarfStripedCentcom: 4294967295
+    ClothingNeckCloakCentcom: 4294967295
   contrabandInventory:
     ToyFigurineCaptain: 1
     ToyFigurineHeadOfPersonnel: 1
