@@ -1,20 +1,20 @@
 - type: vendingMachineInventory
   id: ChemDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitChemistry: 2
-    ClothingUniformJumpskirtChemistry: 2
-    ClothingOuterCoatLabChem: 2
-    ClothingShoesColorWhite: 2
-    ClothingBackpackChemistry: 2
-    ClothingBackpackSatchelChemistry: 2
-    ClothingBackpackDuffelChemistry: 2
-    ClothingBackpackMessengerChemistry: 2 # Frontier
-    ChemBag: 2
+    ClothingUniformJumpsuitChemistry: 4294967295
+    ClothingUniformJumpskirtChemistry: 4294967295
+    ClothingOuterCoatLabChem: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingBackpackChemistry: 4294967295
+    ClothingBackpackSatchelChemistry: 4294967295
+    ClothingBackpackDuffelChemistry: 4294967295
+    ClothingBackpackMessengerChemistry: 4294967295 # Frontier
+    ChemBag: 4294967295
     HandLabeler: 3
-    ClothingBeltMedical: 2
-    ClothingHandsGlovesLatex: 2
-    ClothingHeadsetMedical: 2
-    ClothingOuterWinterChem: 2
-    ClothingShoesBootsWinterChem: 2 #Delta V: Add departmental winter boots
+    ClothingBeltMedical: 4294967295
+    ClothingHandsGlovesLatex: 4294967295
+    ClothingHeadsetMedical: 4294967295
+    ClothingOuterWinterChem: 4294967295
+    ClothingShoesBootsWinterChem: 4294967295 #Delta V: Add departmental winter boots
   contrabandInventory:
     ToyFigurineChemist: 1
