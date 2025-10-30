@@ -1,58 +1,58 @@
 - type: vendingMachineInventory
   id: EngiDrobeInventory
   startingInventory:
-    ClothingBackpackDuffelEngineering: 3
-    ClothingBackpackSatchelEngineering: 3
-    ClothingBackpackEngineering: 3
-    ClothingBackpackMessengerEngineering: 3 # Frontier
-    ClothingOuterEVASuitEngineer: 3 # Frontier
-    ClothingUniformJumpsuitEngineering: 3
-    ClothingUniformJumpskirtEngineering: 3
-    ClothingUniformJumpsuitEngineeringHazard: 3
-    ClothingShoesColorBlack: 3
-    ClothingOuterVestHazard: 3
-    ClothingShoesBootsWork: 3
-    ClothingHeadHatHardhatYellow: 3
-    ClothingHeadHatHardhatOrange: 3
-    ClothingHeadsetEngineering: 3
-    EncryptionKeyEngineering: 10
-    ClothingMaskGas: 3
-    ClothingOuterWinterEngi: 2
-    ClothingNeckScarfStripedOrange: 3
-    ClothingShoesBootsWinterEngi: 2
+    ClothingBackpackDuffelEngineering: 4294967295
+    ClothingBackpackSatchelEngineering: 4294967295
+    ClothingBackpackEngineering: 4294967295
+    ClothingBackpackMessengerEngineering: 4294967295 # Frontier
+    ClothingOuterEVASuitEngineer: 4294967295 # Frontier
+    ClothingUniformJumpsuitEngineering: 4294967295
+    ClothingUniformJumpskirtEngineering: 4294967295
+    ClothingUniformJumpsuitEngineeringHazard: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingOuterVestHazard: 4294967295
+    ClothingShoesBootsWork: 4294967295
+    ClothingHeadHatHardhatYellow: 4294967295
+    ClothingHeadHatHardhatOrange: 4294967295
+    ClothingHeadsetEngineering: 4294967295
+    EncryptionKeyEngineering: 4294967295
+    ClothingMaskGas: 4294967295
+    ClothingOuterWinterEngi: 4294967295
+    ClothingNeckScarfStripedOrange: 4294967295
+    ClothingShoesBootsWinterEngi: 4294967295
     # Frontier
 # Atmos:
-    ClothingBackpackDuffelAtmospherics: 2
-    ClothingBackpackSatchelAtmospherics: 2
-    ClothingBackpackAtmospherics: 2
-    ClothingBackpackMessengerAtmospherics: 2
-    ClothingOuterEVASuitAtmosTech: 2
-    ClothingUniformJumpsuitAtmos: 3
-    ClothingUniformJumpskirtAtmos: 3
-    ClothingUniformJumpsuitAtmosCasual: 3
-    ClothingShoesColorWhite: 3
-    ClothingHeadHelmetFire: 2
-    ClothingOuterSuitFire: 2
-    ClothingOuterWinterAtmos: 2
-    ClothingNeckScarfStripedLightBlue: 3
-    ClothingMaskGasAtmos: 2
-    ClothingShoesBootsWinterAtmos: 2 #Delta V: Add departmental winter boots
+    ClothingBackpackDuffelAtmospherics: 4294967295
+    ClothingBackpackSatchelAtmospherics: 4294967295
+    ClothingBackpackAtmospherics: 4294967295
+    ClothingBackpackMessengerAtmospherics: 4294967295
+    ClothingOuterEVASuitAtmosTech: 4294967295
+    ClothingUniformJumpsuitAtmos: 4294967295
+    ClothingUniformJumpskirtAtmos: 4294967295
+    ClothingUniformJumpsuitAtmosCasual: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingHeadHelmetFire: 4294967295
+    ClothingOuterSuitFire: 4294967295
+    ClothingOuterWinterAtmos: 4294967295
+    ClothingNeckScarfStripedLightBlue: 4294967295
+    ClothingMaskGasAtmos: 4294967295
+    ClothingShoesBootsWinterAtmos: 4294967295 #Delta V: Add departmental winter boots
 # Senior:
-    ClothingUniformJumpsuitSeniorEngineer: 1
-    ClothingUniformJumpskirtSeniorEngineer: 1
+    ClothingUniformJumpsuitSeniorEngineer: 4294967295
+    ClothingUniformJumpskirtSeniorEngineer: 4294967295
 # CE:
-    ClothingUniformJumpsuitChiefEngineerNT: 1
-    ClothingUniformJumpsuitChiefEngineer: 1
-    ClothingUniformJumpskirtChiefEngineer: 1
-    ClothingUniformJumpsuitChiefEngineerTurtle: 1
-    ClothingUniformJumpskirtChiefEngineerTurtle: 1
-    ClothingOuterWinterCE: 1
-    ClothingShoesBootsWinterChiefEngineer: 1
-    ClothingHeadHatBeretEngineering: 1
-    ClothingNeckCloakCe: 1
-    ClothingNeckMantleCE: 1
-    ClothingHeadsetAltEngineering: 1
-    RubberStampCE: 1
+    ClothingUniformJumpsuitChiefEngineerNT: 4294967295
+    ClothingUniformJumpsuitChiefEngineer: 4294967295
+    ClothingUniformJumpskirtChiefEngineer: 4294967295
+    ClothingUniformJumpsuitChiefEngineerTurtle: 4294967295
+    ClothingUniformJumpskirtChiefEngineerTurtle: 4294967295
+    ClothingOuterWinterCE: 4294967295
+    ClothingShoesBootsWinterChiefEngineer: 4294967295
+    ClothingHeadHatBeretEngineering: 4294967295
+    ClothingNeckCloakCe: 4294967295
+    ClothingNeckMantleCE: 4294967295
+    ClothingHeadsetAltEngineering: 4294967295
+    RubberStampCE: 4294967295
     # End Frontier
   contrabandInventory:
     ToyFigurineEngineer: 1
