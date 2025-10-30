@@ -1,12 +1,11 @@
+using System.Numerics;
+using Content.Shared.Emoting;
+using Content.Shared.Rotation;
 using Robust.Client.Animations;
+using Robust.Client.GameObjects;
 using Robust.Shared.Animations;
 using Robust.Shared.GameStates;
-using Robust.Client.GameObjects;
-using Content.Shared.Emoting;
-using System.Numerics;
 using Robust.Shared.Prototypes;
-using Content.Shared.Chat.Prototypes;
-using Content.Shared.Rotation;
 
 namespace Content.Client.Emoting;
 
@@ -38,7 +37,7 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
     private void OnHandleState(EntityUid uid, AnimatedEmotesComponent component, ref ComponentHandleState args)
     {
         if (args.Current is not AnimatedEmotesComponentState state
-        || !_prot.TryIndex<EmotePrototype>(state.Emote, out var emote))
+        || !_prot.TryIndex(state.Emote, out var emote))
             return;
 
         if (emote.Event != null)
@@ -57,11 +56,11 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
             {
                 RotationState.Vertical => rotation.VerticalRotation,
                 RotationState.Horizontal => rotation.HorizontalRotation,
-                _ => Angle.Zero
+                _ => Angle.Zero,
             };
         }
 
-        var a = new Animation
+        var animation = new Animation
         {
             Length = TimeSpan.FromMilliseconds(500),
             AnimationTracks =
@@ -76,11 +75,11 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
                         new AnimationTrackProperty.KeyFrame(angle, 0f),
                         new AnimationTrackProperty.KeyFrame(angle + Angle.FromDegrees(180), 0.25f),
                         new AnimationTrackProperty.KeyFrame(angle + Angle.FromDegrees(360), 0.25f),
-                    }
-                }
-            }
+                    },
+                },
+            },
         };
-        PlayEmote(ent, a);
+        PlayEmote(ent, animation);
     }
     private void OnSpin(Entity<AnimatedEmotesComponent> ent, ref AnimationSpinEmoteEvent args)
     {
@@ -105,9 +104,9 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
                         new AnimationTrackProperty.KeyFrame(Angle.FromDegrees(180), 0.075f),
                         new AnimationTrackProperty.KeyFrame(Angle.FromDegrees(270), 0.075f),
                         new AnimationTrackProperty.KeyFrame(Angle.Zero, 0.075f),
-                    }
-                }
-            }
+                    },
+                },
+            },
         };
         PlayEmote(ent, a, "emoteAnimSpin");
     }
@@ -128,9 +127,9 @@ public sealed partial class AnimatedEmotesSystem : SharedAnimatedEmotesSystem
                         new AnimationTrackProperty.KeyFrame(Vector2.Zero, 0f),
                         new AnimationTrackProperty.KeyFrame(new Vector2(0, .35f), 0.125f),
                         new AnimationTrackProperty.KeyFrame(Vector2.Zero, 0.125f),
-                    }
-                }
-            }
+                    },
+                },
+            },
         };
         PlayEmote(ent, a);
     }

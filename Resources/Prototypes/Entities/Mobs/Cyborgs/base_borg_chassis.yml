@@ -245,6 +245,10 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: PreventDropOnDowned # Frontier: borgs don't drop items when falling (e.g. critical/dead)
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: epicene
 
 - type: entity
   abstract: true

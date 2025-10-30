@@ -144,7 +144,7 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
         var (_, job, _, _, entityName) = data;
 
         // Mark this entity's name as our character name for the "UpdateHighlights" function.
-        string newHighlights = "@" + entityName;
+        var newHighlights = "@" + entityName;
 
         // Subdivide the character's name based on spaces or hyphens so that every word gets highlighted.
         if (newHighlights.Count(c => (c == ' ' || c == '-')) == 1)

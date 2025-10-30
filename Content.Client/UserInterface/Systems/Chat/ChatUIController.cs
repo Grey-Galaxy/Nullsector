@@ -691,7 +691,7 @@ public sealed partial class ChatUIController : UIController
     private bool TryGetRadioChannel(string text, out RadioChannelPrototype? radioChannel)
     {
         radioChannel = null;
-        return _player.LocalEntity is EntityUid { Valid: true } uid
+        return _player.LocalEntity is { Valid: true } uid
                && _chatSys != null
                && _chatSys.TryProccessRadioMessage(uid, text, out _, out radioChannel, quiet: true);
     }
@@ -716,8 +716,7 @@ public sealed partial class ChatUIController : UIController
         // We only cut off prefix only if it is not a radio or local channel, which both map to the same /say command
         // because ????????
 
-        ChatSelectChannel chatChannel;
-        chatChannel = TryGetRadioChannel(text, out var radioChannel)
+        var chatChannel = TryGetRadioChannel(text, out var radioChannel)
             ? ChatSelectChannel.Radio
             : PrefixToChannel.GetValueOrDefault(text[0]);
 
@@ -750,7 +749,7 @@ public sealed partial class ChatUIController : UIController
         if (string.IsNullOrWhiteSpace(text))
             return;
 
-        (var prefixChannel, text, var _) = SplitInputContents(text);
+        (var prefixChannel, text, _) = SplitInputContents(text);
 
         // Check if message is longer than the character limit
         if (text.Length > MaxMessageLength)
@@ -783,13 +782,13 @@ public sealed partial class ChatUIController : UIController
         // Don't send on OOC/LOOC obviously!
 
         // we need to handle selected channel
-        // and prefix-channel separately..
-        var allowedChannels = ChatSelectChannel.Local | ChatSelectChannel.Whisper;
+        // and prefix-channel separately.
+        const ChatSelectChannel allowedChannels = ChatSelectChannel.Local | ChatSelectChannel.Whisper;
         if ((chatBox.SelectedChannel & allowedChannels) == ChatSelectChannel.None)
             return;
 
         // none can be returned from this if there's no prefix,
-        // so we allow it in that case (assuming the previous check will have exited already if its an invalid channel)
+        // so we allow it in that case (assuming the previous check will have exited already if it's an invalid channel)
         var prefixChannel = SplitInputContents(msg).chatChannel;
         if (prefixChannel != ChatSelectChannel.None && (prefixChannel & allowedChannels) == ChatSelectChannel.None)
             return;
@@ -879,8 +878,7 @@ public sealed partial class ChatUIController : UIController
             if (!msg.Read)
             {
                 _sawmill.Debug($"Message filtered: {msg.Channel}: {msg.Message}");
-                if (!_unreadMessages.TryGetValue(msg.Channel, out var count))
-                    count = 0;
+                var count = _unreadMessages.GetValueOrDefault(msg.Channel, 0);
 
                 count += 1;
                 _unreadMessages[msg.Channel] = count;

@@ -559,7 +559,11 @@
   - type: StartingMindRole
     mindRole: "MindRoleSiliconBrain"
     silent: true
-
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: epicene
+      
 - type: entity
   id: PlayerBorgSyndicateAssaultBattery
   parent: BorgChassisSyndicateAssault
