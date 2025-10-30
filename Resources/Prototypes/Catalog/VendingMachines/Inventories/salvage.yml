@@ -10,5 +10,8 @@
     RadioHandheld: 2
     WeaponGrapplingGun: 4
     WeaponProtoKineticAccelerator: 4
+    NFPouchUtility: 10
+    LavalandWeaponKineticMachete: 1
+    SeismicCharge: 3
   contrabandInventory:
     PlushieCarp: 1
