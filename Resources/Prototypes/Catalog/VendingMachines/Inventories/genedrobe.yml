@@ -1,13 +1,13 @@
 - type: vendingMachineInventory
   id: GeneDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitGenetics: 2
-    ClothingUniformJumpskirtGenetics: 2
-    ClothingShoesColorWhite: 2
-    ClothingOuterCoatLabGene: 2
-    ClothingOuterWinterGen: 2
-    ClothingBackpackGenetics: 2
-    ClothingBackpackSatchelGenetics: 2
-    ClothingBackpackDuffelGenetics: 2
-    ClothingShoesBootsWinterGenetics: 2 #Delta V: Add departmental winter boots
-    ClothingBackpackMessengerGenetics: 2 # Frontier
+    ClothingUniformJumpsuitGenetics: 4294967295
+    ClothingUniformJumpskirtGenetics: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingOuterCoatLabGene: 4294967295
+    ClothingOuterWinterGen: 4294967295
+    ClothingBackpackGenetics: 4294967295
+    ClothingBackpackSatchelGenetics: 4294967295
+    ClothingBackpackDuffelGenetics: 4294967295
+    ClothingShoesBootsWinterGenetics: 4294967295 #Delta V: Add departmental winter boots
+    ClothingBackpackMessengerGenetics: 4294967295 # Frontier
