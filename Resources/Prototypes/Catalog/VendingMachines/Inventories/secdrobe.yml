@@ -1,41 +1,41 @@
 - type: vendingMachineInventory
   id: SecDrobeInventory
   startingInventory:
-    ClothingBackpackSecurity: 3
-    ClothingBackpackSatchelSecurity: 3
-    ClothingBackpackDuffelSecurity: 3
-    ClothingHeadHatBeretBrigmedic: 3
-    ClothingHeadHatBeretSecurity: 3
-    ClothingHeadHatSecsoft: 3
-    ClothingHeadBandRed: 3
-    ClothingMaskNeckGaiterRed: 3
-    ClothingHandsGlovesCombat: 3 # Frontier - Officers just walk around with yellow insulated gloves if you wont sell the combat gloves.
+    ClothingBackpackSecurity: 4294967295
+    ClothingBackpackSatchelSecurity: 4294967295
+    ClothingBackpackDuffelSecurity: 4294967295
+    ClothingHeadHatBeretBrigmedic: 4294967295
+    ClothingHeadHatBeretSecurity: 4294967295
+    ClothingHeadHatSecsoft: 4294967295
+    ClothingHeadBandRed: 4294967295
+    ClothingMaskNeckGaiterRed: 4294967295
+    ClothingHandsGlovesCombat: 4294967295 # Frontier - Officers just walk around with yellow insulated gloves if you wont sell the combat gloves.
 #    ClothingHandsGlovesColorBlack: 3 # Frontier - No point in selling this, its like the none insulated gloves.
-    ClothingHandsGlovesFingerless: 3
-    ClothingUniformJumpsuitSec: 3 # Frontier
-    ClothingUniformJumpskirtSec: 3
-    ClothingUniformJumpsuitSecGrey: 3
-    ClothingUniformJumpskirtSecGrey: 3
-    ClothingUniformJumpsuitSecBlue: 3
-    ClothingHeadsetSecurityCommon: 3 # Frontier - Ask SC for keys
-    ClothingMaskGasSecurity: 3
-    ClothingUniformJumpsuitBrigmedic: 3
-    ClothingUniformJumpskirtBrigmedic: 3
-    ClothingOuterWinterSec: 2
-    ClothingHeadHelmetBasic: 2 # Frontier
-    ClothingOuterArmorBasic: 2
-    ClothingNeckScarfStripedRed: 3
-    ClothingOuterArmorBasicSlim: 2
-    ClothingOuterCoatAMG: 2
-    ClothingMaskBreathMedicalSecurity: 3
-    ClothingEyesBlindfold: 1
-    ClothingShoesBootsJack: 1 # Frontier - 3<1
-    ClothingShoesBootsCombat: 1
-    ClothingShoesBootsWinterSec: 2
-    ClothingHeadHelmetJustice: 1
-    ClothingShoesBootsCowboyBlack: 1 # Frontier
-    ClothingHeadHatCowboyBlack: 1 # Frontier
-    ClothingShoesBootsMagSecurity: 1 # Frontier
+    ClothingHandsGlovesFingerless: 4294967295
+    ClothingUniformJumpsuitSec: 4294967295 # Frontier
+    ClothingUniformJumpskirtSec: 4294967295
+    ClothingUniformJumpsuitSecGrey: 4294967295
+    ClothingUniformJumpskirtSecGrey: 4294967295
+    ClothingUniformJumpsuitSecBlue: 4294967295
+    ClothingHeadsetSecurityCommon: 4294967295 # Frontier - Ask SC for keys
+    ClothingMaskGasSecurity: 4294967295
+    ClothingUniformJumpsuitBrigmedic: 4294967295
+    ClothingUniformJumpskirtBrigmedic: 4294967295
+    ClothingOuterWinterSec: 4294967295
+    ClothingHeadHelmetBasic: 4294967295 # Frontier
+    ClothingOuterArmorBasic: 4294967295
+    ClothingNeckScarfStripedRed: 4294967295
+    ClothingOuterArmorBasicSlim: 4294967295
+    ClothingOuterCoatAMG: 4294967295
+    ClothingMaskBreathMedicalSecurity: 4294967295
+    ClothingEyesBlindfold: 4294967295
+    ClothingShoesBootsJack: 4294967295 # Frontier - 3<1
+    ClothingShoesBootsCombat: 4294967295
+    ClothingShoesBootsWinterSec: 4294967295
+    ClothingHeadHelmetJustice: 4294967295
+    ClothingShoesBootsCowboyBlack: 4294967295 # Frontier
+    ClothingHeadHatCowboyBlack: 4294967295 # Frontier
+    ClothingShoesBootsMagSecurity: 4294967295 # Frontier
   contrabandInventory:
     ClothingUniformJumpskirtOfLife: 1 # Frontier
     ClothingMaskClownSecurity: 1
