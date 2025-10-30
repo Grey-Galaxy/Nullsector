@@ -1,36 +1,36 @@
 - type: vendingMachineInventory
   id: PietyVendInventory
   startingInventory:
-    NFClothingBackpackDuffelChaplain: 2 # Frontier
-    ClothingBackpackMessengerChaplain: 2 # Frontier
-    ClothingUniformJumpsuitChaplain: 3
-    ClothingUniformJumpskirtChaplain: 3
-    ClothingUniformJumpsuitMonasticRobeDark: 3
-    ClothingUniformJumpsuitMonasticRobeLight: 3
-    ClothingOuterHoodieChaplain: 3
-    ClothingOuterHoodieBlack: 3
-    ClothingHeadHatHoodNunHood: 3
-    ClothingOuterNunRobe: 3
-    ClothingHeadHatFez: 3
-    ClothingHeadHatPlaguedoctor: 3
-    ClothingHeadHatWitch: 3
-    ClothingHeadHatWitch1: 3
-    ClothingOuterPlagueSuit: 3
-    ClothingMaskPlague: 3
-    ClothingHeadHatWideBrimmed: 3 # Frontier
-    ClothingHeadHatPilgrim: 3 # Frontier
-    ClothingUniformJumpsuitChaplainPilgrimVest: 3 # Frontier
-    ClothingHeadHatBishopMitre: 3 # Frontier
-    ClothingOuterCoatBishop: 3 # Frontier
-    ClothingHeadHatCardinal: 3 # Frontier
-    ClothingOuterCoatCardinal: 3 # Frontier
-    ClothingHeadHatWitchhunter: 3 # Frontier
-    ClothingOuterCoatWitchHunter: 3 # Frontier
-    ClothingNeckScarfChaplainStole: 3 # Frontier
-    ClothingNeckStoleChaplain: 3
-    ClothingBeltChaplainSash: 3 # Frontier
+    NFClothingBackpackDuffelChaplain: 4294967295 # Frontier
+    ClothingBackpackMessengerChaplain: 4294967295 # Frontier
+    ClothingUniformJumpsuitChaplain: 4294967295
+    ClothingUniformJumpskirtChaplain: 4294967295
+    ClothingUniformJumpsuitMonasticRobeDark: 4294967295
+    ClothingUniformJumpsuitMonasticRobeLight: 4294967295
+    ClothingOuterHoodieChaplain: 4294967295
+    ClothingOuterHoodieBlack: 4294967295
+    ClothingHeadHatHoodNunHood: 4294967295
+    ClothingOuterNunRobe: 4294967295
+    ClothingHeadHatFez: 4294967295
+    ClothingHeadHatPlaguedoctor: 4294967295
+    ClothingHeadHatWitch: 4294967295
+    ClothingHeadHatWitch1: 4294967295
+    ClothingOuterPlagueSuit: 3429496729
+    ClothingMaskPlague: 4294967295
+    ClothingHeadHatWideBrimmed: 4294967295 # Frontier
+    ClothingHeadHatPilgrim: 4294967295 # Frontier
+    ClothingUniformJumpsuitChaplainPilgrimVest: 4294967295 # Frontier
+    ClothingHeadHatBishopMitre: 4294967295 # Frontier
+    ClothingOuterCoatBishop: 4294967295 # Frontier
+    ClothingHeadHatCardinal: 4294967295 # Frontier
+    ClothingOuterCoatCardinal: 4294967295 # Frontier
+    ClothingHeadHatWitchhunter: 4294967295 # Frontier
+    ClothingOuterCoatWitchHunter: 4294967295 # Frontier
+    ClothingNeckScarfChaplainStole: 4294967295 # Frontier
+    ClothingNeckStoleChaplain: 4294967295
+    ClothingBeltChaplainSash: 4294967295 # Frontier
 #    ClothingHeadsetService: 4 # Frontier
-    RubberStampChaplain: 3
+    RubberStampChaplain: 4294967295
     BoxCandle: 2
     BoxCandleSmall: 2
     Urn: 5
@@ -38,7 +38,7 @@
     Censer: 2 # Frontier
     SilverRing: 2 # Frontier
     GoldRing: 2 # Frontier
-    ClothingOuterEVASuitChaplain: 3 # Frontier
+    ClothingOuterEVASuitChaplain: 4294967295 # Frontier
 
  #Null Sector start
     BibleArialialDominion: 3
