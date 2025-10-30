@@ -1350,3 +1350,19 @@
       whitelist:
         tags:
           - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMilEnergyPickaxe
+  name:  uplink-security-mil-energy-pickaxe-name
+  description: uplink-security-mil-energy-pickaxe-desc
+  productEntity: MilEnergyPickaxe
+  icon: { sprite: _NF/Objects/Weapons/Melee/energy_pickaxe.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 6
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
