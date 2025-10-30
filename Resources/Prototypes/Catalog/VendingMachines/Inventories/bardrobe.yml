@@ -1,20 +1,20 @@
 - type: vendingMachineInventory
   id: BarDrobeInventory
   startingInventory:
-    ClothingHeadHatBowlerHat: 2
-    ClothingHeadHatTophat: 2
-    ClothingEyesHudBeer: 2
-    ClothingEyesEyepatchHudBeer: 2
+    ClothingHeadHatBowlerHat: 4294967295
+    ClothingHeadHatTophat: 4294967295
+    ClothingEyesHudBeer: 4294967295
+    ClothingEyesEyepatchHudBeer: 4294967295
 #    ClothingHeadsetService: 2 # Frontier
-    ClothingOuterApronBar: 2
-    ClothingOuterWinterBar: 2
-    ClothingUniformJumpsuitBartender: 2
-    ClothingUniformJumpskirtBartender: 2
-    ClothingUniformJumpsuitBartenderPurple: 2
-    ClothingShoesColorBlack: 2
-    ClothingOuterArmorBasicSlim: 2
-    ClothingOuterVest: 2
-    ClothingBeltBandolier: 2
-    ClothingEyesGlassesSunglasses: 2
+    ClothingOuterApronBar: 4294967295
+    ClothingOuterWinterBar: 4294967295
+    ClothingUniformJumpsuitBartender: 4294967295
+    ClothingUniformJumpskirtBartender: 4294967295
+    ClothingUniformJumpsuitBartenderPurple: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingOuterArmorBasicSlim: 4294967295
+    ClothingOuterVest: 4294967295
+    ClothingBeltBandolier: 4294967295
+    ClothingEyesGlassesSunglasses: 4294967295
   contrabandInventory:
     ToyFigurineBartender: 1
