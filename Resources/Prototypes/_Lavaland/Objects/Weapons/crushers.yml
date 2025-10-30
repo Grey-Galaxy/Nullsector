@@ -188,7 +188,9 @@
     animation: WeaponArcThrust
     range: 1.6
   - type: Item
-    size: Ginormous
+    size: Normal
+    shape:
+    - 0,0,5,0
     sprite: Objects/Weapons/Crusher/crusher_machete-inhands.rsi
   # Refrained from porting parrying due to possible... issues. -Lavaland Dev
   - type: Sharp

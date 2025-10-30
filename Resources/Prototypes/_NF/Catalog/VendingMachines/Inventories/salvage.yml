@@ -12,8 +12,9 @@
     WeaponProtoKineticAccelerator: 4
     LavalandWeaponKineticSpear: 4
     LavalandWeaponKineticClaws: 4
-    LavalandWeaponKineticMachete: 4
+    LavalandWeaponKineticMachete: 3
     LavalandWeaponKineticHammer: 2
+    SeismicCharge: 1
 
 - type: vendingMachineInventory
   id: NFSalvageEquipmentPOIInventory
@@ -27,3 +28,8 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
+    LavalandWeaponKineticSpear: 4
+    LavalandWeaponKineticClaws: 4
+    LavalandWeaponKineticMachete: 3
+    LavalandWeaponKineticHammer: 2
+    SeismicCharge: 1
