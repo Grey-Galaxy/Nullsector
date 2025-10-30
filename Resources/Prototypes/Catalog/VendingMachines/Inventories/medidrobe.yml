@@ -1,92 +1,92 @@
 - type: vendingMachineInventory
   id: MediDrobeInventory
   startingInventory:
-    ClothingBackpackMedical: 4
-    ClothingBackpackSatchelMedical: 4
-    ClothingBackpackDuffelMedical: 4
-    ClothingBackpackDuffelTrauma: 4 # Frontier
-    ClothingBackpackMessengerMedical: 4 # Frontier
-    ClothingOuterEVASuitMedic: 4 # Frontier
-    ClothingUniformJumpsuitMedicalDoctor: 4
-    ClothingUniformJumpskirtMedicalDoctor: 4
-    ClothingBeltMedical: 4
-    ClothingHeadHatBeretMedic: 4
-    ClothingHeadNurseHat: 4
-    ClothingOuterCoatLab: 4
-    ClothingOuterWinterMed: 2
-    ClothingShoesColorWhite: 4
-    ClothingShoesBootsWinterMed: 2
-    ClothingHandsGlovesLatex: 4
-    ClothingHandsGlovesNitrile: 2
-    ClothingEyesHudMedical: 4
-    ClothingEyesEyepatchHudMedical: 4 # Frontier
-    ClothingHeadsetMedical: 4
-    EncryptionKeyMedical: 10
-    ClothingMaskBreathMedical: 4
-    ClothingOuterHospitalGown: 5
-    UniformScrubsColorGreen: 4
-    UniformScrubsColorBlue: 4
-    UniformScrubsColorPurple: 4
-    ClothingHeadHatSurgcapGreen: 4
-    ClothingHeadHatSurgcapBlue: 4
-    ClothingHeadHatSurgcapPurple: 4
+    ClothingBackpackMedical: 4294967295
+    ClothingBackpackSatchelMedical: 4294967295
+    ClothingBackpackDuffelMedical: 4294967295
+    ClothingBackpackDuffelTrauma: 4294967295 # Frontier
+    ClothingBackpackMessengerMedical: 4294967295 # Frontier
+    ClothingOuterEVASuitMedic: 4294967295 # Frontier
+    ClothingUniformJumpsuitMedicalDoctor: 4294967295
+    ClothingUniformJumpskirtMedicalDoctor: 4294967295
+    ClothingBeltMedical: 4294967295
+    ClothingHeadHatBeretMedic: 4294967295
+    ClothingHeadNurseHat: 4294967295
+    ClothingOuterCoatLab: 4294967295
+    ClothingOuterWinterMed: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingShoesBootsWinterMed: 4294967295
+    ClothingHandsGlovesLatex: 4294967295
+    ClothingHandsGlovesNitrile: 4294967295
+    ClothingEyesHudMedical: 4294967295
+    ClothingEyesEyepatchHudMedical: 4294967295 # Frontier
+    ClothingHeadsetMedical: 4294967295
+    EncryptionKeyMedical: 4294967295
+    ClothingMaskBreathMedical: 4294967295
+    ClothingOuterHospitalGown: 4294967295
+    UniformScrubsColorGreen: 4294967295
+    UniformScrubsColorBlue: 4294967295
+    UniformScrubsColorPurple: 4294967295
+    ClothingHeadHatSurgcapGreen: 4294967295
+    ClothingHeadHatSurgcapBlue: 4294967295
+    ClothingHeadHatSurgcapPurple: 4294967295
 # Paramed:
-    ClothingUniformJumpsuitParamedic: 4
-    ClothingUniformJumpskirtParamedic: 4
-    ClothingOuterWinterPara: 2
-    ClothingShoesBootsWinterParamedic: 2
-    ClothingOuterCoatParamedicWB: 2
-    ClothingHeadHatParamedicsoft: 2
-    ClothingBeltMedicalEMT: 4 # Frontier, empty
-    ClothingOuterHardsuitVoidParamed: 1
+    ClothingUniformJumpsuitParamedic: 4294967295
+    ClothingUniformJumpskirtParamedic: 4294967295
+    ClothingOuterWinterPara: 4294967295
+    ClothingShoesBootsWinterParamedic: 4294967295
+    ClothingOuterCoatParamedicWB: 4294967295
+    ClothingHeadHatParamedicsoft: 4294967295
+    ClothingBeltMedicalEMT: 4294967295 # Frontier, empty
+    ClothingOuterHardsuitVoidParamed: 4294967295
 # Virology:
-    ClothingBackpackVirology: 2
-    ClothingBackpackSatchelVirology: 2
-    ClothingBackpackDuffelVirology: 2
-    ClothingBackpackMessengerVirology: 2 # Frontier
-    ClothingUniformJumpsuitVirology: 2
-    ClothingUniformJumpskirtVirology: 2
-    ClothingOuterWinterViro: 2
-    ClothingOuterCoatLabViro: 2
-    ClothingMaskSterile: 4
-    ClothingHeadHatHoodBioVirology: 2
-    ClothingOuterBioVirology: 2
-    ClothingShoesBootsWinterViro: 2 #Delta V: Add departmental winter boots
+    ClothingBackpackVirology: 4294967295
+    ClothingBackpackSatchelVirology: 4294967295
+    ClothingBackpackDuffelVirology: 4294967295
+    ClothingBackpackMessengerVirology: 4294967295 # Frontier
+    ClothingUniformJumpsuitVirology: 4294967295
+    ClothingUniformJumpskirtVirology: 4294967295
+    ClothingOuterWinterViro: 4294967295
+    ClothingOuterCoatLabViro: 4294967295
+    ClothingMaskSterile: 4294967295
+    ClothingHeadHatHoodBioVirology: 4294967295
+    ClothingOuterBioVirology: 4294967295
+    ClothingShoesBootsWinterViro: 4294967295 #Delta V: Add departmental winter boots
 # Chem:
-    ClothingBackpackChemistry: 2
-    ClothingBackpackSatchelChemistry: 2
-    ClothingBackpackDuffelChemistry: 2
-    ClothingBackpackMessengerChemistry: 2 # Frontier
-    ChemBag: 2
-    HandLabeler: 4
-    ClothingUniformJumpsuitChemistry: 2
-    ClothingUniformJumpskirtChemistry: 2
-    ClothingOuterWinterChem: 2
-    ClothingOuterCoatLabChem: 2
-    ClothingShoesBootsWinterChem: 2 #Delta V: Add departmental winter boots
+    ClothingBackpackChemistry: 4294967295
+    ClothingBackpackSatchelChemistry: 4294967295
+    ClothingBackpackDuffelChemistry: 4294967295
+    ClothingBackpackMessengerChemistry: 4294967295 # Frontier
+    ChemBag: 4294967295
+    HandLabeler: 4294967295
+    ClothingUniformJumpsuitChemistry: 4294967295
+    ClothingUniformJumpskirtChemistry: 4294967295
+    ClothingOuterWinterChem: 4294967295
+    ClothingOuterCoatLabChem: 4294967295
+    ClothingShoesBootsWinterChem: 4294967295 #Delta V: Add departmental winter boots
 # Genetics:
-    ClothingUniformJumpsuitGenetics: 2
-    ClothingUniformJumpskirtGenetics: 2
-    ClothingOuterCoatLabGene: 2
-    ClothingOuterWinterGen: 2
-    ClothingBackpackGenetics: 2
-    ClothingBackpackSatchelGenetics: 2
-    ClothingBackpackDuffelGenetics: 2
-    ClothingShoesBootsWinterGenetics: 2 #Delta V: Add departmental winter boots
+    ClothingUniformJumpsuitGenetics: 4294967295
+    ClothingUniformJumpskirtGenetics: 4294967295
+    ClothingOuterCoatLabGene: 4294967295
+    ClothingOuterWinterGen: 4294967295
+    ClothingBackpackGenetics: 4294967295
+    ClothingBackpackSatchelGenetics: 4294967295
+    ClothingBackpackDuffelGenetics: 4294967295
+    ClothingShoesBootsWinterGenetics: 4294967295 #Delta V: Add departmental winter boots
 # Physician:
-    ClothingUniformJumpsuitSeniorPhysician: 1
-    ClothingUniformJumpskirtSeniorPhysician: 1
-    ClothingOuterCoatLabSeniorPhysician: 1
-    ClothingHeadHatBeretBrigmedic: 1
+    ClothingUniformJumpsuitSeniorPhysician: 4294967295
+    ClothingUniformJumpskirtSeniorPhysician: 4294967295
+    ClothingOuterCoatLabSeniorPhysician: 4294967295
+    ClothingHeadHatBeretBrigmedic: 4294967295
 # Psychologist:
-    ClothingUniformJumpsuitPsychologist: 1
-    ClothingUniformJumpskirtPsychologist: 1
-    ClothingEyesGlasses: 1
-    ClothingShoesLeather: 1
-    RubberStampPsychologist: 1
+    ClothingUniformJumpsuitPsychologist: 4294967295
+    ClothingUniformJumpskirtPsychologist: 4294967295
+    ClothingEyesGlasses: 4294967295
+    ClothingShoesLeather: 4294967295
+    RubberStampPsychologist: 4294967295
 # CMO:
   contrabandInventory: # Frontier - Hidden inventory
-    ClothingUniformJumpskirtOfLife: 1
+    ClothingUniformJumpskirtOfLife: 
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
