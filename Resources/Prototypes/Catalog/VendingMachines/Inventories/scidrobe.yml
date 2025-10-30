@@ -1,51 +1,51 @@
 - type: vendingMachineInventory
   id: SciDrobeInventory
   startingInventory:
-    ClothingBackpackScience: 3
-    ClothingBackpackSatchelScience: 3
-    ClothingBackpackDuffelScience: 3
-    ClothingBackpackMessengerScience: 3 # Frontier
-    ClothingOuterEVASuitScientist: 3 # Frontier
-    ClothingUniformJumpsuitScientist: 3
-    ClothingUniformJumpskirtScientist: 3
-    ClothingUniformJumpsuitScientistFormal: 3
-    ClothingOuterCoatRnd: 3
-    ClothingShoesColorWhite: 3
-    ClothingNeckTieSci: 3
-    ClothingHeadsetScience: 3
-    ClothingMaskGas: 3
-    ClothingOuterWinterSci: 2
-    ClothingNeckScarfStripedPurple: 3
-    ClothingShoesBootsWinterSci: 2
+    ClothingBackpackScience: 4294967295
+    ClothingBackpackSatchelScience: 4294967295
+    ClothingBackpackDuffelScience: 4294967295
+    ClothingBackpackMessengerScience: 4294967295 # Frontier
+    ClothingOuterEVASuitScientist: 4294967295 # Frontier
+    ClothingUniformJumpsuitScientist: 4294967295
+    ClothingUniformJumpskirtScientist: 4294967295
+    ClothingUniformJumpsuitScientistFormal: 4294967295
+    ClothingOuterCoatRnd: 4294967295
+    ClothingShoesColorWhite: 4294967295
+    ClothingNeckTieSci: 4294967295
+    ClothingHeadsetScience: 4294967295
+    ClothingMaskGas: 4294967295
+    ClothingOuterWinterSci: 4294967295
+    ClothingNeckScarfStripedPurple: 4294967295
+    ClothingShoesBootsWinterSci: 4294967295
     # Frontier
-    ClothingHeadHatHoodBioScientist: 1
-    ClothingOuterBioScientist: 1
+    ClothingHeadHatHoodBioScientist: 4294967295
+    ClothingOuterBioScientist: 4294967295
 # RoboDrobe:
-    ClothingOuterCoatRobo: 2
-    ClothingUniformJumpsuitRoboticist: 2
-    ClothingUniformJumpskirtRoboticist: 2
-    ClothingShoesColorBlack: 2
-    ClothingHandsGlovesFingerless: 2
-    ClothingHeadHatCorpsoft: 2
-    ClothingHeadBandSkull: 2
-    ClothingHeadsetRobotics: 2
-    ClothingOuterWinterRobo: 2
-    ClothingShoesBootsWinterRobo: 2 #Delta V: Add departmental winter boots
+    ClothingOuterCoatRobo: 4294967295
+    ClothingUniformJumpsuitRoboticist: 4294967295
+    ClothingUniformJumpskirtRoboticist: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingHandsGlovesFingerless: 4294967295
+    ClothingHeadHatCorpsoft: 4294967295
+    ClothingHeadBandSkull: 4294967295
+    ClothingHeadsetRobotics: 4294967295
+    ClothingOuterWinterRobo: 4294967295
+    ClothingShoesBootsWinterRobo: 4294967295 #Delta V: Add departmental winter boots
 # Senior:
-    ClothingUniformJumpsuitSeniorResearcher: 1
-    ClothingUniformJumpskirtSeniorResearcher: 1
-    ClothingOuterCoatLabSeniorResearcher: 1
+    ClothingUniformJumpsuitSeniorResearcher: 4294967295
+    ClothingUniformJumpskirtSeniorResearcher: 4294967295
+    ClothingOuterCoatLabSeniorResearcher: 4294967295
 # RD:
-    ClothingUniformJumpsuitResearchDirector: 1
-    ClothingUniformJumpskirtResearchDirector: 1
-    ClothingOuterWinterRD: 1
-    ClothingShoesBootsWinterRD: 1
-    ClothingHeadHatBeretRND: 1
-    ClothingNeckMantleRD: 1
-    ClothingNeckCloakRd: 1
-    ClothingHandsGlovesColorPurple: 1
-    ClothingHeadsetAltScience: 1
-    RubberStampRd: 1
+    ClothingUniformJumpsuitResearchDirector: 4294967295
+    ClothingUniformJumpskirtResearchDirector: 4294967295
+    ClothingOuterWinterRD: 4294967295
+    ClothingShoesBootsWinterRD: 4294967295
+    ClothingHeadHatBeretRND: 4294967295
+    ClothingNeckMantleRD: 4294967295
+    ClothingNeckCloakRd: 4294967295
+    ClothingHandsGlovesColorPurple: 4294967295
+    ClothingHeadsetAltScience: 4294967295
+    RubberStampRd: 4294967295
     # End Frontier
   contrabandInventory:
     ToyFigurineResearchDirector: 1
