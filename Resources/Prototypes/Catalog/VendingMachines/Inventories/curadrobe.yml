@@ -1,18 +1,18 @@
 - type: vendingMachineInventory
   id: CuraDrobeInventory
   startingInventory:
-    BooksBag: 2
-    BriefcaseBrown: 2
+    BooksBag: 4294967295
+    BriefcaseBrown: 4294967295
     HandLabeler: 2
     Cane: 3
-    ClothingEyesGlasses: 2
-    ClothingEyesGlassesJamjar: 2
-    ClothingNeckScarfStripedGreen: 2
-    ClothingUniformJumpsuitCurator: 3
-    ClothingUniformJumpskirtCurator: 3
-    ClothingUniformJumpsuitLibrarian: 3
-    ClothingUniformJumpskirtLibrarian: 3
-    ClothingShoesBootsLaceup: 2
+    ClothingEyesGlasses: 4294967295
+    ClothingEyesGlassesJamjar: 4294967295
+    ClothingNeckScarfStripedGreen: 4294967295
+    ClothingUniformJumpsuitCurator: 4294967295
+    ClothingUniformJumpskirtCurator: 4294967295
+    ClothingUniformJumpsuitLibrarian: 4294967295
+    ClothingUniformJumpskirtLibrarian: 4294967295
+    ClothingShoesBootsLaceup: 4294967295
 #    ClothingHeadsetService: 2 # Frontier
   contrabandInventory:
     ToyFigurineLibrarian: 1
