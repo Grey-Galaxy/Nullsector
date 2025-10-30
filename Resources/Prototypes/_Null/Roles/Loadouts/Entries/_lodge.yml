@@ -28,3 +28,18 @@
   price: 3000
   equipment:
     outerClothing: ClothingOuterCoatJacketBiker
+
+# Side Arm
+- type: loadout
+  id: WeaponPistolMauserC96
+  price: 3264
+  inhand:
+  - WeaponPistolMauserC96
+
+- type: loadout
+  id: LastStandMauserC96
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SecurityStarWorthy
+  inhand:
+  - LastStandMauserC96

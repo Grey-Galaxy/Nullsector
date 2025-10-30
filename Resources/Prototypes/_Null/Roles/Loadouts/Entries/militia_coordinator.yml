@@ -12,3 +12,8 @@
   id: MCJumpsuitYellowEntry
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryColorYellow
+
+- type: loadout
+  id: ClothingNeckCloakGoldBlack
+  equipment:
+    neck: ClothingNeckCloakGoldBlack

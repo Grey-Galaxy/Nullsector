@@ -957,6 +957,7 @@
   name: loadout-group-head-of-security-neck
   minLimit: 0
   loadouts:
+  - ClothingNeckCloakGoldBlack
   - HeadofSecurityCloak
   - HeadofSecurityMantle
 
@@ -1040,7 +1041,14 @@
   loadouts:
   - JackBoots
   - SecurityWinterBoots
-
+  - ContractorClothingShoesLeather
+  - ContractorClothingShoesBootsLaceup
+  - ContractorClothingShoesHighheelShoes
+  - ContractorClothingShoesBootsWork
+  - ContractorClothingShoesBootsCowboyBlack
+  - ContractorClothingShoesBootsCowboyBrown
+  - ContractorClothingShoesBootsCowboyWhite
+  
 - type: loadoutGroup
   id: SecurityPDA
   name: loadout-group-security-id

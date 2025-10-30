@@ -6,9 +6,18 @@
   name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
-  - ContractorClothingOuterCoatExpensive #We let them drip out a little if they want
+  - ContractorClothingOuterCoatExpensive
   - ContractorClothingOuterCoatSpaceAsshole
   - LodgeClothingOuterCoatNfsdBomber
   - LodgeClothingOuterCoatNfsdLongCoat
   - LodgeClothingOuterCoatNfsdFormal
   - LodgeClothingOuterCoatJacketBiker
+
+- type: loadoutGroup
+  id: CommandSideArm
+  name: loadout-group-side-arm
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - WeaponPistolMauserC96
+  - LastStandMauserC96
