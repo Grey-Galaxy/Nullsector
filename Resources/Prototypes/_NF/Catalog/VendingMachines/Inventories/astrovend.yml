@@ -1,38 +1,38 @@
 - type: vendingMachineInventory
   id: AstroVendInventory
   startingInventory:
-    ClothingOuterHardsuitSpatio: 5
-    ClothingShoesBootsMag: 15
-    ClothingOuterEVASuitContractor: 10
+    ClothingOuterHardsuitSpatio: 4294967295
+    ClothingShoesBootsMag: 4294967295
+    ClothingOuterEVASuitContractor: 4294967295
     RadioHandheldNF: 15
     ClothingMaskGas: 10
     JetpackMiniFilled: 10
     HandHeldMassScanner: 10
     AppraisalCartridge: 3
 # Keys
-    EncryptionKeyCommon: 3
-    EncryptionKeyTraffic: 3
-    EncryptionKeyMedical: 3
-    EncryptionKeyCargo: 3
-    EncryptionKeyEngineering: 3
-    EncryptionKeyScience: 3
+    EncryptionKeyCommon: 4294967295
+    EncryptionKeyTraffic: 4294967295
+    EncryptionKeyMedical: 4294967295
+    EncryptionKeyCargo: 4294967295
+    EncryptionKeyEngineering: 4294967295
+    EncryptionKeyScience: 4294967295
 # Pilot drip
-    ClothingBackpackPilot: 3
-    ClothingBackpackDuffelPilot: 3
-    ClothingBackpackSatchelPilot: 3
-    ClothingBackpackMessengerPilot: 3
-    ClothingBeltPilot: 3
-    ClothingMaskPilot: 3
-    ClothingUniformJumpsuitPilot: 3
-    ClothingOuterCoatBomber: 3
-    ClothingHeadsetAltPilot: 3
-    ClothingEyesGlassesPilot: 3
-    ClothingHandsGlovesPilot: 3
-    ClothingHeadHatPilot: 3
-    ClothingNeckScarfPilot: 3
-    ClothingOuterEVASuitPilot: 5
-    ClothingOuterHardsuitPilot: 3
-    ClothingShoesBootsPilot: 3
+    ClothingBackpackPilot: 4294967295
+    ClothingBackpackDuffelPilot: 4294967295
+    ClothingBackpackSatchelPilot: 4294967295
+    ClothingBackpackMessengerPilot: 4294967295
+    ClothingBeltPilot: 4294967295
+    ClothingMaskPilot: 4294967295
+    ClothingUniformJumpsuitPilot: 4294967295
+    ClothingOuterCoatBomber: 4294967295
+    ClothingHeadsetAltPilot: 4294967295
+    ClothingEyesGlassesPilot: 4294967295
+    ClothingHandsGlovesPilot: 4294967295
+    ClothingHeadHatPilot: 4294967295
+    ClothingNeckScarfPilot: 4294967295
+    ClothingOuterEVASuitPilot: 4294967295
+    ClothingOuterHardsuitPilot: 4294967295
+    ClothingShoesBootsPilot: 4294967295
 
 - type: vendingMachineInventory
   id: AstroVendPOIInventory
@@ -53,19 +53,19 @@
     EncryptionKeyEngineering: 4294967295 # Infinite
     EncryptionKeyScience: 4294967295 # Infinite
 # Pilot drip
-    ClothingBackpackPilot: 3
-    ClothingBackpackDuffelPilot: 3
-    ClothingBackpackSatchelPilot: 3
-    ClothingBackpackMessengerPilot: 3
-    ClothingBeltPilot: 3
-    ClothingMaskPilot: 3
-    ClothingUniformJumpsuitPilot: 3
-    ClothingOuterCoatBomber: 3
-    ClothingHeadsetAltPilot: 3
-    ClothingEyesGlassesPilot: 3
-    ClothingHandsGlovesPilot: 3
-    ClothingHeadHatPilot: 3
-    ClothingNeckScarfPilot: 3
-    ClothingOuterEVASuitPilot: 5
-    ClothingOuterHardsuitPilot: 3
-    ClothingShoesBootsPilot: 3
+    ClothingBackpackPilot: 4294967295
+    ClothingBackpackDuffelPilot: 4294967295
+    ClothingBackpackSatchelPilot: 4294967295
+    ClothingBackpackMessengerPilot: 4294967295
+    ClothingBeltPilot: 4294967295
+    ClothingMaskPilot: 4294967295
+    ClothingUniformJumpsuitPilot: 4294967295
+    ClothingOuterCoatBomber: 4294967295
+    ClothingHeadsetAltPilot: 4294967295
+    ClothingEyesGlassesPilot: 4294967295
+    ClothingHandsGlovesPilot: 4294967295
+    ClothingHeadHatPilot: 4294967295
+    ClothingNeckScarfPilot: 4294967295
+    ClothingOuterEVASuitPilot: 4294967295
+    ClothingOuterHardsuitPilot: 4294967295
+    ClothingShoesBootsPilot: 4294967295
