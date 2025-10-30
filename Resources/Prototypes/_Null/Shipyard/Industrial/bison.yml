@@ -11,7 +11,7 @@
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_Null/Shuttles/Industrial/bison.yml
-  guidebookPage: null
+  guidebookPage: ShipyardBison
   class:
   - Cargo
   engine:

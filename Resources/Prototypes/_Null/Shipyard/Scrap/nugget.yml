@@ -1,13 +1,14 @@
 # Author Info
 # GitHub: ???
-# Discord: ???
+# Discord: slimy_sen
 
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
 
 # Shuttle Notes:
-#
+# This hurts to look at. -Z
+
 - type: vessel
   id: Nugget
   parent: BaseVessel
@@ -17,7 +18,7 @@
   category: Small
   group: Scrap
   shuttlePath: /Maps/_Null/Shuttles/Scrap/nugget.yml
-  guidebookPage: Null
+  guidebookPage: ShipyardNugget
   class:
   - Scrapyard
   - Kitchen

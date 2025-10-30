@@ -13,11 +13,17 @@
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_Null/Shuttles/Expedition/archon.yml
-  guidebookPage: null
+  guidebookPage: ShipyardArchon
   class:
   - Expedition
   engine:
   - AME
+
+- type: guideEntry
+  id: ShipyardArchon
+  name: guide-entry-shipyard-archon
+  text: "/ServerInfo/_Null/Guidebook/Shipyard/Archon.xml"
+
 
 - type: gameMap
   id: Archon
