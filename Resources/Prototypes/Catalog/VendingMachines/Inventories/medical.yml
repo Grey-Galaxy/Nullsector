@@ -9,8 +9,8 @@
     EpinephrineChemistryBottle: 3
     Syringe: 5
     BoxBottle: 3
-    ClothingEyesHudMedical: 2
-    ClothingEyesEyepatchHudMedical: 2
+    ClothingEyesHudMedical: 4294967295
+    ClothingEyesEyepatchHudMedical: 4294967295
     MedicalTrackingImplanterLabeled: 4294967295 # Frontier - infinite
     SadTromboneImplanterLabeled: 10 # Frontier
     BikeHornImplanterLabeled: 10 # Frontier
