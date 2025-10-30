@@ -135,6 +135,7 @@
   id: SalvageTreasureRare
   table: !type:GroupSelector
     children:
+    - id: NFPouchContractor
     - id: MaterialDiamond1
     - id: TreasureCPUSupercharged
     # - id: TechnologyDiskRare # Frontier
