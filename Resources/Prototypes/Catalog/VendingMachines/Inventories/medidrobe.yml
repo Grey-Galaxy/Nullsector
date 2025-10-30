@@ -58,7 +58,7 @@
     ClothingBackpackDuffelChemistry: 4294967295
     ClothingBackpackMessengerChemistry: 4294967295 # Frontier
     ChemBag: 4294967295
-    HandLabeler: 4294967295
+    HandLabeler: 4
     ClothingUniformJumpsuitChemistry: 4294967295
     ClothingUniformJumpskirtChemistry: 4294967295
     ClothingOuterWinterChem: 4294967295
@@ -86,7 +86,7 @@
     RubberStampPsychologist: 4294967295
 # CMO:
   contrabandInventory: # Frontier - Hidden inventory
-    ClothingUniformJumpskirtOfLife: 
+    ClothingUniformJumpskirtOfLife: 1
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
