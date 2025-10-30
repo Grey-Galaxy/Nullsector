@@ -14,17 +14,17 @@
     LogProbeCartridge: 3
     ContrabandAppraisalTool: 10
 #Bounty hunter
-    ClothingOuterEVASuitMercenary: 4
-    ClothingOuterEVASuitPrivateSec: 4
-    ClothingUniformJumpsuitBH: 3
-    ClothingUniformJumpskirtBH: 3
-    ClothingUniformJumpsuitBHGrey: 2
-    ClothingUniformJumpskirtBHGrey: 2
-    ClothingNeckTieBH: 2
-    ClothingOuterCoatBHTrench: 3
-    ClothingHeadHatBH: 3
-    ClothingNeckMantleBH: 3
-    ClothingShoesBootsJack: 3
+    ClothingOuterEVASuitMercenary: 4294967295
+    ClothingOuterEVASuitPrivateSec: 4294967295
+    ClothingUniformJumpsuitBH: 4294967295
+    ClothingUniformJumpskirtBH: 4294967295
+    ClothingUniformJumpsuitBHGrey: 4294967295
+    ClothingUniformJumpskirtBHGrey: 4294967295
+    ClothingNeckTieBH: 4294967295
+    ClothingOuterCoatBHTrench: 4294967295
+    ClothingHeadHatBH: 4294967295
+    ClothingNeckMantleBH: 4294967295
+    ClothingShoesBootsJack: 4294967295
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
