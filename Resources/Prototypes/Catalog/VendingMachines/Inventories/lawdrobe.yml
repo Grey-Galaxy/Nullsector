@@ -1,21 +1,21 @@
 - type: vendingMachineInventory
   id: LawDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitLawyerBlue: 1
-    ClothingUniformJumpskirtLawyerBlue: 1
-    ClothingUniformJumpsuitLawyerPurple: 1
-    ClothingUniformJumpskirtLawyerPurple: 1
-    ClothingUniformJumpsuitLawyerRed: 1
-    ClothingUniformJumpskirtLawyerRed: 1
-    ClothingUniformJumpsuitLawyerBlack: 1
-    ClothingUniformJumpskirtLawyerBlack: 1
-    ClothingUniformJumpsuitLawyerGood: 1
-    ClothingUniformJumpskirtLawyerGood: 1
-    ClothingShoesBootsLaceup: 2
+    ClothingUniformJumpsuitLawyerBlue: 4294967295
+    ClothingUniformJumpskirtLawyerBlue: 4294967295
+    ClothingUniformJumpsuitLawyerPurple: 4294967295
+    ClothingUniformJumpskirtLawyerPurple: 4294967295
+    ClothingUniformJumpsuitLawyerRed: 4294967295
+    ClothingUniformJumpskirtLawyerRed: 4294967295
+    ClothingUniformJumpsuitLawyerBlack: 4294967295
+    ClothingUniformJumpskirtLawyerBlack: 4294967295
+    ClothingUniformJumpsuitLawyerGood: 4294967295
+    ClothingUniformJumpskirtLawyerGood: 4294967295
+    ClothingShoesBootsLaceup: 4294967295
 #    ClothingHeadsetService: 2 # Frontier
-    ClothingNeckLawyerbadge: 2
-    RubberStampLawyer: 2
-    BriefcaseBrown: 2
+    ClothingNeckLawyerbadge: 4294967295
+    RubberStampLawyer: 4294967295
+    BriefcaseBrown: 4294967295
 #    HyperlinkBookSpaceLaw: 3 # Frontier: BookSpaceLaw<HyperlinkBookSpaceLaw
     LuxuryPen: 2
     HandLabeler: 2
