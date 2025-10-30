@@ -2,7 +2,7 @@
   id: PirateVendInventory
   startingInventory:
     ClothingNeckCloakPirateCap: 4294967295
-    CageParrot: 4294967295
+    CageParrot: 3
     ClothingShoesBootsMagPirateFilled: 4294967295
     ClothingHeadHatPirate: 4294967295
     ClothingHeadHatPirateTricord: 4294967295
