@@ -196,6 +196,12 @@
         },
 		{
             "name": "agrichemkit"
+        },
+        {
+            "name": "chocolatebar"
+        },
+        {
+            "name": "raisins"
         }
     ]
 }
