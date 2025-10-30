@@ -82,16 +82,23 @@ public abstract class SharedFlatpackSystem : EntitySystem
         // TODO FLATPAK
         // Make this logic smarter. This should eventually allow for shit like building microwaves on tables and such.
         // Also: make it ignore ghosts
-        if (_entityLookup.AnyEntitiesIntersecting(coords, LookupFlags.Dynamic | LookupFlags.Static))
-        {
-            // this popup is on the server because the predicts on the intersection is crazy
-            if (_net.IsServer)
-                _popup.PopupEntity(Loc.GetString("flatpack-unpack-no-room"), uid, args.User);
-            return;
-        }
-
         if (_net.IsServer)
         {
+            var entities = _entityLookup.GetEntitiesIntersecting(coords, LookupFlags.Dynamic | LookupFlags.Static);
+            foreach (var entity in entities)
+            {
+                if (entity == ent.Owner)
+                    continue;
+
+                TryComp<MetaDataComponent>(entity, out var meta);
+                if (meta != null)
+                    _popup.PopupEntity(Loc.GetString("flatpack-unpack-blocked-by", ("name", meta.EntityName)),
+                        uid,
+                        args.User);
+                return;
+            }
+
+
             var spawn = Spawn(comp.Entity, _map.GridTileToLocal(grid, gridComp, buildPos));
             if (TryComp(spawn, out TransformComponent? spawnXform)) // Frontier: rotatable flatpacks
                 spawnXform.LocalRotation = xform.LocalRotation.GetCardinalDir().ToAngle(); // Frontier: rotatable flatpacks
