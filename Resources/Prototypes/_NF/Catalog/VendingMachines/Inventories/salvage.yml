@@ -9,11 +9,11 @@
     RadioHandheldNF: 5
     WeaponCrusher: 6
     WeaponCrusherDagger: 8
-    WeaponProtoKineticAccelerator: 1
-    LavalandWeaponKineticSpear: 1
-    LavalandWeaponKineticClaws: 1
-    LavalandWeaponKineticMachete: 1
-    LavalandWeaponKineticHammer: 1
+    WeaponProtoKineticAccelerator: 4
+    LavalandWeaponKineticSpear: 4
+    LavalandWeaponKineticClaws: 4
+    LavalandWeaponKineticMachete: 3
+    LavalandWeaponKineticHammer: 2
     NFPouchUtility: 3
     SeismicCharge: 1
 
@@ -31,7 +31,7 @@
     RadioHandheldNF: 4294967295 # Infinite
     LavalandWeaponKineticSpear: 4
     LavalandWeaponKineticClaws: 4
-    LavalandWeaponKineticMachete: 4
+    LavalandWeaponKineticMachete: 3
     LavalandWeaponKineticHammer: 2
     NFPouchUtility: 25
     SeismicCharge: 3
