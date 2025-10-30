@@ -157,6 +157,8 @@ uplink-security-spaceblade-sec-name = Security SpaceBlade
 uplink-security-spaceblade-sec-desc = The latest in stun tech.
 uplink-security-contraband-forensics-module-name = Contraband Forenics Module
 uplink-security-contraband-forensics-module-desc = A program for scanning and reporting contraband dead drops and pods for bounties. Slots into a forensic scanner.
+uplink-security-mil-energy-pickaxe-name = Militia Energy Pickaxe
+uplink-security-mil-energy-pickaxe-desc = An advanced energy mining tool for clearing away rock and hull.
 
 store-category-piratehardsuits = Equipment
 store-category-pirateweapons = Weapons
