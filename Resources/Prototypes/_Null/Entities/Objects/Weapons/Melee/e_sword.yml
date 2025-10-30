@@ -1,8 +1,8 @@
 - type: entity
   id: MilEnergyPickaxe
-  parent: [EnergySword, BaseC1Contraband] # Has a reflect chance
-  name: holopickaxe
-  description: A military grade holographic mining tool with blades comprised of hard light. It has a small marking that says C2.
+  parent: [BaseC2Contraband, EnergySword] # Has a reflect chance
+  name: Military holopickaxe
+  description: A military grade holographic mining tool with blades comprised of hard light, it has been overclocked for security work though can no longer reflect bullets, unfortunately.
   components:
   - type: ItemToggleSize
     activatedSize: Huge
@@ -11,10 +11,10 @@
     - 1,1,1,2
   - type: ItemToggleMeleeWeapon
     activatedDamage:
-        types: # Slightly less total damage than wielded crusher glaive has
-          Heat: 8
-          Piercing: 2
-          Structural: 40 # +10 damage compared to crusher glaive
+        types:
+          Heat: 10
+          Piercing: 5
+          Structural: 80 # 7~ hits to break a door, 30~ to fully destroy a standard wall
     deactivatedSecret: true
   - type: Sprite
     sprite: _NF/Objects/Weapons/Melee/energy_pickaxe.rsi
@@ -44,12 +44,12 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
-  - type: Reflect # Explicitly specified the value (the default one from the parent might be too high)
-    reflectProb: 0.05
+  - type: Reflect # removes reflect that parent item gives
+    reflectProb: 0
   - type: Tag
     tags:
     - Pickaxe
   - type: StaticPrice
-    price: 200
+    price: 270
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
