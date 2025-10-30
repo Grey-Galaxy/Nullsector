@@ -14,7 +14,6 @@
     LavalandWeaponKineticClaws: 4
     LavalandWeaponKineticMachete: 3
     LavalandWeaponKineticHammer: 2
-    NFPouchUtility: 3
     SeismicCharge: 1
 
 - type: vendingMachineInventory
@@ -33,5 +32,4 @@
     LavalandWeaponKineticClaws: 4
     LavalandWeaponKineticMachete: 3
     LavalandWeaponKineticHammer: 2
-    NFPouchUtility: 25
     SeismicCharge: 3
