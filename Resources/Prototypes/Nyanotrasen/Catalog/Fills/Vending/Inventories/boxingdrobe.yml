@@ -1,15 +1,15 @@
 - type: vendingMachineInventory
   id: BoxingDrobeInventory
   startingInventory:
-    UniformShortsRed: 3
-    UniformShortsRedWithTop: 3
-    ClothingHandsGlovesBoxingRed: 2
-    ClothingHandsGlovesBoxingBlue: 2
-    ClothingHandsGlovesBoxingGreen: 2
-    ClothingHandsGlovesBoxingYellow: 2
-    ClothingOuterEVASuitBoxerRed: 2 # Frontier
-    ClothingOuterEVASuitBoxerGreen: 2 # Frontier
-    ClothingOuterEVASuitBoxerBlue: 2 # Frontier
-    ClothingOuterEVASuitBoxerYellow: 2 # Frontier
+    UniformShortsRed: 4294967295
+    UniformShortsRedWithTop: 4294967295
+    ClothingHandsGlovesBoxingRed: 4294967295
+    ClothingHandsGlovesBoxingBlue: 4294967295
+    ClothingHandsGlovesBoxingGreen: 4294967295
+    ClothingHandsGlovesBoxingYellow: 4294967295
+    ClothingOuterEVASuitBoxerRed: 4294967295 # Frontier
+    ClothingOuterEVASuitBoxerGreen: 4294967295 # Frontier
+    ClothingOuterEVASuitBoxerBlue: 4294967295 # Frontier
+    ClothingOuterEVASuitBoxerYellow: 4294967295 # Frontier
   emaggedInventory:
     UniformJabroni: 2
