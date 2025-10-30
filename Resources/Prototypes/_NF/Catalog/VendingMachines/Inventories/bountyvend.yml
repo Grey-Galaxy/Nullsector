@@ -53,4 +53,5 @@
     ClothingHeadHatBH: 4294967295 # Frontier: 3<Infinite
     ClothingNeckMantleBH: 4294967295 # Frontier: Infinite
     ClothingShoesBootsJack: 4294967295 # Frontier: Infinite
-    ClothingBeltMilitaryWebbing: 4294967295
+    ClothingBeltSecurityWebbing: 4294967295
+    ClothingBeltSecurity: 4294967295
