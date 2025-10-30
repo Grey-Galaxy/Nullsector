@@ -1,14 +1,14 @@
 - type: vendingMachineInventory
   id: MagiVendInventory
   startingInventory:
-    ClothingHeadHatWizard: 3
-    ClothingOuterWizard: 3
-    ClothingHeadHatWizardFake: 3
-    ClothingHeadHatRedwizard: 3
-    ClothingOuterWizardRed: 3
-    ClothingHeadHatVioletwizard: 3
-    ClothingOuterWizardViolet: 3
-    ClothingShoesWizard: 9
+    ClothingHeadHatWizard: 4294967295
+    ClothingOuterWizard: 4294967295
+    ClothingHeadHatWizardFake: 4294967295
+    ClothingHeadHatRedwizard: 4294967295
+    ClothingOuterWizardRed: 4294967295
+    ClothingHeadHatVioletwizard: 4294967295
+    ClothingOuterWizardViolet: 4294967295
+    ClothingShoesWizard: 4294967295
     #TODO:
     #only missing staff
     #and if wizarditis reagent when hacked if we want this.
