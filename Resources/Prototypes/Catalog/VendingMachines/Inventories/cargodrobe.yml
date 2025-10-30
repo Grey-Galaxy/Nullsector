@@ -1,40 +1,40 @@
 - type: vendingMachineInventory
   id: CargoDrobeInventory
   startingInventory:
-    ClothingBackpackCargo: 3
-    ClothingBackpackSatchelCargo: 3
-    ClothingBackpackDuffelCargo: 3
-    ClothingBackpackMessengerCargo: 3 # Frontier
-    ClothingOuterEVASuitCargo: 3 # Frontier
-    ClothingUniformJumpsuitCargo: 3
-    ClothingUniformJumpskirtCargo: 3
-    ClothingShoesColorBlack: 3
-    ClothingHandsGlovesFingerless: 3
-    ClothingHeadHatCargosoft: 3
-    ClothingHeadBandBrown: 3
-    ClothingHeadsetCargo: 3
-    EncryptionKeyCargo: 10
-    ClothingOuterWinterCargo: 2
-    ClothingShoesBootsWinterCargo: 2
+    ClothingBackpackCargo: 4294967295
+    ClothingBackpackSatchelCargo: 4294967295
+    ClothingBackpackDuffelCargo: 4294967295
+    ClothingBackpackMessengerCargo: 4294967295 # Frontier
+    ClothingOuterEVASuitCargo: 4294967295 # Frontier
+    ClothingUniformJumpsuitCargo: 4294967295
+    ClothingUniformJumpskirtCargo: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingHandsGlovesFingerless: 4294967295
+    ClothingHeadHatCargosoft: 4294967295
+    ClothingHeadBandBrown: 4294967295
+    ClothingHeadsetCargo: 4294967295
+    EncryptionKeyCargo: 4294967295
+    ClothingOuterWinterCargo: 4294967295
+    ClothingShoesBootsWinterCargo: 4294967295
     # Frontier
-    ClothingNeckScarfStripedBrown: 3
+    ClothingNeckScarfStripedBrown: 4294967295
 # Salvage:
-    ClothingBackpackSalvage: 2
-    ClothingBackpackSatchelSalvage: 2
-    ClothingBackpackDuffelSalvage: 2
-    ClothingBackpackMessengerSalvage: 2 # Frontier
-    ClothingOuterEVASuitSalvage: 2 # Frontier
-    ClothingBeltSalvageWebbing: 2
-    ClothingUniformJumpsuitSalvageSpecialist: 2
-    ClothingOuterWinterMiner: 2
-    ClothingShoesBootsWinterMiner: 2
-    ClothingHeadsetMining: 2
-    ClothingShoesBootsSalvage: 2
-    ClothingMaskGasExplorer: 2
-    ClothingNeckCloakMiner: 2
+    ClothingBackpackSalvage: 4294967295
+    ClothingBackpackSatchelSalvage: 4294967295
+    ClothingBackpackDuffelSalvage: 4294967295
+    ClothingBackpackMessengerSalvage: 4294967295 # Frontier
+    ClothingOuterEVASuitSalvage: 4294967295 # Frontier
+    ClothingBeltSalvageWebbing: 4294967295
+    ClothingUniformJumpsuitSalvageSpecialist: 4294967295
+    ClothingOuterWinterMiner: 4294967295
+    ClothingShoesBootsWinterMiner: 4294967295
+    ClothingHeadsetMining: 4294967295
+    ClothingShoesBootsSalvage: 4294967295
+    ClothingMaskGasExplorer: 4294967295
+    ClothingNeckCloakMiner: 4294967295
 # QM:
-    ClothingHeadsetAltCargo: 1
-    RubberStampQm: 1
+    ClothingHeadsetAltCargo: 4294967295
+    RubberStampQm: 4294967295
     # End Frontier
   contrabandInventory:
     ClothingHeadHatCargosoftFlipped: 1 # Frontier
