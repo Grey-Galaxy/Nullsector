@@ -25,6 +25,8 @@
     ClothingHeadHatBH: 4294967295
     ClothingNeckMantleBH: 4294967295
     ClothingShoesBootsJack: 4294967295
+    ClothingBeltSecurityWebbing: 4294967295
+    ClothingBeltSecurity: 4294967295
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory
