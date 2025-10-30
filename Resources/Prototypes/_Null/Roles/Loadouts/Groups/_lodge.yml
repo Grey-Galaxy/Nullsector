@@ -12,3 +12,12 @@
   - LodgeClothingOuterCoatNfsdLongCoat
   - LodgeClothingOuterCoatNfsdFormal
   - LodgeClothingOuterCoatJacketBiker
+
+- type: loadoutGroup
+  id: CommandSideArm
+  name: loadout-group-side-arm
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - WeaponPistolMauserC96
+  - LastStandMauserC96

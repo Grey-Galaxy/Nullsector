@@ -21,7 +21,8 @@
   - StationRepBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
-  
+  - CommandSideArm
+
 # The Lodge
 ## Militia Coordinator
 - type: roleLoadout
@@ -40,7 +41,8 @@
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
   - ContractorWallet
-  
+  - CommandSideArm
+
 ## Lodge Supervisor
 - type: roleLoadout
   id: JobLodgeSupervisor
@@ -58,3 +60,4 @@
   - GroupSpeciesBreathToolSecurity
   - MilitiaCoordinatorPDA
   - ContractorWallet
+  - CommandSideArm

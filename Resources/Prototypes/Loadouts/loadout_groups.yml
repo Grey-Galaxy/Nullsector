@@ -1040,7 +1040,14 @@
   loadouts:
   - JackBoots
   - SecurityWinterBoots
-
+  - ContractorClothingShoesLeather
+  - ContractorClothingShoesBootsLaceup
+  - ContractorClothingShoesHighheelShoes
+  - ContractorClothingShoesBootsWork
+  - ContractorClothingShoesBootsCowboyBlack
+  - ContractorClothingShoesBootsCowboyBrown
+  - ContractorClothingShoesBootsCowboyWhite
+  
 - type: loadoutGroup
   id: SecurityPDA
   name: loadout-group-security-id
