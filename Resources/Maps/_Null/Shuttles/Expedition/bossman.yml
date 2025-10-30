@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:38:13
-  entityCount: 255
+  time: 10/30/2025 01:38:21
+  entityCount: 258
 maps: []
 grids:
 - 1
@@ -1079,6 +1079,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.47241765,8.478284
       parent: 1
+- proto: ClosetWallO2N2Filled
+  entities:
+  - uid: 257
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,9.5
+      parent: 1
 - proto: ComputerGunneryConsole
   entities:
   - uid: 113
@@ -1129,6 +1137,18 @@ entities:
       - device-button-6
       - device-button-7
       - device-button-8
+- proto: ComputerWallmountStationRecords
+  entities:
+  - uid: 256
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,8.5
+      parent: 1
+    - type: ApcPowerReceiver
+      powerLoad: 5
+    - type: Battery
+      startingCharge: 0
 - proto: CrateEmptySpawner
   entities:
   - uid: 116
@@ -1140,6 +1160,14 @@ entities:
     components:
     - type: Transform
       pos: 4.5,7.5
+      parent: 1
+- proto: DefibrillatorCabinetFilled
+  entities:
+  - uid: 258
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,7.5
       parent: 1
 - proto: FaxMachineBase
   entities:
