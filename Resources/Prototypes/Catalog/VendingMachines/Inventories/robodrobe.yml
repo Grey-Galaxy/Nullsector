@@ -1,13 +1,13 @@
 - type: vendingMachineInventory
   id: RoboDrobeInventory
   startingInventory:
-    ClothingOuterCoatRobo: 2
-    ClothingUniformJumpsuitRoboticist: 2
-    ClothingUniformJumpskirtRoboticist: 2
-    ClothingShoesColorBlack: 2
-    ClothingHandsGlovesRobohands: 2
-    ClothingHeadHatCorpsoft: 2
-    ClothingHeadBandSkull: 2
-    ClothingHeadsetRobotics: 2
-    ClothingOuterWinterRobo: 2
-    ClothingShoesBootsWinterRobo: 2 #Delta V: Add departmental winter boots
+    ClothingOuterCoatRobo: 4294967295
+    ClothingUniformJumpsuitRoboticist: 4294967295
+    ClothingUniformJumpskirtRoboticist: 4294967295
+    ClothingShoesColorBlack: 4294967295
+    ClothingHandsGlovesRobohands: 4294967295
+    ClothingHeadHatCorpsoft: 4294967295
+    ClothingHeadBandSkull: 4294967295
+    ClothingHeadsetRobotics: 4294967295
+    ClothingOuterWinterRobo: 4294967295
+    ClothingShoesBootsWinterRobo: 4294967295 #Delta V: Add departmental winter boots
