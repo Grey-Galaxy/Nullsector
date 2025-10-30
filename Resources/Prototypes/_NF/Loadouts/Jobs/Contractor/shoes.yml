@@ -604,6 +604,18 @@
   equipment:
     shoes: ClothingShoesSkates
 
+- type: loadout
+  id: ContractorClothingShoesHighheelShoes
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 1200
+  equipment:
+    shoes: ClothingShoesHighheelShoes
+
 #T3 for lols
 - type: loadout
   id: ContractorClothingShoesClownLarge
@@ -616,7 +628,7 @@
   price: 7500
   equipment:
     shoes: ClothingShoesClownLarge
-    
+
 - type: loadout
   id: ContractorClothingShoesBling
   effects:

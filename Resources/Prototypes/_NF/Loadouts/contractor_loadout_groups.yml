@@ -205,7 +205,8 @@
   - ContractorClothingUniformJumpskirtBlueTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowTurtleneckDress
   - ContractorClothingUniformJumpskirtYellowOldDress
-
+  - ContractorClothingUniformJumpskirtVictorianBlack
+  - ContractorClothingUniformJumpskirtVictorianrRed
   fallbacks:
   - ContractorClothingUniformJumpsuitColorGrey
   - ContractorClothingUniformJumpskirtColorGrey
@@ -482,6 +483,7 @@
   - ContractorClothingShoesSkates
   - ContractorClothingShoesClownLarge
   - ContractorClothingShoesBling
+  - ContractorClothingShoesHighheelShoes
   fallbacks:
   - ContractorClothingShoesColorBlack
 
