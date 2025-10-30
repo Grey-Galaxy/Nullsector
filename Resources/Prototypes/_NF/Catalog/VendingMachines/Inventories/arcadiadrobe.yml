@@ -1,20 +1,20 @@
 - type: vendingMachineInventory
   id: ArcadiaDrobeInventory
   startingInventory:
-    ClothingOuterEVASuitArcadia: 3
-    ClothingBackpackArcadia: 3
-    ClothingBackpackDuffelArcadia: 3
-    ClothingBackpackSatchelArcadia: 3
-    ClothingBackpackMessengerArcadia: 3
-    ClothingBeltArcadia: 3
-    ClothingEyesArcadiaVisor: 3
-    ClothingHandsGlovesArcadiaCombat: 3
-    ClothingMaskArcadia: 3
-    ClothingOuterWinterArcadia: 3
-    ClothingOuterCoatArcadiaTrench: 3
-    ClothingUniformJumpskirtArcadia: 5
-    ClothingUniformJumpsuitArcadia: 5
-    ClothingUniformJumpsuitMilitaryArcadiaTac: 5
+    ClothingOuterEVASuitArcadia: 4294967295
+    ClothingBackpackArcadia: 4294967295
+    ClothingBackpackDuffelArcadia: 4294967295
+    ClothingBackpackSatchelArcadia: 4294967295
+    ClothingBackpackMessengerArcadia: 4294967295
+    ClothingBeltArcadia: 4294967295
+    ClothingEyesArcadiaVisor: 4294967295
+    ClothingHandsGlovesArcadiaCombat: 4294967295
+    ClothingMaskArcadia: 4294967295
+    ClothingOuterWinterArcadia: 4294967295
+    ClothingOuterCoatArcadiaTrench: 4294967295
+    ClothingUniformJumpskirtArcadia: 4294967295
+    ClothingUniformJumpsuitArcadia: 4294967295
+    ClothingUniformJumpsuitMilitaryArcadiaTac: 4294967295
   emaggedInventory:
     ClothingHeadHatTacticalMaidHeadband: 3
     ClothingUniformJumpskirtTacticalMaid: 3
