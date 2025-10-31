@@ -161,6 +161,8 @@ uplink-security-mil-energy-pickaxe-name = Militia Energy Pickaxe
 uplink-security-mil-energy-pickaxe-desc = An advanced energy mining tool for clearing away rock and hull.
 uplink-security-cyborg-module-name = security cyborg module
 uplink-security-cyborg-module-desc = Has everything a security borg needs. A machete, stun baton and a recharging energy gun.
+uplink-security-hfblade-name = HF-katana
+uplink-security-hfblade-desc = The monomolecular edge vibrates so quickly that it destabilizes molecular bonds on contact.
 
 store-category-piratehardsuits = Equipment
 store-category-pirateweapons = Weapons
