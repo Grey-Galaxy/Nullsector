@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "tgstation at 606005645d3a14c4439e5ce14785650121b22678, modified by Potato1234x (Github) modified extensively by LukeZurg22",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "nullsign1"
+    },
+    {
+      "name": "nullsign2"
+    },
+    {
+      "name": "nullsign3"
+    },
+    {
+      "name": "nullsign4"
+    },
+    {
+      "name": "nullsign5"
+    },
+    {
+      "name": "nullsign6"
+    },
+    {
+      "name": "nullsign7"
+    },
+    {
+      "name": "nullsign8"
+    },
+    {
+      "name": "nullsign9"
+    },
+    {
+      "name": "nullsign10"
+    },
+    {
+      "name": "nullsign11"
+    },
+    {
+      "name": "nullsign12"
+    },
+    {
+      "name": "nullsign13"
+    }
+  ]
+}
