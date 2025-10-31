@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/29/2025 21:20:35
-  entityCount: 5135
+  time: 10/31/2025 17:17:25
+  entityCount: 5134
 maps:
 - 4997
 grids:
@@ -3068,6 +3068,8 @@ entities:
     - type: Transform
       pos: 67.5,25.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-two-c
   - uid: 155
     components:
     - type: Transform
@@ -3085,6 +3087,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -57.5,0.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-five-b
   - uid: 1537
     components:
     - type: Transform
@@ -3114,6 +3118,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: 51.5,2.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-three-a
   - uid: 1796
     components:
     - type: Transform
@@ -3126,6 +3132,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 53.5,0.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-three-b
   - uid: 1798
     components:
     - type: Transform
@@ -3142,6 +3150,8 @@ entities:
     - type: Transform
       pos: 51.5,-1.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-three-c
   - uid: 1801
     components:
     - type: Transform
@@ -3159,6 +3169,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -22.5,25.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-six-a
   - uid: 1892
     components:
     - type: Transform
@@ -3177,6 +3189,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: -21.5,27.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-six-b
   - uid: 2031
     components:
     - type: Transform
@@ -3194,11 +3208,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: -54.5,3.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-five-c
   - uid: 2282
     components:
     - type: Transform
       pos: -54.5,-2.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-five-a
   - uid: 4446
     components:
     - type: Transform
@@ -3211,6 +3229,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -5.5,59.5
       parent: 2
+    - type: Door
+      secondsUntilStateChange: -430.2548
+      state: Opening
+    - type: Docking
+      name: dock-label-station-one-a
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 4448
     components:
     - type: Transform
@@ -3229,6 +3255,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,65.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-one-b
   - uid: 4451
     components:
     - type: Transform
@@ -3253,6 +3281,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,59.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-one-c
   - uid: 4875
     components:
     - type: Transform
@@ -3265,6 +3295,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -5.5,-66.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-four-c
   - uid: 4877
     components:
     - type: Transform
@@ -3283,6 +3315,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,-66.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-four-a
   - uid: 4880
     components:
     - type: Transform
@@ -3299,6 +3333,8 @@ entities:
     - type: Transform
       pos: 0.5,-72.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-four-b
   - uid: 4883
     components:
     - type: Transform
@@ -3316,6 +3352,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 70.5,28.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-two-b
   - uid: 4976
     components:
     - type: Transform
@@ -3334,6 +3372,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: 67.5,31.5
       parent: 2
+    - type: Docking
+      name: dock-label-station-two-a
   - uid: 4979
     components:
     - type: Transform
