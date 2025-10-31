@@ -218,7 +218,7 @@ public abstract partial class SharedXenoArtifactSystem
         {
             if (!nodesByDepth.TryGetValue(node.Comp.Depth, out var depthList))
             {
-                depthList = new List<Entity<XenoArtifactNodeComponent>>();
+                depthList = [];
                 nodesByDepth.Add(node.Comp.Depth, depthList);
             }
 

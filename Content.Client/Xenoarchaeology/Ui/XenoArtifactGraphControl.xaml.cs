@@ -117,10 +117,8 @@ public sealed partial class XenoArtifactGraphControl : BoxContainer
             var orderedNodes = _artifactSystem.GetDepthOrderedNodes(segment);
             foreach (var (_, nodes) in orderedNodes)
             {
-                for (var i = 0; i < nodes.Count; i++)
+                foreach (var node in nodes)
                 {
-                    // selecting color for node based on its state
-                    var node = nodes[i];
                     var color = LockedNodeColor;
                     if (_artifactSystem.IsNodeActive(artifact, node))
                     {

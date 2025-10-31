@@ -51,13 +51,14 @@ public abstract partial class SharedXenoArtifactSystem
     /// <param name="user">Character that attempted to activate artifact.</param>
     /// <param name="target">Target, on which artifact activation attempt was used (for hand-held artifact - it can be 'clicked' over someone).</param>
     /// <param name="coordinates">Coordinates of <paramref name="target"/> entity.</param>
+    /// <param name="nodeComp2"></param>
     /// <returns>True, if activation was successful, false otherwise.</returns>
     public bool TryActivateXenoArtifact(
         Entity<XenoArtifactComponent> artifact,
         EntityUid? user,
         EntityUid? target,
-        EntityCoordinates coordinates
-    )
+        EntityCoordinates coordinates,
+        XenoArtifactNodeComponent? artiNode = null)
     {
         XenoArtifactComponent xenoArtifactComponent = artifact;
         if (xenoArtifactComponent.Suppressed)
@@ -66,7 +67,7 @@ public abstract partial class SharedXenoArtifactSystem
         if (TryComp<UseDelayComponent>(artifact, out var delay) && !_useDelay.TryResetDelay((artifact, delay), true))
             return false;
 
-        var success = false;
+        var success = artiNode != null;
         foreach (var node in GetActiveNodes(artifact))
         {
             success |= ActivateNode(artifact, node, user, target, coordinates);

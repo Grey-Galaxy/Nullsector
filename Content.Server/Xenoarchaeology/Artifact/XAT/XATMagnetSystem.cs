@@ -39,7 +39,7 @@ public sealed class XATMagnetSystem : BaseQueryUpdateXATSystem<XATMagnetComponen
             if(!TryComp<ItemToggleComponent>(ent, out var itemToggle) || !itemToggle.Activated)
                 continue;
 
-            Trigger(artifact, node);
+            Trigger(artifact, node, ent, ent.Owner, coords);
             break;
         }
     }

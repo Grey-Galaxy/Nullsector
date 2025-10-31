@@ -1,5 +1,8 @@
 using Content.Shared.Xenoarchaeology.Artifact.Components;
+using Robust.Shared.Map;
 using Robust.Shared.Timing;
+
+// ReSharper disable InconsistentNaming
 
 namespace Content.Shared.Xenoarchaeology.Artifact.XAT;
 
@@ -64,13 +67,23 @@ public abstract class BaseXATSystem<T> : EntitySystem where T : Component
     /// <summary>
     /// Triggers node. Triggered nodes participate in node unlocking.
     /// </summary>
-    protected void Trigger(Entity<XenoArtifactComponent> artifact, Entity<T, XenoArtifactNodeComponent> node)
+    protected void Trigger(
+        Entity<XenoArtifactComponent> artifact,
+        Entity<T, XenoArtifactNodeComponent> node,
+        EntityUid? user = null,
+        EntityUid? target = null,
+        EntityCoordinates? coordinates = null)
     {
         if (!Timing.IsFirstTimePredicted)
             return;
 
+        coordinates ??= Transform(artifact.Owner).Coordinates;
+
         Log.Debug($"Activated trigger {typeof(T).Name} on node {ToPrettyString(node)} for {ToPrettyString(artifact)}");
         XenoArtifact.TriggerXenoArtifact(artifact, (node.Owner, node.Comp2));
+
+        // Causes Crash Here (Flesh to Fur effect)
+        XenoArtifact.TryActivateXenoArtifact(artifact, user, target, coordinates.Value, node.Comp2);
     }
 
     /// <summary>
