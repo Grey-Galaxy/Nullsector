@@ -93,7 +93,7 @@
     interfaces:
       enum.SurgeryUIKey.Key:
         type: SurgeryBui
-  - type: NightVision # Goobstation - Nigthvision
+  - type: NightVision # Goobstation - Night-vision
     color: "#808080"
     activateSound: null
     deactivateSound: null
