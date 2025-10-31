@@ -23,12 +23,12 @@ public sealed class XATInteractionSystem : BaseXATSystem<XATInteractionComponent
 
     private void OnPullStart(Entity<XenoArtifactComponent> artifact, Entity<XATInteractionComponent, XenoArtifactNodeComponent> node, ref PullStartedMessage args)
     {
-        Trigger(artifact, node);
+        Trigger(artifact, node, args.PulledUid, args.PulledUid);
     }
 
     private void OnAttacked(Entity<XenoArtifactComponent> artifact, Entity<XATInteractionComponent, XenoArtifactNodeComponent> node, ref AttackedEvent args)
     {
-        Trigger(artifact, node);
+        Trigger(artifact, node, args.User, args.User, args.ClickLocation);
     }
 
     private void OnInteractHand(Entity<XenoArtifactComponent> artifact, Entity<XATInteractionComponent, XenoArtifactNodeComponent> node, ref InteractHandEvent args)
