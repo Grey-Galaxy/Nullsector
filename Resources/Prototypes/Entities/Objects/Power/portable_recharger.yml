@@ -14,8 +14,9 @@
     quickEquip: false
     slots:
     - back
+    - suitStorage
   - type: Charger
-    chargeRate: 50 # Frontier: chargeRate: 50 
+    chargeRate: 50 # Frontier: chargeRate: 50
     slotId: charger_slot
     portable: true
   - type: PowerChargerVisuals
