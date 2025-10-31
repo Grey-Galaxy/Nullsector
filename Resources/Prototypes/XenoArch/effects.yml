@@ -79,8 +79,8 @@
       weight: 10.0
     - id: XenoArtifactIgnite
       weight: 2.0
-    - id: XenoArtifactTeleport
-      weight: 2.0
+    #- id: XenoArtifactTeleport # Seals player inside Artifact. Needs fixing.
+    #  weight: 2.0
     - id: XenoArtifactEmp
       weight: 2.0
     - id: XenoArtifactPolyMonkey
