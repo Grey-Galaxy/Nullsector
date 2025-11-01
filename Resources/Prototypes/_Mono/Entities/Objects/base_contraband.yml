@@ -15,10 +15,10 @@
   - type: Contraband
     severity: Class3Chem
     turnInValues: 
-      FrontierUplinkCoin: 0 # set to 0 due to TSF farming FUCs, should be simply locked away or destroyed If turnInValues gets set as double/float, could set it to ~0.2 or so
+      SplenduriumCoin: 0 # Set to 0 because balancing is too difficult for Monolith.
 
 # These are compatibility prototypes to work with ported definitions
-# They simply map to the appropriate NF/Mono contraband equivalents
+# They simply map to the appropriate NF/Mono/Null contraband equivalents
 
 # non-stealth syndicate stuff
 - type: entity

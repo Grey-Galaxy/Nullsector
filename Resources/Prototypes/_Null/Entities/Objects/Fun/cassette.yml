@@ -1,11 +1,9 @@
 # Cassette Player
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseC1Contraband] # The Armada despises fun.
   id: CassettePlayer
   name: cassette player
   components:
-  - type: Contraband
-    severity: Class3Chem
   - type: Sprite
     sprite: _Null/Objects/Fun/cassette.rsi
     state: player_filled
@@ -21,7 +19,7 @@
 
 # Base Tape
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseC2ContrabandUnredeemable] # The Armada despises fun.
   id: BaseTape
   name: cassette tape
   description: Nothing screams quality like rewinding your music with a pen!
@@ -121,10 +119,12 @@
 # Special Music Tapes
 # ARMADAN
 - type: entity
-  parent: CassetteTapeArmada # This stuff's rare.
+  parent: [CassetteTapeArmada, BaseC3Contraband] # This stuff's rare.
   id: TapeOhMahNina
   suffix: oh mah nina
   components:
+  - type: Contraband
+    severity: Class3General
   - type: CassetteTape
     name: "Oh Mah Nina"
     custom: false
@@ -132,10 +132,12 @@
     - /Audio/_Null/Cassette/oh_mah_nina.ogg
 
 - type: entity
-  parent: CassetteTapeArmada
+  parent: [CassetteTapeArmada, BaseC3Contraband] # The Armada really doesn't want you to have these.
   id: TapePayemPayam
   suffix: payem payam
   components:
+  - type: Contraband
+    severity: Class3General
   - type: CassetteTape
     name: "Payem Payam"
     custom: false

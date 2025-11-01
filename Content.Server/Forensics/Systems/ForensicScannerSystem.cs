@@ -1,35 +1,53 @@
 using System.Linq;
 using System.Text;
+using Content.Server._NF.Bank;
+using Content.Server._NF.SectorServices;
+using Content.Server._NF.Smuggling;
+using Content.Server._NF.Smuggling.Components;
+using Content.Server.Cargo.Systems;
 using Content.Server.Popups;
-using Content.Server.Stack; // Frontier
-using Content.Server._NF.Smuggling; // Frontier
-using Content.Server._NF.Smuggling.Components; // Frontier
-using Content.Server.Cargo.Systems; // Frontier
-using Content.Server.Radio.EntitySystems; // Frontier
-using Content.Shared.UserInterface;
+using Content.Server.Radio.EntitySystems;
+using Content.Server.Stack;
+using Content.Shared._NF.Bank;
+using Content.Shared._NF.Bank.BUI;
+using Content.Shared._NF.Bank.Components;
+using Content.Shared._NF.CCVar;
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.DoAfter;
+using Content.Shared.FixedPoint;
 using Content.Shared.Forensics;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Paper;
-using Content.Shared.Verbs;
-using Content.Shared.Stacks; // Frontier
-using Content.Shared.Radio; // Frontier
-using Robust.Shared.Prototypes; // Frontier
+using Content.Shared.Radio;
+using Content.Shared.Stacks;
 using Content.Shared.Tag;
-using Robust.Shared.Audio.Systems;
+using Content.Shared.UserInterface;
+using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Content.Shared.Containers.ItemSlots; // Frontier
-using Content.Server._NF.SectorServices; // Frontier
-using Content.Shared.FixedPoint; // Frontier
-using Robust.Shared.Configuration; // Frontier
-using Content.Shared._NF.CCVar; // Frontier
-using Content.Shared._NF.Bank; // Frontier
-using Content.Shared._NF.Bank.Components; // Frontier
-using Content.Server._NF.Bank; // Frontier
-using Content.Shared._NF.Bank.BUI; // Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+// Frontier
+
+// Frontier
 
 // todo: remove this stinky LINQy
 
@@ -119,7 +137,7 @@ namespace Content.Server.Forensics
                         int payout = sectorDD.FUCAccumulator.Int();
                         sectorDD.FUCAccumulator -= payout;
 
-                        var stackPrototype = _prototypeManager.Index<StackPrototype>("FrontierUplinkCoin");
+                        var stackPrototype = _prototypeManager.Index<StackPrototype>("SplenduriumCoin");
                         _stackSystem.Spawn(payout, stackPrototype, Transform(target).Coordinates);
                     }
                 }
@@ -133,7 +151,7 @@ namespace Content.Server.Forensics
             {
                 msgString = msgString + " " + Loc.GetString("forensic-reward-amount",
                 ("spesos", BankSystemExtensions.ToSpesoString(spesoAmount)),
-                ("fuc", BankSystemExtensions.ToFUCString(fucAmount.Int())));
+                ("fuc", BankSystemExtensions. ToFUCString(fucAmount.Int())));
             }
             else
             {

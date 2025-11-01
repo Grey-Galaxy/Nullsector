@@ -1,8 +1,8 @@
 - type: stack
-  id: FrontierUplinkCoin
+  id: SplenduriumCoin
   name: frontier uplink coin
   icon: _NF/Objects/Specific/Security/frontieruplinkcoin.rsi
-  spawn: FrontierUplinkCoin1
+  spawn: SplenduriumCoin1
 
 - type: stack
   id: Doubloon

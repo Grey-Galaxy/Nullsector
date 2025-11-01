@@ -1,2 +1,2 @@
-store-currency-display-security-telecrystal = FUC
+store-currency-display-security-telecrystal = SPL
 store-currency-display-pirate-telecrystal = DB
