@@ -6,10 +6,10 @@
   canWithdraw: true
 
 - type: currency
-  id: FrontierUplinkCoin
+  id: SplenduriumCoin
   displayName: store-currency-display-security-telecrystal
   cash: 
-    1: FrontierUplinkCoin1
+    1: SplenduriumCoin1
   canWithdraw: true
 
 - type: currency

@@ -35,9 +35,9 @@
     - UplinkSecurityExplosives
     - UplinkSecurityBundles
     currencyWhitelist:
-    - FrontierUplinkCoin
+    - SplenduriumCoin
     balance:
-      FrontierUplinkCoin: 0
+      SplenduriumCoin: 0
 
 - type: entity
   id: StorePresetPirateUplink
