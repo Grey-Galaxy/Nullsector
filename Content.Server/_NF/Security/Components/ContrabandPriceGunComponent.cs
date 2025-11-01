@@ -14,7 +14,7 @@ public sealed partial class ContrabandPriceGunComponent : Component
     /// The currency that scanned items will be checked for.
     /// </summary>
     [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<CurrencyPrototype>))]
-    public string Currency = "FrontierUplinkCoin";
+    public string Currency = "Splendurium";
 
     /// <summary>
     /// The prefix for localization strings to display.
