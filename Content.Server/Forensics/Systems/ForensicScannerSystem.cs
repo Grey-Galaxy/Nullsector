@@ -137,7 +137,7 @@ namespace Content.Server.Forensics
                         int payout = sectorDD.FUCAccumulator.Int();
                         sectorDD.FUCAccumulator -= payout;
 
-                        var stackPrototype = _prototypeManager.Index<StackPrototype>("FrontierUplinkCoin");
+                        var stackPrototype = _prototypeManager.Index<StackPrototype>("Splendurium");
                         _stackSystem.Spawn(payout, stackPrototype, Transform(target).Coordinates);
                     }
                 }
