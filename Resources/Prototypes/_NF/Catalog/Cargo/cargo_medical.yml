@@ -135,7 +135,7 @@
     sprite: _NF/Objects/Storage/Barrels/grey.rsi
     state: icon
   product: ChemicalBarrelLithium
-#  cost: 7000
+  cost: 7000
   category: cargoproduct-category-name-medical
   group: market
 
