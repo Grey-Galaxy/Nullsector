@@ -8,7 +8,7 @@ namespace Content.Shared._NF.Contraband.Components;
 public sealed partial class ContrabandPalletConsoleComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer:typeof(PrototypeIdSerializer<StackPrototype>))]
-    public string RewardType = "Splendurium";
+    public string RewardType = "SplenduriumCoin";
 
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
     public string Faction = "NFSD";
